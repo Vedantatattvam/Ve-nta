@@ -1,11 +1,35 @@
-<div align="center">
+# VedantaTattvam — Classical Vedānta Scholarly Platform
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+A comprehensive research platform and repository for Advaita, Viśiṣṭādvaita, Dvaita, Śāktaviśiṣṭādvaita, and classical Sanskrit Vedānta granthas with multi-script transliteration and authentic commentary exegesis.
 
-  <h1>Built with AI Studio</h2>
+## 🚀 Deploying to Vercel
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+This repository is pre-configured for zero-config deployment to [Vercel](https://vercel.com).
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+### Option 1: Deploy with Vercel CLI
+```bash
+npm install -g vercel
+vercel
+```
 
-</div>
+### Option 2: Deploy from GitHub / Git Repository
+1. Push this project to your GitHub repository.
+2. In the [Vercel Dashboard](https://vercel.com/new), select **Import Repository**.
+3. Vercel will automatically detect Vite and use the included `vercel.json` configuration.
+4. **Environment Variables**:
+   - Add `GEMINI_API_KEY`: Your Google Gemini API Key (from [Google AI Studio](https://aistudio.google.com/apikey)).
+5. Click **Deploy**.
+
+---
+
+## 🛠 Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start local full-stack server
+npm run dev
+```
+
+Visit `http://localhost:3000` in your browser.
