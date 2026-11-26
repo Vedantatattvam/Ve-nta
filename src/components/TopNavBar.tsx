@@ -5,6 +5,8 @@ import ToolsFacilitiesMenu, { ALL_FACILITIES } from "./ToolsFacilitiesMenu";
 import BharatiyaLipiSwitcher from "./BharatiyaLipiSwitcher";
 import GlobalTextSearch from "./GlobalTextSearch";
 import { useBharatiyaLipi } from "../context/BharatiyaLipiContext";
+import { useAuthProofread } from "../context/AuthProofreadContext";
+import GoogleSignInButton from "./GoogleSignInButton";
 import {
   Menu,
   BookMarked,
@@ -14,6 +16,7 @@ import {
   ArrowRight,
   BookOpen,
   GraduationCap,
+  History,
 } from "lucide-react";
 
 interface TopNavBarProps {
@@ -47,6 +50,7 @@ export default function TopNavBar({
 }: TopNavBarProps) {
   const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
   const { transliterate, activeLipi } = useBharatiyaLipi();
+  const { user, isAdmin, pendingCount, isSigningIn, signInWithGoogle } = useAuthProofread();
 
   return (
     <nav className="sticky top-0 z-40 bg-[#FFFDF8]/95 backdrop-blur-md border-b border-[#bf953f]/30 shadow-[0_4px_20px_rgba(160,110,20,0.08)] transition-all">
@@ -212,6 +216,52 @@ export default function TopNavBar({
                 <BookMarked className="w-3.5 h-3.5 text-[#8c6011]" />
                 <span className="hidden md:inline">Glossary</span>
               </button>
+            )}
+
+            {/* Account / Google Sign-In / History & Proofreading Trigger */}
+            {user ? (
+              <button
+                type="button"
+                onClick={() => onSelectTab("proofread")}
+                className={`flex items-center gap-1.5 px-2 sm:px-2.5 py-1 rounded-xl border text-xs font-serif font-bold transition cursor-pointer shadow-xs ${
+                  activeTab === "proofread"
+                    ? "bg-gradient-to-br from-[#FFFFFF] via-[#FFFDF5] to-[#FFF8E7] text-[#7A3E00] border-2 border-[#C59B27]"
+                    : "bg-[#FFFDF9] hover:bg-[#FAF1E2] border-[#bf953f]/40 text-[#735013]"
+                }`}
+                title="Open Personal Reading History & Proofreading Hub"
+              >
+                {user.photoURL ? (
+                  <img
+                    src={user.photoURL}
+                    alt={user.displayName || "Profile"}
+                    className="w-5 h-5 rounded-full border border-[#bf953f]/50 object-cover"
+                    referrerPolicy="no-referrer"
+                  />
+                ) : (
+                  <History className="w-3.5 h-3.5 text-[#8c6011]" />
+                )}
+                <span className="hidden md:inline max-w-[90px] truncate">
+                  {user.displayName?.split(" ")[0] || "History"}
+                </span>
+                {pendingCount > 0 && (
+                  <span
+                    className={`px-1.5 py-0.2 rounded-full text-[10px] font-mono font-bold ${
+                      isAdmin
+                        ? "bg-amber-700 text-white"
+                        : "bg-[#FAF1E2] text-[#8c6011] border border-[#bf953f]/40"
+                    }`}
+                  >
+                    {pendingCount}
+                  </span>
+                )}
+              </button>
+            ) : (
+              <GoogleSignInButton
+                onClick={() => void signInWithGoogle()}
+                disabled={isSigningIn}
+                label="Sign in"
+                compact
+              />
             )}
 
             {/* Side Drawer Toggle (Full Facilities Catalog) */}

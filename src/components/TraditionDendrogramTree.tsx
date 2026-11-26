@@ -155,6 +155,7 @@ export default function TraditionDendrogramTree({
       const target = filter ? findNodeById(VEDANTA_TRADITION_TREE, filter.nodeId) : null;
       if (target) {
         const next = new Set<string>([target.id]);
+        collectDefaultExpanded(target, next);
         target.children?.forEach((child) => {
           if (child.children && child.children.length > 0) {
             next.add(child.id);

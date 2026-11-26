@@ -24,11 +24,14 @@ import { exportTextReaderToPdf } from "../utils/academicPdfExport";
 import { AcademicPdfExportButton } from "./AcademicPdfExportButton";
 import VedicChantButton from "./VedicChantButton";
 import BhashyaTikaSelector from "./BhashyaTikaSelector";
+import { useAuthProofread } from "../context/AuthProofreadContext";
 import { 
   ArrowLeft, 
   BookOpen, 
   Copy, 
-  Check, 
+  Check,
+  CheckCircle2,
+  FileEdit,
   Sparkles, 
   Scale, 
   Languages, 
@@ -113,6 +116,13 @@ export default function TextReaderView({
     showDualScript,
     transliterate,
   } = useBharatiyaLipi();
+
+  const {
+    resolveVerseField,
+    getVerseApprovedCorrections,
+    openProofreadModal,
+    recordReadingVisit,
+  } = useAuthProofread();
 
   const chapters: GranthaChapter[] = grantha.chapters || [];
 
@@ -315,6 +325,18 @@ export default function TextReaderView({
 
   const syncToVerse = (verseId: string) => {
     setSelectedVerseId(verseId);
+    const matchedVerse = currentVerses.find((v) => v.id === verseId);
+    if (matchedVerse) {
+      void recordReadingVisit({
+        textId: grantha.id,
+        textTitle: grantha.title,
+        chapterId: currentChapter?.id,
+        chapterTitle: currentChapter?.chapterTitle,
+        verseId: matchedVerse.id,
+        verseNumber: matchedVerse.number,
+        actionType: "read",
+      });
+    }
     
     // In dual-pane mode, smoothly scroll both panes with deliberate offset easing
     const leftEl = document.getElementById(`left-verse-${verseId}`);
@@ -368,6 +390,18 @@ export default function TextReaderView({
   };
 
   const activeFont = getActiveFontConfig();
+
+  // Record chapter/grantha study visit for signed-in users
+  useEffect(() => {
+    if (!grantha?.id) return;
+    void recordReadingVisit({
+      textId: grantha.id,
+      textTitle: grantha.title,
+      chapterId: currentChapter?.id,
+      chapterTitle: currentChapter?.chapterTitle,
+      actionType: "read",
+    });
+  }, [grantha.id, grantha.title, currentChapter?.id, currentChapter?.chapterTitle, recordReadingVisit]);
 
   // Scroll to initial verse if provided and trigger pulse animation
   useEffect(() => {
@@ -1511,6 +1545,26 @@ Academic Citation: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on $
                   const isPulsing = verse.id === pulsingVerseId;
                   const verseAnnotations = granthaNotes.filter((n) => n.verseId === verse.id);
 
+                  const effectiveMulaSanskrit = resolveVerseField(grantha.id, verse, "mulaSanskrit");
+                  const effectiveMulaIast = resolveVerseField(grantha.id, verse, "mulaIast");
+                  const effectivePadaccheda = resolveVerseField(grantha.id, verse, "padaccheda");
+                  const effectiveAnvaya = resolveVerseField(grantha.id, verse, "anvaya");
+                  const effectiveEnglish = resolveVerseField(grantha.id, verse, "englishTranslation");
+                  const effectiveBhashya = resolveVerseField(grantha.id, verse, "bhashyaExtract");
+                  const effectiveNotes = resolveVerseField(grantha.id, verse, "commentaryNotes");
+                  const verseApprovedCorrections = getVerseApprovedCorrections(grantha.id, verse.id);
+
+                  const effectiveVerse: GranthaVerse = {
+                    ...verse,
+                    mulaSanskrit: effectiveMulaSanskrit,
+                    mulaIast: effectiveMulaIast,
+                    padaccheda: effectivePadaccheda || undefined,
+                    anvaya: effectiveAnvaya || undefined,
+                    englishTranslation: effectiveEnglish,
+                    bhashyaExtract: effectiveBhashya || undefined,
+                    commentaryNotes: effectiveNotes || undefined,
+                  };
+
                   const isPadacchedaVisible = versePadacchedaOverrides[verse.id] !== undefined
                     ? versePadacchedaOverrides[verse.id]
                     : showPadaccheda;
@@ -1534,7 +1588,7 @@ Academic Citation: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on $
                     >
                       {/* Verse Head Bar */}
                       <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#bf953f]/25 pb-3">
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-2 flex-wrap">
                           <span className="px-2.5 py-1 rounded-md bg-[#8c6011] text-[#FFFDF8] text-xs font-mono font-bold">
                             {verse.number}
                           </span>
@@ -1542,6 +1596,15 @@ Academic Citation: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on $
                             <h2 className="font-serif font-bold text-sm sm:text-base text-[#2D2319]">
                               {verse.title}
                             </h2>
+                          )}
+                          {verseApprovedCorrections.length > 0 && (
+                            <span
+                              className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-100 border border-emerald-300 text-emerald-900 text-[10px] font-mono font-bold"
+                              title="Includes curator-approved proofreading correction(s)"
+                            >
+                              <CheckCircle2 className="w-3 h-3" />
+                              <span>Proofread Updated</span>
+                            </span>
                           )}
                           {isPulsing && (
                             <span className="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-gradient-to-r from-amber-600 to-amber-800 text-white font-bold shadow-xs animate-pulse">
@@ -1554,13 +1617,13 @@ Academic Citation: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on $
                         <div className="flex flex-wrap items-center gap-1.5">
                           {/* Vedic Chanting Audio Synthesis */}
                           <VedicChantButton
-                            verseText={verse.mulaSanskrit}
+                            verseText={effectiveMulaSanskrit}
                             variant="badge"
                           />
 
                           {/* Bookmark Verse Action Button */}
                           <button
-                            onClick={(e) => handleToggleBookmark(verse, e)}
+                            onClick={(e) => handleToggleBookmark(effectiveVerse, e)}
                             type="button"
                             className={`px-2.5 py-1 text-xs rounded-lg border font-medium flex items-center gap-1 transition cursor-pointer shadow-xs ${
                               isVerseBookmarked(grantha.id, verse.id)
@@ -1587,11 +1650,42 @@ Academic Citation: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on $
                             </span>
                           </button>
 
+                          {/* Suggest Proofread Action Button */}
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              openProofreadModal({
+                                textId: grantha.id,
+                                textTitle: grantha.title,
+                                chapterId: currentChapter?.id,
+                                chapterTitle: currentChapter?.chapterTitle,
+                                verseId: verse.id,
+                                verseNumber: verse.number,
+                                initialField: "mulaSanskrit",
+                                verseSnapshot: {
+                                  mulaSanskrit: verse.mulaSanskrit,
+                                  mulaIast: verse.mulaIast,
+                                  padaccheda: verse.padaccheda || "",
+                                  anvaya: verse.anvaya || "",
+                                  englishTranslation: verse.englishTranslation,
+                                  bhashyaExtract: verse.bhashyaExtract || "",
+                                  commentaryNotes: verse.commentaryNotes || "",
+                                },
+                              });
+                            }}
+                            type="button"
+                            className="px-2.5 py-1 text-xs rounded-lg border border-emerald-600/40 bg-emerald-50/70 hover:bg-emerald-100 text-emerald-950 font-medium flex items-center gap-1 transition cursor-pointer shadow-xs"
+                            title="Suggest a proofreading correction for this verse"
+                          >
+                            <FileEdit className="w-3.5 h-3.5 text-emerald-700" />
+                            <span className="hidden sm:inline">Proofread</span>
+                          </button>
+
                           {/* Highlight & Annotate Action Button */}
                           <button
                             onClick={(e) => {
                               e.stopPropagation();
-                              handleOpenAnnotate(verse, verse.mulaSanskrit, "mula");
+                              handleOpenAnnotate(effectiveVerse, effectiveMulaSanskrit, "mula");
                             }}
                             type="button"
                             className="px-2.5 py-1 text-xs rounded-lg border border-amber-400/80 bg-amber-50 hover:bg-amber-100 text-amber-900 font-medium flex items-center gap-1 transition cursor-pointer shadow-xs"
@@ -1607,8 +1701,8 @@ Academic Citation: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on $
                             shareData={{
                               title: `${grantha.title} — ${verse.number}${verse.title ? ` (${verse.title})` : ""}`,
                               subtitle: `${grantha.author} • ${grantha.school}`,
-                              sanskritText: verse.mulaSanskrit,
-                              translation: verse.englishTranslation,
+                              sanskritText: effectiveMulaSanskrit,
+                              translation: effectiveEnglish,
                               sourceText: `${grantha.title} ${verse.number}`,
                               authorOrSchool: `${grantha.author} (${grantha.school})`,
                               type: "verse",
@@ -1621,7 +1715,7 @@ Academic Citation: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on $
                           <button
                             onClick={(e) => {
                               e.stopPropagation();
-                              handleCopyVerse(verse);
+                              handleCopyVerse(effectiveVerse);
                             }}
                             type="button"
                             className="px-2.5 py-1 text-xs rounded-lg border border-[#bf953f]/40 bg-[#FAF5ED] hover:bg-[#FAF1E2] text-[#735013] hover:text-[#2D2319] font-medium flex items-center gap-1.5 transition cursor-pointer shadow-xs"
@@ -1647,7 +1741,7 @@ Academic Citation: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on $
                                 onClick={(e) => {
                                   e.stopPropagation();
                                   onNavigateToTab("comparative", {
-                                    verseOrSutra: `${verse.mulaSanskrit}\n(${grantha.title} ${verse.number})`,
+                                    verseOrSutra: `${effectiveMulaSanskrit}\n(${grantha.title} ${verse.number})`,
                                   });
                                 }}
                                 type="button"
@@ -1662,7 +1756,7 @@ Academic Citation: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on $
                                 onClick={(e) => {
                                   e.stopPropagation();
                                   onNavigateToTab("translation", {
-                                    text: verse.mulaSanskrit,
+                                    text: effectiveMulaSanskrit,
                                     context: `${grantha.title} (${grantha.author}) - ${verse.number}`,
                                   });
                                 }}
@@ -1678,7 +1772,7 @@ Academic Citation: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on $
                                 onClick={(e) => {
                                   e.stopPropagation();
                                   onNavigateToTab("qa", {
-                                    prompt: `Explain the philosophical significance and traditional commentaries on this passage from ${grantha.title} (${grantha.author}):\n\n"${verse.mulaSanskrit}"`,
+                                    prompt: `Explain the philosophical significance and traditional commentaries on this passage from ${grantha.title} (${grantha.author}):\n\n"${effectiveMulaSanskrit}"`,
                                   });
                                 }}
                                 type="button"
@@ -1707,8 +1801,8 @@ Academic Citation: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on $
                           }}
                         >
                           {activeLipi === "devanagari" 
-                            ? verse.mulaSanskrit 
-                            : transliterate(verse.mulaSanskrit, activeLipi, "devanagari")}
+                            ? effectiveMulaSanskrit 
+                            : transliterate(effectiveMulaSanskrit, activeLipi, "devanagari")}
                         </div>
 
                         {/* Secondary Original Devanagari (if dual-script is active and current script is not Devanagari) */}
@@ -1721,7 +1815,7 @@ Academic Citation: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on $
                               className="text-[#4a3928] font-devanagari leading-relaxed whitespace-pre-wrap text-base"
                               style={{ fontFamily: "'Tiro Devanagari Sanskrit', serif" }}
                             >
-                              {verse.mulaSanskrit}
+                              {effectiveMulaSanskrit}
                             </div>
                           </div>
                         )}
@@ -1731,13 +1825,13 @@ Academic Citation: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on $
                           <div
                             className={`font-serif italic text-[#4a3928] leading-relaxed whitespace-pre-wrap ${fontClasses.iast}`}
                           >
-                            {verse.mulaIast}
+                            {effectiveMulaIast}
                           </div>
                         )}
                       </div>
 
                       {/* Padaccheda (Word-by-word grammatical separation) */}
-                      {verse.padaccheda && (
+                      {effectivePadaccheda && (
                         isPadacchedaVisible ? (
                           <div className="p-3.5 rounded-xl bg-[#FAF5EC] border border-[#bf953f]/25 space-y-1 relative group">
                             <div className="flex items-center justify-between">
@@ -1758,7 +1852,7 @@ Academic Citation: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on $
                               </button>
                             </div>
                             <p className={`font-serif text-[#3d2f21] ${fontClasses.commentary} leading-relaxed`}>
-                              {transliterate(verse.padaccheda, activeLipi)}
+                              {transliterate(effectivePadaccheda, activeLipi)}
                             </p>
                           </div>
                         ) : (
@@ -1780,7 +1874,7 @@ Academic Citation: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on $
                       )}
 
                       {/* Anvaya (Syntactic prose order) */}
-                      {verse.anvaya && (
+                      {effectiveAnvaya && (
                         isAnvayaVisible ? (
                           <div className="p-3.5 rounded-xl bg-[#FAF5EC] border border-[#bf953f]/25 space-y-1 relative group">
                             <div className="flex items-center justify-between">
@@ -1801,7 +1895,7 @@ Academic Citation: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on $
                               </button>
                             </div>
                             <p className={`font-serif text-[#3d2f21] ${fontClasses.commentary} leading-relaxed`}>
-                              {transliterate(verse.anvaya, activeLipi)}
+                              {transliterate(effectiveAnvaya, activeLipi)}
                             </p>
                           </div>
                         ) : (
@@ -1839,13 +1933,13 @@ Academic Citation: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on $
                               : undefined,
                           }}
                         >
-                          {verse.englishTranslation}
+                          {effectiveEnglish}
                         </p>
                       </div>
 
                       {/* Classical Bhāṣya Commentaries & Ṭīkās (Multi-Selection Dropdown & Display together below verse) */}
                       <BhashyaTikaSelector
-                        verse={verse}
+                        verse={effectiveVerse}
                         granthaId={grantha.id}
                         isFocused={isFocused}
                         focusedLineSpacing={focusedLineSpacing}

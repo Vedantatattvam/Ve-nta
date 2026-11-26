@@ -80,10 +80,10 @@ export const PARAMPARA_TRADITIONS: ParamparaTradition[] = [
   },
   {
     id: "advaita",
-    name: "Advaita Vedānta",
-    devanagariName: "केवलाद्वैत-वेदान्तः (शाङ्कर-सम्प्रदायः)",
+    name: "Śāṅkarādvaita (Advaita Vedānta)",
+    devanagariName: "शाङ्कराद्वैत-वेदान्तः (केवलाद्वैतः)",
     englishTitle: "Unconditional Non-Dualism",
-    sampradayaName: "Śmārta / Daśanāmī Sampradāya",
+    sampradayaName: "Smārta / Daśanāmī Sampradāya",
     founderOrPreceptor: "Bhagavān Śrī Dakṣiṇāmūrti & Jagadguru Ādi Śaṅkarācārya",
     avatarOrDeity: "Bhagavān Śrī Dakṣiṇāmūrti (आदिगुरुः दक्षिणामूर्तिः)",
     primaryPhilosophy: "Kevalādvaita (Absolute Monism)",
@@ -94,8 +94,26 @@ export const PARAMPARA_TRADITIONS: ParamparaTradition[] = [
     badgeColor: "bg-amber-100 text-amber-900 border-amber-300",
     borderColor: "border-amber-500",
     accentBg: "from-amber-500/10 via-orange-500/5 to-transparent",
-    canonicalGranthaIds: ["tattvabodha", "mahavakyam", "advaitapancaratnam", "advaitamakaranda", "advaitarasamanjari", "vedantasara", "vivekacudamani", "mandukyopanisad", "vedantaparibhasa", "sankara-catuhsutri", "bhamati"],
+    canonicalGranthaIds: ["tattvabodha", "mahavakyam", "advaitapancaratnam", "kaupinapancakam", "jivanmuktanandalahari", "advaitanubhuti", "anatmasrivigarhana", "aparokshanubhuti", "atmabodha", "upadesasahasri", "tattvopadesa", "advaitamakaranda", "advaitarasamanjari", "vedantasara", "vivekacudamani", "mandukyopanisad", "vedantaparibhasa", "advaitasiddhi", "taptacakrankanavidhvamsanam", "sankara-catuhsutri", "bhamati"],
     subPrasthānas: [
+      {
+        id: "sankara_kritis_prakarana",
+        name: "Śaṅkarācārya Bhagavatpāda Kṛtis — Prakaraṇas",
+        sanskritName: "श्रीमच्छङ्करभगवत्पादकृतयः — प्रकरणग्रन्थाः",
+        proponent: "Jagadguru Ādi Śaṅkarācārya Bhagavatpāda",
+        century: "8th Century CE",
+        coreEpistemology: "Direct pedagogical & contemplative manuals distilling Prasthānatrayī Siddhānta—Viveka, Vairāgya, Mahāvākya-bodha, and Ātma-Sākṣātkāra.",
+        keyWorks: ["Upadeśasāhasrī", "Vivekacūḍāmaṇi", "Aparokṣānubhūti", "Ātmabodha", "Tattvabodha", "Tattvopadeśa", "Mahāvākyam", "Advaitānubhūti", "Anātmaśrīvigarhaṇam"]
+      },
+      {
+        id: "sankara_kritis_stotras",
+        name: "Śaṅkarācārya Bhagavatpāda Kṛtis — Stotras & Laharīs",
+        sanskritName: "श्रीमच्छङ्करभगवत्पादकृतयः — स्तोत्र-पञ्चक-लहर्यः",
+        proponent: "Jagadguru Ādi Śaṅkarācārya Bhagavatpāda",
+        century: "8th Century CE",
+        coreEpistemology: "Devotional-contemplative hymns, Pañcaratnas, Pañcakas, and Laharīs articulating non-dual realization and Jīvanmukti bliss in metrical verse.",
+        keyWorks: ["Advaitapañcaratnam", "Kaupīnapañcakam", "Jīvanmuktānandalaharī", "Dakṣiṇāmūrti Stotram", "Bhaja Govindam", "Manīṣāpañcakam"]
+      },
       {
         id: "bhamati",
         name: "Bhāmatī Prasthāna",
@@ -191,12 +209,19 @@ export const PARAMPARA_TRADITIONS: ParamparaTradition[] = [
         ],
         keyWorks: [
           "Prasthānatrayī Bhāṣya (Brahma Sūtras, 10 Principal Upaniṣads, Bhagavad Gītā)",
-          "Tattvabodhaḥ",
-          "Vivekacūḍāmaṇi",
           "Upadeśasāhasrī",
+          "Vivekacūḍāmaṇi",
+          "Aparokṣānubhūti",
           "Ātmabodha",
-          "Dakṣiṇāmūrti Stotra",
-          "Soundaryalaharī",
+          "Tattvabodha",
+          "Tattvopadeśa",
+          "Mahāvākyam",
+          "Advaitānubhūti",
+          "Anātmaśrīvigarhaṇam",
+          "Advaitapañcaratnam",
+          "Kaupīnapañcakam",
+          "Jīvanmuktānandalaharī",
+          "Dakṣiṇāmūrti Stotram",
           "Bhaja Govindam"
         ],
         primaryDoctrines: [
@@ -298,7 +323,8 @@ export const PARAMPARA_TRADITIONS: ParamparaTradition[] = [
           "Synthesis of Advaita Monism with supreme ecstatic devotion to Lord Kṛṣṇa"
         ],
         famousQuoteOrMantra: "वंशीविभूषितकरान्नवनीरदाभात् पीताम्बरादरुणबिम्बफलाधरोष्ठात् । पूर्णेन्दुसुन्दरमुखादरविन्दनेत्रात् कृष्णात्परं किमपि तत्त्वमहं न जाने ॥",
-        historicalContext: "Reconciled supreme philosophical Non-dualism with spontaneous Kṛṣṇa-Bhakti; contemporary of Emperor Akbar and Gosvāmī Tulsīdās."
+        historicalContext: "Reconciled supreme philosophical Non-dualism with spontaneous Kṛṣṇa-Bhakti; contemporary of Emperor Akbar and Gosvāmī Tulsīdās.",
+        primaryGranthaId: "advaitasiddhi"
       },
       {
         id: "sadananda_yogindra",

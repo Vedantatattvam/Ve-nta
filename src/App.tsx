@@ -15,6 +15,9 @@ import { BengalVedantaFacility } from "./components/BengalVedantaFacility";
 import EarlyVedantaFacility from "./components/EarlyVedantaFacility";
 import { BharatiyaLipiFacility } from "./components/BharatiyaLipiFacility";
 import AboutUsFacility from "./components/AboutUsFacility";
+import AccountProofreadHub from "./components/AccountProofreadHub";
+import ProofreadModal from "./components/ProofreadModal";
+import ProfileRegistrationModal from "./components/ProfileRegistrationModal";
 import { GlossaryDrawer } from "./components/GlossaryDrawer";
 import SideNavDrawer from "./components/SideNavDrawer";
 import SimpleTextReader from "./components/SimpleTextReader";
@@ -384,27 +387,36 @@ export default function App() {
   // If the user selected the "Simple Version" (distraction-free, sacred text only)
   if (siteVersion === "simple") {
     return (
-      <SimpleTextReader
-        initialTextId={mappingViewState.textId || "isopanisad"}
-        initialChapterId={mappingViewState.chapterId}
-        initialTab={mappingViewState.subView === "catalog" ? "catalogue" : "reader"}
-        onSwitchToScholarly={(textId, chapterId, subView) => {
-          handleToggleSiteVersion("scholarly");
-          if (textId) {
-            handleNavigateToTab("mapping", {
-              subView: subView || "reader",
-              textId,
-              chapterId,
-            });
-          } else if (subView === "catalog") {
-            handleNavigateToTab("mapping", {
-              subView: "catalog",
-            });
-          }
-        }}
-        siteVersion={siteVersion}
-        onToggleSiteVersion={handleToggleSiteVersion}
-      />
+      <>
+        <SimpleTextReader
+          initialTextId={mappingViewState.textId || "isopanisad"}
+          initialChapterId={mappingViewState.chapterId}
+          initialTab={mappingViewState.subView === "catalog" ? "catalogue" : "reader"}
+          onSwitchToScholarly={(textId, chapterId, subView) => {
+            handleToggleSiteVersion("scholarly");
+            if (textId) {
+              handleNavigateToTab("mapping", {
+                subView: subView || "reader",
+                textId,
+                chapterId,
+              });
+            } else if (subView === "catalog") {
+              handleNavigateToTab("mapping", {
+                subView: "catalog",
+              });
+            }
+          }}
+          siteVersion={siteVersion}
+          onToggleSiteVersion={handleToggleSiteVersion}
+        />
+        <ProofreadModal
+          onViewHistory={() => {
+            handleToggleSiteVersion("scholarly");
+            handleNavigateToTab("proofread");
+          }}
+        />
+        <ProfileRegistrationModal />
+      </>
     );
   }
 
@@ -510,7 +522,7 @@ export default function App() {
               >
                 <Grid className="w-3.5 h-3.5 text-[#8c6011]" />
                 <span className="hidden sm:inline">
-                  {isToolsMenuExpanded ? "Hide Facilities Menu" : "All Facilities (8)"}
+                  {isToolsMenuExpanded ? "Hide Facilities Menu" : `All Facilities (${ALL_FACILITIES.length})`}
                 </span>
                 {isToolsMenuExpanded ? (
                   <ChevronUp className="w-3.5 h-3.5 text-[#8c6011]" />
@@ -678,6 +690,13 @@ export default function App() {
             />
           )}
           {activeTab === "ocr" && <OcrUtility />}
+          {activeTab === "proofread" && (
+            <AccountProofreadHub
+              onOpenText={(textId, chapterId, verseId) =>
+                handleNavigateToTab("mapping", { textId, chapterId, verseId })
+              }
+            />
+          )}
           {activeTab === "about_us" && (
             <AboutUsFacility onNavigateToTab={handleNavigateToTab} />
           )}
@@ -698,6 +717,10 @@ export default function App() {
           isOpen={isGlossaryOpen ? true : undefined}
           onClose={() => setIsGlossaryOpen(false)}
         />
+
+        {/* Global Proofreading Submission & Registration Modals */}
+        <ProofreadModal onViewHistory={() => handleNavigateToTab("proofread")} />
+        <ProfileRegistrationModal />
 
         {/* Academic Footer with Social Media Sharing Option & Other Repositories (Hidden in Focused Reading Mode) */}
         {!isMappingFocusActive && (

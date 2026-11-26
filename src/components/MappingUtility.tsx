@@ -437,6 +437,9 @@ export default function MappingUtility({
   const [customQuery, setCustomQuery] = useState("");
   const [librarySearchFilter, setLibrarySearchFilter] = useState("");
   const [selectedParamparaFilter, setSelectedParamparaFilter] = useState<ParamparaId | "all">("all");
+  const [selectedAdvaitaSubCategory, setSelectedAdvaitaSubCategory] = useState<
+    "all" | "sankara_prakarana" | "sankara_stotras" | "post_sankara"
+  >("all");
   const [onlyNeoVedanta, setOnlyNeoVedanta] = useState(false);
 
   // Compare Mode State
@@ -682,11 +685,51 @@ Academic Reference: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on 
     setTimeout(() => setCopiedPresetId(null), 2500);
   };
 
+  const sankaraKritiPrakaranaSet = useMemo(
+    () =>
+      new Set([
+        "tattvabodha",
+        "mahavakyam",
+        "advaitanubhuti",
+        "anatmasrivigarhana",
+        "aparokshanubhuti",
+        "atmabodha",
+        "upadesasahasri",
+        "tattvopadesa",
+        "vivekacudamani",
+      ]),
+    []
+  );
+  const sankaraKritiStotraSet = useMemo(
+    () =>
+      new Set([
+        "advaitapancaratnam",
+        "kaupinapancakam",
+        "jivanmuktanandalahari",
+      ]),
+    []
+  );
+
   const filteredGranthas = useMemo(() => {
     return PRESEEDED_GRANTHAS.filter((g) => {
       // Parampara filter
       if (selectedParamparaFilter !== "all" && g.paramparaId !== selectedParamparaFilter) {
         return false;
+      }
+      // Sub-category filter under Śāṅkarādvaita (Advaita)
+      if (selectedParamparaFilter === "advaita" && selectedAdvaitaSubCategory !== "all") {
+        if (selectedAdvaitaSubCategory === "sankara_prakarana" && !sankaraKritiPrakaranaSet.has(g.id)) {
+          return false;
+        }
+        if (selectedAdvaitaSubCategory === "sankara_stotras" && !sankaraKritiStotraSet.has(g.id)) {
+          return false;
+        }
+        if (
+          selectedAdvaitaSubCategory === "post_sankara" &&
+          (sankaraKritiPrakaranaSet.has(g.id) || sankaraKritiStotraSet.has(g.id))
+        ) {
+          return false;
+        }
       }
       // Neo-Vedanta toggle
       if (onlyNeoVedanta && !g.isNeoVedanta) {
@@ -705,7 +748,14 @@ Academic Reference: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on 
       }
       return true;
     });
-  }, [selectedParamparaFilter, onlyNeoVedanta, librarySearchFilter]);
+  }, [
+    selectedParamparaFilter,
+    selectedAdvaitaSubCategory,
+    sankaraKritiPrakaranaSet,
+    sankaraKritiStotraSet,
+    onlyNeoVedanta,
+    librarySearchFilter,
+  ]);
 
   const handleCustomLookup = async () => {
     if (!customQuery.trim()) return;
@@ -965,7 +1015,10 @@ Academic Reference: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on 
           <div className="flex flex-wrap gap-1.5">
             <button
               type="button"
-              onClick={() => setSelectedParamparaFilter("all")}
+              onClick={() => {
+                setSelectedParamparaFilter("all");
+                setSelectedAdvaitaSubCategory("all");
+              }}
               className={`px-3 py-1.5 rounded-xl text-xs font-serif font-bold transition-all cursor-pointer ${
                 selectedParamparaFilter === "all"
                   ? "bg-gradient-to-br from-[#FFFFFF] via-[#FFFDF5] to-[#FFF8E7] text-[#7A3E00] border-2 border-[#C59B27] shadow-xs ring-1 ring-[#E2B755]/60 font-bold"
@@ -981,14 +1034,19 @@ Academic Reference: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on 
                 <button
                   key={trad.id}
                   type="button"
-                  onClick={() => setSelectedParamparaFilter(trad.id)}
+                  onClick={() => {
+                    setSelectedParamparaFilter(trad.id);
+                    if (trad.id !== "advaita") {
+                      setSelectedAdvaitaSubCategory("all");
+                    }
+                  }}
                   className={`px-3 py-1.5 rounded-xl text-xs font-serif font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
                     isSelected
                       ? "bg-gradient-to-br from-[#FFFFFF] via-[#FFFDF5] to-[#FFF8E7] text-[#7A3E00] border-2 border-[#C59B27] shadow-xs ring-1 ring-[#E2B755]/60 font-bold"
                       : "bg-[#FFFDF9] hover:bg-[#FAF3E4] text-[#3D2C1D] border border-[#bf953f]/30 shadow-xs"
                   }`}
                 >
-                  <span>{trad.name.split(" ")[0]}</span>
+                  <span>{trad.id === "advaita" ? "Śāṅkarādvaita" : trad.name.split(" ")[0]}</span>
                   <span className={`text-[10px] font-mono px-1 rounded ${isSelected ? "bg-[#FAF2E3] text-[#7A3E00] border border-[#d4af37] font-bold" : "bg-[#FAF2E3] text-[#8c6011]"}`}>
                     {count}
                   </span>
@@ -996,6 +1054,68 @@ Academic Reference: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on 
               );
             })}
           </div>
+
+          {selectedParamparaFilter === "advaita" && (
+            <div className="pt-2 mt-2 border-t border-[#bf953f]/15 flex flex-wrap items-center gap-1.5">
+              <span className="text-[11px] font-mono font-bold text-[#8c6011] uppercase tracking-wider mr-1">
+                Śāṅkarādvaita Categories:
+              </span>
+              {[
+                {
+                  id: "all" as const,
+                  label: "All Śāṅkarādvaita",
+                  count: PRESEEDED_GRANTHAS.filter((g) => g.paramparaId === "advaita").length,
+                },
+                {
+                  id: "sankara_prakarana" as const,
+                  label: "Śaṅkarācārya Bhagavatpāda Kṛtis (Prakaraṇas)",
+                  count: PRESEEDED_GRANTHAS.filter(
+                    (g) => g.paramparaId === "advaita" && sankaraKritiPrakaranaSet.has(g.id)
+                  ).length,
+                },
+                {
+                  id: "sankara_stotras" as const,
+                  label: "Śaṅkarācārya Bhagavatpāda Kṛtis (Stotras & Laharīs)",
+                  count: PRESEEDED_GRANTHAS.filter(
+                    (g) => g.paramparaId === "advaita" && sankaraKritiStotraSet.has(g.id)
+                  ).length,
+                },
+                {
+                  id: "post_sankara" as const,
+                  label: "Post-Śaṅkara Advaita Prakaraṇas",
+                  count: PRESEEDED_GRANTHAS.filter(
+                    (g) =>
+                      g.paramparaId === "advaita" &&
+                      !sankaraKritiPrakaranaSet.has(g.id) &&
+                      !sankaraKritiStotraSet.has(g.id)
+                  ).length,
+                },
+              ].map((cat) => {
+                const active = selectedAdvaitaSubCategory === cat.id;
+                return (
+                  <button
+                    key={cat.id}
+                    type="button"
+                    onClick={() => setSelectedAdvaitaSubCategory(cat.id)}
+                    className={`px-2.5 py-1 rounded-lg text-[11px] font-serif font-bold transition-all cursor-pointer flex items-center gap-1 ${
+                      active
+                        ? "bg-[#8c6011] text-[#FFFDF9] shadow-xs"
+                        : "bg-[#FAF5ED] hover:bg-[#FAF1E2] text-[#7A3E00] border border-[#bf953f]/30"
+                    }`}
+                  >
+                    <span>{cat.label}</span>
+                    <span
+                      className={`text-[10px] font-mono px-1 rounded ${
+                        active ? "bg-[#FFFDF9]/20 text-[#FFFDF9]" : "bg-[#FFFDF9] text-[#8c6011]"
+                      }`}
+                    >
+                      {cat.count}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          )}
         </div>
       </div>
 

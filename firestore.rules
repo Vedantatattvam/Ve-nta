@@ -1,0 +1,397 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Pillar 4 / Phase 4.1: Global Safety Net catch-all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // =========================================================================
+    // Global Helpers
+    // =========================================================================
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isVerifiedUser() {
+      return isSignedIn() && request.auth.token.email_verified == true;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() >= 1 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function isAdmin() {
+      return isVerifiedUser() && (
+        request.auth.token.email == 'vedantatattvam@gmail.com' ||
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid))
+      );
+    }
+
+    // =========================================================================
+    // Schema Validation Blueprints (Anti-Update-Gap)
+    // =========================================================================
+
+    function isValidUserProfile(data) {
+      return data.keys().hasAll(['uid', 'displayName', 'email', 'role', 'createdAt', 'updatedAt'])
+        && data.keys().hasOnly([
+          'uid', 'displayName', 'email', 'photoURL', 'role',
+          'occupation', 'interestedInVolunteering', 'institutionName',
+          'phoneNumber', 'profileCompleted', 'createdAt', 'updatedAt'
+        ])
+        && isValidId(data.uid)
+        && data.displayName is string && data.displayName.size() >= 1 && data.displayName.size() <= 120
+        && data.email is string && data.email.size() >= 3 && data.email.size() <= 200
+        && (!('photoURL' in data) || (data.photoURL is string && data.photoURL.size() <= 500))
+        && (!('occupation' in data) || (data.occupation is string && data.occupation.size() <= 160))
+        && (!('interestedInVolunteering' in data) || (data.interestedInVolunteering is bool))
+        && (!('institutionName' in data) || (data.institutionName is string && data.institutionName.size() <= 200))
+        && (!('phoneNumber' in data) || (data.phoneNumber is string && data.phoneNumber.size() <= 40))
+        && (!('profileCompleted' in data) || (data.profileCompleted is bool))
+        && (data.role == 'reader' || data.role == 'admin')
+        && data.createdAt is timestamp
+        && data.updatedAt is timestamp;
+    }
+
+    function isValidAdminRole(data) {
+      return data.keys().hasAll(['uid', 'role', 'grantedByUid', 'createdAt'])
+        && data.keys().hasOnly(['uid', 'role', 'grantedByUid', 'createdAt'])
+        && isValidId(data.uid)
+        && data.role == 'admin'
+        && isValidId(data.grantedByUid)
+        && data.createdAt is timestamp;
+    }
+
+    function isValidReadingHistoryItem(data) {
+      return data.keys().hasAll(['id', 'userId', 'textId', 'textTitle', 'actionType', 'visitedAt', 'updatedAt'])
+        && data.keys().hasOnly([
+          'id', 'userId', 'textId', 'textTitle', 'chapterId', 'chapterTitle',
+          'verseId', 'verseNumber', 'actionType', 'visitedAt', 'updatedAt'
+        ])
+        && isValidId(data.id)
+        && isValidId(data.userId)
+        && data.textId is string && data.textId.size() >= 1 && data.textId.size() <= 120
+        && data.textTitle is string && data.textTitle.size() >= 1 && data.textTitle.size() <= 200
+        && (!('chapterId' in data) || (data.chapterId is string && data.chapterId.size() <= 120))
+        && (!('chapterTitle' in data) || (data.chapterTitle is string && data.chapterTitle.size() <= 240))
+        && (!('verseId' in data) || (data.verseId is string && data.verseId.size() <= 120))
+        && (!('verseNumber' in data) || (data.verseNumber is string && data.verseNumber.size() <= 60))
+        && (data.actionType == 'read' || data.actionType == 'proofread_submitted')
+        && data.visitedAt is timestamp
+        && data.updatedAt is timestamp;
+    }
+
+    function isValidProofreadField(field) {
+      return field == 'mulaSanskrit'
+        || field == 'mulaIast'
+        || field == 'padaccheda'
+        || field == 'anvaya'
+        || field == 'englishTranslation'
+        || field == 'bhashyaExtract'
+        || field == 'commentaryNotes';
+    }
+
+    function isValidProofreadSubmission(data) {
+      return data.keys().hasAll([
+          'id', 'submitterUid', 'submitterName', 'submitterEmail',
+          'textId', 'textTitle', 'verseId', 'verseNumber', 'field',
+          'originalText', 'proposedText', 'reason', 'status', 'createdAt', 'updatedAt'
+        ])
+        && data.keys().hasOnly([
+          'id', 'submitterUid', 'submitterName', 'submitterEmail',
+          'textId', 'textTitle', 'chapterId', 'chapterTitle',
+          'verseId', 'verseNumber', 'field',
+          'originalText', 'proposedText', 'reason', 'status',
+          'reviewerUid', 'reviewerNote', 'approvedCorrectionId',
+          'createdAt', 'updatedAt'
+        ])
+        && isValidId(data.id)
+        && isValidId(data.submitterUid)
+        && data.submitterName is string && data.submitterName.size() >= 1 && data.submitterName.size() <= 120
+        && data.submitterEmail is string && data.submitterEmail.size() >= 3 && data.submitterEmail.size() <= 200
+        && data.textId is string && data.textId.size() >= 1 && data.textId.size() <= 120
+        && data.textTitle is string && data.textTitle.size() >= 1 && data.textTitle.size() <= 200
+        && (!('chapterId' in data) || (data.chapterId is string && data.chapterId.size() <= 120))
+        && (!('chapterTitle' in data) || (data.chapterTitle is string && data.chapterTitle.size() <= 240))
+        && data.verseId is string && data.verseId.size() >= 1 && data.verseId.size() <= 120
+        && data.verseNumber is string && data.verseNumber.size() >= 1 && data.verseNumber.size() <= 60
+        && isValidProofreadField(data.field)
+        && data.originalText is string && data.originalText.size() >= 0 && data.originalText.size() <= 12000
+        && data.proposedText is string && data.proposedText.size() >= 1 && data.proposedText.size() <= 12000
+        && data.reason is string && data.reason.size() >= 1 && data.reason.size() <= 2000
+        && (data.status == 'pending' || data.status == 'approved' || data.status == 'rejected')
+        && (!('reviewerUid' in data) || isValidId(data.reviewerUid))
+        && (!('reviewerNote' in data) || (data.reviewerNote is string && data.reviewerNote.size() <= 2000))
+        && (!('approvedCorrectionId' in data) || isValidId(data.approvedCorrectionId))
+        && data.createdAt is timestamp
+        && data.updatedAt is timestamp;
+    }
+
+    function isValidApprovedCorrection(data) {
+      return data.keys().hasAll([
+          'id', 'textId', 'verseId', 'field',
+          'originalText', 'correctedText', 'submissionId', 'approvedByUid',
+          'createdAt', 'updatedAt'
+        ])
+        && data.keys().hasOnly([
+          'id', 'textId', 'chapterId', 'verseId', 'field',
+          'originalText', 'correctedText', 'submissionId', 'approvedByUid',
+          'createdAt', 'updatedAt'
+        ])
+        && isValidId(data.id)
+        && data.textId is string && data.textId.size() >= 1 && data.textId.size() <= 120
+        && (!('chapterId' in data) || (data.chapterId is string && data.chapterId.size() <= 120))
+        && data.verseId is string && data.verseId.size() >= 1 && data.verseId.size() <= 120
+        && isValidProofreadField(data.field)
+        && data.originalText is string && data.originalText.size() >= 0 && data.originalText.size() <= 12000
+        && data.correctedText is string && data.correctedText.size() >= 1 && data.correctedText.size() <= 12000
+        && isValidId(data.submissionId)
+        && isValidId(data.approvedByUid)
+        && data.createdAt is timestamp
+        && data.updatedAt is timestamp;
+    }
+
+    function isValidDriveSyncState(data) {
+      return data.keys().hasAll([
+          'id', 'spreadsheetFileId', 'spreadsheetUrl', 'fileName',
+          'syncedCount', 'lastSyncedByUid', 'updatedAt'
+        ])
+        && data.keys().hasOnly([
+          'id', 'spreadsheetFileId', 'spreadsheetUrl', 'fileName',
+          'syncedCount', 'lastSyncedByUid', 'catalogSignature', 'updatedAt'
+        ])
+        && isValidId(data.id)
+        && data.spreadsheetFileId is string && data.spreadsheetFileId.size() >= 1 && data.spreadsheetFileId.size() <= 200
+        && data.spreadsheetUrl is string && data.spreadsheetUrl.size() >= 1 && data.spreadsheetUrl.size() <= 500
+        && data.fileName is string && data.fileName.size() >= 1 && data.fileName.size() <= 200
+        && data.syncedCount is int && data.syncedCount >= 0 && data.syncedCount <= 1000000
+        && isValidId(data.lastSyncedByUid)
+        && (!('catalogSignature' in data) || (data.catalogSignature is string && data.catalogSignature.size() <= 200))
+        && data.updatedAt is timestamp;
+    }
+
+    // =========================================================================
+    // Collection Rules
+    // =========================================================================
+
+    match /users/{userId} {
+      // PII-protected: only owner or admin can read single doc; only admin can list
+      allow get: if isValidId(userId) && (isOwner(userId) || isAdmin());
+      allow list: if isAdmin();
+
+      allow create: if isVerifiedUser()
+        && isValidId(userId)
+        && isOwner(userId)
+        && isValidUserProfile(incoming())
+        && incoming().uid == userId
+        && incoming().role == 'reader'
+        && incoming().createdAt == request.time
+        && incoming().updatedAt == request.time;
+
+      allow update: if isVerifiedUser()
+        && isValidId(userId)
+        && isValidUserProfile(incoming())
+        && incoming().uid == existing().uid
+        && incoming().createdAt == existing().createdAt
+        && incoming().updatedAt == request.time
+        && (
+          (isAdmin() && incoming().diff(existing()).affectedKeys().hasOnly([
+            'displayName', 'email', 'photoURL', 'role',
+            'occupation', 'interestedInVolunteering', 'institutionName',
+            'phoneNumber', 'profileCompleted', 'updatedAt'
+          ])) ||
+          (isOwner(userId) && incoming().role == existing().role && incoming().diff(existing()).affectedKeys().hasOnly([
+            'displayName', 'email', 'photoURL',
+            'occupation', 'interestedInVolunteering', 'institutionName',
+            'phoneNumber', 'profileCompleted', 'updatedAt'
+          ]))
+        );
+
+      allow delete: if isAdmin() && isValidId(userId);
+
+      // Personal per-user reading & activity history subcollection
+      match /history/{historyId} {
+        allow get: if isValidId(userId) && isValidId(historyId) && (isOwner(userId) || isAdmin());
+        allow list: if isOwner(userId) || isAdmin();
+
+        allow create: if isVerifiedUser()
+          && isValidId(userId)
+          && isValidId(historyId)
+          && isOwner(userId)
+          && isValidReadingHistoryItem(incoming())
+          && incoming().id == historyId
+          && incoming().userId == userId
+          && incoming().visitedAt == request.time
+          && incoming().updatedAt == request.time
+          && exists(/databases/$(database)/documents/users/$(userId));
+
+        allow update: if isVerifiedUser()
+          && isValidId(userId)
+          && isValidId(historyId)
+          && isValidReadingHistoryItem(incoming())
+          && incoming().id == existing().id
+          && incoming().userId == existing().userId
+          && incoming().visitedAt == existing().visitedAt
+          && incoming().updatedAt == request.time
+          && (
+            (isAdmin() && incoming().diff(existing()).affectedKeys().hasOnly(['chapterId', 'chapterTitle', 'verseId', 'verseNumber', 'actionType', 'updatedAt'])) ||
+            (isOwner(userId) && incoming().diff(existing()).affectedKeys().hasOnly(['chapterId', 'chapterTitle', 'verseId', 'verseNumber', 'actionType', 'updatedAt']))
+          );
+
+        allow delete: if isValidId(userId) && isValidId(historyId) && (isOwner(userId) || isAdmin());
+      }
+    }
+
+    match /admins/{userId} {
+      allow get: if isValidId(userId) && (isOwner(userId) || isAdmin());
+      allow list: if isAdmin();
+      allow create: if isAdmin()
+        && isValidId(userId)
+        && isValidAdminRole(incoming())
+        && incoming().uid == userId
+        && incoming().grantedByUid == request.auth.uid
+        && incoming().createdAt == request.time;
+      allow update: if isAdmin()
+        && isValidId(userId)
+        && isValidAdminRole(incoming())
+        && incoming().uid == existing().uid
+        && incoming().createdAt == existing().createdAt
+        && incoming().diff(existing()).affectedKeys().hasOnly(['role', 'grantedByUid']);
+      allow delete: if isAdmin() && isValidId(userId);
+    }
+
+    match /proofreadSubmissions/{submissionId} {
+      // PII-protected (contains submitterEmail): submitter sees own, admin sees all
+      allow get: if isValidId(submissionId) && isSignedIn() && (existing().submitterUid == request.auth.uid || isAdmin());
+      allow list: if isSignedIn() && (resource.data.submitterUid == request.auth.uid || isAdmin());
+
+      allow create: if isVerifiedUser()
+        && isValidId(submissionId)
+        && isValidProofreadSubmission(incoming())
+        && incoming().id == submissionId
+        && incoming().submitterUid == request.auth.uid
+        && incoming().status == 'pending'
+        && !('reviewerUid' in incoming())
+        && !('reviewerNote' in incoming())
+        && !('approvedCorrectionId' in incoming())
+        && incoming().createdAt == request.time
+        && incoming().updatedAt == request.time
+        && exists(/databases/$(database)/documents/users/$(request.auth.uid));
+
+      allow update: if isVerifiedUser()
+        && isValidId(submissionId)
+        && isValidProofreadSubmission(incoming())
+        && incoming().id == existing().id
+        && incoming().submitterUid == existing().submitterUid
+        && incoming().submitterName == existing().submitterName
+        && incoming().submitterEmail == existing().submitterEmail
+        && incoming().textId == existing().textId
+        && incoming().verseId == existing().verseId
+        && incoming().field == existing().field
+        && incoming().originalText == existing().originalText
+        && incoming().createdAt == existing().createdAt
+        && incoming().updatedAt == request.time
+        && (
+          // Action 1: Curator / Admin moderates (approve or reject)
+          (
+            isAdmin()
+            && incoming().reviewerUid == request.auth.uid
+            && incoming().diff(existing()).affectedKeys().hasOnly([
+              'proposedText', 'status', 'reviewerUid', 'reviewerNote', 'approvedCorrectionId', 'updatedAt'
+            ])
+            && (
+              incoming().status == 'rejected' ||
+              incoming().status == 'pending' ||
+              (
+                incoming().status == 'approved'
+                && ('approvedCorrectionId' in incoming())
+                && existsAfter(/databases/$(database)/documents/approvedCorrections/$(incoming().approvedCorrectionId))
+              )
+            )
+          ) ||
+          // Action 2: Submitter edits own still-pending draft (locked once approved/rejected)
+          (
+            existing().submitterUid == request.auth.uid
+            && existing().status == 'pending'
+            && incoming().status == 'pending'
+            && incoming().diff(existing()).affectedKeys().hasOnly(['proposedText', 'reason', 'updatedAt'])
+          )
+        );
+
+      allow delete: if isValidId(submissionId) && isVerifiedUser() && (
+        isAdmin() ||
+        (existing().submitterUid == request.auth.uid && existing().status == 'pending')
+      );
+    }
+
+    match /approvedCorrections/{correctionId} {
+      // Zero-PII public corrections rendered live on sacred texts
+      allow get: if isValidId(correctionId);
+      allow list: if true;
+
+      allow create: if isAdmin()
+        && isValidId(correctionId)
+        && isValidApprovedCorrection(incoming())
+        && incoming().id == correctionId
+        && incoming().approvedByUid == request.auth.uid
+        && incoming().createdAt == request.time
+        && incoming().updatedAt == request.time
+        && exists(/databases/$(database)/documents/proofreadSubmissions/$(incoming().submissionId));
+
+      allow update: if isAdmin()
+        && isValidId(correctionId)
+        && isValidApprovedCorrection(incoming())
+        && incoming().id == existing().id
+        && incoming().textId == existing().textId
+        && incoming().verseId == existing().verseId
+        && incoming().field == existing().field
+        && incoming().createdAt == existing().createdAt
+        && incoming().updatedAt == request.time
+        && incoming().approvedByUid == request.auth.uid
+        && incoming().diff(existing()).affectedKeys().hasOnly([
+          'originalText', 'correctedText', 'submissionId', 'approvedByUid', 'updatedAt'
+        ]);
+
+      allow delete: if isAdmin() && isValidId(correctionId);
+    }
+
+    match /appSettings/{settingId} {
+      allow get: if isValidId(settingId) && isAdmin();
+      allow list: if false;
+
+      allow create: if isAdmin()
+        && isValidId(settingId)
+        && isValidDriveSyncState(incoming())
+        && incoming().id == settingId
+        && incoming().lastSyncedByUid == request.auth.uid
+        && incoming().updatedAt == request.time;
+
+      allow update: if isAdmin()
+        && isValidId(settingId)
+        && isValidDriveSyncState(incoming())
+        && incoming().id == existing().id
+        && incoming().lastSyncedByUid == request.auth.uid
+        && incoming().updatedAt == request.time
+        && incoming().diff(existing()).affectedKeys().hasOnly([
+          'spreadsheetFileId', 'spreadsheetUrl', 'fileName', 'syncedCount', 'lastSyncedByUid', 'catalogSignature', 'updatedAt'
+        ]);
+
+      allow delete: if isAdmin() && isValidId(settingId);
+    }
+  }
+}

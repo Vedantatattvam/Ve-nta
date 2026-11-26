@@ -1,0 +1,437 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "Authenticated user account profile with strict PII isolation.",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "description": "Firebase Auth UID matching the document ID.",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "displayName": {
+          "type": "string",
+          "description": "User display name from Google Sign-In.",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "Verified email address of the user (PII).",
+          "minLength": 3,
+          "maxLength": 200
+        },
+        "photoURL": {
+          "type": "string",
+          "description": "Optional avatar URL from Google account.",
+          "maxLength": 500
+        },
+        "role": {
+          "type": "string",
+          "enum": ["reader", "admin"],
+          "description": "Application role. Self-registration is locked to 'reader'."
+        },
+        "occupation": {
+          "type": "string",
+          "description": "User occupation collected during sign-up (PII).",
+          "maxLength": 160
+        },
+        "interestedInVolunteering": {
+          "type": "boolean",
+          "description": "Whether the user is interested in volunteering."
+        },
+        "institutionName": {
+          "type": "string",
+          "description": "Institution, university, matha, or organization name (PII).",
+          "maxLength": 200
+        },
+        "phoneNumber": {
+          "type": "string",
+          "description": "Contact phone or WhatsApp number (PII).",
+          "maxLength": 40
+        },
+        "profileCompleted": {
+          "type": "boolean",
+          "description": "Whether the user has completed the sign-up registration fields."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp of initial profile creation."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp of last profile update."
+        }
+      },
+      "required": ["uid", "displayName", "email", "role", "createdAt", "updatedAt"]
+    },
+    "AdminRole": {
+      "title": "AdminRole",
+      "description": "Trusted database record granting curator/admin privileges.",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "role": {
+          "type": "string",
+          "enum": ["admin"]
+        },
+        "grantedByUid": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["uid", "role", "grantedByUid", "createdAt"]
+    },
+    "ReadingHistoryItem": {
+      "title": "ReadingHistoryItem",
+      "description": "Per-user cross-session reading and proofreading activity history.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "userId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "textId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "textTitle": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "chapterId": {
+          "type": "string",
+          "maxLength": 120
+        },
+        "chapterTitle": {
+          "type": "string",
+          "maxLength": 240
+        },
+        "verseId": {
+          "type": "string",
+          "maxLength": 120
+        },
+        "verseNumber": {
+          "type": "string",
+          "maxLength": 60
+        },
+        "actionType": {
+          "type": "string",
+          "enum": ["read", "proofread_submitted"]
+        },
+        "visitedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["id", "userId", "textId", "textTitle", "actionType", "visitedAt", "updatedAt"]
+    },
+    "ProofreadSubmission": {
+      "title": "ProofreadSubmission",
+      "description": "User-submitted proofreading correction request awaiting or resolved by curator review.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "submitterUid": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "submitterName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "submitterEmail": {
+          "type": "string",
+          "format": "email",
+          "minLength": 3,
+          "maxLength": 200
+        },
+        "textId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "textTitle": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "chapterId": {
+          "type": "string",
+          "maxLength": 120
+        },
+        "chapterTitle": {
+          "type": "string",
+          "maxLength": 240
+        },
+        "verseId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "verseNumber": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 60
+        },
+        "field": {
+          "type": "string",
+          "enum": [
+            "mulaSanskrit",
+            "mulaIast",
+            "padaccheda",
+            "anvaya",
+            "englishTranslation",
+            "bhashyaExtract",
+            "commentaryNotes"
+          ]
+        },
+        "originalText": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 12000
+        },
+        "proposedText": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 12000
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "status": {
+          "type": "string",
+          "enum": ["pending", "approved", "rejected"]
+        },
+        "reviewerUid": {
+          "type": "string",
+          "maxLength": 128
+        },
+        "reviewerNote": {
+          "type": "string",
+          "maxLength": 2000
+        },
+        "approvedCorrectionId": {
+          "type": "string",
+          "maxLength": 128
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "submitterUid",
+        "submitterName",
+        "submitterEmail",
+        "textId",
+        "textTitle",
+        "verseId",
+        "verseNumber",
+        "field",
+        "originalText",
+        "proposedText",
+        "reason",
+        "status",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "ApprovedCorrection": {
+      "title": "ApprovedCorrection",
+      "description": "Curator-approved text correction publicly displayed as a live overlay on sacred texts (contains zero PII).",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "textId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "chapterId": {
+          "type": "string",
+          "maxLength": 120
+        },
+        "verseId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "field": {
+          "type": "string",
+          "enum": [
+            "mulaSanskrit",
+            "mulaIast",
+            "padaccheda",
+            "anvaya",
+            "englishTranslation",
+            "bhashyaExtract",
+            "commentaryNotes"
+          ]
+        },
+        "originalText": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 12000
+        },
+        "correctedText": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 12000
+        },
+        "submissionId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "approvedByUid": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "textId",
+        "verseId",
+        "field",
+        "originalText",
+        "correctedText",
+        "submissionId",
+        "approvedByUid",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "DriveSyncState": {
+      "title": "DriveSyncState",
+      "description": "Metadata linking the proofreading registry to the curator's Google Drive Spreadsheet.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "spreadsheetFileId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "spreadsheetUrl": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "fileName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "syncedCount": {
+          "type": "integer"
+        },
+        "lastSyncedByUid": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "catalogSignature": {
+          "type": "string",
+          "maxLength": 200,
+          "description": "Deterministic signature of text catalog, commentaries, translations, and approved edits at last sync."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "spreadsheetFileId",
+        "spreadsheetUrl",
+        "fileName",
+        "syncedCount",
+        "lastSyncedByUid",
+        "updatedAt"
+      ]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/UserProfile" },
+      "description": "Private user profiles (PII-protected; readable only by owner or admin)."
+    },
+    "/admins/{userId}": {
+      "schema": { "$ref": "#/entities/AdminRole" },
+      "description": "Trusted admin role assignments."
+    },
+    "/users/{userId}/history/{historyId}": {
+      "schema": { "$ref": "#/entities/ReadingHistoryItem" },
+      "description": "Personal reading and proofreading activity history per authenticated user."
+    },
+    "/proofreadSubmissions/{submissionId}": {
+      "schema": { "$ref": "#/entities/ProofreadSubmission" },
+      "description": "Proofreading suggestions submitted by verified users and moderated by curator/admin."
+    },
+    "/approvedCorrections/{correctionId}": {
+      "schema": { "$ref": "#/entities/ApprovedCorrection" },
+      "description": "Publicly readable approved proofreading corrections applied live to sacred texts."
+    },
+    "/appSettings/{settingId}": {
+      "schema": { "$ref": "#/entities/DriveSyncState" },
+      "description": "Admin-managed Google Drive spreadsheet sync metadata."
+    }
+  }
+}

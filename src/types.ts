@@ -1,4 +1,4 @@
-export type TabType = "tree" | "mapping" | "bengal_vedanta" | "early_vedanta" | "bharatiya_lipi" | "comparative_council" | "comparative" | "translation" | "qa" | "ocr" | "sastrartha" | "about_us";
+export type TabType = "tree" | "mapping" | "bengal_vedanta" | "early_vedanta" | "bharatiya_lipi" | "comparative_council" | "comparative" | "translation" | "qa" | "ocr" | "sastrartha" | "proofread" | "about_us";
 
 export type ParamparaId = 
   | "all"

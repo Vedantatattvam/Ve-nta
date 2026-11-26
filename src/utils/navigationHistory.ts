@@ -38,9 +38,19 @@ const GRANTHA_NAMES: Record<string, string> = {
   advaitamakaranda: "Advaita-Makarandaḥ",
   advaitarasamanjari: "Advaita-Rasamañjarī",
   advaitapancaratnam: "Advaita Pañcaratnam",
+  kaupinapancakam: "Kaupīnapañcakam",
+  jivanmuktanandalahari: "Jīvanmuktānandalaharī",
+  advaitanubhuti: "Advaitānubhūtiḥ",
+  anatmasrivigarhana: "Anātmaśrīvigarhaṇaprakaraṇam",
+  aparokshanubhuti: "Aparokṣānubhūtiḥ",
+  atmabodha: "Ātmabodhaḥ",
+  upadesasahasri: "Upadeśasāhasrī (Gadyaprabandhaḥ)",
+  tattvopadesa: "Tattvopadeśaḥ",
   vedantasara: "Vedāntasāraḥ",
   jivanmuktiviveka: "Jīvanmuktivivekaḥ",
   vedantaparibhasa: "Vedānta-Paribhāṣā",
+  advaitasiddhi: "Advaitasiddhiḥ",
+  taptacakrankanavidhvamsanam: "Taptacakrāṅkanavidhvaṁsanam",
   vivekacudamani: "Vivekacūḍāmaṇiḥ",
   sribhasya: "Śrībhāṣyam",
   yatindramatadipika: "Yatīndramatadīpikā",
@@ -119,6 +129,10 @@ export function getFriendlyPageTitle(state: AppNavState): string {
 
   if (state.tab === "bharatiya_lipi") {
     return "Bharatiya Lipi & Typography";
+  }
+
+  if (state.tab === "proofread") {
+    return "My History & Proofreading";
   }
 
   if (state.tab === "about_us") {
@@ -201,6 +215,7 @@ export function parseHash(hashStr: string = window.location.hash): AppNavState {
     "qa",
     "ocr",
     "sastrartha",
+    "proofread",
     "about_us",
   ];
 

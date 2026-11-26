@@ -18,7 +18,8 @@ import {
   Scroll,
   Library,
   Type,
-  Info
+  Info,
+  History
 } from "lucide-react";
 
 export interface FacilityItem {
@@ -112,6 +113,16 @@ export const ALL_FACILITIES: FacilityItem[] = [
     description: "Special Cell on Bengal's 75 Thinkers, 3 Canonical Categories, & Socio-Spiritual Matrix (Buddhodev Ghosh, 2024)",
     icon: Library,
     badge: "Research Cell",
+  },
+  {
+    id: "proofread",
+    title: "My History & Proofreading",
+    sanskritTitle: "स्वाध्याय-इतिहासः एवं पाठ-संशोधनम्",
+    shortLabel: "History & Proofread",
+    category: "tools",
+    description: "Personal Reading History, Text Proofreading Suggestions, Curator Approval & Google Drive Sheet Sync",
+    icon: History,
+    badge: "Account & Edits",
   },
   {
     id: "about_us",

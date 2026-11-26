@@ -2,6 +2,7 @@ import React, { useState, useMemo, useEffect, useRef } from "react";
 import { PRESEEDED_GRANTHAS } from "../data";
 import { TextEntry, GranthaChapter, GranthaVerse } from "../types";
 import { useBharatiyaLipi } from "../context/BharatiyaLipiContext";
+import { useAuthProofread } from "../context/AuthProofreadContext";
 import { SISTER_REPOSITORIES } from "../utils/sisterRepositories";
 import LogoEmblem from "./LogoEmblem";
 import BharatiyaLipiSwitcher from "./BharatiyaLipiSwitcher";
@@ -17,6 +18,8 @@ import {
   Library,
   Copy,
   Check,
+  CheckCircle2,
+  FileEdit,
   Quote,
   Filter,
   ArrowRight,
@@ -50,6 +53,12 @@ export default function SimpleTextReader({
   onToggleSiteVersion,
 }: SimpleTextReaderProps) {
   const { transliterate, activeLipi } = useBharatiyaLipi();
+  const {
+    resolveVerseField,
+    getVerseApprovedCorrections,
+    openProofreadModal,
+    recordReadingVisit,
+  } = useAuthProofread();
 
   // Active sub-tab in simple mode: "reader" (Sacred Text) or "catalogue" (Granthasūcī)
   const [activeSimpleTab, setActiveSimpleTab] = useState<"reader" | "catalogue">(initialTab);
@@ -104,6 +113,17 @@ export default function SimpleTextReader({
     return PRESEEDED_GRANTHAS.find((g) => g.id === selectedGranthaId);
   }, [selectedGranthaId]);
 
+  useEffect(() => {
+    if (activeSimpleTab === "reader" && currentGrantha) {
+      void recordReadingVisit({
+        textId: currentGrantha.id,
+        textTitle: currentGrantha.title,
+        chapterId: selectedChapterId !== "all" ? selectedChapterId : undefined,
+        actionType: "read",
+      });
+    }
+  }, [activeSimpleTab, currentGrantha, selectedChapterId, recordReadingVisit]);
+
   // Reset chapter selection when grantha changes
   const handleSelectGrantha = (granthaId: string, chapterId: string = "all") => {
     setSelectedGranthaId(granthaId);
@@ -124,7 +144,31 @@ export default function SimpleTextReader({
     ];
     const nyayaIds = ["brahmasutra", "brahmasutra-saktabhasya"];
     const smritiIds = ["bhagavadgita"];
-    const prakaranaIds = ["tattvabodha", "mahavakyam", "advaitapancaratnam", "advaitamakaranda", "advaitarasamanjari", "vivekacudamani", "vedantasara", "jivanmuktiviveka", "vedantaparibhasa"];
+    const sankaraKritiPrakaranaIds = [
+      "tattvabodha",
+      "mahavakyam",
+      "advaitanubhuti",
+      "anatmasrivigarhana",
+      "aparokshanubhuti",
+      "atmabodha",
+      "upadesasahasri",
+      "tattvopadesa",
+      "vivekacudamani",
+    ];
+    const sankaraKritiStotraIds = [
+      "advaitapancaratnam",
+      "kaupinapancakam",
+      "jivanmuktanandalahari",
+    ];
+    const postSankaraPrakaranaIds = [
+      "advaitamakaranda",
+      "advaitarasamanjari",
+      "vedantasara",
+      "jivanmuktiviveka",
+      "vedantaparibhasa",
+      "advaitasiddhi",
+      "taptacakrankanavidhvamsanam",
+    ];
     const bhashyaIds = [
       "sribhasya", "anubhasya", "yatindramatadipika", "upadhikhandana", "nyayamrta",
       "vedanta-parijata-saurabha", "siddhantaratna", "swaminarayan-brahmasutra-bhashyam",
@@ -135,14 +179,18 @@ export default function SimpleTextReader({
     const itaropanishads = PRESEEDED_GRANTHAS.filter((g) => itaropanishadIds.includes(g.id));
     const nyaya = PRESEEDED_GRANTHAS.filter((g) => nyayaIds.includes(g.id));
     const smriti = PRESEEDED_GRANTHAS.filter((g) => smritiIds.includes(g.id));
-    const prakarana = PRESEEDED_GRANTHAS.filter((g) => prakaranaIds.includes(g.id));
+    const sankaraKritiPrakaranas = PRESEEDED_GRANTHAS.filter((g) => sankaraKritiPrakaranaIds.includes(g.id));
+    const sankaraKritiStotras = PRESEEDED_GRANTHAS.filter((g) => sankaraKritiStotraIds.includes(g.id));
+    const postSankaraPrakaranas = PRESEEDED_GRANTHAS.filter((g) => postSankaraPrakaranaIds.includes(g.id));
     const bhashyas = PRESEEDED_GRANTHAS.filter((g) => bhashyaIds.includes(g.id));
     const modern = PRESEEDED_GRANTHAS.filter(
       (g) => !upanishadIds.includes(g.id) &&
              !itaropanishadIds.includes(g.id) &&
              !nyayaIds.includes(g.id) &&
              !smritiIds.includes(g.id) &&
-             !prakaranaIds.includes(g.id) &&
+             !sankaraKritiPrakaranaIds.includes(g.id) &&
+             !sankaraKritiStotraIds.includes(g.id) &&
+             !postSankaraPrakaranaIds.includes(g.id) &&
              !bhashyaIds.includes(g.id)
     );
 
@@ -172,10 +220,22 @@ export default function SimpleTextReader({
         granthas: smriti,
       },
       {
+        id: "sankara-kritis-prakarana",
+        categoryName: "Śāṅkarādvaita — Śaṅkarācārya Bhagavatpāda Kṛtis (Prakaraṇas)",
+        categorySanskrit: "शाङ्कराद्वैतम् — श्रीमच्छङ्करभगवत्पादकृतयः (प्रकरणग्रन्थाः)",
+        granthas: sankaraKritiPrakaranas,
+      },
+      {
+        id: "sankara-kritis-stotras",
+        categoryName: "Śāṅkarādvaita — Śaṅkarācārya Bhagavatpāda Kṛtis (Stotras & Laharīs)",
+        categorySanskrit: "शाङ्कराद्वैतम् — श्रीमच्छङ्करभगवत्पादकृतयः (स्तोत्र-पञ्चक-लहर्यः)",
+        granthas: sankaraKritiStotras,
+      },
+      {
         id: "prakarana",
-        categoryName: "Classical Prakaraṇa Granthas",
-        categorySanskrit: "प्रकरणग्रन्थाः (विवेकचूडामणि-वेदान्तसारादयः)",
-        granthas: prakarana,
+        categoryName: "Śāṅkarādvaita — Post-Śaṅkara Advaita Prakaraṇas",
+        categorySanskrit: "शाङ्कराद्वैतम् — उत्तर-शाङ्कराद्वैतप्रकरणानि",
+        granthas: postSankaraPrakaranas,
       },
       {
         id: "bhashya",
@@ -776,54 +836,110 @@ Academic Citation: ${currentGrantha.transliteratedTitle}, verse ${verse.number}.
 
                     {/* Verses / Sūtras Container */}
                     <div className="space-y-6 sm:space-y-8 divide-y divide-[#bf953f]/20">
-                      {chapter.verses.map((verse, vIdx) => (
-                        <article
-                          key={verse.id || vIdx}
-                          id={`verse-${verse.id || vIdx}`}
-                          className="pt-6 first:pt-0 space-y-3.5 text-center group transition-colors duration-200 rounded-xl"
-                        >
-                          {/* Verse Number Pill & Quick Verse Citation */}
-                          <div className="inline-flex items-center justify-center gap-2">
-                            <span className="px-2.5 py-0.5 rounded-full bg-[#FAF5ED] border border-[#bf953f]/40 text-[11px] font-mono font-bold text-[#8c6011] tracking-wider">
-                              {verse.number}
-                            </span>
-                            <button
-                              type="button"
-                              onClick={() => handleCopyVerse(verse, chapter.chapterTitle)}
-                              className="opacity-60 group-hover:opacity-100 hover:opacity-100 p-1 rounded-md text-[#8c6011] hover:bg-[#FAF1E2] transition cursor-pointer"
-                              title="Copy verse text and bibliographic citation"
-                            >
-                              {copiedVerseId === (verse.id || verse.number) ? (
-                                <span className="flex items-center gap-1 text-[10px] font-mono text-emerald-800">
-                                  <Check className="w-3 h-3 text-emerald-700" />
-                                  <span>Copied</span>
+                      {chapter.verses.map((verse, vIdx) => {
+                        const effectiveMula = resolveVerseField(
+                          currentGrantha.id,
+                          verse,
+                          "mulaSanskrit"
+                        );
+                        const effectiveIast = resolveVerseField(
+                          currentGrantha.id,
+                          verse,
+                          "mulaIast"
+                        );
+                        const verseApproved = getVerseApprovedCorrections(
+                          currentGrantha.id,
+                          verse.id
+                        );
+                        const effectiveVerse: GranthaVerse = {
+                          ...verse,
+                          mulaSanskrit: effectiveMula,
+                          mulaIast: effectiveIast,
+                        };
+
+                        return (
+                          <article
+                            key={verse.id || vIdx}
+                            id={`verse-${verse.id || vIdx}`}
+                            className="pt-6 first:pt-0 space-y-3.5 text-center group transition-colors duration-200 rounded-xl"
+                          >
+                            {/* Verse Number Pill & Quick Verse Citation + Proofread */}
+                            <div className="inline-flex items-center justify-center gap-2 flex-wrap">
+                              <span className="px-2.5 py-0.5 rounded-full bg-[#FAF5ED] border border-[#bf953f]/40 text-[11px] font-mono font-bold text-[#8c6011] tracking-wider">
+                                {verse.number}
+                              </span>
+                              {verseApproved.length > 0 && (
+                                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-100 border border-emerald-300 text-emerald-900 text-[10px] font-mono font-bold">
+                                  <CheckCircle2 className="w-3 h-3" />
+                                  <span>Proofread</span>
                                 </span>
-                              ) : (
-                                <Quote className="w-3 h-3 text-[#8c6011]" />
                               )}
-                            </button>
-                          </div>
+                              <button
+                                type="button"
+                                onClick={() => handleCopyVerse(effectiveVerse, chapter.chapterTitle)}
+                                className="opacity-60 group-hover:opacity-100 hover:opacity-100 p-1 rounded-md text-[#8c6011] hover:bg-[#FAF1E2] transition cursor-pointer"
+                                title="Copy verse text and bibliographic citation"
+                              >
+                                {copiedVerseId === (verse.id || verse.number) ? (
+                                  <span className="flex items-center gap-1 text-[10px] font-mono text-emerald-800">
+                                    <Check className="w-3 h-3 text-emerald-700" />
+                                    <span>Copied</span>
+                                  </span>
+                                ) : (
+                                  <Quote className="w-3 h-3 text-[#8c6011]" />
+                                )}
+                              </button>
+                              <button
+                                type="button"
+                                onClick={() =>
+                                  openProofreadModal({
+                                    textId: currentGrantha.id,
+                                    textTitle: currentGrantha.title,
+                                    chapterId: chapter.id,
+                                    chapterTitle: chapter.chapterTitle,
+                                    verseId: verse.id,
+                                    verseNumber: verse.number,
+                                    initialField: "mulaSanskrit",
+                                    verseSnapshot: {
+                                      mulaSanskrit: verse.mulaSanskrit,
+                                      mulaIast: verse.mulaIast,
+                                      padaccheda: verse.padaccheda || "",
+                                      anvaya: verse.anvaya || "",
+                                      englishTranslation: verse.englishTranslation,
+                                      bhashyaExtract: verse.bhashyaExtract || "",
+                                      commentaryNotes: verse.commentaryNotes || "",
+                                    },
+                                  })
+                                }
+                                className="opacity-65 group-hover:opacity-100 hover:opacity-100 px-2 py-0.5 rounded-md text-[10px] font-mono text-emerald-800 hover:bg-emerald-50 border border-transparent hover:border-emerald-300 flex items-center gap-1 transition cursor-pointer"
+                                title="Suggest a proofreading correction for this verse"
+                              >
+                                <FileEdit className="w-3 h-3" />
+                                <span>Proofread</span>
+                              </button>
+                            </div>
 
-                          {/* Main Sacred Mūla Sanskrit Text */}
-                          <div className="max-w-3xl mx-auto px-2">
-                            <p 
-                              className={`font-serif font-bold text-[#1F140A] whitespace-pre-line tracking-normal ${fontSizeClasses.sanskrit}`}
-                              style={{ textWrap: "balance" as any }}
-                            >
-                              {transliterate(verse.mulaSanskrit, activeLipi)}
-                            </p>
-                          </div>
-
-                          {/* Roman IAST Transliteration (Clean and non-intrusive) */}
-                          {showIast && verse.mulaIast && (
-                            <div className="max-w-2xl mx-auto px-2 pt-0.5">
-                              <p className={`font-serif italic text-[#63482F] whitespace-pre-line ${fontSizeClasses.iast}`}>
-                                {verse.mulaIast}
+                            {/* Main Sacred Mūla Sanskrit Text */}
+                            <div className="max-w-3xl mx-auto px-2">
+                              <p 
+                                className={`font-serif font-bold text-[#1F140A] whitespace-pre-line tracking-normal ${fontSizeClasses.sanskrit}`}
+                                style={{ textWrap: "balance" as any }}
+                              >
+                                {transliterate(effectiveMula, activeLipi)}
                               </p>
                             </div>
-                          )}
-                        </article>
-                      ))}
+
+                            {/* Roman IAST Transliteration (Clean and non-intrusive) */}
+                            {showIast && effectiveIast && (
+                              <div className="max-w-2xl mx-auto px-2 pt-0.5">
+                                <p className={`font-serif italic text-[#63482F] whitespace-pre-line ${fontSizeClasses.iast}`}>
+                                  {effectiveIast}
+                                </p>
+                              </div>
+                            )}
+                          </article>
+                        );
+                      })}
                     </div>
                   </section>
                 ))}
@@ -868,7 +984,7 @@ Academic Citation: ${currentGrantha.transliteratedTitle}, verse ${verse.number}.
               Canonical Vedāntic Catalogue
             </h1>
             <p className="max-w-2xl mx-auto text-xs sm:text-sm font-serif text-[#735013] leading-relaxed">
-              Explore the foundational corpus of Vedāntic literature — the 10 Mukhya Upaniṣads, Brahma Sūtras, Bhagavad Gītā, Classical Prakaraṇas, and Ācārya Bhāṣyas. Select any scripture to read immediately in pure distraction-free form.
+              Explore the foundational corpus of Vedāntic literature — the 10 Mukhya Upaniṣads, Brahma Sūtras, Bhagavad Gītā, Śaṅkarācārya Bhagavatpāda Kṛtis, Post-Śaṅkara Prakaraṇas, and Ācārya Bhāṣyas. Select any scripture to read immediately in pure distraction-free form.
             </p>
 
             {/* In-Catalogue Search Bar */}

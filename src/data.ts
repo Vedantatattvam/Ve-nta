@@ -15,10 +15,20 @@ import { BHAGAVADGITA_GRANTHA } from "./bhagavadgitaData";
 import { VEDANTASARA_GRANTHA } from "./vedantasaraData";
 import { JIVANMUKTIVIVEKA_GRANTHA } from "./jivanmuktivivekaData";
 import { VEDANTAPARIBHASA_GRANTHA } from "./vedantaparibhasaData";
+import { ADVAITASIDDHI_GRANTHA } from "./advaitasiddhiData";
 import { ADVAITAMAKARANDA_GRANTHA } from "./advaitamakarandaData";
 import { ADVAITARASAMANJARI_GRANTHA } from "./advaitarasamanjariData";
 import { ADVAITAPANCARATNAM_GRANTHA } from "./advaitapancaratnamData";
+import { ADVAITANUBHUTI_GRANTHA } from "./advaitanubhutiData";
+import { ANATMASRIVIGARHANA_GRANTHA } from "./anatmasrivigarhanaData";
+import { APAROKSHANUBHUTI_GRANTHA } from "./aparokshanubhutiData";
+import { ATMABODHA_GRANTHA } from "./atmabodhaData";
+import { UPADESASAHASRI_GRANTHA } from "./upadesasahasriData";
+import { KAUPINAPANCAKAM_GRANTHA } from "./kaupinapancakamData";
+import { JIVANMUKTANANDALAHARI_GRANTHA } from "./jivanmuktanandalahariData";
 import { TATTVABODHA_GRANTHA } from "./tattvabodhaData";
+import { TATTVOPADESA_GRANTHA } from "./tattvopadesaData";
+import { TAPTACAKRANKANA_GRANTHA } from "./taptacakrankanaData";
 import { MAHAVAKYAM_GRANTHA } from "./mahavakyamData";
 import { SHAKTI_BHASHYA_GRANTHA } from "./shaktibhashyaData";
 import { SRIBHASHYA_GRANTHA } from "./sribhasyaData";
@@ -131,9 +141,19 @@ export const PRESEEDED_GRANTHAS: TextEntry[] = [
   ADVAITAMAKARANDA_GRANTHA,
   ADVAITARASAMANJARI_GRANTHA,
   ADVAITAPANCARATNAM_GRANTHA,
+  ADVAITANUBHUTI_GRANTHA,
+  ANATMASRIVIGARHANA_GRANTHA,
+  APAROKSHANUBHUTI_GRANTHA,
+  ATMABODHA_GRANTHA,
+  UPADESASAHASRI_GRANTHA,
+  TATTVOPADESA_GRANTHA,
+  KAUPINAPANCAKAM_GRANTHA,
+  JIVANMUKTANANDALAHARI_GRANTHA,
   VEDANTASARA_GRANTHA,
   JIVANMUKTIVIVEKA_GRANTHA,
   VEDANTAPARIBHASA_GRANTHA,
+  ADVAITASIDDHI_GRANTHA,
+  TAPTACAKRANKANA_GRANTHA,
   {
     id: "vivekacudamani",
     title: "Vivekacūḍāmaṇi",
