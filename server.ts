@@ -418,6 +418,110 @@ Return ONLY valid JSON matching this schema:
 
 
 
+// In-memory LRU cache for Sanskrit TTS WAV clips
+const ttsAudioCache = new Map<string, string>();
+const MAX_TTS_CACHE_ENTRIES = 60;
+const ALLOWED_TTS_VOICES = new Set(["Charon", "Kore", "Puck", "Fenrir", "Zephyr"]);
+
+// API: High-Quality Sanskrit Text-to-Speech (Gemini TTS)
+app.post("/api/tts", async (req: Request, res: Response) => {
+  try {
+    const { text, voiceName, style } = req.body as {
+      text?: string;
+      voiceName?: string;
+      style?: string;
+    };
+
+    const trimmedText = typeof text === "string" ? text.trim() : "";
+    if (!trimmedText) {
+      res.status(400).json({ error: "Sanskrit text is required for audio synthesis." });
+      return;
+    }
+
+    const boundedText = trimmedText.slice(0, 3500);
+    const selectedVoice =
+      voiceName && ALLOWED_TTS_VOICES.has(voiceName) ? voiceName : "Charon";
+    const recitationStyle =
+      typeof style === "string" && style.trim()
+        ? style.trim()
+        : "Reverent, clear classical Sanskrit Vedic scholar reciting Devanagari verses with accurate Sanskrit phonetics, crisp syllable articulation, measured cadence, and serene meditative tone.";
+
+    const cacheKey = `${selectedVoice}::${recitationStyle}::${boundedText}`;
+    const cachedAudio = ttsAudioCache.get(cacheKey);
+    if (cachedAudio) {
+      // Refresh LRU position
+      ttsAudioCache.delete(cacheKey);
+      ttsAudioCache.set(cacheKey, cachedAudio);
+      res.json({
+        audioBase64: cachedAudio,
+        mimeType: "audio/wav",
+        voiceName: selectedVoice,
+        cached: true,
+      });
+      return;
+    }
+
+    const ai = getAI();
+    const response = await ai.models.generateContent({
+      model: "gemini-3.8-flash-lite-tts",
+      contents: [
+        {
+          role: "user",
+          parts: [
+            {
+              text: boundedText,
+              speechMetadata: {
+                style: recitationStyle,
+              },
+            },
+          ],
+        },
+      ],
+      config: {
+        responseModalities: ["AUDIO"],
+        speechConfig: {
+          voiceConfig: {
+            prebuiltVoiceConfig: { voiceName: selectedVoice },
+          },
+        },
+      },
+    });
+
+    const audioPart = response.candidates?.[0]?.content?.parts?.find(
+      (p: any) => p.inlineData?.data
+    );
+    const base64Audio = audioPart?.inlineData?.data;
+
+    if (!base64Audio) {
+      res.status(502).json({
+        error: "TTS voice model returned no audio data for this verse.",
+      });
+      return;
+    }
+
+    if (ttsAudioCache.size >= MAX_TTS_CACHE_ENTRIES) {
+      const oldestKey = ttsAudioCache.keys().next().value;
+      if (oldestKey) ttsAudioCache.delete(oldestKey);
+    }
+    ttsAudioCache.set(cacheKey, base64Audio);
+
+    res.json({
+      audioBase64: base64Audio,
+      mimeType: audioPart?.inlineData?.mimeType || "audio/wav",
+      voiceName: selectedVoice,
+    });
+  } catch (err: any) {
+    console.error("TTS API error:", err);
+    const statusCode =
+      typeof err?.status === "number" && err.status >= 400 && err.status < 600
+        ? err.status
+        : 500;
+    res.status(statusCode).json({
+      error: err?.message || "Failed to synthesize Sanskrit verse audio.",
+    });
+  }
+});
+
 // Global process error handlers to prevent crash
 process.on("unhandledRejection", (reason, promise) => {
   console.error("Unhandled Rejection at:", promise, "reason:", reason);

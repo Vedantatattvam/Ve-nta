@@ -2042,8 +2042,8 @@ Academic Reference: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on 
                               {/* Audio Chant Button */}
                               <VedicChantButton
                                 verseText={activeVer.mulaSanskrit}
-                                variant="compact"
-                                label="Chant Verse"
+                                variant="badge"
+                                label="Listen Sanskrit"
                               />
 
                               {/* Copy Verse Button */}

@@ -1,46 +1,63 @@
 /**
- * Vedic Chanting & Sanskrit Prosody Synthesis Engine
- * Combines Web Speech Synthesis with an authentic Web Audio API Tanpura Drone
- * and Svara intonation cadence.
+ * Vedic Chanting & Sanskrit Neural TTS Synthesis Engine
+ * Uses server-side Gemini Sanskrit TTS (/api/tts with gemini-3.8-flash-lite-tts)
+ * combined with an optional Web Audio API Sa-Pa Tanpura harmonic drone.
  */
+
+export type SanskritVoiceName = "Charon" | "Kore" | "Zephyr" | "Puck" | "Fenrir";
+
+export const SANSKRIT_VOICE_OPTIONS: {
+  id: SanskritVoiceName;
+  label: string;
+  description: string;
+}[] = [
+  { id: "Charon", label: "Charon (Deep Scholarly)", description: "Deep, resonant classical recitation" },
+  { id: "Kore", label: "Kore (Serene Clear)", description: "Balanced, lucid vocal clarity" },
+  { id: "Zephyr", label: "Zephyr (Gentle Meditative)", description: "Calm, contemplative cadence" },
+  { id: "Puck", label: "Puck (Crisp Articulate)", description: "Bright, distinct syllable emphasis" },
+  { id: "Fenrir", label: "Fenrir (Grave Resonant)", description: "Firm, commanding Sūtra delivery" },
+];
 
 export interface ChantAudioState {
   isPlaying: boolean;
+  isLoading: boolean;
   isPaused: boolean;
   progress: number;
   currentSegment: string;
   speed: number;
   droneEnabled: boolean;
+  voiceName: SanskritVoiceName;
+  error: string | null;
 }
 
 class VedicChantSynthesizer {
-  private synth: SpeechSynthesis | null = null;
-  private currentUtterance: SpeechSynthesisUtterance | null = null;
+  private audioElement: HTMLAudioElement | null = null;
+  private audioCache: Map<string, string> = new Map();
+  private currentAbortController: AbortController | null = null;
+  private playbackGeneration = 0;
+
   private audioCtx: AudioContext | null = null;
   private tanpuraNodes: {
     masterGain?: GainNode;
     oscillators?: OscillatorNode[];
   } = {};
   private listeners: Set<(state: ChantAudioState) => void> = new Set();
-  
+
   private state: ChantAudioState = {
     isPlaying: false,
+    isLoading: false,
     isPaused: false,
     progress: 0,
     currentSegment: "",
-    speed: 0.9, // Traditional measured Adhyayana pace
+    speed: 1.0,
     droneEnabled: true,
+    voiceName: "Charon",
+    error: null,
   };
-
-  constructor() {
-    if (typeof window !== "undefined" && "speechSynthesis" in window) {
-      this.synth = window.speechSynthesis;
-    }
-  }
 
   public subscribe(callback: (state: ChantAudioState) => void): () => void {
     this.listeners.add(callback);
-    callback(this.state);
+    callback({ ...this.state });
     return () => this.listeners.delete(callback);
   }
 
@@ -52,7 +69,7 @@ class VedicChantSynthesizer {
    * Initialize and start ambient Tanpura harmonic drone using Web Audio API
    */
   private startTanpuraDrone() {
-    if (!this.state.droneEnabled) return;
+    if (!this.state.droneEnabled || typeof window === "undefined") return;
     try {
       const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
       if (!AudioContextClass) return;
@@ -62,19 +79,17 @@ class VedicChantSynthesizer {
       }
 
       if (this.audioCtx.state === "suspended") {
-        this.audioCtx.resume();
+        void this.audioCtx.resume();
       }
 
       this.stopTanpuraDrone();
 
       const masterGain = this.audioCtx.createGain();
       masterGain.gain.setValueAtTime(0.001, this.audioCtx.currentTime);
-      // Soft gentle fade in to meditative volume
-      masterGain.gain.exponentialRampToValueAtTime(0.06, this.audioCtx.currentTime + 1.2);
+      masterGain.gain.exponentialRampToValueAtTime(0.045, this.audioCtx.currentTime + 1.1);
       masterGain.connect(this.audioCtx.destination);
 
       const oscillators: OscillatorNode[] = [];
-      // Classical Indian Sa-Pa Tanpura Frequencies (Tuned around C3 / 130.81 Hz and G3 / 196 Hz)
       const baseFreqs = [130.81, 196.0, 261.63, 130.81 * 0.5];
 
       baseFreqs.forEach((freq, idx) => {
@@ -83,15 +98,12 @@ class VedicChantSynthesizer {
         const filter = this.audioCtx.createBiquadFilter();
         const gain = this.audioCtx.createGain();
 
-        // Warm harmonic overtone filter
         filter.type = "bandpass";
         filter.frequency.value = freq * 1.5;
         filter.Q.value = 3.0;
 
         osc.type = idx % 2 === 0 ? "sine" : "triangle";
         osc.frequency.setValueAtTime(freq + (idx === 0 ? 0.3 : -0.2), this.audioCtx.currentTime);
-
-        // Subtle slow amplitude breathing
         gain.gain.setValueAtTime(0.35, this.audioCtx.currentTime);
 
         osc.connect(filter);
@@ -113,23 +125,24 @@ class VedicChantSynthesizer {
       if (this.tanpuraNodes.masterGain && this.audioCtx) {
         this.tanpuraNodes.masterGain.gain.exponentialRampToValueAtTime(
           0.0001,
-          this.audioCtx.currentTime + 0.6
+          this.audioCtx.currentTime + 0.45
         );
+        const nodesToStop = this.tanpuraNodes.oscillators;
+        this.tanpuraNodes = {};
         setTimeout(() => {
-          this.tanpuraNodes.oscillators?.forEach((o) => {
+          nodesToStop?.forEach((o) => {
             try {
               o.stop();
               o.disconnect();
             } catch (_) {}
           });
-          this.tanpuraNodes = {};
-        }, 650);
+        }, 500);
       }
     } catch (_) {}
   }
 
   /**
-   * Convert Sanskrit / IAST / Devanagari text into natural prosodic chant segments
+   * Normalize Sanskrit / IAST / Devanagari text into clean prosodic recitation input
    */
   public prepareVedicRecitationText(rawText: string): string {
     if (!rawText) return "";
@@ -142,149 +155,234 @@ class VedicChantSynthesizer {
       .trim();
   }
 
-  /**
-   * Select best available voice for Sanskrit / Indian chanting
-   */
-  private getBestVoice(): SpeechSynthesisVoice | null {
-    if (!this.synth) return null;
-    const voices = this.synth.getVoices();
-    if (!voices || voices.length === 0) return null;
-
-    // Preference hierarchy: Sanskrit, Hindi, Marathi, Bengali, Telugu, Indian English
-    const prefLanguages = ["sa", "hi", "mr", "bn", "te", "ta", "kn", "gu", "en-IN", "hi-IN"];
-
-    for (const lang of prefLanguages) {
-      const matched = voices.find(
-        (v) =>
-          v.lang.toLowerCase().startsWith(lang.toLowerCase()) ||
-          v.name.toLowerCase().includes("india") ||
-          v.name.toLowerCase().includes("hindi") ||
-          v.name.toLowerCase().includes("sanskrit")
-      );
-      if (matched) return matched;
+  private base64WavToObjectUrl(base64: string, mimeType: string): string {
+    const binary = window.atob(base64);
+    const bytes = new Uint8Array(binary.length);
+    for (let i = 0; i < binary.length; i++) {
+      bytes[i] = binary.charCodeAt(i);
     }
-
-    // Fallback to default or first available voice
-    return voices.find((v) => v.default) || voices[0] || null;
+    const blob = new Blob([bytes], { type: mimeType || "audio/wav" });
+    return URL.createObjectURL(blob);
   }
 
-  /**
-   * Chant / Play Sanskrit Verse aloud
-   */
-  public chant(verseText: string, speedOverride?: number) {
-    if (!this.synth) {
-      console.warn("Speech synthesis is not supported in this browser.");
-      return;
-    }
+  private async playAudioUrl(
+    objectUrl: string,
+    cleanText: string,
+    speed: number,
+    generation: number
+  ) {
+    if (generation !== this.playbackGeneration) return;
 
-    this.stop();
+    const audio = new Audio(objectUrl);
+    audio.playbackRate = speed;
+    this.audioElement = audio;
 
-    const cleanText = this.prepareVedicRecitationText(verseText);
-    if (!cleanText) return;
-
-    this.startTanpuraDrone();
-
-    const utterance = new SpeechSynthesisUtterance(cleanText);
-    const voice = this.getBestVoice();
-    if (voice) {
-      utterance.voice = voice;
-      if (voice.lang) {
-        utterance.lang = voice.lang;
+    audio.ontimeupdate = () => {
+      if (generation !== this.playbackGeneration) return;
+      if (audio.duration && Number.isFinite(audio.duration) && audio.duration > 0) {
+        this.state.progress = Math.min(100, Math.round((audio.currentTime / audio.duration) * 100));
+        this.notify();
       }
-    }
-
-    const currentSpeed = speedOverride !== undefined ? speedOverride : this.state.speed;
-    utterance.rate = currentSpeed;
-    utterance.pitch = 0.95; // Resonant lower meditative pitch
-    utterance.volume = 1.0;
-
-    utterance.onstart = () => {
-      this.state.isPlaying = true;
-      this.state.isPaused = false;
-      this.state.currentSegment = cleanText;
-      this.notify();
     };
 
-    utterance.onpause = () => {
-      this.state.isPaused = true;
-      this.notify();
-    };
-
-    utterance.onresume = () => {
-      this.state.isPaused = false;
-      this.notify();
-    };
-
-    utterance.onend = () => {
+    audio.onended = () => {
+      if (generation !== this.playbackGeneration) return;
       this.state.isPlaying = false;
+      this.state.isLoading = false;
       this.state.isPaused = false;
       this.state.progress = 100;
       this.stopTanpuraDrone();
       this.notify();
     };
 
-    utterance.onerror = (e) => {
-      console.warn("Chant playback error:", e);
+    audio.onerror = () => {
+      if (generation !== this.playbackGeneration) return;
       this.state.isPlaying = false;
+      this.state.isLoading = false;
       this.state.isPaused = false;
+      this.state.error = "Unable to play synthesized audio clip.";
       this.stopTanpuraDrone();
       this.notify();
     };
 
-    utterance.onboundary = (event) => {
-      if (event.name === "word" && cleanText.length > 0) {
-        const percent = Math.min(100, Math.round((event.charIndex / cleanText.length) * 100));
-        this.state.progress = percent;
-        this.notify();
-      }
-    };
+    this.startTanpuraDrone();
+    await audio.play();
 
-    this.currentUtterance = utterance;
-    this.synth.speak(utterance);
+    if (generation !== this.playbackGeneration) {
+      audio.pause();
+      return;
+    }
+
+    this.state.isLoading = false;
+    this.state.isPlaying = true;
+    this.state.isPaused = false;
+    this.state.progress = 0;
+    this.state.currentSegment = cleanText;
+    this.state.error = null;
+    this.notify();
+  }
+
+  /**
+   * Chant / Play Sanskrit Verse aloud via server-side Gemini Sanskrit TTS
+   */
+  public async chant(verseText: string, speedOverride?: number) {
+    if (typeof window === "undefined") return;
+
+    const cleanText = this.prepareVedicRecitationText(verseText);
+    if (!cleanText) return;
+
+    const targetSpeed = speedOverride !== undefined ? speedOverride : this.state.speed;
+    if (speedOverride !== undefined) {
+      this.state.speed = targetSpeed;
+    }
+
+    this.stop();
+    const generation = ++this.playbackGeneration;
+    const voice = this.state.voiceName;
+    const cacheKey = `${voice}::${cleanText}`;
+
+    this.state.currentSegment = cleanText;
+    this.state.error = null;
+
+    const cachedUrl = this.audioCache.get(cacheKey);
+    if (cachedUrl) {
+      try {
+        await this.playAudioUrl(cachedUrl, cleanText, targetSpeed, generation);
+      } catch (err: any) {
+        if (generation === this.playbackGeneration) {
+          this.state.isLoading = false;
+          this.state.isPlaying = false;
+          this.state.error = err?.message || "Audio playback failed.";
+          this.stopTanpuraDrone();
+          this.notify();
+        }
+      }
+      return;
+    }
+
+    this.state.isLoading = true;
+    this.state.isPlaying = false;
+    this.state.isPaused = false;
+    this.state.progress = 0;
+    this.notify();
+
+    const controller = new AbortController();
+    this.currentAbortController = controller;
+
+    try {
+      const response = await fetch("/api/tts", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          text: cleanText,
+          voiceName: voice,
+        }),
+        signal: controller.signal,
+      });
+
+      const payload = await response.json().catch(() => ({}));
+      if (!response.ok) {
+        throw new Error(payload?.error || `Speech synthesis failed (${response.status})`);
+      }
+
+      if (generation !== this.playbackGeneration) return;
+
+      if (!payload?.audioBase64) {
+        throw new Error("No audio received from Sanskrit TTS service.");
+      }
+
+      const objectUrl = this.base64WavToObjectUrl(
+        payload.audioBase64,
+        payload.mimeType || "audio/wav"
+      );
+      this.audioCache.set(cacheKey, objectUrl);
+
+      await this.playAudioUrl(objectUrl, cleanText, targetSpeed, generation);
+    } catch (err: any) {
+      if (err?.name === "AbortError" || generation !== this.playbackGeneration) {
+        return;
+      }
+      this.state.isLoading = false;
+      this.state.isPlaying = false;
+      this.state.isPaused = false;
+      this.state.error = err?.message || "Failed to generate Sanskrit audio.";
+      this.stopTanpuraDrone();
+      this.notify();
+    } finally {
+      if (this.currentAbortController === controller) {
+        this.currentAbortController = null;
+      }
+    }
   }
 
   public pause() {
-    if (this.synth && this.state.isPlaying && !this.state.isPaused) {
-      this.synth.pause();
+    if (this.audioElement && this.state.isPlaying && !this.state.isPaused) {
+      this.audioElement.pause();
+      this.stopTanpuraDrone();
       this.state.isPaused = true;
       this.notify();
     }
   }
 
   public resume() {
-    if (this.synth && this.state.isPlaying && this.state.isPaused) {
-      this.synth.resume();
+    if (this.audioElement && this.state.isPlaying && this.state.isPaused) {
+      this.startTanpuraDrone();
+      void this.audioElement.play();
       this.state.isPaused = false;
       this.notify();
     }
   }
 
   public stop() {
-    if (this.synth) {
-      this.synth.cancel();
+    this.playbackGeneration += 1;
+    if (this.currentAbortController) {
+      this.currentAbortController.abort();
+      this.currentAbortController = null;
+    }
+    if (this.audioElement) {
+      try {
+        this.audioElement.pause();
+        this.audioElement.currentTime = 0;
+      } catch (_) {}
+      this.audioElement = null;
     }
     this.stopTanpuraDrone();
+    this.state.isLoading = false;
     this.state.isPlaying = false;
     this.state.isPaused = false;
     this.state.progress = 0;
-    this.currentUtterance = null;
     this.notify();
   }
 
   public setSpeed(speed: number) {
     this.state.speed = speed;
-    if (this.state.isPlaying && this.currentUtterance) {
-      // Re-chant with new speed
-      const text = this.state.currentSegment;
-      this.chant(text, speed);
-    } else {
+    if (this.audioElement) {
+      this.audioElement.playbackRate = speed;
+    }
+    this.notify();
+  }
+
+  public setVoice(voiceName: SanskritVoiceName) {
+    const previousVoice = this.state.voiceName;
+    this.state.voiceName = voiceName;
+    if (previousVoice !== voiceName && (this.state.isPlaying || this.state.isLoading) && this.state.currentSegment) {
+      const segment = this.state.currentSegment;
+      void this.chant(segment);
+      return;
+    }
+    this.notify();
+  }
+
+  public clearError() {
+    if (this.state.error) {
+      this.state.error = null;
       this.notify();
     }
   }
 
   public toggleDrone() {
     this.state.droneEnabled = !this.state.droneEnabled;
-    if (this.state.isPlaying) {
+    if (this.state.isPlaying && !this.state.isPaused) {
       if (this.state.droneEnabled) {
         this.startTanpuraDrone();
       } else {

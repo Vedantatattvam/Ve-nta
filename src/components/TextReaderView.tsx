@@ -23,6 +23,11 @@ import { BookmarksDrawer } from "./BookmarksDrawer";
 import { exportTextReaderToPdf } from "../utils/academicPdfExport";
 import { AcademicPdfExportButton } from "./AcademicPdfExportButton";
 import VedicChantButton from "./VedicChantButton";
+import {
+  vedicChantSynthesizer,
+  SANSKRIT_VOICE_OPTIONS,
+  SanskritVoiceName,
+} from "../utils/vedicChantSynthesizer";
 import BhashyaTikaSelector from "./BhashyaTikaSelector";
 import { useAuthProofread } from "../context/AuthProofreadContext";
 import { 
@@ -76,7 +81,8 @@ import {
   Unlink,
   Pause,
   Play,
-  Filter
+  Filter,
+  Volume2
 } from "lucide-react";
 
 interface TextReaderViewProps {
@@ -182,10 +188,20 @@ export default function TextReaderView({
   const [readerLayoutMode, setReaderLayoutMode] = useState<"spotlight_split" | "unified_cards">("unified_cards");
   const [isSyncScrollEnabled, setIsSyncScrollEnabled] = useState<boolean>(true);
   const [scrollSpyPercent, setScrollSpyPercent] = useState<number>(0);
+  const [sanskritVoice, setSanskritVoice] = useState<SanskritVoiceName>(
+    () => vedicChantSynthesizer.getState().voiceName
+  );
+  const chapterVersesContainerRef = useRef<HTMLDivElement>(null);
   const coreVersePaneRef = useRef<HTMLDivElement>(null);
   const translationCommentaryPaneRef = useRef<HTMLDivElement>(null);
   const activeScrollSourceRef = useRef<"core" | "trans" | null>(null);
   const scrollLockTimerRef = useRef<any>(null);
+
+  useEffect(() => {
+    return vedicChantSynthesizer.subscribe((state) => {
+      setSanskritVoice(state.voiceName);
+    });
+  }, []);
 
   // Independent Visibility Toggles for Padaccheda and Anvaya
   const [showPadaccheda, setShowPadaccheda] = useState<boolean>(() => {
@@ -780,10 +796,25 @@ Academic Citation: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on $
     }
   };
 
-  // Window scroll-spy for unified cards mode
+  // Window scroll-spy scoped to the current scriptural chapter in unified cards mode
   useEffect(() => {
     if (readerLayoutMode !== "unified_cards") return;
     const handleWinScroll = () => {
+      const chapterEl = chapterVersesContainerRef.current;
+      if (chapterEl) {
+        const rect = chapterEl.getBoundingClientRect();
+        const topAnchor = 96;
+        const totalScrollable = Math.max(1, chapterEl.offsetHeight - (window.innerHeight - topAnchor - 40));
+        const scrolledWithinChapter = topAnchor - rect.top;
+        if (scrolledWithinChapter <= 0) {
+          setScrollSpyPercent(0);
+        } else {
+          const pct = Math.min(100, Math.max(0, Math.round((scrolledWithinChapter / totalScrollable) * 100)));
+          setScrollSpyPercent(pct);
+        }
+        return;
+      }
+
       const totalH = document.documentElement.scrollHeight - window.innerHeight;
       if (totalH > 0) {
         const pct = Math.min(100, Math.max(0, Math.round((window.scrollY / totalH) * 100)));
@@ -791,9 +822,13 @@ Academic Citation: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on $
       }
     };
     window.addEventListener("scroll", handleWinScroll, { passive: true });
+    window.addEventListener("resize", handleWinScroll, { passive: true });
     handleWinScroll();
-    return () => window.removeEventListener("scroll", handleWinScroll);
-  }, [readerLayoutMode, filteredVerses]);
+    return () => {
+      window.removeEventListener("scroll", handleWinScroll);
+      window.removeEventListener("resize", handleWinScroll);
+    };
+  }, [readerLayoutMode, filteredVerses, selectedChapterId]);
 
   // Initial and reactive overflow state updates
   useEffect(() => {
@@ -805,6 +840,21 @@ Academic Citation: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on $
 
   return (
     <div className="space-y-4 animate-in fade-in duration-200">
+      {/* Subtle Top Chapter Scroll Progress Bar */}
+      <div
+        role="progressbar"
+        aria-label="Chapter scroll progress"
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={scrollSpyPercent}
+        className="fixed top-0 left-0 right-0 z-50 h-[3px] bg-[#FAF1E2]/70 pointer-events-none"
+      >
+        <div
+          className="h-full bg-gradient-to-r from-[#aa771c] via-[#d4af37] to-[#8c6011] transition-[width] duration-150 ease-out"
+          style={{ width: `${scrollSpyPercent}%` }}
+        />
+      </div>
+
       {/* Dedicated Focused Reading Mode HUD (Distraction-Free Scriptural Study) */}
       {isFocused && (
         <div className="sticky top-2 z-40 bg-[#FFFDF8] border-2 border-[#bf953f]/70 rounded-2xl p-3.5 sm:p-4 shadow-xl flex flex-wrap items-center justify-between gap-3 animate-in fade-in">
@@ -951,13 +1001,13 @@ Academic Citation: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on $
       )}
 
       {/* Compact Top Navigation & Focus Toggle Bar with Sticky Scroll-Spy Progress */}
-      <div className="card-3d-gold p-3.5 sm:p-4 flex flex-wrap items-center justify-between gap-3 sticky top-2 z-30 bg-[#FFFDF8]/95 backdrop-blur-md relative overflow-hidden shadow-[0_6px_20px_rgba(180,130,20,0.12)]">
+      <div className="card-3d-gold p-3.5 sm:p-4 flex flex-wrap items-center justify-between gap-3 sticky top-2 z-30 bg-[#FFFDF8]/95 backdrop-blur-md overflow-hidden shadow-[0_6px_20px_rgba(180,130,20,0.12)]">
         {/* Pinned Real-Time Scroll-Spy Progress Bar */}
-        <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-[#FAF1E2] overflow-hidden">
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#FAF1E2] overflow-hidden">
           <div
-            className="h-full bg-gradient-to-r from-[#aa771c] via-[#d4af37] to-[#8c6011] transition-all duration-150 ease-out shadow-xs"
-            style={{ width: `${Math.max(2, scrollSpyPercent || chapterProgressPercent)}%` }}
-            title={`Reading progress: ${scrollSpyPercent || chapterProgressPercent}%`}
+            className="h-full bg-gradient-to-r from-[#aa771c] via-[#d4af37] to-[#8c6011] transition-all duration-150 ease-out"
+            style={{ width: `${scrollSpyPercent}%` }}
+            title={`Chapter scroll progress: ${scrollSpyPercent}%`}
           />
         </div>
 
@@ -1539,7 +1589,7 @@ Academic Citation: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on $
               </div>
             ) : (
               /* CONTINUOUS UNIFIED CARDS VIEW (Main text, Padaccheda, Anvaya, Translation & Commentaries together) */
-              <div className="space-y-5">
+              <div ref={chapterVersesContainerRef} className="space-y-5">
                 {filteredVerses.map((verse) => {
                   const isSelected = verse.id === selectedVerseId;
                   const isPulsing = verse.id === pulsingVerseId;
@@ -2161,6 +2211,24 @@ Academic Citation: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on $
                     </button>
                   ))}
                 </div>
+              </div>
+
+              {/* Sanskrit TTS Voice Model */}
+              <div className="space-y-1.5">
+                <span className="text-[11px] font-bold text-[#8c6011] uppercase tracking-wider font-mono flex items-center gap-1">
+                  <Volume2 className="w-3 h-3" /> Sanskrit Voice Model:
+                </span>
+                <select
+                  value={sanskritVoice}
+                  onChange={(e) => vedicChantSynthesizer.setVoice(e.target.value as SanskritVoiceName)}
+                  className="w-full px-2.5 py-1.5 bg-[#FFFDF9] border border-[#bf953f]/40 rounded-xl text-xs font-serif text-[#2D2319] focus:outline-none focus:ring-1 focus:ring-[#bf953f] cursor-pointer"
+                >
+                  {SANSKRIT_VOICE_OPTIONS.map((voice) => (
+                    <option key={voice.id} value={voice.id}>
+                      {voice.label} — {voice.description}
+                    </option>
+                  ))}
+                </select>
               </div>
 
               {/* In-Text Search */}
