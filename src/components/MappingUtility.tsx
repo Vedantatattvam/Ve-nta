@@ -696,6 +696,7 @@ Academic Reference: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on 
         "atmabodha",
         "upadesasahasri",
         "tattvopadesa",
+        "dasasloki",
         "vivekacudamani",
       ]),
     []
@@ -706,6 +707,7 @@ Academic Reference: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on 
         "advaitapancaratnam",
         "kaupinapancakam",
         "jivanmuktanandalahari",
+        "dasaslokistuti",
       ]),
     []
   );

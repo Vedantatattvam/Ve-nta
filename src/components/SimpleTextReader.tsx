@@ -1,37 +1,38 @@
 import React, { useState, useMemo, useEffect, useRef } from "react";
 import { PRESEEDED_GRANTHAS } from "../data";
-import { TextEntry, GranthaChapter, GranthaVerse } from "../types";
+import { TextEntry, GranthaChapter, GranthaVerse, ParamparaId, BhashyaEntry, TikaEntry } from "../types";
+import { TraditionTreeNode } from "../traditionTreeData";
+import { getBhashyasForVerse } from "../bhashyaData";
 import { useBharatiyaLipi } from "../context/BharatiyaLipiContext";
 import { useAuthProofread } from "../context/AuthProofreadContext";
 import { SISTER_REPOSITORIES } from "../utils/sisterRepositories";
+import { applyDocumentSeo, getSimpleSeoMetadata } from "../utils/seoMetadata";
 import LogoEmblem from "./LogoEmblem";
 import BharatiyaLipiSwitcher from "./BharatiyaLipiSwitcher";
 import { CitationButton } from "./CitationButton";
 import GlobalTextSearch from "./GlobalTextSearch";
+import SimpleGranthaTree from "./SimpleGranthaTree";
 import { 
   BookOpen, 
   GraduationCap, 
   ChevronDown, 
   Search, 
   X,
-  Sparkles,
   Library,
-  Copy,
   Check,
   CheckCircle2,
   FileEdit,
   Quote,
-  Filter,
   ArrowRight,
-  SlidersHorizontal,
-  BookmarkCheck,
+  ArrowLeft,
+  GitFork,
   ExternalLink
 } from "lucide-react";
 
 interface SimpleTextReaderProps {
   initialTextId?: string;
   initialChapterId?: string;
-  initialTab?: "reader" | "catalogue";
+  initialTab?: "pathanam" | "reader" | "catalogue";
   onSwitchToScholarly: (textId?: string, chapterId?: string, subView?: "reader" | "catalog") => void;
   siteVersion: "simple" | "scholarly";
   onToggleSiteVersion: (version: "simple" | "scholarly") => void;
@@ -44,10 +45,28 @@ interface GranthaCategoryGroup {
   granthas: TextEntry[];
 }
 
+function matchesCommentaryParampara(entryPid?: ParamparaId, targetPid?: ParamparaId): boolean {
+  if (!targetPid) return true;
+  if (entryPid === targetPid) return true;
+  if (
+    (entryPid === "aksarapurusottama" || entryPid === "swaminarayan") &&
+    (targetPid === "aksarapurusottama" || targetPid === "swaminarayan")
+  ) {
+    return true;
+  }
+  if (
+    (entryPid === "acintya" || entryPid === "acintyabhedabheda") &&
+    (targetPid === "acintya" || targetPid === "acintyabhedabheda")
+  ) {
+    return true;
+  }
+  return false;
+}
+
 export default function SimpleTextReader({
   initialTextId,
   initialChapterId,
-  initialTab = "reader",
+  initialTab = "pathanam",
   onSwitchToScholarly,
   siteVersion,
   onToggleSiteVersion,
@@ -60,8 +79,8 @@ export default function SimpleTextReader({
     recordReadingVisit,
   } = useAuthProofread();
 
-  // Active sub-tab in simple mode: "reader" (Sacred Text) or "catalogue" (Granthasūcī)
-  const [activeSimpleTab, setActiveSimpleTab] = useState<"reader" | "catalogue">(initialTab);
+  // Active sub-tab in simple mode: "pathanam" (Grantha Pāṭhanam Tree), "reader" (Sacred Text), or "catalogue" (Granthasūcī)
+  const [activeSimpleTab, setActiveSimpleTab] = useState<"pathanam" | "reader" | "catalogue">(initialTab);
 
   // Selected grantha (default to initialTextId if provided, or empty/first)
   const [selectedGranthaId, setSelectedGranthaId] = useState<string>(initialTextId || "isopanisad");
@@ -69,6 +88,12 @@ export default function SimpleTextReader({
   const [showIast, setShowIast] = useState<boolean>(true);
   const [fontSize, setFontSize] = useState<"normal" | "large" | "xlarge">("large");
   const [verseSearchQuery, setVerseSearchQuery] = useState<string>("");
+
+  // Optional Bhāṣya / Ṭīkā reading depth when opened from Grantha Pāṭhanam tree
+  const [commentaryViewMode, setCommentaryViewMode] = useState<"mula" | "bhashya" | "tika">("mula");
+  const [commentaryParamparaId, setCommentaryParamparaId] = useState<ParamparaId>("advaita");
+  const [activeTikaMatchKey, setActiveTikaMatchKey] = useState<string | undefined>(undefined);
+  const [activeTreeSelectionTitle, setActiveTreeSelectionTitle] = useState<string | undefined>(undefined);
 
   // Search Modal state
   const [isSearchModalOpen, setIsSearchModalOpen] = useState<boolean>(false);
@@ -124,12 +149,65 @@ export default function SimpleTextReader({
     }
   }, [activeSimpleTab, currentGrantha, selectedChapterId, recordReadingVisit]);
 
+  // Dynamically update <title>, <meta name="description">, and social metadata in Simple Version
+  useEffect(() => {
+    const selectedChapter =
+      selectedChapterId !== "all"
+        ? currentGrantha?.chapters?.find((ch) => ch.id === selectedChapterId)
+        : undefined;
+    const seo = getSimpleSeoMetadata({
+      activeSimpleTab,
+      grantha: currentGrantha,
+      chapterTitle: selectedChapter?.chapterTitle,
+      commentaryViewMode,
+      treeSelectionTitle: activeTreeSelectionTitle,
+    });
+    applyDocumentSeo(seo);
+  }, [
+    activeSimpleTab,
+    currentGrantha,
+    selectedChapterId,
+    commentaryViewMode,
+    activeTreeSelectionTitle,
+  ]);
+
   // Reset chapter selection when grantha changes
   const handleSelectGrantha = (granthaId: string, chapterId: string = "all") => {
     setSelectedGranthaId(granthaId);
     setSelectedChapterId(chapterId);
+    setCommentaryViewMode("mula");
+    setActiveTikaMatchKey(undefined);
+    setActiveTreeSelectionTitle(undefined);
     setActiveSimpleTab("reader");
     setVerseSearchQuery("");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  // Open a Mūla, Bhāṣya, Ṭīkā, Prakaraṇa, or Stotra node directly from Grantha Pāṭhanam tree
+  const handleOpenTreeNode = (node: TraditionTreeNode) => {
+    if (!node.granthaId) return;
+    setSelectedGranthaId(node.granthaId);
+    setSelectedChapterId(node.chapterId || "all");
+    setVerseSearchQuery("");
+
+    if (node.nodeKind === "tika") {
+      setCommentaryViewMode("tika");
+      setCommentaryParamparaId(node.commentaryParamparaId || node.paramparaId || "advaita");
+      setActiveTikaMatchKey(node.tikaMatchKey);
+      setActiveTreeSelectionTitle(node.sanskritTitle);
+    } else if (node.nodeKind === "bhashya") {
+      setCommentaryViewMode("bhashya");
+      setCommentaryParamparaId(node.commentaryParamparaId || node.paramparaId || "advaita");
+      setActiveTikaMatchKey(undefined);
+      setActiveTreeSelectionTitle(node.sanskritTitle);
+    } else {
+      setCommentaryViewMode("mula");
+      setCommentaryParamparaId(node.paramparaId || "advaita");
+      setActiveTikaMatchKey(undefined);
+      setActiveTreeSelectionTitle(undefined);
+    }
+
+    setActiveSimpleTab("reader");
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -153,12 +231,14 @@ export default function SimpleTextReader({
       "atmabodha",
       "upadesasahasri",
       "tattvopadesa",
+      "dasasloki",
       "vivekacudamani",
     ];
     const sankaraKritiStotraIds = [
       "advaitapancaratnam",
       "kaupinapancakam",
       "jivanmuktanandalahari",
+      "dasaslokistuti",
     ];
     const postSankaraPrakaranaIds = [
       "advaitamakaranda",
@@ -380,8 +460,13 @@ Academic Citation: ${currentGrantha.transliteratedTitle}, verse ${verse.number}.
       <header className="sticky top-0 z-40 bg-[#FFFDF9]/95 backdrop-blur-md border-b border-[#bf953f]/30 shadow-xs">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 py-2 sm:py-2.5 flex items-center justify-between gap-3">
           {/* Brand Identity */}
-          <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
-            <LogoEmblem className="w-8 h-8 sm:w-9 sm:h-9 drop-shadow-xs" />
+          <button
+            type="button"
+            onClick={() => setActiveSimpleTab("pathanam")}
+            className="flex items-center gap-2.5 sm:gap-3 shrink-0 text-left cursor-pointer group"
+            title="vedāntatattvaṁ – Return to Grantha Pāṭhanam"
+          >
+            <LogoEmblem className="w-8 h-8 sm:w-9 sm:h-9 drop-shadow-xs group-hover:scale-105 transition-transform" />
             <div>
               <div className="font-serif font-black text-sm sm:text-base gold-text-gradient tracking-wider uppercase leading-none">
                 vedāntatattvaṁ
@@ -392,14 +477,31 @@ Academic Citation: ${currentGrantha.transliteratedTitle}, verse ${verse.number}.
                 <span className="hidden xs:inline">Simple Version</span>
               </div>
             </div>
-          </div>
+          </button>
 
-          {/* Center Navigation Option Tabs: Sacred Reader vs Canonical Catalogue */}
-          <div className="flex items-center p-1 rounded-xl bg-[#FAF1E2] border border-[#bf953f]/40 shadow-xs">
+          {/* Center Navigation Option Tabs: Grantha Pāṭhanam, Sacred Text & Catalogue */}
+          <div className="flex items-center p-1 rounded-xl bg-[#FAF1E2] border border-[#bf953f]/40 shadow-xs overflow-x-auto">
+            <button
+              type="button"
+              onClick={() => setActiveSimpleTab("pathanam")}
+              className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg text-xs font-serif font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 ${
+                activeSimpleTab === "pathanam"
+                  ? "bg-gradient-to-br from-[#FFFFFF] via-[#FFFDF5] to-[#FFF8E7] text-[#7A3E00] border border-[#C59B27] shadow-xs ring-1 ring-[#E2B755]/40"
+                  : "text-[#8c6011] hover:text-[#5c4731]"
+              }`}
+              title="Open Grantha Pāṭhanam Tree (ग्रन्थ-पाठनम्)"
+            >
+              <GitFork className="w-3.5 h-3.5 text-[#8c6011]" />
+              <span>Grantha Pāṭhanam</span>
+              <span className="text-[10px] font-mono text-[#8c6011]/80 hidden lg:inline">
+                ({transliterate("ग्रन्थ-पाठनम्", activeLipi)})
+              </span>
+            </button>
+
             <button
               type="button"
               onClick={() => setActiveSimpleTab("reader")}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-serif font-bold transition-all cursor-pointer ${
+              className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg text-xs font-serif font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 ${
                 activeSimpleTab === "reader"
                   ? "bg-gradient-to-br from-[#FFFFFF] via-[#FFFDF5] to-[#FFF8E7] text-[#7A3E00] border border-[#C59B27] shadow-xs ring-1 ring-[#E2B755]/40"
                   : "text-[#8c6011] hover:text-[#5c4731]"
@@ -408,7 +510,7 @@ Academic Citation: ${currentGrantha.transliteratedTitle}, verse ${verse.number}.
             >
               <BookOpen className="w-3.5 h-3.5 text-[#8c6011]" />
               <span>Sacred Text</span>
-              <span className="text-[10px] font-mono text-[#8c6011]/80 hidden md:inline">
+              <span className="text-[10px] font-mono text-[#8c6011]/80 hidden lg:inline">
                 ({transliterate("वाचनम्", activeLipi)})
               </span>
             </button>
@@ -416,7 +518,7 @@ Academic Citation: ${currentGrantha.transliteratedTitle}, verse ${verse.number}.
             <button
               type="button"
               onClick={() => setActiveSimpleTab("catalogue")}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-serif font-bold transition-all cursor-pointer ${
+              className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg text-xs font-serif font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 ${
                 activeSimpleTab === "catalogue"
                   ? "bg-gradient-to-br from-[#FFFFFF] via-[#FFFDF5] to-[#FFF8E7] text-[#7A3E00] border border-[#C59B27] shadow-xs ring-1 ring-[#E2B755]/40"
                   : "text-[#8c6011] hover:text-[#5c4731]"
@@ -425,11 +527,11 @@ Academic Citation: ${currentGrantha.transliteratedTitle}, verse ${verse.number}.
             >
               <Library className="w-3.5 h-3.5 text-[#8c6011]" />
               <span>Catalogue</span>
-              <span className="text-[10px] font-mono text-[#8c6011]/80 hidden md:inline">
+              <span className="text-[10px] font-mono text-[#8c6011]/80 hidden lg:inline">
                 ({transliterate("ग्रन्थसूची", activeLipi)})
               </span>
-              <span className="ml-1 px-1.5 py-0.2 rounded-full bg-[#E2B755]/20 text-[10px] font-mono text-[#7A3E00] font-bold">
-                {PRESEEDED_GRANTHAS.length}
+              <span className="ml-1 text-[10px] font-mono text-[#7A3E00]/80 tabular-nums">
+                · {PRESEEDED_GRANTHAS.length}
               </span>
             </button>
           </div>
@@ -554,8 +656,12 @@ Academic Citation: ${currentGrantha.transliteratedTitle}, verse ${verse.number}.
         </div>
       )}
 
-      {/* 3. CONDITIONAL BODY: SACRED TEXT READER vs CANONICAL CATALOGUE */}
-      {activeSimpleTab === "reader" ? (
+      {/* 3. CONDITIONAL BODY: GRANTHA PĀṬHANAM TREE vs SACRED TEXT READER vs CANONICAL CATALOGUE */}
+      {activeSimpleTab === "pathanam" ? (
+        <main className="flex-1 w-full">
+          <SimpleGranthaTree onOpenNode={handleOpenTreeNode} />
+        </main>
+      ) : activeSimpleTab === "reader" ? (
         <>
           {/* Text Choosing Bar (Front & Center Dropdown + Options + Citation) */}
           <section className="bg-gradient-to-b from-[#FAF5ED] to-[#FDFBF7] border-b border-[#bf953f]/25 py-4 sm:py-5 px-3 sm:px-6">
@@ -634,10 +740,61 @@ Academic Citation: ${currentGrantha.transliteratedTitle}, verse ${verse.number}.
                 )}
               </div>
 
-              {/* Minimal Reading Options (IAST toggle, Font Size, Citation & Verse Search) */}
+              {/* Minimal Reading Options (Back to Tree, Commentary Depth, IAST toggle, Font Size, Citation) */}
               {currentGrantha && (
                 <div className="flex flex-wrap items-center justify-between gap-2.5 pt-1.5 border-t border-[#bf953f]/20 text-xs">
                   <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+                    {/* Quick Return to Grantha Pāṭhanam Tree */}
+                    <button
+                      type="button"
+                      onClick={() => setActiveSimpleTab("pathanam")}
+                      className="flex items-center gap-1 px-2.5 py-1 rounded-lg border border-[#bf953f]/40 bg-[#FFFDF9] hover:bg-[#FAF1E2] text-[#7A3E00] font-serif font-semibold transition cursor-pointer whitespace-nowrap shrink-0"
+                      title="Return to Grantha Pāṭhanam tree"
+                    >
+                      <ArrowLeft className="w-3.5 h-3.5" />
+                      <span>Grantha Pāṭhanam</span>
+                    </button>
+
+                    {/* Commentary Depth Segmented Control */}
+                    <div className="flex items-center bg-[#FAF5ED] border border-[#bf953f]/30 rounded-lg p-0.5">
+                      <button
+                        type="button"
+                        onClick={() => setCommentaryViewMode("mula")}
+                        className={`px-2 py-0.5 rounded text-xs transition cursor-pointer font-serif whitespace-nowrap shrink-0 ${
+                          commentaryViewMode === "mula"
+                            ? "bg-[#FFFDF9] text-[#7A3E00] font-bold shadow-2xs"
+                            : "text-[#8c6011] hover:text-[#2D2319]"
+                        }`}
+                        title="Show Mūla text only"
+                      >
+                        {transliterate("मूलम्", activeLipi)}
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setCommentaryViewMode("bhashya")}
+                        className={`px-2 py-0.5 rounded text-xs transition cursor-pointer font-serif whitespace-nowrap shrink-0 ${
+                          commentaryViewMode === "bhashya"
+                            ? "bg-[#FFFDF9] text-[#7A3E00] font-bold shadow-2xs"
+                            : "text-[#8c6011] hover:text-[#2D2319]"
+                        }`}
+                        title="Show Mūla with Bhāṣya"
+                      >
+                        {transliterate("+ भाष्यम्", activeLipi)}
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setCommentaryViewMode("tika")}
+                        className={`px-2 py-0.5 rounded text-xs transition cursor-pointer font-serif whitespace-nowrap shrink-0 ${
+                          commentaryViewMode === "tika"
+                            ? "bg-[#FFFDF9] text-[#7A3E00] font-bold shadow-2xs"
+                            : "text-[#8c6011] hover:text-[#2D2319]"
+                        }`}
+                        title="Show Mūla with Bhāṣya & Ṭīkā"
+                      >
+                        {transliterate("+ टीका", activeLipi)}
+                      </button>
+                    </div>
+
                     {/* IAST Transliteration Toggle */}
                     <button
                       type="button"
@@ -805,6 +962,11 @@ Academic Citation: ${currentGrantha.transliteratedTitle}, verse ${verse.number}.
                   <p className="text-xs sm:text-sm font-serif italic text-[#735013]">
                     {currentGrantha.transliteratedTitle}
                   </p>
+                  {activeTreeSelectionTitle && commentaryViewMode !== "mula" && (
+                    <p className="text-xs sm:text-sm font-serif text-[#7A3E00]">
+                      {transliterate(activeTreeSelectionTitle, activeLipi)}
+                    </p>
+                  )}
 
                   {/* Header Citation & Academic Reference Pill */}
                   <div className="pt-2 flex items-center justify-center gap-3">
@@ -937,6 +1099,84 @@ Academic Citation: ${currentGrantha.transliteratedTitle}, verse ${verse.number}.
                                 </p>
                               </div>
                             )}
+
+                            {/* Optional Selected Tradition Bhāṣya & Ṭīkā Prose (when reading a commentary node or toggled on) */}
+                            {commentaryViewMode !== "mula" && (() => {
+                              const allBhashyas: BhashyaEntry[] = getBhashyasForVerse(effectiveVerse, currentGrantha.id);
+                              const matchedBhashyas = allBhashyas.filter((b) =>
+                                matchesCommentaryParampara(b.paramparaId, commentaryParamparaId)
+                              );
+                              const displayBhashyas = matchedBhashyas.length > 0 ? matchedBhashyas : allBhashyas.slice(0, 1);
+                              if (displayBhashyas.length === 0) return null;
+
+                              return (
+                                <div className="max-w-3xl mx-auto mt-5 text-left space-y-4">
+                                  {displayBhashyas.map((bhashya) => {
+                                    const allTikas: TikaEntry[] = bhashya.tikas || [];
+                                    const filteredTikas =
+                                      commentaryViewMode === "tika"
+                                        ? activeTikaMatchKey
+                                          ? allTikas.filter(
+                                              (t) =>
+                                                t.name.toLowerCase().includes(activeTikaMatchKey.toLowerCase()) ||
+                                                t.author.toLowerCase().includes(activeTikaMatchKey.toLowerCase())
+                                            )
+                                          : allTikas
+                                        : [];
+                                    const displayTikas =
+                                      commentaryViewMode === "tika"
+                                        ? filteredTikas.length > 0
+                                          ? filteredTikas
+                                          : allTikas
+                                        : [];
+
+                                    return (
+                                      <div
+                                        key={bhashya.id}
+                                        className="bg-[#FAF8F4] border border-[#E4DBCC] rounded-xl p-4 sm:p-5 space-y-3"
+                                      >
+                                        <div className="flex flex-wrap items-baseline justify-between gap-2 pb-2 border-b border-[#EFE9DE]">
+                                          <span className="font-serif font-bold text-sm text-[#7A3E00]">
+                                            {transliterate(bhashya.devanagariName || bhashya.name, activeLipi)}
+                                          </span>
+                                          <span className="text-xs font-serif text-[#6E5842]">
+                                            {bhashya.author}
+                                          </span>
+                                        </div>
+
+                                        {bhashya.mulaExtract && (
+                                          <p className="font-serif text-[15px] sm:text-base leading-relaxed text-[#1F140A] whitespace-pre-line">
+                                            {transliterate(bhashya.mulaExtract, activeLipi)}
+                                          </p>
+                                        )}
+
+                                        {displayTikas.length > 0 && (
+                                          <div className="pt-3 mt-3 border-t border-[#E4DBCC] space-y-3">
+                                            {displayTikas.map((tika) => (
+                                              <div key={tika.id} className="bg-[#FFFFFF] border border-[#E9E2D5] rounded-lg p-3.5 space-y-2">
+                                                <div className="flex flex-wrap items-baseline justify-between gap-2">
+                                                  <span className="font-serif font-semibold text-xs sm:text-sm text-[#5C4731]">
+                                                    {transliterate(tika.devanagariName || tika.name, activeLipi)}
+                                                  </span>
+                                                  <span className="text-[11px] font-serif text-[#735013]">
+                                                    {tika.author}
+                                                  </span>
+                                                </div>
+                                                {tika.mulaExtract && (
+                                                  <p className="font-serif text-sm sm:text-[15px] leading-relaxed text-[#2D2319] whitespace-pre-line">
+                                                    {transliterate(tika.mulaExtract, activeLipi)}
+                                                  </p>
+                                                )}
+                                              </div>
+                                            ))}
+                                          </div>
+                                        )}
+                                      </div>
+                                    );
+                                  })}
+                                </div>
+                              );
+                            })()}
                           </article>
                         );
                       })}

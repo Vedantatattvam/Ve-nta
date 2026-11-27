@@ -13,16 +13,24 @@ export const KATHA_VALLI_5: GranthaChapter = {
       mulaSanskrit: "पुरमेकादशद्वारमजस्यावक्रचेतसः । अनुष्ठाय न शोचति विमुक्तश्च विमुच्यते । एतद्वै तत् ॥ १ ॥",
       mulaIast: "puram ekādaśadvāram ajasyāvakracetasaḥ | anuṣṭhāya na śocati vimuktaś ca vimucyate | etad vai tat || 1 ||",
       padaccheda: "पुरम्, एकादश-द्वारम्, अजस्य, अवक्र-चेतसः, अनुष्ठाय, न, शोचति, विमुक्तः, च, विमुच्यते, एतत्, वै, तत्",
-      englishTranslation: "There is a city of eleven gates belonging to the unborn One of uncrooked consciousness. Meditating upon Him, one grieves no more, and being liberated from delusion, is forever released. This indeed is That!"
+      englishTranslation: "There is a city of eleven gates belonging to the unborn One of uncrooked consciousness. Meditating upon Him, one grieves no more, and being liberated from delusion, is forever released. This indeed is That!",
+      bhashyaExtract:
+        "पुनरपि प्रकारान्तरेण ब्रह्मतत्त्वनिर्धारणार्थोऽयमारम्भः, दुर्विज्ञेयत्वाद्ब्रह्मणः — पुरं पुरमिव पुरम् । द्वारद्वारपालाधिष्ठात्राद्यनेकपुरोपकरणसम्पत्तिदर्शनात् शरीरं पुरम् । पुरं च सोपकरणं स्वात्मना असंहतस्वतन्त्रस्वाम्यर्थं दृष्टम् । तथेदं पुरसामान्यादनेकोपकरणसंहतं शरीरं स्वात्मना असंहतराजस्थानीयस्वाम्यर्थं भवितुमर्हति । तच्चेदं शरीराख्यं पुरम् एकादशद्वारम् ; एकादश द्वाराण्यस्य — सप्त शीर्षण्यानि, नाभ्या सहार्वाञ्चि त्रीणि, शिरस्येकम् , तैरेकादशद्वारं पुरम् । कस्य ? अजस्य जन्मादिविक्रियारहितस्यात्मनो राजस्थानीयस्य पुरधर्मविलक्षणस्य । अवक्रचेतसः अवक्रम् अकुटिलमादित्यप्रकाशवन्नित्यमेवावस्थितमेकरूपं चेतो विज्ञानमस्येति अवक्रचेताः तस्यावक्रचेतसः राजस्थानीयस्य ब्रह्मणः यस्येदं पुरं तं परमेश्वरं पुरस्वामिनम् अनुष्ठाय ध्यात्वा । ध्यानं हि तस्यानुष्ठानं सम्यग्विज्ञानपूर्वकम् । तं सर्वैषणाविनिर्मुक्तः सन्समं सर्वभूतस्थं ध्यात्वा न शोचति । तद्विज्ञानादभयप्राप्तेः शोकावसराभावात्कुतो भयेक्षा । इहैवाविद्याकृतकामकर्मबन्धनैर्विमुक्तो भवति । विमुक्तश्च सन्विमुच्यते ; पुनः शरीरं न गृह्णातीत्यर्थः ॥",
+      commentaryNotes:
+        "Śāṅkarabhāṣya 2.2.1: Initiates a fresh inquiry into Brahman via the 'city of eleven gates' (seven cranial apertures, three lower openings including the navel, and one at the crown of the head): just as any equipped city exists for an independent sovereign distinct from it, this body exists for its unborn, uncrooked-consciousness Master (avakra-cetas, shining uniformly like sunlight). Meditating on Him with right knowledge frees one from grief, breaks the bonds of ignorance-born desire and action here and now, and ensures liberation from future embodiment."
     },
     {
       id: "katha-2-2-2",
       number: "2.2.2",
       title: "The Supreme Swan (Haṁsa) in All Spheres",
-      mulaSanskrit: "हंसः शुचिषद्वसुरन्तरिक्षसद्धोता वेदिषदतिथिर्दुरोणसत् । नृषद्वरसदृसद्व्योमसद्गोअब्जा गोजा ऋतजा अद्रिजा ऋतं बृहत् ॥ २ ॥",
+      mulaSanskrit: "हंसः शुचिषद्वसुरन्तरिक्षसद्धोता वेदिषदतिथिर्दुरोणसत् । नृषद्वरसदृतसद्व्योमसदब्जा गोजा ऋतजा अद्रिजा ऋतं बृहत् ॥ २ ॥",
       mulaIast: "haṁsaḥ śucisad vasur antarikṣasad dhotā vediṣad atithir duroṇasat | nṛṣad varasad ṛtasad vyomasad abjā gojā ṛtajā adrijā ṛtaṁ bṛhat || 2 ||",
       padaccheda: "हंसः, शुचि-षत्, वसुः, अन्तरिक्ष-सत्, होता, वेदि-षत्, अतिथिः, दुरोण-सत्, नृ-षत्, वर-सत्, ऋत-सत्, व्योम-सत्, अब्-जाः, गो-जाः, ऋत-जाः, अद्रि-जाः, ऋतम्, बृहत्",
-      englishTranslation: "He is the sun moving in the clear sky; He is the air dwelling in space; He is the priest at the altar; He is the guest in the dwelling. He dwells in humans, in exalted beings, in cosmic order, in the heavens; He is born of water, born of the earth, born of truth, born of the mountains—the Great Cosmic Law and Supreme Reality!"
+      englishTranslation: "He is the sun moving in the clear sky; He is the air dwelling in space; He is the priest at the altar; He is the guest in the dwelling. He dwells in humans, in exalted beings, in cosmic order, in the heavens; He is born of water, born of the earth, born of truth, born of the mountains—the Great Cosmic Law and Supreme Reality!",
+      bhashyaExtract:
+        "स तु नैकपुरवर्त्येवात्मा किं तर्हि सर्वपुरवर्ती । कथम् ? हंसः हन्ति गच्छतीति । शुचिषत् शुचौ दिवि आदित्यात्मना सीदतीति । वसुः वासयति सर्वानिति । वाय्वात्मना अन्तरिक्षे सीदतीति अन्तरिक्षसत् । होता अग्निः, ‘अग्निर्वै होता’ इति श्रुतेः । वेद्यां पृथिव्यां सीदतीति वेदिषत् , ‘इयं वेदिः परोऽन्तः पृथिव्याः’ (ऋ. मं. १ । २२ । १६४ । ३५) इति मन्त्रवर्णात् । अतिथिः सोमः सन् दुरोणे कलशे सीदतीति दुरोणसत् । ब्राह्मणोऽतिथिरूपेण वा दुरोणेषु गृहेषु सीदतीति दुरोणसत् । नृषत् नृषु मनुष्येषु सीदतीति नृषत् । वरसत् वरेषु देवेषु सीदतीति वरसत् । ऋतसत् ऋतं सत्यं यज्ञो वा, तस्मिन् सीदतीति ऋतसत् । व्योमसत् व्योम्नि आकाशे सीदतीति व्योमसत् । अब्जाः अप्सु शङ्खशुक्तिमकरादिरुपेण जायत इति अब्जाः । गोजाः गवि पृथिव्यां व्रीहियवादिरूपेण जायत इति गोजाः । ऋतजाः यज्ञाङ्गरूपेण जायत इति ऋतजाः । अद्रिजाः पर्वतेभ्यो नद्यादिरूपेण जायत इति अद्रिजाः । सर्वात्मापि सन् ऋतम् अवितथस्वभाव एव । बृहत् महान् , सर्वकारणत्वात् । यदाप्यादित्य एव मन्त्रेणोच्यते तदाप्यात्मस्वरूपत्वमादित्यस्याङ्गीकृतमिति ब्रह्मणि व्याख्यानेऽप्यविरोधः । सर्वव्याप्येक एवात्मा जगतः, नात्मभेद इति मन्त्रार्थः ॥",
+      commentaryNotes:
+        "Śāṅkarabhāṣya 2.2.2: Shows that the Self does not inhabit one body-city alone, but dwells in all cities—as sun in the clear sky ('śucisad'), air in mid-space ('antarikṣasad'), fire on the earth-altar ('vedisad'), Soma/guest in the house ('duroṇasad'), and manifest across humans, gods, cosmic order, space, waters, earth, sacrifice, and mountain rivers. Even if the Vedic mantra primarily celebrates Āditya, because Āditya's essence is the Self, its purport establishes one all-pervading non-dual Self of the universe."
     },
     {
       id: "katha-2-2-3",
@@ -31,7 +39,11 @@ export const KATHA_VALLI_5: GranthaChapter = {
       mulaSanskrit: "ऊर्ध्वं प्राणमुन्नयत्यपानं प्रत्यगस्यति । मध्ये वामनमासीनं विश्वे देवा उपासते ॥ ३ ॥",
       mulaIast: "ūrdhvaṁ prāṇam unnayaty apānaṁ pratyag asyati | madhye vāmanam āsīnaṁ viśve devā upāsate || 3 ||",
       padaccheda: "ऊर्ध्वम्, प्राणम्, उन्नयति, अपानम्, प्रत्यक्, अस्यति, मध्ये, वामनम्, आसीनम्, विश्वे, देवाः, उपासते",
-      englishTranslation: "He it is who directs the upward breath (prāṇa) and drives downward the incoming breath (apāna). That dwarf-sized adorable Purusha seated in the center (the heart), all the senses and faculties adore!"
+      englishTranslation: "He it is who directs the upward breath (prāṇa) and drives downward the incoming breath (apāna). That dwarf-sized adorable Purusha seated in the center (the heart), all the senses and faculties adore!",
+      bhashyaExtract:
+        "ऊर्ध्वं हृदयात् प्राणं प्राणवृत्तिं वायुम् उन्नयति ऊर्ध्वं गमयति । तथा अपानं प्रत्यक् अधः अस्यति क्षिपति यः इति वाक्यशेषः । तं मध्ये हृदयपुण्डरीकाकाशे आसीनं बुद्धावभिव्यक्तं विज्ञानप्रकाशनं वामनं वननीयं सम्भजनीयं विश्वे सर्वे देवाः चक्षुरादयः प्राणाः रूपादिविज्ञानं बलिमुपाहरन्तो विश इव राजानम् उपासते तादर्थ्येनानुपरतव्यापारा भवन्तीत्यर्थः । यदर्था यत्प्रयुक्ताश्च सर्वे वायुकरणव्यापाराः, सोऽन्यः सिद्ध इति वाक्यार्थः ॥",
+      commentaryNotes:
+        "Śāṅkarabhāṣya 2.2.3: Infers the distinct inner Ruler from physiological and sensory activity: He who impels prāṇa upward and apāna downward from the heart—the adorable ('vāmana' = vananīya) Consciousness seated in the heart-lotus space—is served unceasingly by all sense-gods bringing perceptual tributes like subjects serving a king; that very Lord for whose sake all vital and sensory functions operate is thereby established as distinct from them."
     },
     {
       id: "katha-2-2-4",
@@ -40,7 +52,11 @@ export const KATHA_VALLI_5: GranthaChapter = {
       mulaSanskrit: "अस्य विस्रंसमानस्य शरीरस्थस्य देहिनः । देहाद्विमुच्यमानस्य किमत्र परिशिष्यते । एतद्वै तत् ॥ ४ ॥",
       mulaIast: "asya visraṁsamānasya śarīrasthasya dehinaḥ | dehād vimucyamānasya kim atra pariśiṣyate | etad vai tat || 4 ||",
       padaccheda: "अस्य, विस्रंसमानस्य, शरीर-स्थस्य, देहिनः, देहात्, विमुच्यमानस्य, किम्, अत्र, परिशिष्यते, एतत्, वै, तत्",
-      englishTranslation: "When this embodied soul dwelling in the physical frame is unloosened and released from the body, what of the body remains? Nothing whatsoever! This indeed is That!"
+      englishTranslation: "When this embodied soul dwelling in the physical frame is unloosened and released from the body, what of the body remains? Nothing whatsoever! This indeed is That!",
+      bhashyaExtract:
+        "किञ्च, अस्य शरीरस्थस्य आत्मनः विस्रंसमानस्य भ्रंशमानस्य देहिनो देहवतः । विस्रंसनशब्दार्थमाह — देहाद्विमुच्यमानस्येति । किमत्र परिशिष्यते प्राणादिकलापे न किञ्चन परिशिष्यते ; अत्र देहे पुरस्वामिविद्रवण इव पुरवासिनां यस्यात्मनोऽपगमे क्षणमात्रात्कार्यकरणकलापरूपं सर्वमिदं हतबलं विध्वस्तं भवति विनष्टं भवति, सोऽन्यः सिद्ध आत्मा ॥",
+      commentaryNotes:
+        "Śāṅkarabhāṣya 2.2.4: Clarifies 'visraṁsamānasya' as 'being released from the body': just as citizens scatter when a city's ruler departs, the moment this Self withdraws from the body, the entire aggregate of prāṇas, body, and senses collapses powerless in an instant—nothing remains, proving the Self's distinctness."
     },
     {
       id: "katha-2-2-5",

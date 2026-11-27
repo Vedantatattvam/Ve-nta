@@ -40,12 +40,14 @@ const GRANTHA_NAMES: Record<string, string> = {
   advaitapancaratnam: "Advaita Pañcaratnam",
   kaupinapancakam: "Kaupīnapañcakam",
   jivanmuktanandalahari: "Jīvanmuktānandalaharī",
+  dasaslokistuti: "Daśaślokīstutiḥ",
   advaitanubhuti: "Advaitānubhūtiḥ",
   anatmasrivigarhana: "Anātmaśrīvigarhaṇaprakaraṇam",
   aparokshanubhuti: "Aparokṣānubhūtiḥ",
   atmabodha: "Ātmabodhaḥ",
   upadesasahasri: "Upadeśasāhasrī (Gadyaprabandhaḥ)",
   tattvopadesa: "Tattvopadeśaḥ",
+  dasasloki: "Daśaślokī",
   vedantasara: "Vedāntasāraḥ",
   jivanmuktiviveka: "Jīvanmuktivivekaḥ",
   vedantaparibhasa: "Vedānta-Paribhāṣā",
@@ -136,7 +138,7 @@ export function getFriendlyPageTitle(state: AppNavState): string {
   }
 
   if (state.tab === "about_us") {
-    return "About VedantaTattvam";
+    return "About vedāntatattvaṁ";
   }
 
   return "vedāntatattvaṁ";

@@ -30,6 +30,7 @@ import {
   replaceNavHistory,
   getFriendlyPageTitle,
 } from "./utils/navigationHistory";
+import { applyDocumentSeo, getScholarlySeoMetadata } from "./utils/seoMetadata";
 import { 
   Info,
   Menu,
@@ -120,6 +121,26 @@ export default function App() {
     const currentParsed = parseHash(window.location.hash);
     replaceNavHistory(currentParsed);
   }, []);
+
+  // Dynamically update <title>, <meta name="description">, OpenGraph, and canonical URL for Scholarly views
+  useEffect(() => {
+    if (siteVersion !== "scholarly") return;
+    const seo = getScholarlySeoMetadata({
+      activeTab,
+      mappingViewState,
+      comparativeCouncilSubTab,
+      bengalScholarId,
+      earlyThinkerId,
+    });
+    applyDocumentSeo(seo);
+  }, [
+    siteVersion,
+    activeTab,
+    mappingViewState,
+    comparativeCouncilSubTab,
+    bengalScholarId,
+    earlyThinkerId,
+  ]);
 
   // Listen to browser Back and Forward button navigation (popstate)
   useEffect(() => {
@@ -391,7 +412,11 @@ export default function App() {
         <SimpleTextReader
           initialTextId={mappingViewState.textId || "isopanisad"}
           initialChapterId={mappingViewState.chapterId}
-          initialTab={mappingViewState.subView === "catalog" ? "catalogue" : "reader"}
+          initialTab={
+            mappingViewState.subView === "reader" && mappingViewState.textId
+              ? "reader"
+              : "pathanam"
+          }
           onSwitchToScholarly={(textId, chapterId, subView) => {
             handleToggleSiteVersion("scholarly");
             if (textId) {

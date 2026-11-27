@@ -268,15 +268,19 @@ export default function AboutUsFacility({ onNavigateToTab }: AboutUsFacilityProp
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Creator / Designer */}
           <div className="p-5 rounded-2xl bg-white border border-[#bf953f]/35 space-y-3 shadow-xs">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#FAF1E2] text-[#8c6011] font-serif font-bold flex items-center justify-center border border-[#bf953f]/30 text-base">
-                BG
+            <div className="flex items-center gap-4">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden bg-[#FAF1E2] border-2 border-[#bf953f]/50 shadow-sm shrink-0">
+                <img
+                  src="/assets/aistudio/image_4bc167c4.png"
+                  alt="Buddhodev Ghosh"
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
               <div>
                 <div className="text-[10px] font-mono uppercase tracking-wider text-[#8c6011] font-bold">
                   Design, Architecture & Development
                 </div>
-                <h3 className="font-serif font-black text-base text-[#2D2319]">
+                <h3 className="font-serif font-black text-base sm:text-lg text-[#2D2319]">
                   Buddhodev Ghosh
                 </h3>
               </div>
@@ -288,15 +292,19 @@ export default function AboutUsFacility({ onNavigateToTab }: AboutUsFacilityProp
 
           {/* Academic Curator */}
           <div className="p-5 rounded-2xl bg-white border border-[#bf953f]/35 space-y-3 shadow-xs">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#FAF1E2] text-[#8c6011] font-serif font-bold flex items-center justify-center border border-[#bf953f]/30 text-base">
-                SA
+            <div className="flex items-center gap-4">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden bg-[#FAF1E2] border-2 border-[#bf953f]/50 shadow-sm shrink-0">
+                <img
+                  src="/assets/aistudio/image_0bb7aab1.png"
+                  alt="Dr. Saibal Acharya"
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
               <div>
                 <div className="text-[10px] font-mono uppercase tracking-wider text-[#8c6011] font-bold">
                   Scholarly Curation & Exegesis
                 </div>
-                <h3 className="font-serif font-black text-base text-[#2D2319]">
+                <h3 className="font-serif font-black text-base sm:text-lg text-[#2D2319]">
                   Dr. Saibal Acharya
                 </h3>
               </div>

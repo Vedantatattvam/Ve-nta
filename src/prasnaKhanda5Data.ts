@@ -14,9 +14,10 @@ export const PRASNA_KHANDA_5: GranthaChapter = {
       mulaIast: "atha hainaṁ śaibyaḥ satyakāmaḥ papraccha | sa yo ha vai tad bhagavan manuṣyeṣu prāyaṇāntam oṅkāram abhidhyāyīta katamaṁ vāva sa tena lokaṁ jayatīti || 1 ||",
       padaccheda: "अथ, ह, एनम्, शैब्यः, सत्यकामः, पप्रच्छ, सः, यः, ह, वै, तत्, भगवन्, मनुष्येषु, प्रायणान्तम्, ओङ्कारम्, अभिध्यायीत, कतमम्, वाव, सः, तेन, लोकम्, जयति, इति",
       anvaya: "अथ एनं शैब्यः सत्यकामः ह पप्रच्छ—भगवन् ! मनुष्येषु सः यः ह वै प्रायणान्तम् ओङ्कारम् अभिध्यायीत, सः तेन कतमं वाव लोकं जयति इति ?",
-      bhashyaExtract: "सत्यकामः पप्रच्छ—मरणपर्यन्तं यः अनन्यचेता ओङ्कारं ध्यायति, तस्य किं फलं कतमो लोकः सेत्स्यतीति ।",
+      bhashyaExtract:
+        "अथ ह एनं शैब्यः सत्यकामः पप्रच्छ । अथेदानीं परापरब्रह्मप्राप्तिसाधनत्वेन ओङ्कारस्योपासनविधित्सया प्रश्न आरभ्यते । सः यः कश्चित् ह वै भगवन् , मनुष्येषु मनुष्याणां मध्ये तत् अद्भुतमिव प्रायणान्तं मरणान्तं यावज्जीवमित्येतत् ; ओङ्कारम् अभिध्यायीत आभिमुख्येन चिन्तयेत् । बाह्यविषयेभ्य उपसंहृतकरणः समाहितचित्तो भक्त्यावेशितब्रह्मभावे ओङ्कारे आत्मप्रत्ययसन्तानाविच्छेदो भिन्नजातीयप्रत्ययान्तराखिलीकृतो निवातस्थदीपशिखासमोऽभिध्यानशब्दार्थः । सत्यब्रह्मचर्याहिंसापरिग्रहत्यागसंन्यासशौचसन्तोषामायावित्वाद्यनेकयमनियमानुगृहीतः सः एवं यावज्जीवव्रतधारणः, कतमं वाव, अनेके हि ज्ञानकर्मभिर्जेतव्या लोकास्तिष्ठन्ति ; तेषु तेन ओङ्काराभिध्यानेन कतमं सः लोकं जयतीति ॥",
       englishTranslation: "Then Śaibya Satyakāma questioned him: 'Venerable sir, if anyone among men should meditate on the syllable OM continually until the very end of life (death), which world indeed would he win by that?'",
-      commentaryNotes: "Inquires into the ultimate spiritual efficacy of Oṅkāra-sādhana practiced with lifelong, uninterrupted contemplation (prāyaṇāntam)."
+      commentaryNotes: "Śāṅkarabhāṣya 5.1: Introduces Oṅkāra meditation as the means to attain Para and Apara Brahman. Gives Śaṅkara's classic definition of 'abhidhyāna'—withdrawing the senses from external objects, entering samādhi, and maintaining an unbroken stream of Self-cognition on OM infused with Brahman-devotion, unobstructed by dissimilar thoughts and steady like a lamp-flame in a windless place, supported by yamas and niyamas (truth, brahmacarya, ahiṁsā, renunciation, purity, guilelessness) throughout life."
     },
     {
       id: "prasna-5-2",

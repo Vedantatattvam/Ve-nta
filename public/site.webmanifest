@@ -1,0 +1,27 @@
+{
+  "name": "vedāntatattvaṁ – Vedānta Texts & Philosophy Research",
+  "short_name": "vedāntatattvaṁ",
+  "description": "Explore primary Vedānta scriptures, Sanskrit bhāṣyas, multi-script Indic typography, and cross-school analysis on vedāntatattvaṁ.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF5ED",
+  "theme_color": "#8c6011",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

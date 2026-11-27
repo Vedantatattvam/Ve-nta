@@ -673,7 +673,7 @@ export default function BhashyaTikaSelector({
                         </span>
                       </div>
                       <div
-                        className={`p-3 rounded-xl bg-[#FAF5ED] border border-[#bf953f]/25 font-serif text-[#2D2319] leading-relaxed select-text ${
+                        className={`p-3 rounded-xl bg-[#FAF5ED] border border-[#bf953f]/25 font-serif text-[#2D2319] leading-relaxed select-text whitespace-pre-line ${
                           isFocused ? "text-base sm:text-lg" : "text-xs sm:text-sm"
                         }`}
                         style={{
@@ -697,7 +697,7 @@ export default function BhashyaTikaSelector({
                           Scholarly Exegesis & Philosophical Analysis:
                         </div>
                         <p
-                          className={`font-serif text-[#3d2f21] leading-relaxed ${
+                          className={`font-serif text-[#3d2f21] leading-relaxed whitespace-pre-line ${
                             isFocused ? "text-sm sm:text-base" : "text-xs sm:text-sm"
                           }`}
                         >
@@ -776,13 +776,13 @@ export default function BhashyaTikaSelector({
                               </div>
 
                               {/* Ṭīkā Sanskrit Extract */}
-                              <div className="font-serif text-xs text-[#2D2319] leading-relaxed italic bg-[#FAF7F0] p-2 rounded-lg border border-[#bf953f]/20">
+                              <div className="font-serif text-xs text-[#2D2319] leading-relaxed italic bg-[#FAF7F0] p-2.5 rounded-lg border border-[#bf953f]/20 whitespace-pre-line">
                                 {transliterate(tika.mulaExtract, activeLipi)}
                               </div>
 
                               {/* Ṭīkā English Explanation */}
                               {tika.englishExplanation && (
-                                <p className="text-[11px] text-[#543b14] font-serif leading-relaxed">
+                                <p className="text-[11px] text-[#543b14] font-serif leading-relaxed whitespace-pre-line">
                                   {tika.englishExplanation}
                                 </p>
                               )}

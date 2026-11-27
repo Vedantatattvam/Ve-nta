@@ -28,6 +28,8 @@ import { KAUPINAPANCAKAM_GRANTHA } from "./kaupinapancakamData";
 import { JIVANMUKTANANDALAHARI_GRANTHA } from "./jivanmuktanandalahariData";
 import { TATTVABODHA_GRANTHA } from "./tattvabodhaData";
 import { TATTVOPADESA_GRANTHA } from "./tattvopadesaData";
+import { DASASLOKI_GRANTHA } from "./dasaslokiData";
+import { DASASLOKISTUTI_GRANTHA } from "./dasaslokistutiData";
 import { TAPTACAKRANKANA_GRANTHA } from "./taptacakrankanaData";
 import { MAHAVAKYAM_GRANTHA } from "./mahavakyamData";
 import { SHAKTI_BHASHYA_GRANTHA } from "./shaktibhashyaData";
@@ -147,8 +149,10 @@ export const PRESEEDED_GRANTHAS: TextEntry[] = [
   ATMABODHA_GRANTHA,
   UPADESASAHASRI_GRANTHA,
   TATTVOPADESA_GRANTHA,
+  DASASLOKI_GRANTHA,
   KAUPINAPANCAKAM_GRANTHA,
   JIVANMUKTANANDALAHARI_GRANTHA,
+  DASASLOKISTUTI_GRANTHA,
   VEDANTASARA_GRANTHA,
   JIVANMUKTIVIVEKA_GRANTHA,
   VEDANTAPARIBHASA_GRANTHA,

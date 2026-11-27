@@ -94,7 +94,7 @@ export const PARAMPARA_TRADITIONS: ParamparaTradition[] = [
     badgeColor: "bg-amber-100 text-amber-900 border-amber-300",
     borderColor: "border-amber-500",
     accentBg: "from-amber-500/10 via-orange-500/5 to-transparent",
-    canonicalGranthaIds: ["tattvabodha", "mahavakyam", "advaitapancaratnam", "kaupinapancakam", "jivanmuktanandalahari", "advaitanubhuti", "anatmasrivigarhana", "aparokshanubhuti", "atmabodha", "upadesasahasri", "tattvopadesa", "advaitamakaranda", "advaitarasamanjari", "vedantasara", "vivekacudamani", "mandukyopanisad", "vedantaparibhasa", "advaitasiddhi", "taptacakrankanavidhvamsanam", "sankara-catuhsutri", "bhamati"],
+    canonicalGranthaIds: ["tattvabodha", "mahavakyam", "advaitapancaratnam", "kaupinapancakam", "jivanmuktanandalahari", "dasaslokistuti", "advaitanubhuti", "anatmasrivigarhana", "aparokshanubhuti", "atmabodha", "upadesasahasri", "tattvopadesa", "dasasloki", "advaitamakaranda", "advaitarasamanjari", "vedantasara", "vivekacudamani", "mandukyopanisad", "vedantaparibhasa", "advaitasiddhi", "taptacakrankanavidhvamsanam", "sankara-catuhsutri", "bhamati"],
     subPrasthānas: [
       {
         id: "sankara_kritis_prakarana",
@@ -103,7 +103,7 @@ export const PARAMPARA_TRADITIONS: ParamparaTradition[] = [
         proponent: "Jagadguru Ādi Śaṅkarācārya Bhagavatpāda",
         century: "8th Century CE",
         coreEpistemology: "Direct pedagogical & contemplative manuals distilling Prasthānatrayī Siddhānta—Viveka, Vairāgya, Mahāvākya-bodha, and Ātma-Sākṣātkāra.",
-        keyWorks: ["Upadeśasāhasrī", "Vivekacūḍāmaṇi", "Aparokṣānubhūti", "Ātmabodha", "Tattvabodha", "Tattvopadeśa", "Mahāvākyam", "Advaitānubhūti", "Anātmaśrīvigarhaṇam"]
+        keyWorks: ["Upadeśasāhasrī", "Vivekacūḍāmaṇi", "Aparokṣānubhūti", "Ātmabodha", "Tattvabodha", "Tattvopadeśa", "Daśaślokī", "Mahāvākyam", "Advaitānubhūti", "Anātmaśrīvigarhaṇam"]
       },
       {
         id: "sankara_kritis_stotras",
@@ -112,7 +112,7 @@ export const PARAMPARA_TRADITIONS: ParamparaTradition[] = [
         proponent: "Jagadguru Ādi Śaṅkarācārya Bhagavatpāda",
         century: "8th Century CE",
         coreEpistemology: "Devotional-contemplative hymns, Pañcaratnas, Pañcakas, and Laharīs articulating non-dual realization and Jīvanmukti bliss in metrical verse.",
-        keyWorks: ["Advaitapañcaratnam", "Kaupīnapañcakam", "Jīvanmuktānandalaharī", "Dakṣiṇāmūrti Stotram", "Bhaja Govindam", "Manīṣāpañcakam"]
+        keyWorks: ["Advaitapañcaratnam", "Kaupīnapañcakam", "Jīvanmuktānandalaharī", "Daśaślokīstutiḥ", "Dakṣiṇāmūrti Stotram", "Bhaja Govindam", "Manīṣāpañcakam"]
       },
       {
         id: "bhamati",
@@ -215,12 +215,14 @@ export const PARAMPARA_TRADITIONS: ParamparaTradition[] = [
           "Ātmabodha",
           "Tattvabodha",
           "Tattvopadeśa",
+          "Daśaślokī",
           "Mahāvākyam",
           "Advaitānubhūti",
           "Anātmaśrīvigarhaṇam",
           "Advaitapañcaratnam",
           "Kaupīnapañcakam",
           "Jīvanmuktānandalaharī",
+          "Daśaślokīstutiḥ",
           "Dakṣiṇāmūrti Stotram",
           "Bhaja Govindam"
         ],

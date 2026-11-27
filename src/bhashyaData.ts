@@ -1,4 +1,10 @@
 import { BhashyaEntry, GranthaVerse, TikaEntry } from "./types";
+import { getIsopanisadAnandagiriTika } from "./isopanisadAnandagiriData";
+import { getKenopanisadAnandagiriTika } from "./kenopanisadAnandagiriData";
+import { getKenopanisadVakyabhashya } from "./kenopanisadVakyabhashyaData";
+import { getKathopanisadAnandagiriTika } from "./kathopanisadAnandagiriData";
+import { getPrasnopanisadAnandagiriTika } from "./prasnopanisadAnandagiriData";
+import { getMundakopanisadAnandagiriTika } from "./mundakopanisadAnandagiriData";
 
 /**
  * Curated classical Bhāṣyas (Commentaries) and Ṭīkās (Sub-Commentaries)
@@ -902,6 +908,50 @@ export function getBhashyasForVerse(
     verse.bhashyaExtract ||
     "अस्य मन्त्रस्य/सूत्रस्य तात्पर्यं परब्रह्मस्वरूपप्रतिपादने मोक्षसाधनविधौ च विशिष्यते ।";
 
+  const isIsopanisad =
+    granthaId === "isopanisad" ||
+    (verse.id && verse.id.toLowerCase().startsWith("iso-"));
+
+  const isKenopanisad =
+    granthaId === "kenopanisad" ||
+    (verse.id && verse.id.toLowerCase().startsWith("kena-"));
+
+  const isKathopanisad =
+    granthaId === "kathopanisad" ||
+    (verse.id && verse.id.toLowerCase().startsWith("katha-"));
+
+  const isPrasnopanisad =
+    granthaId === "prasnopanisad" ||
+    (verse.id && verse.id.toLowerCase().startsWith("prasna-"));
+
+  const isMundakopanisad =
+    granthaId === "mundakopanisad" ||
+    (verse.id && verse.id.toLowerCase().startsWith("mundaka-"));
+
+  const isopanisadAnandagiriTika = isIsopanisad
+    ? getIsopanisadAnandagiriTika(verse.id)
+    : undefined;
+
+  const kenopanisadAnandagiriTika = isKenopanisad
+    ? getKenopanisadAnandagiriTika(verse.id)
+    : undefined;
+
+  const kenopanisadVakyabhashya = isKenopanisad
+    ? getKenopanisadVakyabhashya(verse.id)
+    : undefined;
+
+  const kathopanisadAnandagiriTika = isKathopanisad
+    ? getKathopanisadAnandagiriTika(verse.id)
+    : undefined;
+
+  const prasnopanisadAnandagiriTika = isPrasnopanisad
+    ? getPrasnopanisadAnandagiriTika(verse.id)
+    : undefined;
+
+  const mundakopanisadAnandagiriTika = isMundakopanisad
+    ? getMundakopanisadAnandagiriTika(verse.id)
+    : undefined;
+
   const primaryTikas: TikaEntry[] = isBrahmasutra
     ? [
         {
@@ -935,6 +985,16 @@ export function getBhashyasForVerse(
             "Ānandagiri provides an exhaustive syntactical and logical gloss on every phrase of the Śāṅkara-Bhāṣya.",
         },
       ]
+    : isopanisadAnandagiriTika
+    ? [isopanisadAnandagiriTika]
+    : kenopanisadAnandagiriTika
+    ? [kenopanisadAnandagiriTika]
+    : kathopanisadAnandagiriTika
+    ? [kathopanisadAnandagiriTika]
+    : prasnopanisadAnandagiriTika
+    ? [prasnopanisadAnandagiriTika]
+    : mundakopanisadAnandagiriTika
+    ? [mundakopanisadAnandagiriTika]
     : [
         {
           id: `tika-vyakhyana-${verse.id}`,
@@ -956,10 +1016,18 @@ export function getBhashyasForVerse(
         ? "Śārīraka-Bhāṣya (शारीरकभाष्यम्)"
         : isGita
         ? "Śāṅkara-Gītā-Bhāṣya (शाङ्कर-गीताभाष्यम्)"
+        : isKenopanisad
+        ? "Śāṅkara-Padabhāṣya (केनोपनिषत्पदभाष्यम्)"
         : "Śāṅkaropaniṣad-Bhāṣya (शाङ्करोपनिषद्भाष्यम्)",
-      devanagariName: isBrahmasutra ? "शारीरकभाष्यम्" : "शाङ्करभाष्यम्",
+      devanagariName: isBrahmasutra
+        ? "शारीरकभाष्यम्"
+        : isKenopanisad
+        ? "केनोपनिषत्पदभाष्यम्"
+        : "शाङ्करभाष्यम्",
       author: "Ādi Śaṅkarācārya (आदिशङ्कराचार्यः)",
-      school: "Advaita Vedānta (अद्वैतवेदान्तः)",
+      school: isKenopanisad
+        ? "Advaita Vedānta — Pada Bhāṣyam (पदभाष्यम्)"
+        : "Advaita Vedānta (अद्वैतवेदान्तः)",
       paramparaId: "advaita",
       century: "8th Century CE",
       badgeColor: "#b45309",
@@ -970,6 +1038,7 @@ export function getBhashyasForVerse(
       commentaryNotes: verse.commentaryNotes,
       tikas: primaryTikas,
     },
+    ...(kenopanisadVakyabhashya ? [kenopanisadVakyabhashya] : []),
 
     // 2. Viśiṣṭādvaita Perspective
     {
