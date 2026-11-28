@@ -5,6 +5,10 @@ import { getKenopanisadVakyabhashya } from "./kenopanisadVakyabhashyaData";
 import { getKathopanisadAnandagiriTika } from "./kathopanisadAnandagiriData";
 import { getPrasnopanisadAnandagiriTika } from "./prasnopanisadAnandagiriData";
 import { getMundakopanisadAnandagiriTika } from "./mundakopanisadAnandagiriData";
+import { getMandukyopanisadAnandagiriTika } from "./mandukyopanisadAnandagiriData";
+import { getTaittiriyopanisadAnandagiriTika } from "./taittiriyopanisadAnandagiriData";
+import { getTaittiriyopanisadVartika } from "./taittiriyopanisadVartikaData";
+import { getTaittiriyopanisadVanamalaTika } from "./taittiriyopanisadVanamalaData";
 
 /**
  * Curated classical Bhāṣyas (Commentaries) and Ṭīkās (Sub-Commentaries)
@@ -928,6 +932,14 @@ export function getBhashyasForVerse(
     granthaId === "mundakopanisad" ||
     (verse.id && verse.id.toLowerCase().startsWith("mundaka-"));
 
+  const isMandukyopanisad =
+    granthaId === "mandukyopanisad" ||
+    (verse.id && verse.id.toLowerCase().startsWith("mandukya-"));
+
+  const isTaittiriyopanisad =
+    granthaId === "taittiriyopanisad" ||
+    (verse.id && verse.id.toLowerCase().startsWith("tait-"));
+
   const isopanisadAnandagiriTika = isIsopanisad
     ? getIsopanisadAnandagiriTika(verse.id)
     : undefined;
@@ -951,6 +963,28 @@ export function getBhashyasForVerse(
   const mundakopanisadAnandagiriTika = isMundakopanisad
     ? getMundakopanisadAnandagiriTika(verse.id)
     : undefined;
+
+  const mandukyopanisadAnandagiriTika = isMandukyopanisad
+    ? getMandukyopanisadAnandagiriTika(verse.id)
+    : undefined;
+
+  const taittiriyopanisadAnandagiriTika = isTaittiriyopanisad
+    ? getTaittiriyopanisadAnandagiriTika(verse.id)
+    : undefined;
+
+  const taittiriyopanisadVartika = isTaittiriyopanisad
+    ? getTaittiriyopanisadVartika(verse.id)
+    : undefined;
+
+  const taittiriyopanisadVanamalaTika = isTaittiriyopanisad
+    ? getTaittiriyopanisadVanamalaTika(verse.id)
+    : undefined;
+
+  const taittiriyopanisadTikas: TikaEntry[] = [
+    ...(taittiriyopanisadVartika ? [taittiriyopanisadVartika] : []),
+    ...(taittiriyopanisadAnandagiriTika ? [taittiriyopanisadAnandagiriTika] : []),
+    ...(taittiriyopanisadVanamalaTika ? [taittiriyopanisadVanamalaTika] : []),
+  ];
 
   const primaryTikas: TikaEntry[] = isBrahmasutra
     ? [
@@ -995,6 +1029,10 @@ export function getBhashyasForVerse(
     ? [prasnopanisadAnandagiriTika]
     : mundakopanisadAnandagiriTika
     ? [mundakopanisadAnandagiriTika]
+    : mandukyopanisadAnandagiriTika
+    ? [mandukyopanisadAnandagiriTika]
+    : taittiriyopanisadTikas.length > 0
+    ? taittiriyopanisadTikas
     : [
         {
           id: `tika-vyakhyana-${verse.id}`,

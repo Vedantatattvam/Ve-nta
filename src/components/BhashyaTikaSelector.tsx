@@ -776,9 +776,11 @@ export default function BhashyaTikaSelector({
                               </div>
 
                               {/* Ṭīkā Sanskrit Extract */}
-                              <div className="font-serif text-xs text-[#2D2319] leading-relaxed italic bg-[#FAF7F0] p-2.5 rounded-lg border border-[#bf953f]/20 whitespace-pre-line">
-                                {transliterate(tika.mulaExtract, activeLipi)}
-                              </div>
+                              {tika.mulaExtract && (
+                                <div className="font-serif text-xs text-[#2D2319] leading-relaxed italic bg-[#FAF7F0] p-2.5 rounded-lg border border-[#bf953f]/20 whitespace-pre-line">
+                                  {transliterate(tika.mulaExtract, activeLipi)}
+                                </div>
+                              )}
 
                               {/* Ṭīkā English Explanation */}
                               {tika.englishExplanation && (

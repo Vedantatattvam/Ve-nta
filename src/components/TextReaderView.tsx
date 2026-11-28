@@ -30,6 +30,8 @@ import {
 } from "../utils/vedicChantSynthesizer";
 import BhashyaTikaSelector from "./BhashyaTikaSelector";
 import { useAuthProofread } from "../context/AuthProofreadContext";
+import TaittiriyaMantraUsageChart from "./TaittiriyaMantraUsageChart";
+import { GRANTHA_ULLEKHA_DATASETS } from "../taittiriyaUsageAnalyticsData";
 import { 
   ArrowLeft, 
   BookOpen, 
@@ -1306,6 +1308,20 @@ Academic Citation: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on $
               </p>
             )}
           </div>
+
+          {!isFocused &&
+            GRANTHA_ULLEKHA_DATASETS.some((d) => d.granthaId === grantha.id) && (
+              <TaittiriyaMantraUsageChart
+                activeGranthaId={grantha.id}
+                compactCollapsible
+                defaultOpen={grantha.id === "taittiriyopanisad"}
+                defaultView={
+                  grantha.id === "taittiriyopanisad"
+                    ? "corpus_usage"
+                    : "bhashya_ullekhas"
+                }
+              />
+            )}
 
           {/* Unified Exegetical Reader Space (Main text, Word splits, Prose order & Commentaries together) */}
           <div id="unified-reader-widget" className="space-y-4">

@@ -28,6 +28,7 @@ import {
   ChevronLeft,
   EyeOff,
   Layers,
+  PieChart as PieChartIcon,
 } from "lucide-react";
 import { CitationButton } from "./CitationButton";
 import { GlossaryHover } from "./GlossaryHover";
@@ -39,6 +40,8 @@ import { getBookmarks, VerseBookmark } from "../utils/bookmarksStorage";
 import { useBharatiyaLipi } from "../context/BharatiyaLipiContext";
 import BhashyaTikaSelector from "./BhashyaTikaSelector";
 import VedicChantButton from "./VedicChantButton";
+import TaittiriyaMantraUsageChart from "./TaittiriyaMantraUsageChart";
+import { GRANTHA_ULLEKHA_DATASETS } from "../taittiriyaUsageAnalyticsData";
 import { BRAHMASUTRA_GRANTHA } from "../brahmasutraniData";
 import { SHAKTI_BHASHYA_GRANTHA } from "../shaktibhashyaData";
 import {
@@ -646,6 +649,7 @@ export default function MappingUtility({
   // Bookmarks Drawer State
   const [isBookmarksDrawerOpen, setIsBookmarksDrawerOpen] = useState(false);
   const [bookmarksVersion, setBookmarksVersion] = useState(0);
+  const [showTaittiriyaAnalytics, setShowTaittiriyaAnalytics] = useState(false);
 
   const allBookmarks = useMemo(() => {
     return getBookmarks();
@@ -945,6 +949,28 @@ Academic Reference: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on 
             >
               <Compass className="w-3.5 h-3.5 text-[#8c6011]" />
               <span>Nyāya-Prasthāna (Brahmasūtras)</span>
+            </button>
+
+            {/* Taittirīya Mantra Usage & Ullekhāḥ Pie Chart Button */}
+            <button
+              type="button"
+              onClick={() => {
+                setShowTaittiriyaAnalytics((prev) => !prev);
+                setTimeout(() => {
+                  const el = document.getElementById("taittiriya-analytics-panel");
+                  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+                }, 60);
+              }}
+              className={`text-xs font-mono font-bold px-3 py-1.5 rounded-xl border flex items-center gap-1.5 transition cursor-pointer shadow-xs ${
+                showTaittiriyaAnalytics ||
+                GRANTHA_ULLEKHA_DATASETS.some((d) => d.granthaId === selectedPreset.id)
+                  ? "bg-[#8c6011] text-[#FFFDF8] border-[#735013]"
+                  : "text-[#8c6011] bg-gradient-to-r from-[#FAF5ED] to-[#f5e6ce] hover:brightness-95 border-[#bf953f]/40"
+              }`}
+              title="Visualize Taittirīya mantra usage across Vedānta Śāstras and Upaniṣad-Bhāṣya Ullekhāḥ Concordance"
+            >
+              <PieChartIcon className="w-3.5 h-3.5" />
+              <span>Taittirīya Usage Pie Chart</span>
             </button>
 
             {/* Compare Mode Button */}
@@ -2231,6 +2257,30 @@ Academic Reference: vedāntatattvaṁ (https://vedantatattvam.com). Accessed on 
                       </div>
                     </div>
                   </div>
+
+                  {(showTaittiriyaAnalytics ||
+                    GRANTHA_ULLEKHA_DATASETS.some(
+                      (d) => d.granthaId === selectedPreset.id
+                    )) && (
+                    <div id="taittiriya-analytics-panel" className="pt-2">
+                      <TaittiriyaMantraUsageChart
+                        activeGranthaId={selectedPreset.id}
+                        defaultView={
+                          selectedPreset.id === "taittiriyopanisad"
+                            ? "corpus_usage"
+                            : GRANTHA_ULLEKHA_DATASETS.some(
+                                (d) => d.granthaId === selectedPreset.id
+                              )
+                            ? "bhashya_ullekhas"
+                            : "corpus_usage"
+                        }
+                        onOpenGrantha={(id) => {
+                          const target = PRESEEDED_GRANTHAS.find((g) => g.id === id);
+                          if (target) openReader(target);
+                        }}
+                      />
+                    </div>
+                  )}
                 </>
               )}
             </div>

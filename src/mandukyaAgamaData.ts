@@ -14,7 +14,7 @@ export const MANDUKYA_AGAMA_CHAPTER: GranthaChapter = {
       mulaIast: "bahiḥprajño vibhur viśvo hy antaḥprajñas tu taijasaḥ |\nghanaprajñas tathā prājña eka eva tridhā sthitaḥ || 1 ||",
       padaccheda: "बहिः-प्रज्ञः, विभुः, विश्वः, हि, अन्तः-प्रज्ञः, तु, तैजसः, घन-प्रज्ञः, तथा, प्राज्ञः, एकः, एव, त्रिधा, स्थितः",
       anvaya: "बहिःप्रज्ञः विभुः विश्वः, अन्तःप्रज्ञः तु तैजसः, तथा घनप्रज्ञः प्राज्ञः—एकः एव (आत्मा) त्रिधा स्थितः ।",
-      bhashyaExtract: "एक एव आत्मा त्रिषु स्थानेषु विश्वतैजसप्राज्ञरूपेण त्रिधा व्यवस्थितः । विभुर्व्यापकः स्थूलशरीराभिमानी विश्वः, स्वप्ने तैजसः, सुषुप्ते प्राज्ञः ।",
+      bhashyaExtract: "अत्र एतस्मिन्यथोक्तेऽर्थे एते श्लोका भवन्ति — बहिःप्रज्ञ इति । पर्यायेण त्रिस्थानत्वात् सोऽहमिति स्मृत्या प्रतिसन्धानाच्च स्थानत्रयव्यतिरिक्तत्वमेकत्वं शुद्धत्वमसङ्गत्वं च सिद्धमित्यभिप्रायः, महामत्स्यादिदृष्टान्तश्रुतेः ॥",
       englishTranslation: "Viśva is all-pervading and outwardly cognitive; Taijasa is inwardly cognitive; and Prājña is a consolidated mass of cognition. It is the one Self alone that is stationed in three ways.",
       commentaryNotes: "Gauḍapāda demonstrates that despite apparent division across the three states, the underlying conscious principle is single and indivisible."
     },
@@ -26,7 +26,7 @@ export const MANDUKYA_AGAMA_CHAPTER: GranthaChapter = {
       mulaIast: "dakṣiṇākṣimukhe viśvo manasy antas tu taijasaḥ |\nākāśe ca hṛdi prājñas tridhā dehe vyavasthitaḥ || 2 ||",
       padaccheda: "दक्षिणाक्षि-मुखे, विश्वः, मनसि, अन्तः, तु, तैजसः, आकाशे, च, हृदि, प्राज्ञः, त्रिधा, देहे, व्यवस्थितः",
       anvaya: "विश्वः दक्षिणाक्षिमुखे, तैजसः तु मनसि अन्तः, प्राज्ञः च हृदि आकाशे देहे त्रिधा व्यवस्थितः ।",
-      bhashyaExtract: "दक्षिणाक्षिणि विशेषेणोपलब्धिस्थानं विश्वस्य । मनस्यन्तर्गतो वासनामयस्तैजसः । हृद्याकाशे प्रलीनसर्वकरणः प्राज्ञः ।",
+      bhashyaExtract: "जागरितावस्थायामेव विश्वादीनां त्रयाणामनुभवप्रदर्शनार्थोऽयं श्लोकः — दक्षिणाक्षीति । दक्षिणमक्ष्येव मुखम् , तस्मिन्प्राधान्येन द्रष्टा स्थूलानां विश्वः अनुभूयते, ‘इन्धो ह वै नामैष योऽयं दक्षिणेऽक्षन्पुरुषः’(बृ. उ. ४ । २ । २) इति श्रुतेः । इन्धो दीप्तिगुणो वैश्वानर आदीत्यान्तर्गतो वैराज आत्मा चक्षुषि च द्रष्टैकः । नन्वन्यो हिरण्यगर्भः, क्षेत्रज्ञो दक्षिणेऽक्षिण्यक्ष्णोर्नियन्ता द्रष्टा चान्यो देहस्वामी ; न, स्वतो भेदानभ्युपगमात् ; ‘एको देवः सर्वभूतेषु गूढः’(श्वे. उ. ६ । ११) इति श्रुतेः, ‘क्षेत्रज्ञं चापि मां विद्धि सर्वक्षेत्रेषु भारत’(भ. गी. १३ । २) ‘अविभक्तं च भूतेषु विभक्तमिव च स्थितम्’(भ. गी. १३ । १६) इति स्मृतेश्च ; सर्वेषु करणेष्वविशेषेष्वपि दक्षिणाक्षिण्युपलब्धिपाटवदर्शनात्तत्र विशेषेण निर्देशोऽस्य विश्वस्य । दक्षिणाक्षिगतो दृष्ट्वा रूपं निमीलिताक्षस्तदेव स्मरन्मनस्यन्तः स्वप्न इव तदेव वासनारूपाभिव्यक्तं पश्यति । यथा तत्र तथा स्वप्ने ; अतः मनसि अन्तस्तु तैजसोऽपि विश्व एव । आकाशे च हृदि स्मरणाख्यव्यापारोपरमे प्राज्ञ एकीभूतो घनप्रज्ञ एव भवति, मनोव्यापाराभावात् । दर्शनस्मरणे एव हि मनःस्पन्दितम् ; तदभावे हृद्येवाविशेषेण प्राणात्मनावस्थानम् , ‘प्राणो ह्येवैतान्सर्वान्संवृङ्क्ते’(छा. उ. ४ । ३ । ३) इति श्रुतेः । तैजसः हिरण्यगर्भः, मनःस्थत्वात् ; ‘लिङ्गं मनः’(बृ. उ. ४ । ४ । ६) ‘मनोमयोऽयं पुरुषः’(बृ. उ. ५ । ६ । १) इत्यादिश्रुतिभ्यः । ननु, व्याकृतः प्राणः सुषुप्ते ; तदात्मकानि करणानि भवन्ति ; कथमव्याकृतता ? नैष दोषः, अव्याकृतस्य देशकालविशेषाभावात् । यद्यपि प्राणाभिमाने सति व्याकृततैव प्राणस्य ; तथापि पिण्डपरिच्छिन्नविशेषाभिमाननिरोधः प्राणे भवतीत्यव्याकृत एव प्राणः सुषुप्ते परिच्छिन्नाभिमानवताम् । यथा प्राणलये परिच्छिन्नाभिमानिनां प्राणोऽव्याकृतः, तथा प्राणाभिमानिनोऽप्यविशेषापत्तावव्याकृतता समाना, प्रसवबीजात्मकत्वं च । तदध्यक्षश्चैकोऽव्याकृतावस्थः । परिच्छिन्नाभिमानिनामध्यक्षाणां च तेनैकत्वमिति पूर्वोक्तं विशेषणमेकीभूतः प्रज्ञानघन इत्याद्युपपन्नम् । तस्मिन्नेतस्मिन्नुक्तहेतुसत्त्वाच्च । कथं प्राणशब्दत्वमव्याकृतस्य ? ‘प्राणबन्धनं हि सोम्य मनः’(छा. उ. ६ । ८ । २) इति श्रुतेः । ननु, तत्र ‘सदेव सोम्य’(छा. उ. ६ । २ । १) इति प्रकृतं सद्ब्रह्म प्राणशब्दवाच्यम् ; नैष दोषः, बीजात्मकत्वाभ्युपगमात्सतः । यद्यपि सद्ब्रह्म प्राणशब्दवाच्यं तत्र, तथापि जीवप्रसवबीजात्मकत्वमपरित्यज्यैव प्राणशब्दत्वं सतः सच्छब्दवाच्यता च । यदि हि निर्बीजरूपं विवक्षितं ब्रह्माभविष्यत् , ‘नेति नेति’(बृ. उ. ४ । ५ । ३)(बृ. उ. २ । ३ । ६) ‘यतो वाचो निवर्तन्ते’(तै. उ. २ । ९ । १) ‘अन्यदेव तद्विदितादथो अविदितादधि’(के. उ. १ । ४) इत्यवक्ष्यत् ; ‘न सत्तन्नासदुच्यते’(भ. गी. १३ । १२) इति स्मृतेः । निर्बीजतयैव चेत् , सति प्रलीनानां सम्पन्नानां सुषुप्तिप्रलययोः पुनरुत्थानानुपपत्तिः स्यात् ; मुक्तानां च पुनरुत्पत्तिप्रसङ्गः, बीजाभावाविशेषात् , ज्ञानदाह्यबीजाभावे च ज्ञानानर्थक्यप्रसङ्गः ; तस्मात्सबीजत्वाभ्युपगमेनैव सतः प्राणत्वव्यपदेशः, सर्वश्रुतिषु च कारणत्वव्यपदेशः । अत एव ‘अक्षरात्परतः परः’(मु. उ. २ । १ । २) ‘सबाह्याभ्यन्तरो ह्यजः’(मु. उ. २ । १ । २) ‘यतो वाचो निवर्तन्ते’ ‘नेति नेति’ इत्यादिना बीजत्वापनयनेन व्यपदेशः । तामबीजावस्थां तस्यैव प्राज्ञशब्दवाच्यस्य तुरीयत्वेन देहादिसम्बन्धजाग्रदादिरहितां पारमार्थिकीं पृथग्वक्ष्यति । बीजावस्थापि ‘न किञ्चिदवेदिषम्’ इत्युत्थितस्य प्रत्ययदर्शनाद्देहेऽनुभूयत एवेति त्रिधा देहे व्यवस्थित इत्युच्यते ॥",
       englishTranslation: "Viśva is experienced predominantly in the right eye; Taijasa is within the mind; and Prājña is in the ether of the heart. Thus the Self is threefold stationed within the physical frame.",
       commentaryNotes: "The right eye is considered the chief instrument of waking sensory perception; mind is the stage for dream; the heart-ether is the retreat of deep sleep."
     },
@@ -38,7 +38,7 @@ export const MANDUKYA_AGAMA_CHAPTER: GranthaChapter = {
       mulaIast: "viśvo hi sthūlabhuṅ nityaṁ taijasaḥ praviviktabhuk |\nānandabhuk tathā prājñas tridhā bhogaṁ nibodhata || 3 ||",
       padaccheda: "विश्वः, हि, स्थूल-भुक्, नित्यम्, तैजसः, प्रविविक्त-भुक्, आनन्द-भुक्, तथा, प्राज्ञः, त्रिधा, भोगम्, निबोधत",
       anvaya: "विश्वः हि नित्यं स्थूलभुक्, तैजसः प्रविविक्तभुक्, तथा प्राज्ञः आनन्दभुक्—त्रिधा भोगं निबोधत ।",
-      bhashyaExtract: "विश्वेन स्थूलं बाह्यविषयजातं भुज्यते, तैजसेन मनोवासनारूपं सूक्ष्मं भुज्यते, प्राज्ञेन च सर्वद्वैतोपशमे परमानन्दः भुज्यते ।",
+      bhashyaExtract: "उक्तार्थौ हि श्लोकौ ॥",
       englishTranslation: "Viśva ever experiences the gross; Taijasa experiences the subtle; and Prājña experiences bliss. Understand this threefold nature of enjoyment.",
       commentaryNotes: "Shows the gradation of experience from physical objects to mental concepts, resolving into unagitated subjective rest."
     },
@@ -50,7 +50,7 @@ export const MANDUKYA_AGAMA_CHAPTER: GranthaChapter = {
       mulaIast: "sthūlaṁ tarpayate viśvaṁ praviviktaṁ tu taijasam |\nānandaś ca tathā prājñaṁ tridhā tṛptiṁ nibodhata || 4 ||",
       padaccheda: "स्थूलम्, तर्पयते, विश्वम्, प्रविविक्तम्, तु, तैजसम्, आनन्दः, च, तथा, प्राज्ञम्, त्रिधा, तृप्तिम्, निबोधत",
       anvaya: "स्थूलं विश्वं तर्पयते, प्रविविक्तं तु तैजसम्, तथा आनन्दः च प्राज्ञं (तर्पयते)—त्रिधा तृप्तिं निबोधत ।",
-      bhashyaExtract: "स्थूलैर्विषयैर्विश्वस्तृप्यति, वासनामयैस्तैजसः, अविद्याच्छादितस्वरूपानन्देन प्राज्ञस्तृप्यति ।",
+      bhashyaExtract: "उक्तार्थौ हि श्लोकौ ॥",
       englishTranslation: "The gross gives satisfaction to Viśva; the subtle satisfies Taijasa; and bliss satisfies Prājña. Comprehend this threefold satisfaction.",
       commentaryNotes: "Each level of subjective awareness is matched with a corresponding dimension of fulfillment."
     },
@@ -62,7 +62,7 @@ export const MANDUKYA_AGAMA_CHAPTER: GranthaChapter = {
       mulaIast: "triṣu dhāmasu yad bhojyaṁ bhoktā yaś ca prakīrtitaḥ |\nvedaitad ubhayaṁ yas tu sa bhuñjāno na lipyate || 5 ||",
       padaccheda: "त्रिषु, धामसु, यत्, भोज्यम्, भोक्ता, यः, च, प्रकीर्तितः, वेद, एतत्, उभयम्, यः, तु, सः, भुञ्जानः, न, लिप्यते",
       anvaya: "त्रिषु धामसु यत् भोज्यं यः च भोक्ता प्रकीर्तितः, एतत् उभयं यः तु वेद सः भुञ्जानः न लिप्यते ।",
-      bhashyaExtract: "जाग्रदादिषु त्रिषु स्थानेषु यद्ग्राह्यं ग्राहको यश्च तदुभयमेक एवात्मेति यो वेद, स कर्मफलभोगेन न लिप्यते, असङ्गत्वात् ।",
+      bhashyaExtract: "त्रिषु धामसु जाग्रदादिषु स्थूलप्रविविक्तानन्दाख्यं यद्भोज्यमेकं त्रिधाभूतम् ; यश्च विश्वतैजसप्राज्ञाख्यो भोक्तैकः ‘सोऽहम्’ इत्येकत्वेन प्रतिसन्धानात् द्रष्टृत्वाविशेषाच्च प्रकीर्तितः ; यो वेद एतदुभयं भोज्यभोक्तृतया अनेकधा भिन्नम् , सः भुञ्जानः न लिप्यते, भोज्यस्य सर्वस्यैकभोक्तृभोज्यत्वात् । न हि यस्य यो विषयः, स तेन हीयते वर्धते वा । न ह्यग्निः स्वविषयं दग्ध्वा काष्ठादि, तद्वत् ॥",
       englishTranslation: "He who knows both the object of enjoyment and the enjoyer declared in all the three states is not tainted even while experiencing them.",
       commentaryNotes: "By recognizing the non-dual substratum behind both observer and observed, the sage attains absolute freedom from karmic taint."
     },
@@ -74,7 +74,7 @@ export const MANDUKYA_AGAMA_CHAPTER: GranthaChapter = {
       mulaIast: "prabhavaḥ sarvabhāvānāṁ satām iti viniścayaḥ |\nsarvaṁ janayati prāṇaś ceto'ṁśūn puruṣaḥ pṛthak || 6 ||",
       padaccheda: "प्रभवः, सर्व-भावानाम्, सताम्, इति, विनिश्चयः, सर्वम्, जनयति, प्राणः, चेतः-अंशून्, पुरुषः, पृथक्",
       anvaya: "सतां सर्वभावानां प्रभवः इति विनिश्चयः । प्राणः सर्वं जनयति, पुरुषः चेतोऽंशून् पृथक् (जनयति) ।",
-      bhashyaExtract: "सद्वादिनां मते सतामेव भावानां प्रभवो न त्वसताम् । प्राणः सर्वेश्वरः सर्वं जनयति, पुरुषश्चेतनारश्मीन् जीवान् पृथक् जनयतीति केचित् ।",
+      bhashyaExtract: "सतां विद्यमानानां स्वेन अविद्याकृतनामरूपमायास्वरूपेण सर्वभावानां विश्वतैजसप्राज्ञभेदानां प्रभवः उत्पत्तिः । वक्ष्यति च — ‘वन्ध्यापुत्रो न तत्त्वेन मायया वापि जायते’(मा. का. ३ । २८) इति । यदि ह्यसतामेव जन्म स्यात् , ब्रह्मणोऽव्यवहार्यस्य ग्रहणद्वाराभावादसत्त्वप्रसङ्गः । दृष्टं च रज्जुसर्पादीनामविद्याकृतमायाबीजोत्पन्नानां रज्ज्वाद्यात्मना सत्त्वम् । न हि निरास्पदा रज्जुसर्पमृगतृष्णिकादयः क्वचिदुपलभ्यन्ते केनचित् । यथा रज्ज्वां प्राक्सर्पोत्पत्तेः रज्ज्वात्मना सर्पः सन्नेवासीत् , एवं सर्वभावानामुत्पत्तेः प्राक्प्राणबीजात्मनैव सत्त्वमिति । श्रुतिरपि वक्ति ‘ब्रह्मैवेदम्’(मु. उ. २ । २ । १२) ‘आत्मैवेदमग्र आसीत्’(बृ. उ. १ । ४ । १) इति । अतः सर्वं जनयति प्राणः चेतोंशून् अंशव इव रवेश्चिदात्मकस्य पुरुषस्य चेतोरूपा जलार्कसमाः प्राज्ञतैजसविश्वभेदेन देवमनुष्यतिर्यगादिदेहभेदेषु विभाव्यमानाश्चेतोंशवो ये, तान् पुरुषः पृथक् सृजति विषयभावविलक्षणानग्निविस्फुलिङ्गवत्सलक्षणान् जलार्कवच्च जीवलक्षणांस्त्वितरान्सर्वभावान् प्राणो बीजात्मा जनयति, ‘यथोर्णनाभिः. . . यथाग्नेः क्षुद्रा विस्फुलिङ्गाः’(बृ. उ. २ । १ । २०) इत्यादिश्रुतेः ॥",
       englishTranslation: "The settled conviction of some thinkers is that existing entities originate from an existing cause. Prāṇa (the cosmic seed) generates everything, and Puruṣa radiates the individual conscious sparks (jīvas).",
       commentaryNotes: "Gauḍapāda begins enumerating various classical theories of cosmogenesis to contrast them later with Ajātivāda."
     },
@@ -86,7 +86,7 @@ export const MANDUKYA_AGAMA_CHAPTER: GranthaChapter = {
       mulaIast: "vibhūtiṁ prasavaṁ tv anye manyante sṛṣṭicintakāḥ |\nsvapnamāyāsarūpeti sṛṣṭir anyair vikalpitā || 7 ||",
       padaccheda: "विभूतिम्, प्रसवम्, तु, अन्ये, मन्यन्ते, सृष्टि-चिन्तकाः, स्वप्न-माया-सरूपा, इति, सृष्टिः, अन्यैः, विकल्पिता",
       anvaya: "सृष्टिचिन्तकाः अन्ये तु प्रसवं विभूतिं मन्यन्ते, अन्यैः सृष्टिः स्वप्नमायासरूपा इति विकल्पिता ।",
-      bhashyaExtract: "ईश्वरस्य विभूतिरेवायं प्रपञ्च इति केचित् । स्वप्नवन्मायावच्चासत्येति वेदान्तिनो मन्यन्ते ।",
+      bhashyaExtract: "विभूतिर्विस्तार ईश्वरस्य सृष्टिरिति सृष्टिचिन्तका मन्यन्ते ; न तु परमार्थचिन्तकानां सृष्टावादर इत्यर्थः, ‘इन्द्रो मायाभिः पुरुरूप ईयते’(बृ. उ. २ । ५ । १९) इति श्रुतेः । न हि मायाविनं सूत्रमाकाशे निःक्षिप्य तेन सायुधमारुह्य चक्षुर्गोचरतामतीत्य युद्धेन खण्डशश्छिन्नं पतितं पुनरुत्थितं च पश्यतां तत्कृतमायादिसतत्त्वचिन्तायामादरो भवति । तथैवायं मायाविनः सूत्रप्रसारणसमः सुषुप्तस्वप्नादिविकासः ; तदारूढमायाविसमश्च तत्स्थप्राज्ञतैजसादिः ; सूत्रतदारूढाभ्यामन्यः परमार्थमायावी । स एव भूमिष्ठो मायाच्छन्नः अदृश्यमान एव स्थितो यथा, तथा तुरीयाख्यं परमार्थतत्त्वम् । अतस्तच्चिन्तायामेवादरो मुमुक्षूणामार्याणाम् , न निष्प्रयोजनायां सृष्टावादर इत्यतः सृष्टिचिन्तकानामेवैते विकल्पा इत्याह — स्वप्नमायासरूपेति । स्वप्नसरूपा मायासरूपा चेति ॥",
       englishTranslation: "Other cosmological theorists consider creation to be the manifold manifestation of divine glory (vibhūti); while others conceive creation to be comparable to dream and magical illusion (māyā).",
       commentaryNotes: "Points out the distinction between theological realism (creation as real divine glory) and radical Vedāntic illusionism (creation as dream/māyā)."
     },
@@ -98,7 +98,7 @@ export const MANDUKYA_AGAMA_CHAPTER: GranthaChapter = {
       mulaIast: "icchāmātraṁ prabhoḥ sṛṣṭir iti sṛṣṭau viniścitāḥ |\nkālāt prasūtiṁ bhūtānāṁ manyante kālacintakāḥ || 8 ||",
       padaccheda: "इच्छा-मात्रम्, प्रभोः, सृष्टिः, इति, सृष्टौ, विनिश्चिताः, कालात्, प्रसूतिम्, भूतानाम्, मन्यन्ते, काल-चिन्तकाः",
       anvaya: "प्रभोः इच्छामात्रं सृष्टिः इति सृष्टौ विनिश्चिताः, कालचिन्तकाः भूतानां कालात् प्रसूतिं मन्यन्ते ।",
-      bhashyaExtract: "सत्यसङ्कल्पस्येश्वरस्येच्छामात्रमेव जगदिति केषाञ्चिन्निश्चयः । ज्योतिर्विदादयस्तु कालादेव सर्वभूतोत्पत्तिं वर्णयन्ति ।",
+      bhashyaExtract: "इच्छामात्रं प्रभोः सत्यसङ्कल्पत्वात् सृष्टिः घटादीनां सङ्कल्पनामात्रम् , न सङ्कल्पनातिरिक्तम् । कालादेव सृष्टिरिति केचित् ॥",
       englishTranslation: "Those expert in cosmogony resolve that creation is merely the will of the Lord; while astronomers and astrologers attribute the emergence of beings to Time (Kāla).",
       commentaryNotes: "Refers to voluntaristic theism (God's mere wish creates) vs. temporal determinism (Kālavāda)."
     },
@@ -110,7 +110,7 @@ export const MANDUKYA_AGAMA_CHAPTER: GranthaChapter = {
       mulaIast: "bhogārthaṁ sṛṣṭir ity anye krīḍārtham iti cāpare |\ndevasyaiṣa svabhāvo'yam āptakāmasya kā spṛhā || 9 ||",
       padaccheda: "भोग-अर्थम्, सृष्टिः, इति, अन्ये, क्रीडा-अर्थम्, इति, च, अपरे, देवस्य, एषः, स्वभावः, अयम्, आप्त-कामस्य, का, स्पृहा",
       anvaya: "अन्ये भोगार्थं सृष्टिः इति, अपरे क्रीडार्थम् इति च (मन्यन्ते) । आप्तकामस्य देवस्य एषः अयम् स्वभावः, का स्पृहा ?",
-      bhashyaExtract: "ईश्वरस्य भोगाय क्रीडायै वा जगत्प्रवृत्तिरिति बालिशाः । नित्यतृप्तस्य परिपूर्णस्याप्तकामस्य का स्पृहा भवेत् ? अतो देवस्यैष स्वभावो मायामात्रमित्यर्थः ।",
+      bhashyaExtract: "भोगार्थम् , क्रीडार्थमिति च अन्ये सृष्टिं मन्यन्ते । अनयोः पक्षयोर्दूषणं देवस्यैष स्वभावोऽयमिति देवस्य स्वभावपक्षमाश्रित्य, सर्वेषां वा पक्षाणाम् — आप्तकामस्य का स्पृहेति । न हि रज्ज्वादीनामविद्यास्वभावव्यतिरेकेण सर्पाद्याभासत्वे कारणं शक्यं वक्तुम् ॥",
       englishTranslation: "Some say creation is for the Lord's enjoyment; others that it is for sport (līlā). But what desire can belong to One whose desires are eternally fulfilled? This appearance is simply the intrinsic nature (svabhāva) of the Divine!",
       commentaryNotes: "A crucial Advaitic critique: Brahman has no unfulfilled desires to satisfy via recreation or enjoyment; cosmic projection is an unforced appearance (svabhāva/māyā)."
     },
@@ -122,7 +122,7 @@ export const MANDUKYA_AGAMA_CHAPTER: GranthaChapter = {
       mulaIast: "nivṛtteḥ sarvaduḥkhānām īśānaḥ prabhur avyayaḥ |\nadvaitaḥ sarvabhāvānāṁ devas turyo vibhuḥ smṛtaḥ || 10 ||",
       padaccheda: "निवृत्तेः, सर्व-दुःखानाम्, ईशानः, प्रभुः, अव्ययः, अद्वैतः, सर्व-भावानाम्, देवः, तुर्यः, विभुः, स्मृतः",
       anvaya: "सर्वदुःखानां निवृत्तेः ईशानः प्रभुः अव्ययः सर्वभावानाम् अद्वैतः तुर्यः देवः विभुः स्मृतः ।",
-      bhashyaExtract: "तुरीयात्मदर्शनेन हि सर्वसंसारदुःखनिवृत्तिर्भवति । स एव सर्वस्येशिता प्रभुः अविकारी अद्वैतः सर्वव्यापी परमार्थसत्यः ।",
+      bhashyaExtract: "अत्रैते श्लोका भवन्ति । प्राज्ञतैजसविश्वलक्षणानां सर्वदुःखानां निवृत्तेः ईशानः तुरीय आत्मा । ईशान इत्यस्य पदस्य व्याख्यानं प्रभुरिति ; दुःखनिवृत्तिं प्रति प्रभुर्भवतीत्यर्थः, तद्विज्ञाननिमित्तत्वाद्दुःखनिवृत्तेः । अव्ययः न व्येति, स्वरूपान्न व्यभिचरति न च्यवत इत्येतत् । कुतः ? यस्मात् अद्वैतः, सर्वभावानाम् — सर्पादीनां रज्जुरद्वया सत्या च ; एवं तुरीयः, ‘न हि द्रष्टुर्दृष्टेर्विपरिलोपो विद्यते’(बृ. उ. ४ । ३ । २३) इति श्रुतेः — अतो रज्जुसर्पवन्मृषात्वात् । स एष देवः द्योतनात् तुर्यः चतुर्थः विभुः व्यापी स्मृतः ॥",
       englishTranslation: "Through the cessation of all miseries, Turiya is recognized as the supreme Sovereign (Īśāna), the omnipotent Lord (Prabhu), the Changeless (Avyaya), the non-dual essence of all existences, the all-pervading radiant Deity.",
       commentaryNotes: "Direct realization of Turiya dissolves the entire root of existential suffering (saṁsāra-duḥkha)."
     },
@@ -134,7 +134,7 @@ export const MANDUKYA_AGAMA_CHAPTER: GranthaChapter = {
       mulaIast: "kāryakāraṇabaddhau tāv iṣyete viśvataijasau |\nprājñaḥ kāraṇabaddhas tu dvau tau turye na sidhyataḥ || 11 ||",
       padaccheda: "कार्य-कारण-बद्धौ, तौ, इष्येते, विश्व-तैजसौ, प्राज्ञः, कारण-बद्धः, तु, द्वौ, तौ, तुर्ये, न, सिध्यतः",
       anvaya: "तौ विश्वतैजसौ कार्यकारणबद्धौ इष्येते, प्राज्ञः तु कारणबद्धः, तौ द्वौ तुर्ये न सिध्यतः ।",
-      bhashyaExtract: "कार्यम् अन्यथाग्रहणं स्वप्नः, कारणं तत्त्वाप्रतिबोधो निद्रा । विश्वतैजसौ ताभ्यामुभाभ्यां बद्धौ । प्राज्ञस्तु तत्त्वाप्रतिबोधमात्रेण कारणेन बद्धः । तुरीये तु नैवान्यथाग्रहणं नापि तत्त्वाप्रतिबोधः ।",
+      bhashyaExtract: "विश्वादीनां सामान्यविशेषभावो निरूप्यते तुर्ययाथात्म्यावधारणार्थम् — कार्यं क्रियत इति फलभावः, कारणं करोतीति बीजभावः । तत्त्वाग्रहणान्यथाग्रहणाभ्यां बीजफलभावाभ्यां तौ यथोक्तौ विश्वतैजसौ बद्धौ सङ्गृहीतौ इष्येते । प्राज्ञस्तु बीजभावेनैव बद्धः । तत्त्वाप्रतिबोधमात्रमेव हि बीजं प्राज्ञत्वे निमित्तम् । ततः द्वौ तौ बीजफलभावौ तत्त्वाग्रहणान्यथाग्रहणे तुरीये न सिध्यतः न विद्येते, न सम्भवत इत्यर्थः ॥",
       englishTranslation: "Viśva and Taijasa are held to be bound by both cause and effect (non-apprehension and misapprehension of Truth). Prājña is bound by cause alone (non-apprehension). In Turiya, neither of these two is established.",
       commentaryNotes: "Foundational formula: Kāraṇa = ignorance (tattvāpratibodha); Kārya = false projection (anyathāgrahaṇa). Waking and dream have both; sleep has only ignorance; Turiya has neither."
     },
@@ -146,7 +146,7 @@ export const MANDUKYA_AGAMA_CHAPTER: GranthaChapter = {
       mulaIast: "nātmānaṁ na paraṁ caiva na satyaṁ nāpi cānṛtam |\nprājñaḥ kiñcana saṁvetti turyaṁ tat sarvadṛk sadā || 12 ||",
       padaccheda: "न, आत्मानम्, न, परम्, च, एव, न, सत्यम्, न, अपि, च, अनृतम्, प्राज्ञः, किञ्चन, संवेत्ति, तुर्यम्, तत्, सर्व-दृक्, सदा",
       anvaya: "प्राज्ञः न आत्मानं न परं चैव न सत्यं न अपि च अनृतं किञ्चन संवेत्ति । तत् तुर्यं सदा सर्वदृक् ।",
-      bhashyaExtract: "यथा जाग्रति दृश्यते तथा प्राज्ञो नात्मानं संवेत्ति न बाह्यं वस्तु, तमसाच्छादितत्वात् । तुर्यं तु सदा सर्वदृक् सर्वदा स्वभावप्रकाशरूपम् ।",
+      bhashyaExtract: "कथं पुनः कारणबद्धत्वं प्राज्ञस्य तुरीये वा तत्त्वाग्रहणान्यथाग्रहणलक्षणौ बन्धौ न सिध्यत इति ? यस्मात् — आत्मानम् , विलक्षणम् , अविद्याबीजप्रसूतं वेद्यं बाह्यं द्वैतम् — प्राज्ञो न किञ्चन संवेत्ति, यथा विश्वतैजसौ ; ततश्चासौ तत्त्वाग्रहणेन तमसा अन्यथाग्रहणबीजभूतेन बद्धो भवति । यस्मात् तुर्यं तत्सर्वदृक्सदा तुरीयादन्यस्याभावात् सर्वदा सदैव भवति, सर्वं च तद्दृक्चेति सर्वदृक् ; तस्मान्न तत्त्वाग्रहणलक्षणं बीजम् । तत्र तत्प्रसूतस्यान्यथाग्रहणस्याप्यत एवाभावः । न हि सवितरि सदाप्रकाशात्मके तद्विरुद्धमप्रकाशनमन्यथाप्रकाशनं वा सम्भवति, ‘न हि द्रष्टुर्दृष्टेर्विपरिलोपो विद्यते’(बृ. उ. ४ । ३ । २३) इति श्रुतेः । अथवा, जाग्रत्स्वप्नयोः सर्वभूतावस्थः सर्ववस्तुदृगाभासस्तुरीय एवेति सर्वदृक्सदा, ‘नान्यदतोऽस्ति द्रष्टृ’(बृ. उ. ३ । ८ । ११) इत्यादिश्रुतेः ॥",
       englishTranslation: "Prājña knows neither oneself nor others, neither truth nor falsehood; it perceives nothing whatsoever. But that Turiya is the eternal, ever-present Witness and Knower of all.",
       commentaryNotes: "Deep sleep is an absence of dual cognition due to tamas, whereas Turiya is the self-luminous pure consciousness that never dims."
     },
@@ -158,7 +158,7 @@ export const MANDUKYA_AGAMA_CHAPTER: GranthaChapter = {
       mulaIast: "dvaitasyāgrahaṇaṁ tulyam ubhayoḥ prājñaturyayoḥ |\nbījanidrāyutaḥ prājñaḥ sā ca turye na vidyate || 13 ||",
       padaccheda: "द्वैतस्य, अग्रहणम्, तुल्यम्, उभयोः, प्राज्ञ-तुर्ययोः, बीज-निद्रा-युतः, प्राज्ञः, सा, च, तुर्ये, न, विद्यते",
       anvaya: "उभयोः प्राज्ञतुर्ययोः द्वैतस्य अग्रहणं तुल्यम् । प्राज्ञः बीजनिद्रायुतः, सा च तुर्ये न विद्यते ।",
-      bhashyaExtract: "द्वैतस्याप्रतिभानमुभयोः समानम् । किन्तु प्राज्ञः पुनरुद्बोधानुकूलबीजरूपया निद्रया युक्तः, तुरीये तु सा बीजनिद्रा नास्ति ।",
+      bhashyaExtract: "निमित्तान्तरप्राप्ताशङ्कानिवृत्त्यर्थोऽयं श्लोकः — कथं द्वैताग्रहणस्य तुल्यत्वे कारणबद्धत्वं प्राज्ञस्यैव, न तुरीयस्येति प्राप्ता आशङ्का निवर्त्यते ; यस्मात् बीजनिद्रायुतः, तत्त्वाप्रतिबोधो निद्रा ; सैव च विशेषप्रतिबोधप्रसवस्य बीजम् ; सा बीजनिद्रा ; तया युतः प्राज्ञः । सदासर्वदृक्स्वभावत्वात्तत्त्वाप्रतिबोधलक्षणा बीजनिद्रा तुर्ये न विद्यते ; अतो न कारणबन्धस्तस्मिन्नित्यभिप्रायः ॥",
       englishTranslation: "The non-perception of duality is identical in both Prājña and Turiya. But Prājña is endowed with causal sleep (the seed of future delusion), whereas in Turiya that causal sleep does not exist.",
       commentaryNotes: "Solves the riddle: why is deep sleep not liberation? Because in sleep the seed of ignorance remains latent (bījanidrā), causing one to awaken back into duality."
     },
@@ -170,7 +170,7 @@ export const MANDUKYA_AGAMA_CHAPTER: GranthaChapter = {
       mulaIast: "svapnanidrāyutāv ādyau prājñas tv asvapnanidrayā |\nna nidrāṁ naiva ca svapnaṁ turye paśyanti niścitāḥ || 14 ||",
       padaccheda: "स्वप्न-निद्रा-युतौ, आद्यौ, प्राज्ञः, तु, अस्वप्न-निद्रया, न, निद्राम्, न, एव, च, स्वप्नम्, तुर्ये, पश्यन्ति, निश्चिताः",
       anvaya: "आद्यौ स्वप्ननिद्रायुतौ, प्राज्ञः तु अस्वप्ननिद्रया (युतः), निश्चिताः तुर्ये न निद्रां न एव च स्वप्नं पश्यन्ति ।",
-      bhashyaExtract: "विश्वतैजसौ द्वन्द्वेन ग्रस्तावुभावपि । प्राज्ञे केवलमज्ञाननिद्रा न तु विक्षेपरूपः स्वप्नः । तुरीये तु तत्त्वविदो न निद्रां नापि स्वप्नं पश्यन्ति ।",
+      bhashyaExtract: "स्वप्नः अन्यथाग्रहणं सर्प इव रज्ज्वाम् , निद्रोक्ता तत्त्वाप्रतिबोधलक्षणं तम इति ; ताभ्यां स्वप्ननिद्राभ्यां युतौ विश्वतैजसौ ; अतस्तौ कार्यकारणबद्धावित्युक्तौ । प्राज्ञस्तु स्वप्नवर्जितया केवलयैव निद्रया युत इति कारणबद्ध इत्युक्तम् । नोभयं पश्यन्ति तुरीये निश्चिताः ब्रह्मविद इत्यर्थः, विरुद्धत्वात्सवितरीव तमः । अतो न कार्यकारणबद्ध इत्युक्तस्तुरीयः ॥",
       englishTranslation: "The first two (Viśva and Taijasa) are accompanied by both dream and sleep (projection and veiling). Prājña is accompanied by dreamless sleep alone. The illumined seers behold neither sleep nor dream in Turiya.",
       commentaryNotes: "Dream represents misapprehension (vikṣepa); sleep represents non-apprehension (āvaraṇa). Turiya is pure wakeful transparency."
     },
@@ -182,7 +182,7 @@ export const MANDUKYA_AGAMA_CHAPTER: GranthaChapter = {
       mulaIast: "anyathā gṛhṇataḥ svapno nidrā tattvam ajānataḥ |\nviparyāse tayoḥ kṣīṇe turīyaṁ padam aśnute || 15 ||",
       padaccheda: "अन्यथा, गृह्णतः, स्वप्नः, निद्रा, तत्त्वम्, अजानतः, विपर्यासे, तयोः, क्षीणे, तुरीयम्, पदम्, अश्नुते",
       anvaya: "अन्यथा गृह्णतः स्वप्नः, तत्त्वम् अजानतः निद्रा । तयोः विपर्यासे क्षीणे तुरीयं पदम् अश्नुते ।",
-      bhashyaExtract: "तत्त्वस्य विपरीतरूपेण ग्रहणं स्वप्नः, यथान्धकारे रज्जुं सर्पत्वेन । तत्त्वस्याग्रहणमात्रं निद्रा । यदा तयोर्द्वयोः क्षयो भवति तदैव तुरीयावाप्तिः ।",
+      bhashyaExtract: "कदा तुरीये निश्चितो भवतीत्युच्यते — स्वप्नजागरितयोः अन्यथा रज्ज्वां सर्पवत् गृह्णतः तत्त्वं स्वप्नो भवति ; निद्रा तत्त्वमजानतः तिसृष्ववस्थासु तुल्या । स्वप्ननिद्रयोस्तुल्यत्वाद्विश्वतैजसयोरेकराशित्वम् । अन्यथाग्रहणप्राधान्याच्च गुणभूता निद्रेति तस्मिन्विपर्यासः स्वप्नः । तृतीये तु स्थाने तत्त्वाग्रहणलक्षणा निद्रैव केवला विपर्यासः । अतः तयोः कार्यकारणस्थानयोः अन्यथाग्रहणतत्त्वाग्रहणलक्षणविपर्यासे कार्यकारणबन्धरूपे परमार्थतत्त्वप्रतिबोधतः क्षीणे तुरीयं पदमश्नुते ; तदा उभयलक्षणं बन्धनं तत्रापश्यंस्तुरीये निश्चितो भवतीत्यर्थः ॥",
       englishTranslation: "Dream belongs to him who apprehends things wrongly; sleep belongs to him who knows not the Truth. When the erroneous states of both are destroyed, one attains the state of Turiya.",
       commentaryNotes: "The classical definition of cognitive delusion: avidya (nidrā) leads to adhyāsa (svapna)."
     },
@@ -194,7 +194,7 @@ export const MANDUKYA_AGAMA_CHAPTER: GranthaChapter = {
       mulaIast: "anādimāyayā supto yadā jīvaḥ prabudhyate |\najam anidram asvapnam advaitaṁ budhyate tadā || 16 ||",
       padaccheda: "अनादि-मायया, सुप्तः, यदा, जीवः, प्रबुध्यते, अजम्, अनिद्रम्, अस्वप्नम्, अद्वैतम्, बुध्यते, तदा",
       anvaya: "यदा अनादिमायया सुप्तः जीवः प्रबुध्यते, तदा अजम् अनिद्रम् अस्वप्नम् अद्वैतं बुध्यते ।",
-      bhashyaExtract: "अनाद्यविद्यया मोहनिद्रामुपगतो जीवो यदा वेदान्तवाक्यैराचार्येण प्रबोध्यते, तदा स्वात्मानमजमविकारमविद्यानिद्रारहितमसत्यविकल्पशून्यमद्वैतं विजानाति ।",
+      bhashyaExtract: "योऽयं संसारी जीवः, सः उभयलक्षणेन तत्त्वाप्रतिबोधरूपेण बीजात्मना, अन्यथाग्रहणलक्षणेन चानादिकालप्रवृत्तेन मायालक्षणेन स्वापेन, ममायं पिता पुत्रोऽयं नप्ता क्षेत्रं गृहं पशवः, अहमेषां स्वामी सुखी दुःखी क्षयितोऽहमनेन वर्धितश्चानेन इत्येवंप्रकारान्स्वप्नान् स्थानद्वयेऽपि पश्यन्सुप्तः, यदा वेदान्तार्थतत्त्वाभिज्ञेन परमकारुणिकेन गुरुणा ‘नास्येवं त्वं हेतुफलात्मकः, किन्तु तत्त्वमसि’ इति प्रतिबोध्यमानः, तदैवं प्रतिबुध्यते । कथम् ? नास्मिन्बाह्यमाभ्यन्तरं वा जन्मादिभावविकारोऽस्ति, अतः अजम् ‘सबाह्याभ्यन्तरो ह्यजः’(मु. उ. २ । १ । २) इति श्रुतेः, सर्वभावविकारवर्जितमित्यर्थः । यस्माज्जन्मादिकारणभूतम् , नास्मिन्नविद्यातमोबीजं निद्रा विद्यत इति अनिद्रम् ; अनिद्रं हि तत्तुरीयम् ; अत एव अस्वप्नम् , तन्निमित्तत्वादन्यथाग्रहणस्य । यस्माच्च अनिद्रमस्वप्नम् , तस्मादजम् अद्वैतं तुरीयमात्मानं बुध्यते तदा ॥",
       englishTranslation: "When the individual soul (Jīva), asleep under the influence of beginningless cosmic illusion (Māyā), awakens, it then realizes the Unborn (Aja), the Sleepless (Anidra), the Dreamless (Asvapna), the Non-Dual (Advaita).",
       commentaryNotes: "One of the most famous verses in Advaita philosophy. The waking from saṁsāra is not an event in time, but the realization of that which was ever unborn."
     },
@@ -206,7 +206,7 @@ export const MANDUKYA_AGAMA_CHAPTER: GranthaChapter = {
       mulaIast: "prapañco yadi vidyeta nivarteta na saṁśayaḥ |\nmāyāmātram idaṁ dvaitam advaitaṁ paramārthataḥ || 17 ||",
       padaccheda: "प्रपञ्चः, यदि, विद्येत, निवर्तेत, न, संशयः, माया-मात्रम्, इदम्, द्वैतम्, अद्वैतम्, परमार्थतः",
       anvaya: "यदि प्रपञ्चः विद्येत निवर्तेत न संशयः । इदं द्वैतं मायामात्रम्, परमार्थतः अद्वैतम् ।",
-      bhashyaExtract: "रज्जुसर्पवत् कल्पितो हि प्रपञ्चो न तु वस्तुभूतः । यदि परमार्थतो भवेत् तदा निवर्तेत, न तु वस्तुभूतस्य विनाशोऽस्ति । अतो मायामात्रम् ।",
+      bhashyaExtract: "प्रपञ्चनिवृत्त्या चेत्प्रतिबुध्यते, अनिवृत्ते प्रपञ्चे कथमद्वैतमिति, उच्यते । सत्यमेवं स्यात्प्रपञ्चो यदि विद्येत ; रज्ज्वां सर्प इव कल्पितत्वान्न तु स विद्यते । विद्यमानश्चेत् निवर्तेत, न संशयः । न हि रज्ज्वां भ्रान्तिबुद्ध्या कल्पितः सर्पो विद्यमानः सन्विवेकतो निवृत्तः ; न च माया मायाविना प्रयुक्ता तद्दर्शिनां चक्षुर्बन्धापगमे विद्यमाना सती निवृत्ता ; तथेदं प्रपञ्चाख्यं मायामात्रं द्वैतम् ; रज्जुवन्मायाविवच्च अद्वैतं परमार्थतः ; तस्मान्न कश्चित्प्रपञ्चः प्रवृत्तो निवृत्तो वास्तीत्यभिप्रायः ॥",
       englishTranslation: "If the manifold phenomenal world truly existed, it would undoubtedly cease to be. But this duality is mere illusion (Māyāmātram); in the ultimate sense, Non-Duality alone is real.",
       commentaryNotes: "What does not truly exist cannot undergo ontological annihilation; the rope-snake does not die when light is brought, for it never was."
     },
@@ -218,7 +218,7 @@ export const MANDUKYA_AGAMA_CHAPTER: GranthaChapter = {
       mulaIast: "vikalpo vinivarteta kalpito yadi kenacit |\nupadeśād ayaṁ vādo jñāte dvaitaṁ na vidyate || 18 ||",
       padaccheda: "विकल्पः, विनिवर्तेत, कल्पितः, यदि, केनचित्, उपदेशात्, अयम्, वादः, ज्ञाते, द्वैतम्, न, विद्यते",
       anvaya: "यदि केनचित् कल्पितः विकल्पः विनिवर्तेत । उपदेशात् अयं वादः, ज्ञाते द्वैतं न विद्यते ।",
-      bhashyaExtract: "शिष्यशिक्षार्थं गुरुशास्त्रविभागोपदेशः क्रियते । यदा तु परमार्थावबोधो जातः तदा न गुरुर्न शिष्यो न शास्त्रं न द्वैतम् ।",
+      bhashyaExtract: "ननु शास्ता शास्त्रं शिष्य इत्ययं विकल्पः कथं निवृत्त इति, उच्यते — विकल्पो विनिवर्तेत यदि केनचित्कल्पितः स्यात् । यथा अयं प्रपञ्चो मायारज्जुसर्पवत् , तथा अयं शिष्यादिभेदविकल्पोऽपि प्राक्प्रतिबोधादेवोपदेशनिमित्तः ; अत उपदेशादयं वादः — शिष्यः शास्ता शास्त्रमिति । उपदेशकार्ये तु ज्ञाने निर्वृत्ते ज्ञाते परमार्थतत्त्वे, द्वैतं न विद्यते ॥",
       englishTranslation: "The conceptual division would disappear if it were imagined by someone. This dualistic exposition is employed only for the purpose of instruction; once Truth is realized, no duality exists at all.",
       commentaryNotes: "Pedagogical accommodation: distinctions like guru, disciple, and path are provisional ladders discarded upon reaching non-dual realization."
     },
@@ -230,7 +230,7 @@ export const MANDUKYA_AGAMA_CHAPTER: GranthaChapter = {
       mulaIast: "viśvasyātvavivakṣāyām ādisāmānyam utkaṭam |\nmātrāsampratipattau syād āptisāmānyam eva ca || 19 ||",
       padaccheda: "विश्वस्य, अत्व-विवक्षायाम्, आदि-सामान्यम्, उत्कटम्, मात्रा-सम्प्रतिपत्तौ, स्यात्, आप्ति-सामान्यम्, एव, च",
       anvaya: "विश्वस्य अत्वविवक्षायाम् आदिसामान्यम् उत्कटम्, मात्रासम्प्रतिपत्तौ आप्तिसामान्यम् एव च स्यात् ।",
-      bhashyaExtract: "अकारस्य विश्वस्य च प्रथमत्वं सर्वव्यापित्वं च समानम् । अकारमात्राया ज्ञानेनैव विश्वस्य साक्षात्कारः ।",
+      bhashyaExtract: "अत्र एते श्लोका भवन्ति । विश्वस्य अत्वम् अकारमात्रत्वं यदा विवक्ष्यते, तदा आदित्वसामान्यम् उक्तन्यायेन उत्कटम् उद्भूतं दृश्यत इत्यर्थः । अत्वविवक्षायामित्यस्य व्याख्यानम् — मात्रासम्प्रतिपत्तौ इति । विश्वस्य अकारमात्रत्वं यदा सम्प्रतिपद्यते इत्यर्थः । आप्तिसामान्यमेव च, उत्कटमित्यनुवर्तते, च - शब्दात् ॥",
       englishTranslation: "When the identity of Viśva with the letter 'A' is to be explained, the common quality of being primal is conspicuous; in understanding the sound-element, the common quality of pervasiveness is also evident.",
       commentaryNotes: "Elucidates mantra 9 of the Upaniṣad: both 'A' and waking consciousness initiate their respective domains."
     },
@@ -242,7 +242,7 @@ export const MANDUKYA_AGAMA_CHAPTER: GranthaChapter = {
       mulaIast: "taijasasyotvavijñāna utkarṣo dṛśyate sphuṭam |\nmātrāsampratipattau syād ubhayatvaṁ tathāvidham || 20 ||",
       padaccheda: "तैजसस्य, उत्व-विज्ञाने, उत्कर्षः, दृश्यते, स्फुटम्, मात्रा-सम्प्रतिपत्तौ, स्यात्, उभयत्वम्, तथा-विधम्",
       anvaya: "तैजसस्य उत्वविज्ञाने उत्कर्षः स्फुटं दृश्यते, मात्रासम्प्रतिपत्तौ तथाविधम् उभयत्वं स्यात् ।",
-      bhashyaExtract: "अकारादुकारवद् विश्वान्तरत्वेन तैजसस्योत्कर्षः, द्वयोरन्तरालवर्तित्वेन चोभयत्वम् ।",
+      bhashyaExtract: "तैजसस्य उत्वविज्ञाने उकारत्वविवक्षायाम् उत्कर्षो दृश्यते स्फुटं स्पष्टमित्यर्थः । उभयत्वं च स्फुटमेवेति । पूर्ववत्सर्वम् ॥",
       englishTranslation: "In apprehending Taijasa as the letter 'U', excellence is clearly perceived; and in comprehending the sound-element, the intermediate nature is similarly established.",
       commentaryNotes: "Corresponds to mantra 10 of the Upaniṣad."
     },
@@ -254,7 +254,7 @@ export const MANDUKYA_AGAMA_CHAPTER: GranthaChapter = {
       mulaIast: "makārabhāve prājñasya mānasāmānyam utkaṭam |\nmātrāsampratipattau tu layasāmānyam eva ca || 21 ||",
       padaccheda: "मकार-भावे, प्राज्ञस्य, मान-सामान्यम्, उत्कटम्, मात्रा-सम्प्रतिपत्तौ, तु, लय-सामान्यम्, एव, च",
       anvaya: "प्राज्ञस्य मकारभावे मानसामान्यम् उत्कटम्, मात्रासम्प्रतिपत्तौ तु लयसामान्यम् एव च ।",
-      bhashyaExtract: "मकारेण जाग्रत्स्वप्नयोर्मितिर्मानम्, प्रलये च सर्वप्रलयवन्मकारे पूर्वयोर्लयः ।",
+      bhashyaExtract: "मकारत्वे प्राज्ञस्य मितिलयावुत्कृष्टे सामान्ये इत्यर्थः ॥",
       englishTranslation: "In the identification of Prājña with the letter 'M', the common feature of measuring is conspicuous; and in understanding the sound-element, the common feature of dissolution is equally evident.",
       commentaryNotes: "Corresponds to mantra 11 of the Upaniṣad."
     },
@@ -266,7 +266,7 @@ export const MANDUKYA_AGAMA_CHAPTER: GranthaChapter = {
       mulaIast: "triṣu dhāmasu yas tulyaṁ sāmānyaṁ vetti niścitaḥ |\nsa pūjyaḥ sarvabhūtānāṁ vandyaś caiva mahāmuniḥ || 22 ||",
       padaccheda: "त्रिषु, धामसु, यः, तुल्यम्, सामान्यम्, वेत्ति, निश्चितः, सः, पूज्यः, सर्व-भूतानाम्, वन्द्यः, च, एव, महा-मुनिः",
       anvaya: "यः निश्चितः त्रिषु धामसु तुल्यं सामान्यं वेत्ति, सः महामुनिः सर्वभूतानां पूज्यः वन्द्यः च एव ।",
-      bhashyaExtract: "यो मात्राणां पादानां च सामान्यं निश्चितबुद्ध्या जानाति स परमयोगी पूज्यो भवति ।",
+      bhashyaExtract: "यथोक्तस्थानत्रये यः तुल्यमुक्तं सामान्यं वेत्ति, एवमेवैतदिति निश्चितः सन् सः पूज्यः वन्द्यश्च ब्रह्मवित् लोके भवति ॥",
       englishTranslation: "He who with unshakable conviction knows the common feature equally present in the three states is a great sage, worthy of adoration and veneration by all living beings.",
       commentaryNotes: "Reverence accorded to the seeker who integrates sound meditation with psychological self-inquiry."
     },
@@ -278,7 +278,7 @@ export const MANDUKYA_AGAMA_CHAPTER: GranthaChapter = {
       mulaIast: "akāro nayate viśvam ukāraś cāpi taijasam |\nmakāraś ca punaḥ prājñaṁ nāmātre vidyate gatiḥ || 23 ||",
       padaccheda: "अकारः, नयते, विश्वम्, उकारः, च, अपि, तैजसम्, मकारः, च, पुनः, प्राज्ञम्, न, अमात्रे, विद्यते, गतिः",
       anvaya: "अकारः विश्वं नयते, उकारः च अपि तैजसम्, मकारः च पुनः प्राज्ञम्, अमात्रे गतिः न विद्यते ।",
-      bhashyaExtract: "ओङ्कारोपासनया क्रमेणाकारो विश्वपदं प्रापयति, उकारस्तैजसपदं, मकारः प्राज्ञपदम् । अमात्रे तुरीये सर्वगतीनां विरहात् नैव काचिद् गतिर्विद्यते ।",
+      bhashyaExtract: "यथोक्तैः सामान्यैः आत्मपादानां मात्राभिः सह एकत्वं कृत्वा यथोक्तोङ्कारं प्रतिपद्यते यो ध्यायी, तम् अकारः नयते विश्वं प्रापयति । अकारालम्बनमोङ्कारं विद्वान्वैश्वानरो भवतीत्यर्थः । तथा उकारः तैजसम् ; मकारश्चापि पुनः प्राज्ञम् , च - शब्दान्नयत इत्यनुवर्तते । क्षीणे तु मकारे बीजभावक्षयात् अमात्रे ओङ्कारे गतिः न विद्यते क्वचिदित्यर्थः ॥",
       englishTranslation: "The letter 'A' leads to Viśva; the letter 'U' leads to Taijasa; and the letter 'M' leads to Prājña. But in the soundless, partless Amātra (Turiya), no motion or realm of arrival exists.",
       commentaryNotes: "Turiya is not a realm to be reached in space or time; it is the immovable substratum of all motion."
     },
@@ -290,7 +290,7 @@ export const MANDUKYA_AGAMA_CHAPTER: GranthaChapter = {
       mulaIast: "oṅkāraṁ pādaśo vidyāt pādā mātrā na saṁśayaḥ |\noṅkāraṁ pādaśo jñātvā na kiñcid api cintayet || 24 ||",
       padaccheda: "ओङ्कारम्, पादशः, विद्यात्, पादाः, मात्राः, न, संशयः, ओङ्कारम्, पादशः, ज्ञात्वा, न, किञ्चित्, अपि, चिन्तयेत्",
       anvaya: "ओङ्कारं पादशो विद्यात्, पादाः मात्राः न संशयः । ओङ्कारं पादशो ज्ञात्वा किञ्चिदपि न चिन्तयेत् ।",
-      bhashyaExtract: "पादानां मात्राणां चैक्यं ज्ञात्वा सर्वद्वैताभावं निश्चित्य विरमेत् सर्वसङ्कल्पेभ्यः ।",
+      bhashyaExtract: "पूर्ववदत्रैते श्लोका भवन्ति । यथोक्तैः सामान्यैः पादा एव मात्राः, मात्राश्च पादाः ; तस्मात् ओङ्कारं पादशः विद्यात् इत्यर्थः । एवमोङ्कारे ज्ञाते दृष्टार्थमदृष्टार्थं वा न किञ्चिदपि प्रयोजनं चिन्तयेत् , कृतार्थत्वादित्यर्थः ॥",
       englishTranslation: "One should comprehend OM quarter by quarter; without doubt, the quarters of the Self are the sound-elements of OM. Having known OM quarter by quarter, one should think of nothing else whatsoever.",
       commentaryNotes: "Total absorption of thought in the silent Witness: Citta-vṛtti-nirodha culminating in Nirvikalpa Samādhi."
     },
@@ -302,7 +302,7 @@ export const MANDUKYA_AGAMA_CHAPTER: GranthaChapter = {
       mulaIast: "yuñjīta praṇave cetaḥ praṇavo brahma nirbhayam |\npraṇave nityayuktasya na bhayaṁ vidyate kvacit || 25 ||",
       padaccheda: "युञ्जीत, प्रणवे, चेतः, प्रणवः, ब्रह्म, निर्भयम्, प्रणवे, नित्य-युक्तस्य, न, भयम्, विद्यते, क्वचित्",
       anvaya: "प्रणवे चेतः युञ्जीत, प्रणवः निर्भयं ब्रह्म । प्रणवे नित्ययुक्तस्य क्वचित् भयं न विद्यते ।",
-      bhashyaExtract: "प्रणवे समाधानं कुर्यात्, स एव परं निर्भयं ब्रह्म । तत्र नित्यसमाहितचित्तस्य भयहेतोर्द्वैतस्याभावात् न भयं कुत्रापि भवति ।",
+      bhashyaExtract: "युञ्जीत समादध्यात् यथाव्याख्याते परमार्थरूपे प्रणवे चेतः मनः ; यस्मात्प्रणवः ब्रह्म निर्भयम् ; न हि तत्र सदायुक्तस्य भयं विद्यते क्वचित् , ‘विद्वान्न बिभेति कुतश्चन’(तै. उ. २ । ९ । १) इति श्रुतेः ॥",
       englishTranslation: "Unite the mind with Praṇava, for Praṇava is Brahman, the Fearless. For one who is constantly absorbed in Praṇava, there exists no fear anywhere.",
       commentaryNotes: "Fear arises only from the illusion of a second (dvitīyād vai bhayaṁ bhavati). In the non-dual Praṇava, fear is completely annihilated."
     },
@@ -314,7 +314,7 @@ export const MANDUKYA_AGAMA_CHAPTER: GranthaChapter = {
       mulaIast: "praṇavo hy aparaṁ brahma praṇavaś ca paraṁ smṛtaḥ |\napūrvo'nantaro'bāhyo'naparaḥ praṇavo'vyayaḥ || 26 ||",
       padaccheda: "प्रणवः, हि, अपरम्, ब्रह्म, प्रणवः, च, परम्, स्मृतः, अपूर्वः, अनन्तरः, अबाह्यः, अनपरः, प्रणवः, अव्ययः",
       anvaya: "प्रणवः हि अपरं ब्रह्म, प्रणवः च परं स्मृतः । अपूर्वः अनन्तरः अबाह्यः अनपरः अव्ययः प्रणवः ।",
-      bhashyaExtract: "प्रणवः सोपाधिको निरुपाधिकश्च । न तस्य पूर्वं कारणमस्ति, न च तस्माद्भिन्नं किञ्चिदस्ति, न बाह्यं नापरम्, अव्यय एकरसः ।",
+      bhashyaExtract: "परापरे ब्रह्मणी प्रणवः ; परमार्थतः क्षीणेषु मात्रापादेषु पर एवात्मा ब्रह्म इति ; न पूर्वं कारणमस्य विद्यत इत्यपूर्वः ; नास्य अन्तरं भिन्नजातीयं किञ्चिद्विद्यत इति अनन्तरः, तथा बाह्यमन्यत् न विद्यत इत्यबाह्यः ; अपरं कार्यमस्य न विद्यत इत्यनपरः, सबाह्याभ्यन्तरो ह्यजः सैन्धवघनवत्प्रज्ञानघन इत्यर्थः ॥",
       englishTranslation: "Praṇava is verily the Lower Brahman (Apara Brahman as cosmos) and Praṇava is declared to be the Higher Brahman (Para Brahman). Praṇava is without prior cause, without interior, without exterior, without an effect, and imperishable.",
       commentaryNotes: "Echoes the Bṛhadāraṇyaka formula: apūrvam, anantaram, abāhyam, anaparam."
     },
@@ -326,7 +326,7 @@ export const MANDUKYA_AGAMA_CHAPTER: GranthaChapter = {
       mulaIast: "sarvasya praṇavo hy ādir madhyam antas tathaiva ca |\nevaṁ hi praṇavaṁ jñātvā vyaśnute tad anantaram || 27 ||",
       padaccheda: "सर्वस्य, प्रणवः, हि, आदिः, मध्यम्, अन्तः, तथा, एव, च, एवम्, हि, प्रणवम्, ज्ञात्वा, व्यश्नुते, तत्, अनन्तरम्",
       anvaya: "प्रणवः हि सर्वस्य आदिः मध्यम् अन्तः तथा एव च । एवं प्रणवं ज्ञात्वा हि तदनन्तरम् (ब्रह्मभावं) व्यश्नुते ।",
-      bhashyaExtract: "सर्वस्य जगत उत्पत्तिकारणादिः, स्थितिकारणं मध्यम्, प्रलयकारणमन्तः । एवं प्रणवात्मकं स्वात्मानं ज्ञात्वा ब्रह्मस्वरूपमेवाप्नोति ।",
+      bhashyaExtract: "आदिमध्यान्ता उत्पत्तिस्थितिप्रलयाः सर्वस्य प्रणव एव । मायाहस्तिरज्जुसर्पमृगतृष्णिकास्वप्नादिवदुत्पद्यमानस्य वियदादिप्रपञ्चस्य यथा मायाव्यादयः, एवं हि प्रणवमात्मानं मायाव्यादिस्थानीयं ज्ञात्वा तत्क्षणादेव तदात्मभावं व्यश्नुत इत्यर्थः ॥",
       englishTranslation: "Praṇava is verily the beginning, middle, and end of all things. Knowing Praṇava in this manner, one immediately attains identity with Brahman.",
       commentaryNotes: "Brahman as OM is the material, sustaining, and resolving ground of all phenomena."
     },
@@ -338,7 +338,7 @@ export const MANDUKYA_AGAMA_CHAPTER: GranthaChapter = {
       mulaIast: "praṇavaṁ hīśvaraṁ vidyāt sarvasya hṛdi saṁsthitam |\nsarvavyāpinam oṅkāraṁ matvā dhīro na śocati || 28 ||",
       padaccheda: "प्रणवम्, हि, ईश्वरम्, विद्यात्, सर्वस्य, हृदि, संस्थितम्, सर्व-व्यापिनम्, ओङ्कारम्, मत्वा, धीरः, न, शोचति",
       anvaya: "सर्वस्य हृदि संस्थितं प्रणवं हि ईश्वरं विद्यात् । सर्वव्यापिनम् ओङ्कारं मत्वा धीरः न शोचति ।",
-      bhashyaExtract: "हृदये स्थितमीश्वरमेव प्रणवस्वरूपं विभावयेत् । एवं सर्वव्यापिनमात्मानं ज्ञात्वा शोकसागरात्तरति ।",
+      bhashyaExtract: "सर्वस्य प्राणिजातस्य स्मृतिप्रत्ययास्पदे हृदये स्थितमीश्वरं प्रणवं विद्यात् सर्वव्यापिनं व्योमवत् ओङ्कारमात्मानमसंसारिणं धीरः धीमान्बुद्धिमान् आत्मतत्त्वं मत्वा ज्ञात्वा न शोचति, शोकनिमित्तानुपपत्तेः, ‘तरति शोकमात्मवित्’(छा. उ. ७ । १ । ३) इत्यादिश्रुतिभ्यः ॥",
       englishTranslation: "One should know Praṇava to be the Lord stationed in the heart of all beings. Having realized the all-pervading OM, the wise sage grieves no more.",
       commentaryNotes: "Connects macrocosmic divinity with the indwelling Antaryāmin in the lotus of the heart."
     },
@@ -350,7 +350,7 @@ export const MANDUKYA_AGAMA_CHAPTER: GranthaChapter = {
       mulaIast: "amātro'nantamātraś ca dvaitasyopaśamaḥ śivaḥ |\noṅkāro vidito yena sa munir netaro janaḥ || 29 ||",
       padaccheda: "अमात्रः, अनन्त-मात्रः, च, द्वैतस्य, उपशमः, शिवः, ओङ्कारः, विदितः, येन, सः, मुनिः, न, इतरः, जनः",
       anvaya: "अमात्रः अनन्तमात्रः च द्वैतस्य उपशमः शिवः ओङ्कारः येन विदितः, सः मुनिः इतरः जनः न ।",
-      bhashyaExtract: "मात्राशून्यस्तुरीयः, अनन्तविभूतिरूपश्च । द्वैतस्योपशमः परमशिवः । येनैवमयमात्मा विज्ञातः स एव यथार्थमुनिः, न केवलवेषधारी ।",
+      bhashyaExtract: "अमात्रः तुरीय ओङ्कारः, मीयते अनयेति मात्रा परिच्छित्तिः, सा अनन्ता यस्य सः अनन्तमात्रः ; नैतावत्त्वमस्य परिच्छेत्तुं शक्यत इत्यर्थः । सर्वद्वैतोपशमत्वादेव शिवः । ओङ्कारो यथाव्याख्यातो विदितो येन, स एव परमार्थतत्त्वस्य मननान्मुनिः ; नेतरो जनः शास्त्रविदपीत्यर्थः ॥\n\nइति प्रथममागमप्रकरणं सम्पूर्णम् ॥",
       englishTranslation: "He who knows OM as both without sound-elements (amātra) and of infinite elements (ananta-mātra), the cessation of all duality, and eternally auspicious—he alone is the true sage, and none other!",
       commentaryNotes: "Concluding declaration of the Āgama Prakaraṇa. True sagehood (munitva) consists of direct intuitive knowledge of the non-dual Praṇava."
     }

@@ -9,7 +9,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "vijñāne spandamāne vai nābhāsā anyatobhuvaḥ |\nna tato'nyatra nispandān na vijñānaṁ viśanti te || 51 ||",
     padaccheda: "विज्ञाने, स्पन्दमाने, वै, न, आभासाः, अन्यतोभुवः, न, ततः, अन्यत्र, निस्पन्दात्, न, विज्ञानम्, विशन्ति, ते",
     anvaya: "विज्ञाने स्पन्दमाने आभासाः अन्यतोभुवः न वै, निस्पन्दात् ततः अन्यत्र न, न ते विज्ञानं विशन्ति ।",
-    bhashyaExtract: "विज्ञानावस्थायामपि प्रपञ्चाभासो न बाह्यतः, नान्यत्र गच्छति, न च विज्ञाने प्रविशति ।",
+    bhashyaExtract: "कथं तुल्यत्वमित्याह — अलातेन समानं सर्वं विज्ञानस्य ; सदा अचलत्वं तु विज्ञानस्य विशेषः । जात्याद्याभासा विज्ञाने अचले किङ्कृता इत्याह — कार्यकारणताभावात् जन्यजनकत्वानुपपत्तेरभावरूपत्वात् अचिन्त्याः ते यतः सदैव । यथा असत्सु ऋज्वाद्याभासेषु ऋज्वादिबुद्धिर्दृष्टा अलातमात्रे, तथा असत्स्वेव जात्यादिषु विज्ञानमात्रे जात्यादिबुद्धिर्मृषैवेति समुदायार्थः ॥",
     englishTranslation: "When Consciousness is in vibration, the appearances do not come from anywhere outside; when it is motionless, they do not depart anywhere else, nor do they enter into Consciousness.",
     commentaryNotes: "Direct application of the firebrand paradigm to consciousness: the universe neither enters nor exits Brahman."
   },
@@ -21,7 +21,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "na nirgatās te vijñānād dravyatvābhāvayogataḥ |\nkāryakāraṇatābhāvād yato'cintyāḥ sadaiva te || 52 ||",
     padaccheda: "न, निर्गताः, ते, विज्ञानात्, द्रव्यत्व-अभाव-योगतः, कार्य-कारणता-अभावात्, यतः, अचिन्त्याः, सदा, एव, ते",
     anvaya: "द्रव्यत्वाभावयोगतः ते विज्ञानात् न निर्गताः, कार्यकारणताभावात् यतः ते सदा एव अचिन्त्याः ।",
-    bhashyaExtract: "न हि विज्ञानाज्जगदुत्पद्यते, कार्यकारणसम्बन्धस्याभावात् । सर्वमेतदनिर्वचनीयं मायामात्रम् ।",
+    bhashyaExtract: "कथं तुल्यत्वमित्याह — अलातेन समानं सर्वं विज्ञानस्य ; सदा अचलत्वं तु विज्ञानस्य विशेषः । जात्याद्याभासा विज्ञाने अचले किङ्कृता इत्याह — कार्यकारणताभावात् जन्यजनकत्वानुपपत्तेरभावरूपत्वात् अचिन्त्याः ते यतः सदैव । यथा असत्सु ऋज्वाद्याभासेषु ऋज्वादिबुद्धिर्दृष्टा अलातमात्रे, तथा असत्स्वेव जात्यादिषु विज्ञानमात्रे जात्यादिबुद्धिर्मृषैवेति समुदायार्थः ॥",
     englishTranslation: "They do not emerge from Consciousness, because they possess no substantial reality; and because causality is completely absent, these appearances are ever unthinkable.",
     commentaryNotes: "Appearances cannot be categorized rationally as real effects; they are beyond causal explanation (acintya)."
   },
@@ -33,7 +33,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "dravyaṁ dravyasya hetuḥ syād anyad anyasya caiva hi |\ndravyatvam anyabhāvo vā dharmāṇāṁ nopapadyate || 53 ||",
     padaccheda: "द्रव्यम्, द्रव्यस्य, हेतुः, स्यात्, अन्यत्, अन्यस्य, च, एव, हि, द्रव्यत्वम्, अन्य-भावः, वा, धर्माणाम्, न, उपपद्यते",
     anvaya: "द्रव्यं द्रव्यस्य हेतुः स्यात्, अन्यद् अन्यस्य च एव हि । धर्माणां द्रव्यत्वम् अन्यभावः वा न उपपद्यते ।",
-    bhashyaExtract: "द्रव्यसत्त्वं पृथक्त्वं वा धर्माणां न सिद्ध्यति, अतः कार्यकारणभावो नोपपद्यते ।",
+    bhashyaExtract: "अजमेकमात्मतत्त्वमिति स्थितम् । तत्र यैरपि कार्यकारणभावः कल्प्यते, तेषां द्रव्यं द्रव्यस्यान्यस्यान्यत् हेतुः कारणं स्यात् , न तु तस्यैव तत् । नाप्यद्रव्यं कस्यचित्कारणं स्वतन्त्रं दृष्टं लोके । न च द्रव्यत्वं धर्माणाम् आत्मनाम् उपपद्यते अन्यत्वं वा कुतश्चित् , येन अन्यस्य कारणत्वं कार्यत्वं वा प्रतिपद्येत । अतः अद्रव्यत्वादनन्यत्वाच्च न कस्यचित्कार्यं कारणं वा आत्मेत्यर्थः ॥",
     englishTranslation: "A substance may be the cause of another substance, and one distinct thing of another; yet neither independent substantiality nor separate otherness is logically established for any entity (dharma).",
     commentaryNotes: "Deconstructs the Nyāya-Vaiśeṣika category of dravya (substance) as the basis for causation."
   },
@@ -45,7 +45,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "evaṁ na cittajā dharmāś cittaṁ vāpi na dharmajam |\nevaṁ hetuphalājātiṁ praviśanti manīṣiṇaḥ || 54 ||",
     padaccheda: "एवम्, न, चित्त-जाः, धर्माः, चित्तम्, वा, अपि, न, धर्म-जम्, एवम्, हेतु-फल-अजातिम्, प्रविशन्ति, मनीषिणः",
     anvaya: "एवं धर्माः चित्तजाः न, चित्तं वा अपि धर्मजं न । एवं मनीषिणः हेतुफलाजातिं प्रविशन्ति ।",
-    bhashyaExtract: "न चित्ताद् बाह्यार्था जायन्ते न च बाह्यार्थेभ्यश्चित्तम्, इत्येवं कार्यकारणयोरजातिं तत्त्वविदोऽवगच्छन्ति ।",
+    bhashyaExtract: "एवं यथोक्तेभ्यो हेतुभ्यः आत्मविज्ञानस्वरूपमेव चित्तमिति, न चित्तजाः बाह्यधर्माः, नापि बाह्यधर्मजं चित्तम् , विज्ञानस्वरूपाभासमात्रत्वात्सर्वधर्माणाम् । एवं न हेतोः फलं जायते, नापि फलाद्धेतुरिति हेतुफलयोरजातिं हेतुफलाजातिं प्रविशन्ति अध्यवस्यन्ति । आत्मनि हेतुफलयोरभावमेव प्रतिपद्यन्ते ब्रह्मविद इत्यर्थः ॥",
     englishTranslation: "Thus objects are not born of the mind, nor is the mind born of objects. In this manner the wise enter into the realization of the Non-Origination of both cause and effect.",
     commentaryNotes: "Rejects both one-sided subjective idealism and crude materialism."
   },
@@ -57,7 +57,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "yāvad dhetuphalāveśas tāvad dhetuphalodbhavaḥ |\nkṣīṇe hetuphalāveśe nāsti hetuphalodbhavaḥ || 55 ||",
     padaccheda: "यावत्, हेतु-फल-आवेशः, तावत्, हेतु-फल-उद्भवः, क्षीणे, हेतु-फल-आवेशे, न, अस्ति, हेतु-फल-उद्भवः",
     anvaya: "यावत् हेतुफलावेशः तावत् हेतुफलोद्भवः । हेतुफलावेशे क्षीणे हेतुफलोद्भवः न अस्ति ।",
-    bhashyaExtract: "हेतुफलाभिनिवेशे सत्येव कार्यकारणप्रवृत्तिर्भासते, तन्निवृत्तौ तु सर्वं शान्तम् ।",
+    bhashyaExtract: "ये पुनर्हेतुफलयोरभिनिविष्टाः, तेषां किं स्यादिति, उच्यते — धर्माधर्माख्यस्य हेतोः अहं कर्ता मम धर्माधर्मौ तत्फलं कालान्तरे क्वचित्प्राणिनिकाये जातो भोक्ष्ये इति यावद्धेतुफलयोरावेशः हेतुफलाग्रह आत्मन्यध्यारोपणम् , तच्चित्ततेत्यर्थः ; तावद्धेतुफलयोरुद्भवः धर्माधर्मयोस्तत्फलस्य चानुच्छेदेन प्रवृत्तिरित्यर्थः । यदा पुनर्मन्त्रौषधिवीर्येणेव ग्रहावेशो यथोक्ताद्वैतदर्शनेन अविद्योद्भूतहेतुफलावेशोपनीतो भवति, तदा तस्मिन्क्षीणे नास्ति हेतुफलोद्भवः ॥",
     englishTranslation: "As long as there is obsessive belief in cause and effect, so long does the appearance of cause and effect persist. When that clinging to cause and effect is destroyed, no origination of cause and effect exists.",
     commentaryNotes: "Causality is a psychological projection sustained by ignorance (āveśa)."
   },
@@ -69,7 +69,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "yāvad dhetuphalāveśaḥ saṁsāras tāvad āyataḥ |\nkṣīṇe hetuphalāveśe saṁsāraṁ na prapadyate || 56 ||",
     padaccheda: "यावत्, हेतु-फल-आवेशः, संसारः, तावत्, आयतः, क्षीणे, हेतु-फल-आवेशे, संसारम्, न, प्रपद्यते",
     anvaya: "यावत् हेतुफलावेशः तावत् संसारः आयतः । हेतुफलावेशे क्षीणे संसारं न प्रपद्यते ।",
-    bhashyaExtract: "अविद्यानिबन्धनो हि संसारो हेतुफलाभिनिवेशनिमित्तः, ज्ञानोदये सति न पुनः संसारो विद्यते ।",
+    bhashyaExtract: "यदि हेतुफलोद्भवः, तदा को दोष इति, उच्यते — यावत् सम्यग्दर्शनेन हेतुफलावेशः न निवर्तते, अक्षीणः संसारः तावत् आयातः दीर्घो भवतीत्यर्थः । क्षीणे पुनः हेतुफलावेशे संसारं न प्रपद्यते, कारणाभावात् ॥",
     englishTranslation: "As long as there is attachment to cause and effect, so long is empirical transmigration (saṁsāra) prolonged. When attachment to cause and effect is exhausted, one no longer enters saṁsāra.",
     commentaryNotes: "Freedom from the wheel of rebirth follows directly from transcending causal clinging."
   },
@@ -81,7 +81,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "saṁvṛtyā jāyate sarvaṁ śāśvataṁ nāsti tena vai |\nsadbhāvena hy ajaṁ sarvam ucchedas tena nāsti vai || 57 ||",
     padaccheda: "संवृत्या, जायते, सर्वम्, शाश्वतम्, न, अस्ति, तेन, वै, सद्-भावेन, हि, अजम्, सर्वम्, उच्छेदः, तेन, न, अस्ति, वै",
     anvaya: "संवृत्या सर्वं जायते तेन शाश्वतं न अस्ति वै । सद्भावेन हि सर्वम् अजम्, तेन उच्छेदः न अस्ति वै ।",
-    bhashyaExtract: "अविद्यासंवृत्या सर्वं जायत इव भाति, अतोऽनित्यम् । परमार्थसद्भावेन तु सर्वमजं नित्यम्, अतो न कस्याप्युच्छेदः ।",
+    bhashyaExtract: "ननु अजादात्मनोऽन्यन्नास्त्येव ; तत्कथं हेतुफलयोः संसारस्य च उत्पत्तिविनाशावुच्येते त्वया ? शृणु ; संवृत्या संवरणं संवृतिः अविद्याविषयो लौकिकव्यवहारः ; तया संवृत्या जायते सर्वम् । तेन अविद्याविषये शाश्वतं नित्यं नास्ति वै । अतः उत्पत्तिविनाशलक्षणः संसारः आयत इत्युच्यते । परमार्थसद्भावेन तु अजं सर्वम् आत्मैव यस्मात् ; अतो जात्यभावात् उच्छेदः तेन नास्ति वै कस्यचिद्धेतुफलादेरित्यर्थः ॥",
     englishTranslation: "From the empirical standpoint (saṁvṛti) everything appears born, and therefore nothing worldly is eternal. From the standpoint of true Being (sadbhāva), everything is unborn, and therefore there is no annihilation!",
     commentaryNotes: "Steers Advaita cleanly between eternalism of phenomena (śāśvatavāda) and nihilism (ucchedavāda)."
   },
@@ -93,7 +93,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "dharmā ya iti jāyante jāyante te na tattvataḥ |\njanma māyopamaṁ teṣāṁ sā ca māyā na vidyate || 58 ||",
     padaccheda: "धर्माः, ये, इति, जायन्ते, जायन्ते, ते, न, तत्त्वतः, जन्म, माया-उपमम्, तेषाम्, सा, च, माया, न, विद्यते",
     anvaya: "ये धर्माः इति जायन्ते ते तत्त्वतः न जायन्ते । तेषां जन्म मायोपमम्, सा च माया न विद्यते ।",
-    bhashyaExtract: "मायावदविद्यमानमेव जन्मेति कथ्यते, सा चापि माया न वस्तुसती ।",
+    bhashyaExtract: "येऽप्यात्मानोऽन्ये च धर्मा जायन्त इति कल्प्यन्ते, ते इति एवंप्रकारा यथोक्ता संवृतिर्निर्दिश्यत इति संवृत्यैव धर्मा जायन्ते । न ते तत्त्वतः परमार्थतः जायन्ते । यत्पुनस्तत्संवृत्या जन्म तेषां धर्माणां यथोक्तानां यथा मायया जन्म तथा तत् मायोपमं प्रत्येतव्यम् । माया नाम वस्तु तर्हि ; नैवम् , सा च माया न विद्यते । मायेत्यविद्यमानस्याख्येत्यभिप्रायः ॥",
     englishTranslation: "Those entities which are said to be born are not born in ultimate reality. Their birth is comparable to magical illusion (māyā), and even that illusion itself has no real existence!",
     commentaryNotes: "Crucial clarification: Māyā is not a second real cosmic power alongside Brahman; 'sā ca māyā na vidyate'."
   },
@@ -105,7 +105,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "yathā māyāmayād bījāj jāyate tanmayo'ṅkuraḥ |\nnāsau nityo na cocchedī tadvad dharmeṣu yojanā || 59 ||",
     padaccheda: "यथा, माया-मयात्, बीजात्, जायते, तत्-मयः, अङ्कुरः, न, असौ, नित्यः, न, च, उच्छेदी, तद्वत्, धर्मेषु, योजना",
     anvaya: "यथा मायामयात् बीजात् तन्मयः अङ्कुरः जायते, असौ न नित्यः न च उच्छेदी, तद्वत् धर्मेषु योजना ।",
-    bhashyaExtract: "मायाबीजमायाङ्कुरवत् सृष्टिसंहारयोर्न नित्यत्वं नाप्युच्छेदित्वम् ।",
+    bhashyaExtract: "कथं मायोपमं तेषां धर्माणां जन्मेति, आह — यथा मायामयात् आम्रादिबीजात् जायते तन्मयः मायामयः अङ्कुरः, नासावङ्कुरो नित्यः, न च उच्छेदी विनाशी वा । अभूतत्वादेव धर्मेषु जन्मनाशादियोजना युक्तिः, न तु परमार्थतो धर्माणां जन्म नाशो वा युज्यत इत्यर्थः ॥",
     englishTranslation: "Just as from an illusory seed springs forth an equally illusory sprout, which is neither eternal nor destructible (since unreal); in the very same way applies the reasoning to all entities.",
     commentaryNotes: "Empirical causality occurs wholly within the dream/magic frame."
   },
@@ -117,7 +117,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "nājeṣu sarvadharmeṣu śāśvatāśāśvatābhidhā |\nyatra varṇā na vartante vivekas tatra nocyate || 60 ||",
     padaccheda: "न, अजेषु, सर्व-धर्मेषु, शाश्वत-अशाश्वत-अभिधा, यत्र, वर्णाः, न, वर्तन्ते, विवेकः, तत्र, न, उच्यते",
     anvaya: "अजेषु सर्वधर्मेषु शाश्वताशाश्वताभिधा न । यत्र वर्णाः न वर्तन्ते तत्र विवेकः न उच्यते ।",
-    bhashyaExtract: "यत्र वाचो न प्रवर्तन्ते तत्र नित्यानित्यादिव्यपदेशो नैव सम्भवति ।",
+    bhashyaExtract: "परमार्थतस्त्वात्मस्वजेषु नित्यैकरसविज्ञप्तिमात्रसत्ताकेषु शाश्वतः अशाश्वतः इति वा न अभिधा, नाभिधानं प्रवर्तत इत्यर्थः । यत्र येषु वर्ण्यन्ते यैरर्थाः, ते वर्णाः शब्दा न वर्तन्ते अभिधातुं प्रकाशयितुं न प्रवर्तन्त इत्यर्थः । इदमेवमिति विवेकः विविक्तता तत्र नित्योऽनित्य इति नोच्यते, ‘यतो वाचो निवर्तन्ते’(तै. उ. २ । ९ । १) इति श्रुतेः ॥",
     englishTranslation: "Regarding all unborn entities, the designations 'eternal' or 'non-eternal' do not apply. Where syllables and speech cannot reach, conceptual discrimination cannot be uttered.",
     commentaryNotes: "Echoes Taittirīya 2.9: 'yato vāco nivartante' — ultimate truth transcends linguistic binaries."
   },
@@ -129,7 +129,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "yathā svapne dvayābhāsaṁ cittaṁ calati māyayā |\ntathā jāgrad dvayābhāsaṁ cittaṁ calati māyayā || 61 ||",
     padaccheda: "यथा, स्वप्ने, द्वय-आभासम्, चित्तम्, चलति, मायया, तथा, जाग्रत्, द्वय-आभासम्, चित्तम्, चलति, मायया",
     anvaya: "यथा स्वप्ने मायया चित्तं द्वयाभासं चलति, तथा जाग्रत् मायया चित्तं द्वयाभासं चलति ।",
-    bhashyaExtract: "स्वप्नजाग्रतोर्द्वयोरपि चित्तातिरिक्तद्वैताभावात् तुल्यैव मायया चित्तचञ्चलता ।",
+    bhashyaExtract: "यत्पुनर्वाग्गोचरत्वं परमार्थतः अद्वयस्य विज्ञानमात्रस्य, तन्मनसः स्पन्दनमात्रम् , न परमार्थतः इत्युक्तार्थौ श्लोकौ ॥",
     englishTranslation: "Just as in dream the mind moves through Māyā as having the appearance of duality, so in the waking state the mind moves through Māyā as having the appearance of duality.",
     commentaryNotes: "Parallels Kārikā 3.29, now framed specifically around citta and empirical cognition."
   },
@@ -141,7 +141,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "advayaṁ ca dvayābhāsaṁ cittaṁ svapne na saṁśayaḥ |\nadvayaṁ ca dvayābhāsaṁ tathā jāgran na saṁśayaḥ || 62 ||",
     padaccheda: "अद्वयम्, च, द्वय-आभासम्, चित्तम्, स्वप्ने, न, संशयः, अद्वयम्, च, द्वय-आभासम्, तथा, जाग्रत्, न, संशयः",
     anvaya: "स्वप्ने अद्वयं च चित्तं द्वयाभासं न संशयः, तथा जाग्रत् अद्वयं च द्वयाभासं न संशयः ।",
-    bhashyaExtract: "उभयत्र चित्तमद्वयमेवापि सद् ग्राह्यग्राहकद्वयरूपेणावभासते ।",
+    bhashyaExtract: "यत्पुनर्वाग्गोचरत्वं परमार्थतः अद्वयस्य विज्ञानमात्रस्य, तन्मनसः स्पन्दनमात्रम् , न परमार्थतः इत्युक्तार्थौ श्लोकौ ॥",
     englishTranslation: "Undoubtedly the mind, though non-dual, appears dual in dream; and undoubtedly, though non-dual, it appears dual in the waking state as well.",
     commentaryNotes: "Confirms the structural identity of dream and waking appearances."
   },
@@ -153,7 +153,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "svapnadṛk pracaran svapne dikṣu vai daśasu sthitān |\naṇḍajān svedajān vāpi jīvān paśyati yān sadā || 63 ||",
     padaccheda: "स्वप्न-दृक्, प्रचरन्, स्वप्ने, दिक्षु, वै, दशसु, स्थितान्, अण्डजान्, स्वेदजान्, वा, अपि, जीवान्, पश्यति, यान्, सदा",
     anvaya: "स्वप्ने प्रचरन् स्वप्नदृक् दशसु दिक्षु स्थितान् अण्डजान् स्वेदजान् वा अपि यान् जीवान् सदा पश्यति...",
-    bhashyaExtract: "स्वप्नद्रष्टा स्वप्ने विचरन् नानायोनिजान् जीवान् सर्वदिक्षु पश्यति (उत्तरेणान्वयः) ।",
+    bhashyaExtract: "इतश्च वाग्गोचरस्याभावो द्वैतस्य — स्वप्नान्पश्यतीति स्वप्नदृक् प्रचरन् पर्यटन्स्वप्ने स्वप्नस्थाने दिक्षु वै दशसु स्थितान् वर्तमानान् जीवान्प्राणिनः अण्डजान्स्वेदजान्वा यान् सदा पश्यतीति ॥",
     englishTranslation: "Whatever living creatures—born of eggs, sweat, and other wombs—the dreamer sees stationed across all ten directions while roaming about in his dream...",
     commentaryNotes: "First half of a two-verse argument (63–64) proving dream creatures have no existence outside the dreamer's mind."
   },
@@ -165,7 +165,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "svapnadṛkcittadṛśyās te na vidyante tataḥ pṛthak |\ntathā taddṛśyam evedaṁ svapnadṛkcittam iṣyate || 64 ||",
     padaccheda: "स्वप्न-दृक्-चित्त-दृश्याः, ते, न, विद्यन्ते, ततः, पृथक्, तथा, तत्-दृश्यम्, एव, इदम्, स्वप्न-दृक्-चित्तम्, इष्यते",
     anvaya: "ते स्वप्नदृक्चित्तदृश्याः ततः पृथक् न विद्यन्ते । तथा इदं स्वप्नदृक्चित्तं तद्दृश्यम् एव इष्यते ।",
-    bhashyaExtract: "ते जीवाः स्वप्नद्रष्टुश्चित्ताद् भिन्ना न सन्ति, तस्यैव चित्तस्य दृश्याकारः सोऽपि ।",
+    bhashyaExtract: "यद्येवम् , ततः किम् ? उच्यते — स्वप्नदृशश्चित्तं स्वप्नदृक्चित्तम् , तेन दृश्याः ते जीवाः ; ततः तस्मात् स्वप्नदृक्चित्तात् पृथक् न विद्यन्ते न सन्तीत्यर्थः । चित्तमेव ह्यनेकजीवादिभेदाकारेण विकल्प्यते । तथा तदपि स्वप्नदृक्चित्तमिदं तद्दृश्यमेव, तेन स्वप्नदृशा दृश्यं तद्दृश्यम् । अतः स्वप्नदृग्व्यतिरेकेण चित्तं नाम नास्तीत्यर्थः ॥",
     englishTranslation: "...all those are objects of the dreamer's mind and do not exist apart from it. Likewise, this dreamer's mind itself is held to be nothing separate from what it perceives.",
     commentaryNotes: "Subject-mind and object-creatures in dream are mutually dependent aspects of one undivided appearance."
   },
@@ -177,7 +177,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "carañ jāgarite jāgrad dikṣu vai daśasu sthitān |\naṇḍajān svedajān vāpi jīvān paśyati yān sadā || 65 ||",
     padaccheda: "चरन्, जागरिते, जाग्रत्, दिक्षु, वै, दशसु, स्थितान्, अण्डजान्, स्वेदजान्, वा, अपि, जीवान्, पश्यति, यान्, सदा",
     anvaya: "जागरिते चरन् जाग्रत् दशसु दिक्षु स्थितान् अण्डजान् स्वेदजान् वा अपि यान् जीवान् सदा पश्यति...",
-    bhashyaExtract: "जाग्रदपि जाग्रद्दशायां विचरन् सर्वदिक्षु येषां जीवानां दर्शनं करोति (उत्तरेणान्वयः) ।",
+    bhashyaExtract: "जाग्रतो दृश्या जीवाः तच्चित्ताव्यतिरिक्ताः, चित्तेक्षणीयत्वात् , स्वप्नदृक्चित्तेक्षणीयजीववत् । तच्च जीवेक्षणात्मकं चित्तं द्रष्टुरव्यतिरिक्तं द्रष्टृदृश्यत्वात् स्वप्नचित्तवत् । उक्तार्थमन्यत् ॥",
     englishTranslation: "Likewise, whatever living beings—born of eggs, sweat, and the rest—the waking experiencer constantly beholds across all ten directions while moving about in the waking state...",
     commentaryNotes: "Applies the exact same analysis from Kārikā 63 to waking experience."
   },
@@ -189,7 +189,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "jāgraccittekṣaṇīyās te na vidyante tataḥ pṛthak |\ntathā taddṛśyam evedaṁ jāgrataś cittam iṣyate || 66 ||",
     padaccheda: "जाग्रत्-चित्त-ईक्षणीयाः, ते, न, विद्यन्ते, ततः, पृथक्, तथा, तत्-दृश्यम्, एव, इदम्, जाग्रतः, चित्तम्, इष्यते",
     anvaya: "ते जाग्रच्चित्तेक्षणीयाः ततः पृथक् न विद्यन्ते । तथा इदं जाग्रतः चित्तं तद्दृश्यम् एव इष्यते ।",
-    bhashyaExtract: "तेऽपि जाग्रच्चित्ताद् व्यतिरिक्ता न सन्ति, चित्तं च तद्दृश्याद् भिन्नं न विद्यते ।",
+    bhashyaExtract: "जाग्रतो दृश्या जीवाः तच्चित्ताव्यतिरिक्ताः, चित्तेक्षणीयत्वात् , स्वप्नदृक्चित्तेक्षणीयजीववत् । तच्च जीवेक्षणात्मकं चित्तं द्रष्टुरव्यतिरिक्तं द्रष्टृदृश्यत्वात् स्वप्नचित्तवत् । उक्तार्थमन्यत् ॥",
     englishTranslation: "...all those are objects perceived by the waking mind and do not exist apart from it. Likewise, the mind of the waking person is held to be nothing separate from those perceived objects.",
     commentaryNotes: "Establishes non-separation of perceiver and perceived in the waking state."
   },
@@ -201,7 +201,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "ubhe hy anyonyadṛśye te kiṁ tad astīti cocyate |\nlakṣaṇāśūnyam ubhayaṁ tan matenaiva gṛhyate || 67 ||",
     padaccheda: "उभे, हि, अन्योन्य-दृश्ये, ते, किम्, तत्, अस्ति, इति, च, उच्यते, लक्षणा-शून्यम्, उभयम्, तत्, मतेन, एव, गृह्यते",
     anvaya: "ते उभे हि अन्योन्यदृश्ये, तत् किम् अस्ति इति च उच्यते ? तत् उभयं लक्षणाशून्यं मतेन एव गृह्यते ।",
-    bhashyaExtract: "चित्ततद्दृश्ययोरन्योन्यापेक्षत्वात् न कस्यापि स्वतः प्रमाणलक्षणमस्ति ।",
+    bhashyaExtract: "जीवचित्ते उभे चित्तचैत्त्ये ते अन्योन्यदृश्ये इतरेतरगम्ये । जीवादिविषयापेक्षं हि चित्तं नाम भवति । चित्तापेक्षं हि जीवादि दृश्यम् । अतस्ते अन्योन्यदृश्ये । तस्मान्न किञ्चिदस्तीति चोच्यते चित्तं वा चित्तेक्षणीयं वा । किं तदस्तीति विवेकिनोच्यते । न हि स्वप्ने हस्ती हस्तिचित्तं वा विद्यते ; तथा इहापि विवेकिनामित्यभिप्रायः । कथम् ? लक्षणाशून्यं लक्ष्यते अनयेति लक्षणा प्रमाणम् ; प्रमाणशून्यमुभयं चित्तं चैत्त्यं द्वयं यतः, तन्मतेनैव तच्चित्ततयैव तत् गृह्यते । न हि घटमतिं प्रत्याख्याय घटो गृह्यते, नापि घटं प्रत्याख्याय घटमतिः । न हि तत्र प्रमाणप्रमेयभेदः शक्यते कल्पयितुमित्यभिप्रायः ॥",
     englishTranslation: "Since mind and its object are mutually perceived (each depending on the other for definition), how can either be said to exist independently? Both are devoid of any independent defining mark and are apprehended solely through that mind's own conception.",
     commentaryNotes: "Without an object, 'perceiving mind' cannot be posited; without mind, 'perceived object' cannot be posited."
   },
@@ -213,7 +213,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "yathā svapnamayo jīvo jāyate mriyate'pi ca |\ntathā jīvā amī sarve bhavanti na bhavanti ca || 68 ||",
     padaccheda: "यथा, स्वप्नमयः, जीवः, जायते, म्रियते, अपि, च, तथा, जीवाः, अमी, सर्वे, भवन्ति, न, भवन्ति, च",
     anvaya: "यथा स्वप्नमयः जीवः जायते म्रियते अपि च, तथा अमी सर्वे जीवाः भवन्ति न भवन्ति च ।",
-    bhashyaExtract: "स्वप्नदृष्टजीववत् सर्वजीवानां जन्ममरणे मायामये एव ।",
+    bhashyaExtract: "मायामयः मायाविना यः कृतो निर्मितकः मन्त्रौषध्यादिभिर्निष्पादितः । स्वप्नमायानिर्मितका अण्डजादयो जीवा यथा जायन्ते म्रियन्ते च, तथा मनुष्यादिलक्षणा अविद्यमाना एव चित्तविकल्पनामात्रा इत्यर्थः ॥",
     englishTranslation: "Just as a dream-creature is born and dies as well, so do all these empirical jīvas appear to come into being and pass away.",
     commentaryNotes: "Birth and death of empirical individuals carry the exact status of dream biographies."
   },
@@ -225,7 +225,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "yathā māyāmayo jīvo jāyate mriyate'pi ca |\ntathā jīvā amī sarve bhavanti na bhavanti ca || 69 ||",
     padaccheda: "यथा, मायामयः, जीवः, जायते, म्रियते, अपि, च, तथा, जीवाः, अमी, सर्वे, भवन्ति, न, भवन्ति, च",
     anvaya: "यथा मायामयः जीवः जायते म्रियते अपि च, तथा अमी सर्वे जीवाः भवन्ति न भवन्ति च ।",
-    bhashyaExtract: "ऐन्द्रजालिकनिर्मितमायापुरुषवत् जीवानां जन्मनाशौ प्रतीतिमात्रौ ।",
+    bhashyaExtract: "मायामयः मायाविना यः कृतो निर्मितकः मन्त्रौषध्यादिभिर्निष्पादितः । स्वप्नमायानिर्मितका अण्डजादयो जीवा यथा जायन्ते म्रियन्ते च, तथा मनुष्यादिलक्षणा अविद्यमाना एव चित्तविकल्पनामात्रा इत्यर्थः ॥",
     englishTranslation: "Just as a creature produced by magic is born and dies as well, so do all these empirical jīvas appear to come into being and cease to be.",
     commentaryNotes: "Second parallel simile underscoring illusory embodiment."
   },
@@ -237,7 +237,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "yathā nirmitako jīvo jāyate mriyate'pi ca |\ntathā jīvā amī sarve bhavanti na bhavanti ca || 70 ||",
     padaccheda: "यथा, निर्मितकः, जीवः, जायते, म्रियते, अपि, च, तथा, जीवाः, अमी, सर्वे, भवन्ति, न, भवन्ति, च",
     anvaya: "यथा निर्मितकः जीवः जायते म्रियते अपि च, तथा अमी सर्वे जीवाः भवन्ति न भवन्ति च ।",
-    bhashyaExtract: "योगिभिर्मन्त्रौषध्यादिभिर्निर्मितो जीव इव जीवानां जन्ममरणावभासः ।",
+    bhashyaExtract: "मायामयः मायाविना यः कृतो निर्मितकः मन्त्रौषध्यादिभिर्निष्पादितः । स्वप्नमायानिर्मितका अण्डजादयो जीवा यथा जायन्ते म्रियन्ते च, तथा मनुष्यादिलक्षणा अविद्यमाना एव चित्तविकल्पनामात्रा इत्यर्थः ॥",
     englishTranslation: "Just as a creature fashioned by yogic or magical artifice is born and dies as well, so do all these jīvas appear to come into being and cease to be.",
     commentaryNotes: "Completes the triad of similes (dream, illusion, artifice) leading into the grand refrain of 4.71."
   },
@@ -249,7 +249,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "na kaścij jāyate jīvaḥ sambhavo'sya na vidyate |\netat tad uttamaṁ satyaṁ yatra kiñcin na jāyate || 71 ||",
     padaccheda: "न, कश्चित्, जायते, जीवः, संभवः, अस्य, न, विद्यते, एतत्, तत्, उत्तमम्, सत्यम्, यत्र, किञ्चित्, न, जायते",
     anvaya: "कश्चित् जीवः न जायते, अस्य संभवः न विद्यते । एतत् तत् उत्तमं सत्यं यत्र किञ्चित् न जायते ।",
-    bhashyaExtract: "परमार्थतस्तु न कश्चिज्जीवो जायते, न तस्योत्पत्तिहेतुरस्ति । एतदेवोत्तमाद्वैतसत्यम् ।",
+    bhashyaExtract: "व्यवहारसत्यविषये जीवानां जन्ममरणादिः स्वप्नादिजीववदित्युक्तम् । उत्तमं तु परमार्थसत्यं न कश्चिज्जायते जीव इति । उक्तार्थमन्यत् ॥",
     englishTranslation: "No individual jīva is ever born; no cause of its origination exists anywhere. This is the supreme, ultimate Truth—where nothing whatsoever is ever born!",
     commentaryNotes: "Deliberate repetition of Kārikā 3.48 as the unifying seal of both Advaita and Alātaśānti Prakaraṇas."
   },
@@ -261,7 +261,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "cittaspanditam evedaṁ grāhyagrāhakavaddvayam |\ncittaṁ nirviṣayaṁ nityam asaṅgaṁ tena kīrtitam || 72 ||",
     padaccheda: "चित्त-स्पन्दितम्, एव, इदम्, ग्राह्य-ग्राहक-वत्, द्वयम्, चित्तम्, निर्विषयम्, नित्यम्, असङ्गम्, तेन, कीर्तितम्",
     anvaya: "इदं ग्राह्यग्राहकवद् द्वयं चित्तस्पन्दितम् एव । चित्तं नित्यं निर्विषयम्, तेन असङ्गं कीर्तितम् ।",
-    bhashyaExtract: "ग्राह्यग्राहकद्वयं चित्तस्यैव स्पन्दनमात्रम् । परमार्थतो विषयशून्यत्वाच्चित्तमात्मा नित्यमसङ्ग एव ।",
+    bhashyaExtract: "सर्वं ग्राह्यग्राहकवच्चित्तस्पन्दितमेव द्वयम् । चित्तं परमार्थत आत्मैवेति निर्विषयम् । तेन निर्विषयत्वेन नित्यम् असङ्गं कीर्तितम् । ‘असङ्गो ह्ययं पुरुषः’(बृ. उ. ४ । ३ । १५) इति श्रुतेः । सविषयस्य हि विषये सङ्गः । निर्विषयत्वाच्चित्तमसङ्गमित्यर्थः ॥",
     englishTranslation: "This entire duality of perceived and perceiver is nothing but a vibration of the mind (citta-spandita). The mind (Pure Consciousness) is eternally devoid of external objects and is therefore declared unattached (asaṅga).",
     commentaryNotes: "Echoes Bṛhadāraṇyaka 4.3.15: 'asaṅgo hy ayaṁ puruṣaḥ'."
   },
@@ -273,7 +273,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "yo'sti kalpitasaṁvṛtyā paramārthena nāsty asau |\nparatantrābhisaṁvṛtyā syān nāsti paramārthataḥ || 73 ||",
     padaccheda: "यः, अस्ति, कल्पित-संवृत्या, परमार्थेन, न, अस्ति, असौ, पर-तन्त्र-अभिसंवृत्या, स्यात्, न, अस्ति, परमार्थतः",
     anvaya: "यः कल्पितसंवृत्या अस्ति, असौ परमार्थेन न अस्ति । परतन्त्राभिसंवृत्या स्यात् (चेदपि) परमार्थतः न अस्ति ।",
-    bhashyaExtract: "कल्पितया व्यावहारिक्या परतन्त्राभिमतया वा संवृत्या यत् प्रतीयते तत् परमार्थदृष्ट्या सर्वथा नास्त्येव ।",
+    bhashyaExtract: "ननु निर्विषयत्वेन चेदसङ्गत्वम् , चित्तस्य न निःसङ्गता भवति, यस्मात् शास्ता शास्त्रं शिष्यश्चेत्येवमादेर्विषयस्य विद्यमानत्वात् ; नैष दोषः । कस्मात् ? यः पदार्थः शास्त्रादिर्विद्यते, स कल्पितसंवृत्या । कल्पिता च सा परमार्थप्रतिपत्त्युपायत्वेन संवृतिश्च सा तया योऽस्ति परमार्थेन, नास्त्यसौ न विद्यते । ‘ज्ञाते द्वैतं न विद्यते’(मा. का. १ । १८) इत्युक्तम् । यश्च परतन्त्राभिसंवृत्या परशास्त्रव्यवहारेण स्यात्पदार्थः, स परमार्थतो निरूप्यमाणो नास्त्येव । तेन युक्तमुक्तम् ‘असङ्गं तेन कीर्तितम्’(मा. का. ४ । ७२) इति ॥",
     englishTranslation: "That which exists by imagined convention does not exist in Ultimate Reality. Even if something is posited by another school's dependent relativity (paratantra), it still does not exist in Ultimate Reality!",
     commentaryNotes: "Direct Advaitic critique of Vijñānavāda's parikalpita/paratantra distinction: relative existence cannot stand as ultimate truth."
   },
@@ -285,7 +285,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "ajaḥ kalpitasaṁvṛtyā paramārthena nāpy ajaḥ |\nparatantrābhiniṣpattyā saṁvṛtyā jāyate tu saḥ || 74 ||",
     padaccheda: "अजः, कल्पित-संवृत्या, परमार्थेन, न, अपि, अजः, पर-तन्त्र-अभिनिष्पत्त्या, संवृत्या, जायते, तु, सः",
     anvaya: "कल्पितसंवृत्या अजः, परमार्थेन अजः अपि न । परतन्त्राभिनिष्पत्त्या सः संवृत्या तु जायते ।",
-    bhashyaExtract: "जन्मनिषेधार्थमज इति व्यपदेशोऽपि संवृत्यैव, परमार्थतो न कोऽप्यभिधानव्यवहारः ।",
+    bhashyaExtract: "ननु शास्त्रादीनां संवृतित्वे अज इतीयमपि कल्पना संवृतिः स्यात् । सत्यमेवम् ; शास्त्रादिकल्पितसंवृत्यैव अज इत्युच्यते । परमार्थेन नाप्यजः, यस्मात् परतन्त्राभिनिष्पत्त्या परशास्त्रसिद्धिमपेक्ष्य यः अज इत्युक्तः, स संवृत्या जायते । अतः अज इतीयमपि कल्पना परमार्थविषये नैव क्रमत इत्यर्थः ॥",
     englishTranslation: "Even the term 'Unborn' belongs to imagined conceptual convention—from the absolute standpoint, Reality is not even characterized by the relative word 'unborn'; while according to dependent relativity, it appears born only conventionally.",
     commentaryNotes: "Shows the self-transcending rigor of Gauḍapāda's apophatic dialectic: even 'unborn' is only a corrective pointer against 'born'."
   },
@@ -297,7 +297,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "abhūtābhiniveśo'sti dvayaṁ tatra na vidyate |\ndvayābhāvaṁ sa buddhvaiva nirnimitto na jāyate || 75 ||",
     padaccheda: "अभूत-अभिनिवेशः, अस्ति, द्वयम्, तत्र, न, विद्यते, द्वय-अभावम्, सः, बुद्ध्वा, एव, निर्निमित्तः, न, जायते",
     anvaya: "अभूताभिनिवेशः अस्ति, तत्र द्वयं न विद्यते । सः द्वयाभावं बुद्ध्वा एव निर्निमित्तः न जायते ।",
-    bhashyaExtract: "असत्ये द्वैतेऽभिनिवेशमात्रमविद्यात्मकमस्ति, न तु द्वैतं वस्तुतः । तस्याभावं विज्ञाय निमित्तशून्यो न पुनर्जायते ।",
+    bhashyaExtract: "यस्मादसद्विषयः, तस्मात् असत्यभूते द्वैते अभिनिवेशोऽस्ति केवलम् । अभिनिवेशः आग्रहमात्रम् । द्वयं तत्र न विद्यते मिथ्याभिनिवेशमात्रं च जन्मनः कारणं यस्मात् , तस्मात् द्वयाभावं बुद्ध्वा निर्निमित्तः निवृत्तमिथ्याद्वयाभिनिवेशः यः, सः न जायते ॥",
     englishTranslation: "There exists only an obstinate clinging to the unreal, while duality itself does not exist there at all. Having directly realized the non-existence of duality, freed from all causal impulse, one is never born again.",
     commentaryNotes: "Bondage consists solely of misdirected belief (abhiniveśa); dispelling it ends rebirth immediately."
   },
@@ -309,7 +309,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "yadā na labhate hetūn uttamādhamamadhyamān |\ntadā na jāyate cittaṁ hetvabhāve phalaṁ kutaḥ || 76 ||",
     padaccheda: "यदा, न, लभते, हेतून्, उत्तम-अधम-मध्यमान्, तदा, न, जायते, चित्तम्, हेतु-अभावे, फलम्, कुतः",
     anvaya: "यदा उत्तमाधममध्यमान् हेतून् न लभते, तदा चित्तं न जायते; हेत्वभावे फलं कुतः ?",
-    bhashyaExtract: "धर्माधर्महेतुफलभावाभावे चित्तं देवतिर्यङ्मनुष्यादियोनिषु न पुनरुत्पद्यते ।",
+    bhashyaExtract: "जात्याश्रमविहिता आशीर्वर्जितैरनुष्ठीयमाना धर्मा देवत्वादिप्राप्तिहेतव उत्तमाः केवलाश्च । धर्माः अधर्मव्यामिश्रामनुष्यत्वादिप्राप्त्यर्था मध्यमाः । तिर्यगादिप्राप्तिनिमित्ता अधर्मलक्षणाः प्रवृत्तिविशेषाश्चाधमाः । तानुत्तममध्यमाधमानविद्यापरिकल्पितान् यदा एकमेवाद्वितीयमात्मतत्त्वं सर्वकल्पनावर्जितं जानन् न लभते न पश्यति, यथा बालैर्दृश्यमानं गगने मलं विवेकी न पश्यति, तद्वत् , तदा न जायते नोत्पद्यते चित्तं देवाद्याकारैः उत्तमाधममध्यमफलरूपेण । न ह्यसति हेतौ फलमुत्पद्यते बीजाद्यभाव इव सस्यादि ॥",
     englishTranslation: "When the mind no longer grasps after causes producing superior (celestial), inferior (subhuman), or middling (human) states of existence, then the mind is not born; in the absence of a cause, how could there be an effect?",
     commentaryNotes: "Transcending karmic fruits (meritorious, demeritorious, and mixed) uproots mental rebirth."
   },
@@ -321,7 +321,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "animittasya cittasya yānutpattiḥ samādvayā |\najātasyaiva sarvasya cittadṛśyaṁ hi tad yataḥ || 77 ||",
     padaccheda: "अनिमित्तस्य, चित्तस्य, या, अनुत्पत्तिः, समा, अद्वया, अजातस्य, एव, सर्वस्य, चित्त-दृश्यम्, हि, तत्, यतः",
     anvaya: "अनिमित्तस्य चित्तस्य या समा अद्वया अनुत्पत्तिः (सा सर्वदा अस्ति), यतः सर्वस्य अजातस्य एव तत् चित्तदृश्यं हि ।",
-    bhashyaExtract: "सर्वदा निमित्तरहितस्य चित्तस्य या समाद्वयानुत्पत्तिः सा नित्यमुक्तावस्था, यतः सर्वं दृश्यमजातब्रह्ममात्रम् ।",
+    bhashyaExtract: "हेत्वभावे चित्तं नोत्पद्यत इति हि उक्तम् । सा पुनरनुत्पत्तिश्चित्तस्य कीदृशीत्युच्यते — परमार्थदर्शनेन निरस्तधर्माधर्माख्योत्पत्तिनिमित्तस्य अनिमित्तस्य चित्तस्येति या मोक्षाख्या अनुत्पत्तिः, सा सर्वदा सर्वावस्थासु समा निर्विशेषा अद्वया च ; पूर्वमपि अजातस्यैव अनुत्पन्नस्य चित्तस्य सर्वस्याद्वयस्येत्यर्थः । यस्मात्प्रागपि विज्ञानात् चित्तं दृश्यं तद्द्वयं जन्म च, तस्मादजातस्य सर्वस्य सर्वदा चित्तस्य समा अद्वयैव अनुत्पत्तिः न पुनः कदाचिद्भवति, कदाचिद्वा न भवति । सर्वदा एकरूपैवेत्यर्थः ॥",
     englishTranslation: "The unoriginated, uniform, non-dual stillness of the causeless mind belongs eternally to all that is unborn; for all perceived appearance is nothing other than that pure Awareness.",
     commentaryNotes: "Establishes non-origination as timeless equality (samatā)."
   },
@@ -333,7 +333,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "buddhvānimittatāṁ satyāṁ hetuṁ pṛthag anāpnuvan |\nvītaśokaṁ tathākāmam abhayaṁ padam aśnute || 78 ||",
     padaccheda: "बुद्ध्वा, अनिमित्तताम्, सत्याम्, हेतुम्, पृथक्, अनाप्नुवन्, वीत-शोकम्, तथा, अकामम्, अभयम्, पदम्, अश्नुते",
     anvaya: "सत्याम् अनिमित्ततां बुद्ध्वा, पृथक् हेतुम् अनाप्नुवन्, वीतशोकं तथा अकामम् अभयं पदम् अश्नुते ।",
-    bhashyaExtract: "द्वैतनिमित्ताभावरूपं सत्यं विज्ञाय कर्महेतुमनाददानो विद्वान् शोककामभयवर्जितं मोक्षपदमाप्नोति ।",
+    bhashyaExtract: "यथोक्तेन न्यायेन जन्मनिमित्तस्य द्वयस्य अभावादनिमित्ततां च सत्यां परमार्थरूपां बुद्ध्वा हेतुं धर्मादिकारणं देवादियोनिप्राप्तये पृथगनाप्नुवन् अनुपाददानः त्यक्तबाह्यैषणः सन् कामशोकादिवर्जितम् अविद्यादिरहितम् अभयं पदम् अश्नुते, पुनर्न जायत इत्यर्थः ॥",
     englishTranslation: "Having realized the true causelessness of Reality and no longer pursuing separate causes, the wise one attains the state free from sorrow, free from desire, and completely fearless!",
     commentaryNotes: "Practical fruit of Ajāti realization: vītaśoka, akāma, abhaya."
   },
@@ -345,7 +345,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "abhūtābhiniveśād dhi sadṛśe tat pravartate |\nvastvabhāvaṁ sa buddhvaiva niḥsaṅgaṁ vinivartate || 79 ||",
     padaccheda: "अभूत-अभिनिवेशात्, हि, सदृशे, तत्, प्रवर्तते, वस्तु-अभावम्, सः, बुद्ध्वा, एव, निःसङ्गम्, विनिवर्तते",
     anvaya: "अभूताभिनिवेशात् हि तत् सदृशे प्रवर्तते । सः वस्त्वभावं बुद्ध्वा एव निःसङ्गं विनिवर्तते ।",
-    bhashyaExtract: "असद्वस्तुन्याग्रहवशादेव चित्तं तत्सदृशविषयेषु प्रवर्तते, मिथ्यात्वं ज्ञात्वा तु निःसङ्गं निवर्तते ।",
+    bhashyaExtract: "यस्मात् अभूताभिनिवेशात् असति द्वये द्वयास्तित्वनिश्चयः अभूताभिनिवेशः, तस्मात् अविद्याव्यामोहरूपाद्धि सदृशे तदनुरूपे तत् चित्तं प्रवर्तते । तस्य द्वयस्य वस्तुनः अभावं यदा बुद्धवान् , तदा तस्मात् निःसङ्गं निरपेक्षं सत् विनिवर्तते अभूताभिनिवेशविषयात् ॥",
     englishTranslation: "Solely through clinging to the unreal does the mind engage in corresponding appearances. Having realized the unsubstantiality of those objects, it turns back free from all attachment.",
     commentaryNotes: "Illusion dissolves not by suppression, but by seeing through its lack of substance."
   },
@@ -357,7 +357,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "nivṛttasyāpravṛttasya niścalā hi tadā sthitiḥ |\nviṣayaḥ sa hi buddhānāṁ tat sāmyam ajam advayam || 80 ||",
     padaccheda: "निवृत्तस्य, अप्रवृत्तस्य, निश्चला, हि, तदा, स्थितिः, विषयः, सः, हि, बुद्धानाम्, तत्, साम्यम्, अजम्, अद्वयम्",
     anvaya: "निवृत्तस्य अप्रवृत्तस्य तदा निश्चला स्थितिः हि । सः हि बुद्धानां विषयः, तत् अजम् अद्वयं साम्यम् ।",
-    bhashyaExtract: "द्वैतान् निवृत्तस्य तत्राप्रवृत्तस्य च चित्तस्य याऽचला स्थितिः, सैव तत्त्वविदां परमं साम्यम् ।",
+    bhashyaExtract: "निवृत्तस्य द्वैतविषयात् , विषयान्तरे च अप्रवृत्तस्य अभावदर्शनेन चित्तस्य निश्चला चलनवर्जिता ब्रह्मस्वरूपैव तदा स्थितिः, यैषा ब्रह्मस्वरूपा स्थितिः चित्तस्य अद्वयविज्ञानैकरसघनलक्षणा । स हि यस्मात् विषयः गोचरः परमार्थदर्शिनां बुद्धानाम् , तस्मात् तत्साम्यं परं निर्विशेषमजमद्वयं च ॥",
     englishTranslation: "For one turned away from duality and no longer engaging in it, there abides then an immovable stillness. That indeed is the domain realized by the enlightened—that unborn, non-dual Equality (Sāmya)!",
     commentaryNotes: "Describes the Sahaja stillness of the awakened sage."
   },
@@ -369,7 +369,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "ajam anidram asvapnaṁ prabhātaṁ bhavati svayam |\nsakṛd vibhāto hy evaiṣa dharmo dhātusvabhāvataḥ || 81 ||",
     padaccheda: "अजम्, अनिद्रम्, अस्वप्नम्, प्रभातम्, भवति, स्वयम्, सकृत्-विभातः, हि, एव, एषः, धर्मः, धातु-स्वभावतः",
     anvaya: "एषः धर्मः धातुस्वभावतः स्वयं प्रभातं भवति, अजम् अनिद्रम् अस्वप्नं सकृद्विभातः हि एव ।",
-    bhashyaExtract: "अविद्यानिद्रास्वप्नरहितो नित्यप्रभातः स्वयंज्योतिरात्मा सकृदेव विभातः सर्वदा स्फुरति ।",
+    bhashyaExtract: "पुनरपि कीदृशश्चासौ बुद्धानां विषय इत्याह — स्वयमेव तत् प्रभातं भवति न आदित्याद्यपेक्षम् ; स्वयं ज्योतिःस्वभावमित्यर्थः । सकृद्विभातः सदैव विभात इत्येतत् । एषः एवंलक्षणः आत्माख्यो धर्मः धातुस्वभावतः वस्तुस्वभावत इत्यर्थः ॥",
     englishTranslation: "Unborn, sleepless, dreamless, it dawns of its own accord! For this Reality (Dharma) is eternally once-effulgent by its very intrinsic essence.",
     commentaryNotes: "Self-luminosity (svayam-prabhāta) never needs an external lamp or cause to shine."
   },
@@ -381,7 +381,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "sukham āvriyate nityaṁ duḥkhaṁ vivriyate sadā |\nyasya kasya ca dharmasya graheṇa bhagavān asau || 82 ||",
     padaccheda: "सुखम्, आव्रियते, नित्यम्, दुःखम्, विव्रियते, सदा, यस्य, कस्य, च, धर्मस्य, ग्रहेण, भगवान्, असौ",
     anvaya: "यस्य कस्य च धर्मस्य ग्रहेण असौ भगवान् नित्यं सुखम् आव्रियते, सदा दुःखं च विव्रियते ।",
-    bhashyaExtract: "यस्य कस्यापि द्वैतधर्मस्याभिनिवेशेन परमात्मा भगवानाच्छाद्यते, संसाराख्यं दुःखं च प्रकटं भवति ।",
+    bhashyaExtract: "एवं बहुश उच्यमानमपि परमार्थतत्त्वं कस्माल्लौकिकैर्न गृह्यत इत्युच्यते — यस्मात् यस्य कस्यचित् द्वयवस्तुनो धर्मस्य ग्रहेण ग्रहणावेशेन मिथ्याभिनिविष्टतया सुखमाव्रियते अनायासेन आच्छाद्यत इत्यर्थः । द्वयोपलब्धिनिमित्तं हि तत्रावरणं न यत्नान्तरमपेक्षते । दुःखं च विव्रियते प्रकटीक्रियते, परमार्थज्ञानस्य दुर्लभत्वात् । भगवानसौ आत्माद्वयो देव इत्यर्थः । अतो वेदान्तैराचार्यैश्च बहुश उच्यमानोऽपि नैव ज्ञातुं शक्य इत्यर्थः, ‘आश्चर्यो वक्ता कुशलोऽस्य लब्धा’(क. उ. १ । २ । ७) इति श्रुतेः ॥",
     englishTranslation: "By grasping onto any finite entity or dogma whatsoever, this radiant Lord (the Self) is easily veiled, and sorrow is perpetually uncovered!",
     commentaryNotes: "Even attachment to subtle philosophical categories obscures the infinite Self."
   },
@@ -393,7 +393,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "asti nāsty asti nāstīti nāsti nāstīti vā punaḥ |\ncalasthirobhayābhāvair āvṛṇoty eva bāliśaḥ || 83 ||",
     padaccheda: "अस्ति, न, अस्ति, अस्ति-न-अस्ति, इति, न-अस्ति-न-अस्ति, इति, वा, पुनः, चल-स्थिर-उभय-अभावैः, आवृणोति, एव, बालिशः",
     anvaya: "बालिशः 'अस्ति', 'नास्ति', 'अस्ति-नास्ति' इति, वा पुनः 'नास्ति-नास्ति' इति चलस्थिरोभयाभावैः आवृणोति एव ।",
-    bhashyaExtract: "सदसत्सदसदुभयाभावरूपैश्चतुर्भिः कोटिभिः पण्डितमन्याः स्वमनीषिकाभिः परमात्मानमावृण्वन्ति ।",
+    bhashyaExtract: "अस्ति नास्तीत्यादि सूक्ष्मविषया अपि पण्डितानां ग्रहाः भगवतः परमात्मन आवरणा एव ; किमुत मूढजनानां बुद्धिलक्षणा इत्येवमर्थं प्रदर्शयन्नाह — अस्तीति । अस्त्यात्मेति कश्चिद्वादी प्रतिपद्यते । नास्तीत्यपरो वैनाशिकः । अस्ति नास्तीत्यपरोऽर्धवैनाशिकः सदसद्वादी दिग्वासाः । नास्ति नास्तीत्यत्यन्तशून्यवादी । तत्रास्तिभावश्चलः, घटाद्यनित्यविलक्षणत्वात् । नास्तिभावः स्थिरः, सदाविशेषत्वात् । उभयं चलस्थिरविषयत्वात् सदसद्भावः । अभावोऽत्यन्ताभावः । प्रकारचतुष्टयस्यापि तैरेतैश्चलस्थिरोभयाभावैः सदसदादिवादी सर्वोऽपि भगवन्तमावृणोत्येव बालिशोऽविवेकी । यद्यपि पण्डितो बालिश एव परमार्थतत्त्वानवबोधात् , किमु स्वभावमूढो जन इत्यभिप्रायः ॥",
     englishTranslation: "Saying 'It exists', 'It does not exist', 'It both exists and does not exist', or again 'It neither exists nor does not exist'—the immature thinker simply veils the Truth through these notions of moving, fixed, both, and neither.",
     commentaryNotes: "Refers to the four logical extremities (catuṣkoṭi): asti (affirmation/eternalism), nāsti (nihilism), asti-nāsti (syncretism), nāsti-nāsti (radical negation)."
   },
@@ -405,7 +405,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "koṭyaś catasra etās tu grahair yāsāṁ sadāvṛtaḥ |\nbhagavān ābhir aspṛṣṭo yena dṛṣṭaḥ sa sarvadṛk || 84 ||",
     padaccheda: "कोट्यः, चतस्रः, एताः, तु, ग्रहैः, यासाम्, सदा, आवृतः, भगवान्, आभिः, अस्पृष्टः, येन, दृष्टः, सः, सर्व-दृक्",
     anvaya: "एताः चतस्रः कोट्यः तु यासां ग्रहैः (आत्मा) सदा आवृतः, आभिः अस्पृष्टः भगवान् येन दृष्टः सः सर्वदृक् ।",
-    bhashyaExtract: "एतैश्चतुर्भिर्विवादकोटिविकल्पैर्निष्कलङ्को निर्विकल्पो भगवान् येन साक्षात्कृतः स एव सर्वज्ञः ।",
+    bhashyaExtract: "कीदृक्पुनः परमार्थतत्त्वम् , यदवबोधादबालिशः पण्डितो भवतीत्याह — कोट्यः प्रावादुकशास्त्रनिर्णयान्ताः एताः उक्ता अस्ति नास्तीत्याद्याः चतस्रः, यासां कोटीनां ग्रहैः ग्रहणैः उपलब्धिनिश्चयैः सदा सर्वदा आवृतः आच्छादितः तेषामेव प्रावादुकानां यः, स भगवान् आभिः अस्ति नास्तीत्यादिकोटिभिः चतसृभिरपि अस्पृष्टः अस्त्यादिविकल्पनावर्जित इत्येतत् । येन मुनिना दृष्टो ज्ञातः वेदान्तेष्वौपनिषदः पुरुषः, स सर्वदृक् सर्वज्ञः ; परमार्थपण्डित इत्यर्थः ॥",
     englishTranslation: "These are the four logical extremes by whose dogmatic grasp the Self appears eternally veiled. He by whom the Lord is beheld as utterly untouched by these four—he is the true All-Seer!",
     commentaryNotes: "True omniscience (sarvadṛktva) is transcending the four conceptual extremes."
   },
@@ -417,7 +417,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "prāpya sarvajñatāṁ kṛtsnāṁ brāhmaṇyaṁ padam advayam |\nanāpannādimadhyāntaṁ kim ataḥ param īhate || 85 ||",
     padaccheda: "प्राप्य, सर्वज्ञताम्, कृत्स्नाम्, ब्राह्मण्यम्, पदम्, अद्वयम्, अनापन्न-आदि-मध्य-अन्तम्, किम्, अतः, परम्, ईहते",
     anvaya: "कृत्स्नां सर्वज्ञताम् अनापन्नादिमध्यान्तं ब्राह्मण्यम् अद्वयं पदं प्राप्य अतः परं किम् ईहते ?",
-    bhashyaExtract: "ब्रह्मस्वरूपं सर्वज्ञतां प्राप्य कृतकृत्यस्य विदुषः किञ्चिदपि प्राप्तव्यं नावशिष्यते ।",
+    bhashyaExtract: "प्राप्य एतां यथोक्तां कृत्स्नां समस्तां सर्वज्ञतां ब्राह्मण्यं पदम् ‘स ब्राह्मणः’(बृ. उ. ३ । ८ । १०) ‘एष नित्यो महिमा ब्राह्मणस्य’(बृ. उ. ४ । ४ । २३) इति श्रुतेः । अनापन्नादिमध्यान्तम् आदिमध्यान्ताः उत्पत्तिस्थितिलयाः अनापन्ना अप्राप्ता यस्य अद्वयस्य पदस्य न विद्यन्ते, तत् अनापन्नादिमध्यान्तं ब्राह्मण्यं पदम् । तदेव प्राप्य लब्ध्वा किमतः परमस्मादात्मलाभादूर्ध्वम् ईहते चेष्टते, निष्प्रयोजनमित्यर्थः । ‘नैव तस्य कृतेनार्थः’(भ. गी. ३ । १८) इत्यादिस्मृतेः ॥",
     englishTranslation: "Having attained complete omniscience—that supreme state of Brahmanhood (brāhmaṇya), non-dual and untouched by beginning, middle, or end—what more beyond this could anyone ever desire?",
     commentaryNotes: "Echoes Kṛta-kṛtyatā (complete fulfillment of life's purpose)."
   },
@@ -429,7 +429,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "viprāṇāṁ vinayo hy eṣa śamaḥ prākṛta ucyate |\ndamaḥ prakṛtidāntatvād evaṁ vidvāñ śamaṁ vrajet || 86 ||",
     padaccheda: "विप्राणाम्, विनयः, हि, एषः, शमः, प्राकृतः, उच्यते, दमः, प्रकृति-दान्तत्वात्, एवम्, विद्वान्, शमम्, व्रजेत्",
     anvaya: "विप्राणाम् एषः विनयः हि, प्राकृतः शमः उच्यते, प्रकृतिदान्तत्वात् दमः (उच्यते); एवं विद्वान् शमं व्रजेत् ।",
-    bhashyaExtract: "ब्रह्मविदां स्वभावत एव शमदमविनयाः सिद्ध्यन्ति, ततश्च परमशान्तिं प्राप्नोति ।",
+    bhashyaExtract: "विप्राणां ब्राह्मणानां विनयः विनीतत्वं स्वाभाविकं यदेतदात्मस्वरूपेणावस्थानम् । एष विनयः शमोऽप्येष एव प्राकृतः स्वाभाविकः अकृतकः उच्यते । दमोऽप्येष एव प्रकृतिदान्तत्वात् स्वभावत एव चोपशान्तरूपत्वाद्ब्रह्मणः । एवं यथोक्तं स्वभावोपशान्तं ब्रह्म विद्वान् शमम् उपशान्तिं स्वाभाविकीं ब्रह्मस्वरूपां व्रजेत् ब्रह्मस्वरूपेणावतिष्ठत इत्यर्थः ॥",
     englishTranslation: "This verily is the natural discipline of the wise (vipras): it is called spontaneous tranquility (śama) and self-restraint (dama) because the Self is subdued by its very nature. Knowing thus, the wise sage attains supreme peace.",
     commentaryNotes: "Calmness is not forced austerity, but alignment with one's intrinsically peaceful nature."
   },
@@ -441,7 +441,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "savastu sopalambhaṁ ca dvayaṁ laukikam iṣyate |\navastu sopalambhaṁ ca śuddhaṁ laukikam iṣyate || 87 ||",
     padaccheda: "सवस्तु, सोपलम्भम्, च, द्वयम्, लौकिकम्, इष्यते, अवस्तु, सोपलम्भम्, च, शुद्धम्, लौकिकम्, इष्यते",
     anvaya: "सवस्तु सोपलम्भं च द्वयं लौकिकम् इष्यते, अवस्तु सोपलम्भं च शुद्धं लौकिकम् इष्यते ।",
-    bhashyaExtract: "जाग्रदवस्था सवस्तुसुपलम्भा लौकिकी, स्वप्नावस्था त्ववस्तुसुपलम्भा शुद्धलौकिकीति द्विधा व्यावहारिकं ज्ञानम् ।",
+    bhashyaExtract: "एवमन्योन्यविरुद्धत्वात् संसारकारणरागद्वेषदोषास्पदानि प्रावादुकानां दर्शनानि । अतो मिथ्यादर्शनानि तानीति तद्युक्तिभिरेव दर्शयित्वा चतुष्कोटिवर्जितत्वात् रागादिदोषानास्पदं स्वभावशान्तमद्वैतदर्शनमेव सम्यग्दर्शनमित्युपसंहृतम् । अथेदानीं स्वप्रक्रियाप्रदर्शनार्थ आरम्भः — सवस्तु संवृतिसता वस्तुना सह वर्तत इति सवस्तु, तथा च उपलब्धिरुपलम्भः, तेन सह वर्तत इति सोपलम्भं च शास्त्रादिसर्वव्यवहारास्पदं ग्राह्यग्रहणलक्षणं द्वयं लोकादनपेतं लौकिकं जागरितमित्येतत् । एवंलक्षणं जागरितमिष्यते वेदान्तेषु । अवस्तु संवृतेरप्यभावात् । सोपलम्भं वस्तुवदुपलम्भनमुपलम्भः असत्यपि वस्तुनि, तेन सह वर्तत इति सोपलम्भं च । शुद्धं केवलं प्रविभक्तं जागरितात्स्थूलाल्लौकिकं सर्वप्राणिसाधारणत्वात् इष्यते स्वप्न इत्यर्थः ॥",
     englishTranslation: "The dual state involving both external objects and their perception (waking) is known as the ordinary mundane state (laukika); the state without external objects yet with perception (dream) is known as the pure mundane state (śuddha laukika).",
     commentaryNotes: "First two stages of knowledge corresponding to Viśva (waking) and Taijasa (dream)."
   },
@@ -453,7 +453,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "avastv anupalambhaṁ ca lokottaram iti smṛtam |\njñānaṁ jñeyaṁ ca vijñeyaṁ sadā buddhaiḥ prakīrtitam || 88 ||",
     padaccheda: "अवस्तु, अनुपलम्भम्, च, लोकोत्तरम्, इति, स्मृतम्, ज्ञानम्, ज्ञेयम्, च, विज्ञेयम्, सदा, बुद्धैः, प्रकीर्तितम्",
     anvaya: "अवस्तु अनुपलम्भं च लोकोत्तरम् इति स्मृतम् । बुद्धैः सदा ज्ञानं ज्ञेयं च विज्ञेयं प्रकीर्तितम् ।",
-    bhashyaExtract: "सुषुप्तलोकोत्तरतुरीययोर्ज्ञानत्रयविभागः—लौकिकं ज्ञानम्, शुद्धलौकिकं ज्ञेयं (द्वयाभावः), लोकोत्तरं परमार्थसत्यं विज्ञेयमिति ।",
+    bhashyaExtract: "अवस्त्वनुपलम्भं च ग्राह्यग्रहणवर्जितमित्येतत् ; लोकोत्तरम् , अत एव लोकातीतम् । ग्राह्यग्रहणविषयो हि लोकः, तदभावात् सर्वप्रवृत्तिबीजं सुषुप्तमित्येतत् । एवं स्मृतं सोपायं परमार्थतत्त्वं लौकिकं शुद्धलौकिकं लोकोत्तरं च क्रमेण येन ज्ञानेन ज्ञायते, तत् ज्ञानं ज्ञेयम् एतान्येव त्रीणि, एतद्व्यतिरेकेण ज्ञेयानुपपत्तेः । सर्वप्रावादुककल्पितवस्तुनोऽत्रैवान्तर्भावात् ; विज्ञेयं यत्परमार्थसत्यं तुर्याख्यमद्वयमजमात्मतत्त्वमित्यर्थः ; सदा सर्वदैव, तल्लौकिकादि विज्ञेयान्तं बुद्धैः परमार्थदर्शिभिर्ब्रह्मविद्भिः प्रकीर्तितम् ॥",
     englishTranslation: "The state devoid of both external objects and dualistic perception is remembered as the supramundane (lokottara). Thus knowledge (jñāna), what is to be known (jñeya), and what is to be deeply realized (vijñeya) are ever proclaimed by the wise.",
     commentaryNotes: "Maps the three levels of experience (waking, dream, deep sleep) and knowledge leading to Turiya."
   },
@@ -465,7 +465,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "jñāne ca trividhe jñeye krameṇa vidite svayam |\nsarvajñatā hi sarvatra bhavatīha mahādhiyaḥ || 89 ||",
     padaccheda: "ज्ञाने, च, त्रिविधे, ज्ञेये, क्रमेण, विदिते, स्वयम्, सर्वज्ञता, हि, सर्वत्र, भवति, इह, महा-धियः",
     anvaya: "त्रिविधे ज्ञाने ज्ञेये च क्रमेण स्वयं विदिते, इह महाधियः सर्वत्र सर्वज्ञता हि भवति ।",
-    bhashyaExtract: "लौकिकशुद्धलौकिकलोकोत्तररूपे ज्ञाने ज्ञेये च क्रमेण ज्ञाते सति महाबुद्धेः सर्वदा सर्वज्ञता सिद्ध्यति ।",
+    bhashyaExtract: "ज्ञाने च लौकिकादिविषये ज्ञेये च लौकिकादौ त्रिविधे, पूर्वं लौकिकं स्थूलम् ; तदभावेन पश्चाच्छुद्धं लौकिकम् , तदभावेन लोकोत्तरमित्येवं क्रमेण स्थानत्रयाभावेन परमार्थसत्ये तुर्ये अद्वये अजे अभये विदिते, स्वयमेव आत्मस्वरूपमेव सर्वज्ञता सर्वश्चासौ ज्ञश्च सर्वज्ञः, तद्भावः सर्वज्ञता इह अस्मिन् लोके भवति महाधियः महाबुद्धेः । सर्वलोकातिशयवस्तुविषयबुद्धित्वादेवंविदः सर्वत्र सर्वदा भवति । सकृद्विदिते स्वरूपे व्यभिचाराभावादित्यर्थः । न हि परमार्थविदो ज्ञानिनः ज्ञानोद्भवाभिभवौ स्तः, यथा अन्येषां प्रावादुकानाम् ॥",
     englishTranslation: "When the threefold knowledge and its corresponding knowable have been directly realized in due sequence, universal omniscience belongs effortlessly here and everywhere to the person of exalted intellect.",
     commentaryNotes: "Gradual pedagogical ascent through waking, dream, and sleep to non-dual Turiya."
   },
@@ -477,7 +477,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "heyajñeyāpyapākyāni vijñeyāny agrayāṇataḥ |\nteṣām anyatra vijñeyād upalambhas triṣu smṛtaḥ || 90 ||",
     padaccheda: "हेय-ज्ञेय-आप्य-पाक्यानि, विज्ञेयानि, अग्रयाणतः, तेषाम्, अन्यत्र, विज्ञेयात्, उपलम्भः, त्रिषु, स्मृतः",
     anvaya: "अग्रयाणतः हेयज्ञेयाप्यपाक्यानि विज्ञेयानि । तेषां विज्ञेयाद् अन्यत्र त्रिषु उपलम्भः स्मृतः ।",
-    bhashyaExtract: "हेयानि जाग्रदादीनि, ज्ञेयं परमार्थसत्यम्, आप्यानि पाण्डित्यबाल्यमौनानि, पाक्यानि रागादिकषायाः । तत्र ज्ञेयादन्यत्र त्रिषु कल्पितोपलम्भ एव ।",
+    bhashyaExtract: "लौकिकादीनां क्रमेण ज्ञेयत्वेन निर्देशादस्तित्वाशङ्का परमार्थतो मा भूदित्याह — हेयानि च लौकिकादीनि त्रीणि जागरितस्वप्नसुषुप्तानि आत्मन्यसत्त्वेन रज्ज्वां सर्पवद्धातव्यानीत्यर्थः । ज्ञेयमिह चतुष्कोटिवर्जितं परमार्थतत्त्वम् । आप्यानि आप्तव्यानि त्यक्तबाह्यैषणात्रयेण भिक्षुणा पाण्डित्यबाल्यमौनाख्यानि साधनानि । पाक्यानि रागद्वेषमोहादयो दोषाः कषायाख्यानि पक्तव्यानि । सर्वाण्येतानि हेयज्ञेयाप्यपाक्यानि विज्ञेयानि भिक्षुणा उपायत्वेनेत्यर्थः । अग्रयाणतः प्रथमतः । तेषां हेयादीनामन्यत्र विज्ञेयात्परमार्थसत्यं विज्ञेयं ब्रह्मैकं वर्जयित्वा । उपलम्भनमुपलम्भः अविद्याकल्पनामात्रम् । हेयाप्यपाक्येषु त्रिष्वपि स्मृतो ब्रह्मविद्भिः न परमार्थसत्यता त्रयाणामित्यर्थः ॥",
     englishTranslation: "From the standpoint of the highest vehicle (agrayāṇa), four things must be understood: what is to be abandoned (heya), what is to be known (jñeya), what is to be attained (āpya), and what is to be matured/overcome (pākya). Apart from the ultimate Knowable, perception is remembered as purely imagined in the other three.",
     commentaryNotes: "Synthesizes Vedāntic sādhanā: only the jñeya (Brahman) is ultimately real; abandonment, attainment, and purification belong to the relative sphere."
   },
@@ -489,7 +489,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "prakṛtyākāśavaj jñeyāḥ sarve dharmā anādayaḥ |\nvidyate na hi nānātvaṁ teṣāṁ kvacana kiñcana || 91 ||",
     padaccheda: "प्रकृत्या, आकाशवत्, ज्ञेयाः, सर्वे, धर्माः, अनादयः, विद्यते, न, हि, नानात्वम्, तेषाम्, क्वचन, किञ्चन",
     anvaya: "सर्वे अनादयः धर्माः प्रकृत्या आकाशवत् ज्ञेयाः । तेषां क्वचन किञ्चन नानात्वं न हि विद्यते ।",
-    bhashyaExtract: "आत्मस्वरूपाः सर्वे धर्मा आकाशवदनादयो निरवयवाश्च, न तेषु क्वापि भेदलेशोऽस्ति ।",
+    bhashyaExtract: "परमार्थतस्तु प्रकृत्या स्वभावतः आकाशवत् आकाशतुल्याः सूक्ष्मनिरञ्जनसर्वगतत्वैः सर्वे धर्मा आत्मानो ज्ञेया मुमुक्षुभिः अनादयः नित्याः । बहुवचनकृतभेदाशङ्कां निराकुर्वन्नाह — क्वचन क्वचिदपि किञ्चन किञ्चित् अणुमात्रमपि तेषां न विद्यते नानात्वमिति ॥",
     englishTranslation: "All beings (dharmas) are to be known as beginningless and like infinite space by their intrinsic nature. There exists no diversity whatsoever among them at any time or place.",
     commentaryNotes: "Space-like non-duality of all souls."
   },
@@ -501,7 +501,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "ādibuddhāḥ prakṛtyaiva sarve dharmāḥ suniścitāḥ |\nyasyaivaṁ bhavati kṣāntiḥ so'mṛtatvāya kalpate || 92 ||",
     padaccheda: "आदि-बुद्धाः, प्रकृत्या, एव, सर्वे, धर्माः, सुनिश्चिताः, यस्य, एवम्, भवति, क्षान्तिः, सः, अमृतत्वाय, कल्पते",
     anvaya: "सर्वे धर्माः प्रकृत्या एव आदिबुद्धाः सुनिश्चिताः । यस्य एवं क्षान्तिः भवति सः अमृतत्वाय कल्पते ।",
-    bhashyaExtract: "स्वभावत एव नित्यबुद्धा आत्मानः, न तु बोधोत्पत्तिरपेक्षिता । यस्यैवं निश्चयो भवति स मोक्षाय समर्थो भवति ।",
+    bhashyaExtract: "ज्ञेयतापि धर्माणां संवृत्यैव, न परमार्थत इत्याह — यस्मात् आदौ बुद्धाः आदिबुद्धाः प्रकृत्यैव स्वभावत एव यथा नित्यप्रकाशस्वरूपः सविता, एवं नित्यबोधस्वरूपा इत्यर्थः । सर्वे धर्माः सर्व आत्मानः । न च तेषां निश्चयः कर्तव्यः नित्यनिश्चितस्वरूपा इत्यर्थः । न सन्दिह्यमानस्वरूपा एवं नैवं वेति यस्य मुमुक्षोः एवं यथोक्तप्रकारेण सर्वदा बोधनिश्चयनिरपेक्षता आत्मार्थं परार्थं वा । यथा सविता नित्यं प्रकाशान्तरनिरपेक्षः स्वार्थं परार्थं वेत्येवं भवति क्षान्तिः बोधकर्तव्यतानिरपेक्षता सर्वदा स्वात्मनि, सः अमृतत्वाय अमृतभावाय कल्पते, मोक्षाय समर्थो भवतीत्यर्थः ॥",
     englishTranslation: "All entities (dharmas) are by their very nature primordially enlightened (ādibuddha) and completely settled in truth. He who attains this serene conviction is fit for immortality!",
     commentaryNotes: "Enlightenment is not manufactured; it is recognized as one's eternal primordial status."
   },
@@ -513,7 +513,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "ādiśāntā hy anutpannāḥ prakṛtyaiva sunirvṛtāḥ |\nsarve dharmāḥ samābhinnā ajaṁ sāmyaṁ viśāradam || 93 ||",
     padaccheda: "आदि-शान्ताः, हि, अनुत्पन्नाः, प्रकृत्या, एव, सुनिर्वृताः, सर्वे, धर्माः, समाः, अभिन्नाः, अजम्, साम्यम्, विशारदम्",
     anvaya: "सर्वे धर्माः प्रकृत्या एव आदिशान्ताः अनुत्पन्नाः सुनिर्वृताः हि, समाः अभिन्नाः, अजं साम्यं विशारदम् ।",
-    bhashyaExtract: "सर्वे जीवा आद्यन्तशान्ताः, स्वभावत एव परिनिर्वृता मोक्षस्वरूपाः, नित्यसमा निष्प्रपञ्चाः ।",
+    bhashyaExtract: "तथा नापि शान्तिकर्तव्यता आत्मनीत्याह — यस्मात् आदिशान्ताः नित्यमेव शान्ताः अनुत्पन्ना अजाश्च प्रकृत्यैव सुनिर्वृताः सुष्ठूपरतस्वभावाः नित्यमुक्तस्वभावा इत्यर्थः । सर्वे धर्माः समाश्च अभिन्नाश्च समाभिन्नाः अजं साम्यं विशारदं विशुद्धमात्मतत्त्वं यस्मात् , तस्मात् शान्तिर्मोक्षो वा नास्ति कर्तव्य इत्यर्थः । न हि नित्यैकस्वभावस्य कृतं किञ्चिदर्थवत्स्यात् ॥",
     englishTranslation: "All beings are from the very beginning peaceful, unborn, and completely liberated (sunirvṛta) by their own nature. All are equal and non-different—that unborn, stainless Sameness!",
     commentaryNotes: "One of the most luminous verses of Gauḍapāda: souls do not become liberated; they are primordially liberated (Ādi-śānta, Nitya-mukta)."
   },
@@ -525,7 +525,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "vaiśāradyaṁ tu vai nāsti bhede vicaratāṁ sadā |\nbhedanimnāḥ pṛthagvādās tasmāt te kṛpaṇāḥ smṛtāḥ || 94 ||",
     padaccheda: "वैशारद्यम्, तु, वै, न, अस्ति, भेदे, विचरताम्, सदा, भेद-निम्नाः, पृथक्-वादाः, तस्मात्, ते, कृपणाः, स्मृताः",
     anvaya: "भेदे सदा विचरतां वैशारद्यं तु वै न अस्ति । पृथग्वादाः भेदनिम्नाः, तस्मात् ते कृपणाः स्मृताः ।",
-    bhashyaExtract: "ये द्वैतमार्गे सदा विचरन्ति तेषां विशुद्धं तत्त्वज्ञानं नास्ति । भेदप्रवणा द्वैतिनः कृपणा उच्यन्ते ।",
+    bhashyaExtract: "ये यथोक्तं परमार्थतत्त्वं प्रतिपन्नाः, ते एव अकृपणा लोके ; कृपणास्त्वन्ये इत्याह — यस्मात् भेदनिम्नाः भेदानुयायिनः संसारानुगा इत्यर्थः । के ? पृथग्वादाः पृथक् नाना वस्तु इत्येवं वदनं येषां ते पृथग्वादाः द्वैतिन इत्यर्थः । तस्मात्ते कृपणाः क्षुद्राः स्मृताः, यस्मात् वैशारद्यं विशुद्धिः तन्नास्ति तेषां भेदे विचरतां द्वैतमार्गे अविद्यापरिकल्पिते सर्वदा वर्तमानानामित्यर्थः । अतो युक्तमेव तेषां कार्पण्यमित्यभिप्रायः ॥",
     englishTranslation: "Pure clarity (vaiśāradya) does not belong to those who ever wander in duality and difference. Proponents of separateness incline downward toward division; therefore they are declared pitiable (kṛpaṇa).",
     commentaryNotes: "Contrasts non-dual clarity with the restlessness of pluralistic debate."
   },
@@ -537,7 +537,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "aje sāmye tu ye kecid bhaviṣyanti suniścitāḥ |\nte hi loke mahājñānās tac ca loko na gāhate || 95 ||",
     padaccheda: "अजे, साम्ये, तु, ये, केचित्, भविष्यन्ति, सुनिश्चिताः, ते, हि, लोके, महा-ज्ञानाः, तत्, च, लोकः, न, गाहते",
     anvaya: "ये केचित् तु अजे साम्ये सुनिश्चिताः भविष्यन्ति, ते हि लोके महाज्ञानाः, तत् च लोकः न गाहते ।",
-    bhashyaExtract: "अजे साम्ये परमात्मनि ये सुनिश्चिता विद्वांसस्त एव लोके महाज्ञानाः, तच्च पदं प्राकृतो लोको नावगाहते ।",
+    bhashyaExtract: "यदिदं परमार्थतत्त्वम् , अमहात्मभिरपण्डितैर्वेदान्तबहिःष्ठैः क्षुद्रैरल्पप्रज्ञैरनवगाह्यमित्याह — अजे साम्ये परमार्थतत्त्वे एवमेवेति ये केचित् स्त्र्यादयोऽपि सुनिश्चिता भविष्यन्ति चेत् , त एव हि लोके महाज्ञानाः निरतिशयतत्त्वविषयज्ञाना इत्यर्थः । तच्च तेषां वर्त्म तेषां विदितं परमार्थतत्त्वं सामान्यबुद्धिरन्यो लोको न गाहते नावतरति न विषयीकरोतीत्यर्थः । ‘सर्वभूतात्मभूतस्य समैकार्थं प्रपश्यतः । देवा अपि मार्गे मुह्यन्त्यपदस्य पदैषिणः । शकुनीनामिवाकाशे गतिर्नैवोपलभ्यते’ इत्यादिस्मरणात् ॥",
     englishTranslation: "Whosoever shall become firmly settled in that Unborn Sameness—they indeed are the great knowers of Truth in the world; and that Truth the ordinary world cannot fathom.",
     commentaryNotes: "True wisdom belongs solely to those anchored in the non-dual equality of all existence."
   },
@@ -549,7 +549,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "ajeṣv ajam asaṁkrāntaṁ dharmeṣu jñānam iṣyate |\nyato na kramate jñānam asaṅgaṁ tena kīrtitam || 96 ||",
     padaccheda: "अजेषु, अजम्, असंक्रान्तम्, धर्मेषु, ज्ञानम्, इष्यते, यतः, न, क्रमते, ज्ञानम्, असङ्गम्, तेन, कीर्तितम्",
     anvaya: "अजेषु धर्मेषु अजम् असंक्रान्तं ज्ञानम् इष्यते । यतः ज्ञानं न क्रमते, तेन असङ्गं कीर्तितम् ।",
-    bhashyaExtract: "यत्परमार्थात्मज्ञानं तदप्यजमेव, न तद् विषयेषु संक्रामति । असङ्गो ह्ययं पुरुष इति श्रुतेः ।",
+    bhashyaExtract: "कथं महाज्ञानत्वमित्याह — अजेषु अनुत्पन्नेषु अचलेषु धर्मेषु आत्मसु अजमचलं च ज्ञानमिष्यते सवितरीव औष्ण्यं प्रकाशश्च यतः, तस्मात् असङ्क्रान्तम् अर्थान्तरे ज्ञानमजमिष्यते । यस्मान्न क्रमते अर्थान्तरे ज्ञानम् , तेन कारणेन असङ्गं तत् कीर्तितम् आकाशकल्पमित्युक्तम् ॥",
     englishTranslation: "Knowledge is held to be unborn and non-migrating with respect to all unborn entities. Because knowledge does not pass over into objects, it is proclaimed as ever-unattached (Asaṅga).",
     commentaryNotes: "Pure Consciousness does not move to grasp an object; it illumines without attachment."
   },
@@ -561,7 +561,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "aṇumātre'pi vaidharmye jāyamāne'vipaścitaḥ |\nasaṅgatā sadā nāsti kim utāvaraṇacyutiḥ || 97 ||",
     padaccheda: "अणु-मात्रे, अपि, वैधर्म्ये, जायमाने, अविपश्चितः, असङ्गता, सदा, न, अस्ति, किमुत, आवरण-च्युतिः",
     anvaya: "अविपश्चितः अणुमात्रे अपि वैधर्म्ये जायमाने, सदा असङ्गता न अस्ति, आवरणच्युतिः किमुत ?",
-    bhashyaExtract: "यदि सूक्ष्मोऽपि भेदधर्मोऽङ्गीक्रियते, तर्ह्यासङ्गत्वं नश्येत्, अज्ञाननिवृत्तिश्च न सम्भवति ।",
+    bhashyaExtract: "इतोऽन्येषां वादिनाम् अणुमात्रे अल्पेऽपि वैधर्म्ये वस्तुनि बहिरन्तर्वा जायमाने उत्पद्यमाने अविपश्चितः अविवेकिनः असङ्गता असङ्गत्वं सदा नास्ति ; किमुत वक्तव्यम् आवरणच्युतिः बन्धनाशो नास्तीति ॥",
     englishTranslation: "If even an atom of differentiation is admitted to arise by the undiscerning thinker, non-attachment (asaṅgatā) can never exist, much less the removal of the veil of ignorance!",
     commentaryNotes: "Warns that even subtle dualism shatters the unconditioned peace of Advaita."
   },
@@ -573,7 +573,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "alabdhāvaraṇāḥ sarve dharmāḥ prakṛtinirmalāḥ |\nādau buddhās tathā muktā budhyanta iti nāyakāḥ || 98 ||",
     padaccheda: "अलब्ध-आवरणाः, सर्वे, धर्माः, प्रकृति-निर्मलाः, आदौ, बुद्धाः, तथा, मुक्ताः, बुध्यन्ते, इति, नायकाः",
     anvaya: "सर्वे धर्माः अलब्धावरणाः प्रकृतिनिर्मलाः आदौ बुद्धाः तथा मुक्ताः; नायकाः 'बुध्यन्ते' इति (उपचारेण वदन्ति) ।",
-    bhashyaExtract: "न कदाप्यविद्यावरणमवाप्तवन्त आत्मानः, स्वभावशुद्धा नित्यबुद्धमुक्ता एव, ते 'बुध्यन्ते' इति व्यावहारिकोपचारः ।",
+    bhashyaExtract: "तेषामावरणच्युतिर्नास्तीति ब्रुवतां स्वसिद्धान्ते अभ्युपगतं तर्हि धर्माणामावरणम् । नेत्युच्यते — अलब्धावरणाः अलब्धमप्राप्तमावरणम् अविद्यादिबन्धनं येषां ते धर्माः अलब्धावरणाः बन्धनरहिता इत्यर्थः । प्रकृतिनिर्मलाः स्वभावशुद्धाः आदौ बुद्धाः तथा मुक्ताः, यस्मात् नित्यशुद्धबुद्धमुक्तस्वभावाः । यद्येवं कथं तर्हि बुध्यन्त इत्युच्यते — नायकाः स्वामिनः समर्थाः बोद्धुं बोधशक्तिमत्स्वभावा इत्यर्थः । यथा नित्यप्रकाशस्वरूपोऽपि सन् सविता प्रकाशत इत्युच्यते, यथा वा नित्यनिवृत्तगतयोऽपि नित्यमेव शैलास्तिष्ठन्तीत्युच्यते, तद्वत् ॥",
     englishTranslation: "All entities (dharmas) have never truly incurred any veil; they are spotless by nature, enlightened from the beginning, and liberated. The supreme teachers speak of them as 'awakening' only figuratively.",
     commentaryNotes: "Enlightenment is not a new acquisition; the veil of avidyā never truly existed."
   },
@@ -585,7 +585,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "kramate na hi buddhasya jñānaṁ dharmeṣu tāyinaḥ |\nsarve dharmās tathā jñānaṁ naitad buddhena bhāṣitam || 99 ||",
     padaccheda: "क्रमते, न, हि, बुद्धस्य, ज्ञानम्, धर्मेषु, तायिनः, सर्वे, धर्माः, तथा, ज्ञानम्, न, एतत्, बुद्धेन, भाषितम्",
     anvaya: "तायिनः बुद्धस्य ज्ञानं धर्मेषु न हि क्रमते । सर्वे धर्माः तथा ज्ञानम्—एतद् बुद्धेन न भाषितम् ।",
-    bhashyaExtract: "परमार्थदर्शिनो ज्ञानं न विषयेषु संक्रामति; धर्मज्ञेयज्ञानभेदवादो न तु वेदान्तबुद्धेन भाषितः, अद्वैतमेव हि परमार्थः ।",
+    bhashyaExtract: "यस्मात् न हि क्रमते बुद्धस्य परमार्थदर्शिनो ज्ञानं विषयान्तरेषु धर्मेषु धर्मसंस्थं सवितरीव प्रभा । तायिनः तायोऽस्यास्तीति तायी, सन्तानवतो निरन्तरस्य आकाशकल्पस्येत्यर्थः ; पूजावतो वा प्रज्ञावतो वा सर्वे धर्मा आत्मानोऽपि तथा ज्ञानवदेव आकाशकल्पत्वान्न क्रमन्ते क्वचिदप्यर्थान्तर इत्यर्थः । यदादावुपन्यस्तम् ‘ज्ञानेनाकाशकल्पेन’(मा. का. ४ । १) इत्यादि, तदिदमाकाशकल्पस्य तायिनो बुद्धस्य तदनन्यत्वादाकाशकल्पं ज्ञानं न क्रमते क्वचिदप्यर्थान्तरे । तथा धर्मा इति आकाशमिव अचलमविक्रियं निरवयवं नित्यमद्वितीयमसङ्गमदृश्यमग्राह्यमशनायाद्यतीतं ब्रह्मात्मतत्त्वम् , ‘न हि द्रष्टुर्दृष्टेर्विपरिलोपो विद्यते’(बृ. उ. ४ । ३ । २३) इति श्रुतेः । ज्ञानज्ञेयज्ञातृभेदरहितं परमार्थतत्त्वमद्वयमेतन्न बुद्धेन भाषितम् । यद्यपि बाह्यार्थनिराकरणं ज्ञानमात्रकल्पना च अद्वयवस्तुसामीप्यमुक्तम् । इदं तु परमार्थतत्त्वमद्वैतं वेदान्तेष्वेव विज्ञेयमित्यर्थः ॥",
     englishTranslation: "The knowledge of the all-pervading Awakened One never moves toward separate objects. Neither separate entities nor fragmented knowledge was ever proclaimed as ultimate by the Awakened Sage!",
     commentaryNotes: "In non-dual realization (Tāyin = all-pervading/eternal), there is no subject-object bridge to cross."
   },
@@ -597,7 +597,7 @@ export const MANDUKYA_ALATASHANTI_VERSES_PART2: GranthaVerse[] = [
     mulaIast: "durdarśam atigambhīram ajaṁ sāmyaṁ viśāradam |\nbuddhvā padam anānātvaṁ namaskurmo yathābalam || 100 ||",
     padaccheda: "दुर्दर्शम्, अति-गम्भीरम्, अजम्, साम्यम्, विशारदम्, बुद्ध्वा, पदम्, अनानात्वम्, नमस्कुर्मः, यथा-बलम्",
     anvaya: "दुर्दर्शम् अतिगम्भीरम् अजं साम्यं विशारदम् अनानात्वं पदं बुद्ध्वा, यथाबलं नमस्कुर्मः ।",
-    bhashyaExtract: "मन्दबुद्धिभिर्दुष्प्रापं, परमागम्भीरम्, जन्मरहितम्, सर्वसमम्, निर्मलम्, अद्वैतं तत्परमं पदं ज्ञात्वा तस्मै स्वसामर्थ्यानुरूपं प्रणामाञ्जलिं समर्पयामः ॥",
+    bhashyaExtract: "शास्त्रसमाप्तौ परमार्थतत्त्वस्तुत्यर्थं नमस्कार उच्यते — दुर्दर्शं दुःखेन दर्शनमस्येति दुर्दर्शम् । अस्ति नास्तीति चतुष्कोटिवर्जितत्वाद्दुर्विज्ञेयमित्यर्थः । अत एव अतिगम्भीरं दुष्प्रवेशं महासमुद्रवदकृतप्रज्ञैः । अजं साम्यं विशारदम् । ईदृक् पदम् अनानात्वं नानात्ववर्जितं बुद्ध्वा अवगम्य तद्भूताः सन्तः नमस्कुर्मः तस्मै पदाय । अव्यवहार्यमपि व्यवहारगोचरतामापाद्य यथाबलं यथाशक्तीत्यर्थः ॥\n\nअजमपि जनियोगं प्रापदैश्वर्ययोगा -\nदगति च गतिमत्तां प्रापदेकं ह्यनेकम् ।\nविविधविषयधर्मग्राहि मुग्धेक्षणानां\nप्रणतभयविहन्तृ ब्रह्म यत्तन्नतोऽस्मि ॥ १ ॥\n\nप्रज्ञावैशाखवेधक्षुभितजलनिधेर्वेदनाम्नोऽन्तरस्थं\nभूतान्यालोक्य मग्नान्यविरतजननग्राहघोरे समुद्रे ।\nकारुण्यादुद्दधारामृतमिदममरैर्दुर्लभं भूतहेतो -\nर्यस्तं पूज्याभिपूज्यं परमगुरुममुं पादपातैर्नतोऽस्मि ॥ २ ॥\n\nयत्प्रज्ञालोकभासा प्रतिहतिमगमत्स्वान्तमोहान्धकारो\nमज्जोन्मज्जच्च घोरे ह्यसकृदुपजनोदन्वति त्रासने मे ।\nयत्पादावाश्रितानां श्रुतिशमविनयप्राप्तिरग्न्या ह्यमोघा\nतत्पादौ पावनीयौ भवभयविनुदौ सर्वभावैर्नमस्ये ॥ ३ ॥\n\nइति अलातशान्तिप्रकरणम् सम्पूर्णम् ॥\n\nइति श्रीमत्परमहंसपरिव्राजकाचार्यस्य श्रीगोविन्दभगवत्पूज्यपादशिष्यस्य श्रीमच्छङ्करभगवतः कृतौ माण्डूक्योपनिषत्कारिकाभाष्यं सम्पूर्णम् ॥",
     englishTranslation: "Having realized that supreme State which is difficult to perceive, unfathomably profound, unborn, all-equal, stainless, and free from multiplicity—we offer our reverent salutations according to the best of our ability!",
     commentaryNotes: "The glorious concluding Kārikā of the Gauḍapādīya Kārikā. Gauḍapāda offers his final salutation to the non-dual Truth itself, leaving the seeker in awe of the Unborn."
   }

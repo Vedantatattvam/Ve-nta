@@ -14,7 +14,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "vaitathyaṁ sarvabhāvānāṁ svapna āhur manīṣiṇaḥ |\nantaḥsthānāt tu bhāvānāṁ saṁvṛtatvena hetunā || 1 ||",
       padaccheda: "वैतथ्यम्, सर्व-भावानाम्, स्वप्ने, आहुः, मनीषिणः, अन्तः-स्थानात्, तु, भावानाम्, संवृतत्वेन, हेतुना",
       anvaya: "मनीषिणः संवृतत्वेन हेतुना भावानाम् अन्तःस्थानात् तु स्वप्ने सर्वभावानां वैतथ्यम् आहुः ।",
-      bhashyaExtract: "स्वप्ने दृश्यमानानां हस्तिरथादीनां भावानां वैतथ्यं मिथ्यात्वं पण्डिता आहुः । कुतः ? देहस्यान्तःस्थानात् संवृतप्रदेशेऽवकाशाभावात् ।",
+      bhashyaExtract: "‘ज्ञाते द्वैतं न विद्यते’ इत्युक्तम् ‘एकमेवाद्वितीयम्’(छा. उ. ६ । २ । १) इत्यादिश्रुतिभ्यः । आगममात्रं तत् । तत्र उपपत्त्यापि द्वैतस्य वैतथ्यं शक्यतेऽवधारयितुमिति द्वितीयं प्रकरणमारभ्यते — वैतथ्यमित्यादिना । वितथस्य भावो वैतथ्यम् ; असत्यत्वमित्यर्थः । कस्य ? सर्वेषां बाह्याध्यात्मिकानां भावानां पदार्थानां स्वप्ने उपलभ्यमानानाम् , आहुः कथयन्ति मनीषिणः प्रमाणकुशलाः । वैतथ्ये हेतुमाह — अन्तःस्थानात् , अन्तः शरीरस्य मध्ये स्थानं येषाम् ; तत्र हि भावा उपलभ्यन्ते पर्वतहस्त्यादयः, न बहिः शरीरात् ; तस्मात् ते वितथा भवितुमर्हन्ति । ननु अपवरकाद्यन्तरुपलभ्यमानैर्घटादिभिरनैकान्तिको हेतुरित्याशङ्क्याह — संवृतत्वेन हेतुनेति । अन्तः संवृतस्थानादित्यर्थः । न ह्यन्तः संवृते देहान्तर्नाडीषु पर्वतहस्त्यादीनां सम्भवोऽस्ति ; न हि देहे पर्वतोऽस्ति ॥",
       englishTranslation: "The wise declare the unreality (vaitathya) of all objects seen in dream, on account of their being confined inside the body within a restricted space.",
       commentaryNotes: "Dream objects like mountains, oceans, and elephants cannot physically fit inside the small body; hence their perception is purely illusory (mithyā)."
     },
@@ -26,7 +26,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "adīrghatvāc ca kālasya gatvā deśān na paśyati |\npratibuddhaś ca vai sarvas tasmin deśe na vidyate || 2 ||",
       padaccheda: "अदीर्घत्वात्, च, कालस्य, गत्वा, देशान्, न, पश्यति, प्रतिबुद्धः, च, वै, सर्वः, तस्मिन्, देशे, न, विद्यते",
       anvaya: "कालस्य अदीर्घत्वात् च देशान् गत्वा न पश्यति, प्रतिबुद्धः च वै सर्वः तस्मिन् देशे न विद्यते ।",
-      bhashyaExtract: "स्वप्ने दूरदेशगमनं मुहूर्तान्तःपाति न सम्भवति, प्रबुद्धश्च न तत्र तिष्ठति यत्र स्वप्नेऽदृश्यत । अतो भ्रान्तिमात्रम् ।",
+      bhashyaExtract: "स्वप्नदृश्यानां भावानामन्तः संवृतस्थानमित्येतदसिद्धम् , यस्मात्प्राच्येषु सुप्त उदक्षु स्वप्नान्पश्यन्निव दृश्यत इत्येतदाशङ्क्याह — न देहाद्बहिर्देशान्तरं गत्वा स्वप्नान्पश्यति ; यस्मात्सुप्तमात्र एव देहदेशाद्योजनशतान्तरिते मासमात्रप्राप्ये देशे स्वप्नान्पश्यन्निव दृश्यते ; न च तद्देशप्राप्तेरागमनस्य च दीर्घः कालोऽस्ति ; अतः अदीर्घत्वाच्च कालस्य न स्वप्नदृग्देशान्तरं गच्छति । किञ्च, प्रतिबुद्धश्च वै सर्वः स्वप्नदृक् स्वप्नदर्शनदेशे न विद्यते । यदि च स्वप्ने देशान्तरं गच्छेत् , यस्मिन्देशे स्वप्नान्पश्येत् , तत्रैव प्रतिबुध्येत । न चैतदस्ति । रात्रौ सुप्तः अहनीव भावान्पश्यति ; बहुभिः सङ्गतो भवति ; यैश्च सङ्गतः स तैर्गृह्येत, न च गृह्यते ; गृहीतश्चेत्त्वामद्य तत्रोपलब्धवन्तो वयमिति ब्रूयुः ; न चैतदस्ति । तस्मान्न देशान्तरं गच्छति स्वप्ने ॥",
       englishTranslation: "Moreover, owing to the brevity of time, one does not go outside the body to behold dream objects; nor, upon awakening, does anyone find oneself in that distant place seen in dream.",
       commentaryNotes: "A person dreams of traveling thousands of leagues in a few seconds and wakes up in the same bed, proving spatial travel in dream is mental fabrication."
     },
@@ -38,7 +38,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "abhāvaś ca rathādīnāṁ śrūyate nyāyapūrvakam |\nvaitathyaṁ tena vai prāptaṁ svapna āhuḥ prakāśitam || 3 ||",
       padaccheda: "अभावः, च, रथ-आदीनाम्, श्रूयते, न्याय-पूर्वकम्, वैतथ्यम्, तेन, वै, प्राप्तम्, स्वप्ने, आहुः, प्रकाशितम्",
       anvaya: "न्यायपूर्वं रथादीनाम् अभावः च श्रूयते, तेन वै स्वप्ने वैतथ्यं प्राप्तं प्रकाशितम् आहुः ।",
-      bhashyaExtract: "'न तत्र रथा न रथयोगा न पन्थानो भवन्ति' इति श्रुतेः । युक्तिश्रुतिभ्यां स्वप्नभावानां वैतथ्यं सिद्धम् ।",
+      bhashyaExtract: "इतश्च स्वप्नदृश्या भावा वितथाः, यतः अभावश्च रथादीनां स्वप्नदृश्यानां श्रूयते, न्यायपूर्वकं युक्तितः श्रुतौ ‘न तत्र रथाः’(बृ. उ. ४ । ३ । १०) इत्यत्र । तेन अन्तःस्थानसंवृतत्वादिहेतुना प्राप्तं वैतथ्यं तदनुवादिन्या श्रुत्या स्वप्ने स्वयञ्ज्योतिष्ट्वप्रतिपादनपरया प्रकाशितमाहुः ब्रह्मविदः ॥",
       englishTranslation: "The absence of real chariots, roads, etc. in dream is confirmed by scripture with logical reasoning (Bṛhadāraṇyaka Upaniṣad 4.3.10). Therefore, the unreality of dream objects is proven and declared by thinkers.",
       commentaryNotes: "Combines Śruti authority with yukti to show that dream creations are unsubstantial mental projections."
     },
@@ -50,7 +50,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "antaḥsthānāt tu bhedānāṁ tasmāj jāgarite smṛtam |\nyathā tatra tathā svapne saṁvṛtatvena bhidyate || 4 ||",
       padaccheda: "अन्तः-स्थानात्, तु, भेदानाम्, तस्मात्, जागरिते, स्मृतम्, यथा, तत्र, तथा, स्वप्ने, संवृतत्वेन, भिद्यते",
       anvaya: "तस्मात् भेदानाम् अन्तःस्थानात् जागरिते स्मृतम्, यथा तत्र तथा स्वप्ने, संवृतत्वेन भिद्यते ।",
-      bhashyaExtract: "यथा स्वप्नदृश्या भावा वैतथास्तथा जाग्रद्दृश्या अपि भावाश्चित्तान्तःस्थत्वाविशेषात् मिथ्याभूता एव ।",
+      bhashyaExtract: "जाग्रद्दृश्यानां भावानां वैतथ्यमिति प्रतिज्ञा । दृश्यत्वादिति हेतुः । स्वप्नदृश्यभाववदिति दृष्टान्तः । यथा तत्र स्वप्ने दृश्यानां भावानां वैतथ्यम् , तथा जागरितेऽपि दृश्यत्वमविशिष्टमिति हेतूपनयः । तस्माज्जागरितेऽपि वैतथ्यं स्मृतमिति निगमनम् । अन्तःस्थानात्संवृतत्वेन च स्वप्नदृश्यानां भावानां जाग्रद्दृश्येभ्यो भेदः । दृश्यत्वमसत्यत्वं चाविशिष्टमुभयत्र ॥",
       englishTranslation: "Just as dream objects are unreal, so too are the objects perceived in the waking state; for both are experienced as distinct entities within consciousness. The only difference is the apparent enclosure of space in dream.",
       commentaryNotes: "The crucial leap in Gauḍapāda's epistemology: the common property of both waking and dream objects is dṛśyatva (being perceived) and jadatva (insentience)."
     },
@@ -62,7 +62,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "svapnajāgarite sthāne hy ekam āhur manīṣiṇaḥ |\nbhedānāṁ hi samatvena prasiddhenaiva hetunā || 5 ||",
       padaccheda: "स्वप्न-जागरिते, स्थाने, हि, एकम्, आहुः, मनीषिणः, भेदानाम्, हि, समत्वेन, प्रसिद्धेन, एव, हेतुना",
       anvaya: "भेदानां समत्वेन प्रसिद्धेन हेतुना एव मनीषिणः स्वप्नजागरिते स्थाने हि एकम् आहुः ।",
-      bhashyaExtract: "दृश्यत्वमसत्यत्वं क्षणभङ्गुरत्वं चेत्येवमादिना हेतुना जाग्रत्स्वप्नयोः सादृश्यं मनीषिणो वदन्ति । उभयोरपि मिथ्यात्वमेकमेव ।",
+      bhashyaExtract: "प्रसिद्धेनैव भेदानां ग्राह्यत्वेन हेतुना समत्वेन स्वप्नजागरितस्थानयोरेकत्वमाहुर्विवेकिन इति पूर्वप्रमाणसिद्धस्यैव फलम् ॥",
       englishTranslation: "The wise declare the waking and dream states to be identical, on the well-known logical ground of the common nature of the entities perceived in both.",
       commentaryNotes: "In both states, a perceiving subject confronts an objective world, feels emotions, and believes in the reality of the experience while it lasts."
     },
@@ -74,7 +74,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "ādāv ante ca yan nāsti vartamāne'pi tat tathā |\nvitathaiḥ sadṛśāḥ santo'vitathā iva lakṣitāḥ || 6 ||",
       padaccheda: "आदौ, अन्ते, च, यत्, न, अस्ति, वर्तमाने, अपि, तत्, तथा, वितथैः, सदृशाः, सन्तः, अवितथाः, इव, लक्षिताः",
       anvaya: "यत् आदौ अन्ते च न अस्ति वर्तमाने अपि तत् तथा (न अस्ति) । वितथैः सदृशाः सन्तः अवितथाः इव लक्षिताः ।",
-      bhashyaExtract: "यद्वस्तु पूर्वं नासीत्, पश्चाच्च न भविष्यति, तत् मध्येऽपि नास्तीत्यवगन्तव्यम् । रज्जुसर्पादिवन्मिथ्याभूता अपि अविद्यादृष्ट्या सत्यवद्भासन्ते ।",
+      bhashyaExtract: "इतश्च वैतथ्यं जाग्रद्दृश्यानां भेदानाम् आद्यन्तयोरभावात् , यदादावन्ते च नास्ति वस्तु मृगतृष्णिकादि, तन्मध्येऽपि नास्तीति निश्चितं लोके ; तथेमे जाग्रद्दृश्या भेदाः आद्यन्तयोरभावात् वितथैरेव मृगतृष्णिकादिभिः सदृशत्वाद्वितथा एव ; तथापि अवितथा इव लक्षिता मूढैरनात्मविद्भिः ॥",
       englishTranslation: "That which does not exist in the beginning and at the end does not exist even in the present. Being identical to unreal things, objects appear as though real only to the undiscerning.",
       commentaryNotes: "One of the most celebrated philosophical axioms in Indian thought. Real existence (Sat) is unalterable and eternal; whatever is non-existent before production and after destruction is non-existent in essence even while perceived."
     },
@@ -86,7 +86,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "saprayojanatā teṣāṁ svapne vipratipadyate |\ntasmād ādyantavattvena mithyaiva khalu te smṛtāḥ || 7 ||",
       padaccheda: "सप्रयोजनता, तेषाम्, स्वप्ने, विप्रतिपद्यते, तस्मात्, आद्यन्तवत्त्वेन, मिथ्या, एव, खलु, ते, स्मृताः",
       anvaya: "तेषां सप्रयोजनता स्वप्ने विप्रतिपद्यते, तस्माद् आद्यन्तवत्त्वेन ते खलु मिथ्या एव स्मृताः ।",
-      bhashyaExtract: "जाग्रति दृष्टानां जलादीनां तृष्णाशमनादिप्रयोजनं स्वप्ने बाध्यते, स्वप्ने भुक्तस्यापि तृप्तिर्जाग्रति न दृश्यते । अतो द्वयोरपि आद्यन्तवत्त्वान्मिथ्यात्वम् ।",
+      bhashyaExtract: "स्वप्नदृश्यवज्जागरितदृश्यानामप्यसत्त्वमिति यदुक्तम् तदयुक्तम् ; यस्माज्जाग्रद्दृश्या अन्नपानवाहनादयः क्षुत्पिपासादिनिवृत्तिं कुर्वन्तो गमनागमनादि कार्यं च सप्रयोजना दृष्टाः । न तु स्वप्नदृश्यानां तदस्ति । तस्मात्स्वप्नदृश्यवज्जाग्रद्दृश्यानामसत्त्वं मनोरथमात्रमिति । तन्न । कस्मात् ? यस्माद्या सप्रयोजनता दृष्टा अन्नपानादीनाम् , सा स्वप्ने विप्रतिपद्यते । जागरिते हि भुक्त्वा पीत्वा च तृप्तो विनिवर्तिततृट् सुप्तमात्र एव क्षुत्पिपासाद्यार्तमहोरात्रोपोषितमभुक्तवन्तमात्मानं मन्यते, यथा स्वप्ने भुक्त्वा पीत्वा च अतृप्तोत्थितः, तथा । तस्माज्जाग्रद्दृश्यानां स्वप्ने विप्रतिपत्तिर्दृष्टा । अतो मन्यामहे तेषामप्यसत्त्वं स्वप्नदृश्यवदनाशङ्कनीयमिति । तस्मादाद्यन्तवत्त्वमुभयत्र समानमिति मिथ्यैव खलु ते स्मृताः ॥",
       englishTranslation: "The practical utility (saprayojanatā) of waking objects is contradicted in the dream state. Therefore, on account of possessing a beginning and an end, they are rightly known to be verily illusory.",
       commentaryNotes: "Refutes the realist objection that waking is real because of practical causal efficacy (arthakriyākāritva). Dream water quenches dream thirst, but neither dream nor waking water crosses into the other state."
     },
@@ -98,7 +98,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "apūrvaṁ sthānidharmo hi yathā svarganivāsinām |\ntān ayaṁ prekṣate gatvā yathaiveha suśikṣitaḥ || 8 ||",
       padaccheda: "अपूर्वम्, स्थानि-धर्मः, हि, यथा, स्वर्ग-निवासिनाम्, तान्, अयम्, प्रेक्षते, गत्वा, यथा, एव, इह, सुशिक्षितः",
       anvaya: "यथा स्वर्गनिवासिनां स्थानिधर्मः, तथा अपूर्वं स्थानिधर्मः हि । यथा इह सुशिक्षितः गत्वा तान् प्रेक्षते एव ।",
-      bhashyaExtract: "स्वप्ने चतुरङ्गहस्त्याद्यपूर्वदर्शनं जाग्रद्वासनाकृतं स्थानिधर्ममात्रम्, न तु पारमार्थिकम् ।",
+      bhashyaExtract: "स्वप्नजाग्रद्भेदयोः समत्वाज्जाग्रद्भेदानामसत्त्वमिति यदुक्तम् , तदसत् । कस्मात् ? दृष्टान्तस्यासिद्धत्वात् । कथम् ? न हि जाग्रद्दृश्या ये, ते भेदाः स्वप्ने दृश्यन्ते । किं तर्हि ? अपूर्वं स्वप्ने पश्यति चतुर्दन्तं गजमारूढोऽष्टभुजमात्मानम् । अन्यदप्येवंप्रकारमपूर्वं पश्यति स्वप्ने । तन्नान्येनासता सममिति सदेव । अतो दृष्टान्तोऽसिद्धः । तस्मात्स्वप्नवज्जागरितस्यासत्त्वमित्ययुक्तम् । तन्न । स्वप्ने दृष्टमपूर्वं यन्मन्यसे, न तत्स्वतः सिद्धम् । किं तर्हि ? अपूर्वं स्थानिधर्मो हि, स्थानिनो द्रष्टुरेव हि स्वप्नस्थानवतो धर्मः ; यथा स्वर्गनिवासिनामिन्द्रादीनां सहस्राक्षत्वादि, तथा स्वप्नदृशोऽपूर्वोऽयं धर्मः, न स्वतःसिद्धो द्रष्टुः स्वरूपवत् । तान् एवंप्रकारानपूर्वान्स्वचित्तविकल्पान् अयं स्थानी यः स्वप्नदृक्स्वप्नस्थानं गत्वा प्रेक्षते । यथैव इह लोके सुशिक्षितदेशान्तरमार्गस्तेन मार्गेण देशान्तरं गत्वा पदार्थान्पश्यति, तद्वत् । तस्माद्यथा स्थानिधर्माणां रज्जुसर्पमृगतृष्णिकादीनामसत्त्वम् , तथा स्वप्नदृश्यानामप्यपूर्वाणां स्थानिधर्मत्वमेवेत्यसत्त्वम् ; अतो न स्वप्नदृष्टान्तस्यासिद्धत्वम् ॥",
       englishTranslation: "Unprecedented experiences (apūrva) in dream are merely the specific conditions belonging to the perceiver in that state, just as the wondrous sights of the heaven-dwellers are. One beholds them just as an educated man goes to see foreign lands.",
       commentaryNotes: "Novel configurations in dream (e.g. flying or having multiple heads) do not prove dream reality; they are mental syntheses peculiar to the dreaming mind."
     },
@@ -110,7 +110,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "svapnavṛttāv api tv antaś cetasā kalpitaṁ tv asat |\nbahiś ceto gṛhītaṁ sad dṛṣṭaṁ vaitathyam etayoḥ || 9 ||",
       padaccheda: "स्वप्न-वृत्तौ, अपि, तु, अन्तः, चेतसा, कल्पितम्, तु, असत्, बहिः, चेतः-गृहीतम्, सत्, दृष्टम्, वैतथ्यम्, एतयोः",
       anvaya: "स्वप्नवृत्तौ अपि तु अन्तः चेतसा कल्पितम् असत्, बहिः चेतोगृहीतं सत् (इति कल्प्यते), एतयोः वैतथ्यं दृष्टम् ।",
-      bhashyaExtract: "स्वप्नेऽपि कल्पितं मनोमात्रमसत्, बहिर्दृष्टं सत्यमिति प्रतीतिर्भवति, तथापि प्रबोधे द्वयमपि वितथमेव ।",
+      bhashyaExtract: "अपूर्वत्वाशङ्कां निराकृत्य स्वप्नदृष्टान्तस्य पुनः स्वप्नतुल्यतां जाग्रद्भेदानां प्रपञ्चयन्नाह — स्वप्नवृत्तावपि स्वप्नस्थानेऽपि अन्तश्चेतसा मनोरथसङ्कल्पितमसत् ; सङ्कल्पानन्तरसमकालमेवादर्शनात् । तत्रैव स्वप्ने बहिश्चेतसा गृहीतं चक्षुरादिद्वारेणोपलब्धं घटादि सदित्येवमसत्यमिति निश्चितेऽपि सदसद्विभागो दृष्टः । उभयोरप्यन्तर्बहिश्चेतः कल्पितयोर्वैतथ्यमेव दृष्टम् ॥",
       englishTranslation: "In the dream state, what is imagined within by the mind is deemed unreal, and what is apprehended outside by the dream senses is considered real; yet both these are seen to be completely false upon waking.",
       commentaryNotes: "Within the dream itself, a distinction between subjective imagination and objective reality is made; upon awakening, both are recognized as equally unreal."
     },
@@ -122,7 +122,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "jāgradvṛttāv api tv antaś cetasā kalpitaṁ tv asat |\nbahiś ceto gṛhītaṁ sad yuktaṁ vaitathyam etayoḥ || 10 ||",
       padaccheda: "जाग्रत्-वृत्तौ, अपि, तु, अन्तः, चेतसा, कल्पितम्, तु, असत्, बहिः, चेतः-गृहीतम्, सत्, युक्तम्, वैतथ्यम्, एतयोः",
       anvaya: "जाग्रद्वृत्तौ अपि तु अन्तः चेतसा कल्पितम् असत्, बहिः चेतोगृहीतं सत् (इति मन्यते), एतयोः वैतथ्यं युक्तम् ।",
-      bhashyaExtract: "जाग्रत्यपि मनोराज्यमसत्, बाह्यघटादिकं सदिति लोकव्यवहारः । परमार्थदृष्ट्या तूभयोरपि चित्तपरिकल्पितत्वान्मृषात्वं युक्तम् ।",
+      bhashyaExtract: "सदसतोर्वैतथ्यं युक्तम् , अन्तर्बहिश्चेतःकल्पितत्वाविशेषादिति । व्याख्यातमन्यत् ॥",
       englishTranslation: "In the waking state likewise, that which is imagined within by thought is considered unreal, and that which is perceived outside by the senses is considered real; yet the unreality of both is logically established.",
       commentaryNotes: "Waking internal reverie and external perception are both constructs of consciousness, dissolving alike in transcendental awareness."
     },
@@ -134,7 +134,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "ubhayor api vaitathyaṁ bhedānāṁ sthānayor yadi |\nka etān budhyate bhedān ko vai teṣāṁ vikalpakaḥ || 11 ||",
       padaccheda: "उभयोः, अपि, वैतथ्यम्, भेदानाम्, स्थानयोः, यदि, कः, एतान्, बुध्यते, भेदान्, कः, वै, तेषाम्, विकल्पकः",
       anvaya: "यदि उभयोः स्थानयोः अपि भेदानां वैतथ्यम्, कः एतान् भेदान् बुध्यते ? कः वै तेषां विकल्पकः ?",
-      bhashyaExtract: "पूर्वपक्षी पृच्छति—यदि जाग्रत्स्वप्नयोः सर्वं मिथ्या, तर्हि कश्चिद् विज्ञाता विकल्पयिता वाऽस्ति न वेति शून्यवादप्रसङ्गः ।",
+      bhashyaExtract: "चोदक आह — स्वप्नजाग्रत्स्थानयोर्भेदानां यदि वैतथ्यम् , क एतानन्तर्बहिश्चेतःकल्पितान्बुध्यते । को वै तेषां विकल्पकः ; स्मृतिज्ञानयोः क आलम्बनमित्यभिप्रायः ; न चेन्निरात्मवाद इष्टः ॥",
       englishTranslation: "If the manifold objects in both states (waking and dream) are unreal, who is it that cognizes these distinctions? Who, verily, is their imaginer?",
       commentaryNotes: "A critical philosophical challenge: does Advaita lapse into nihilism (Śūnyavāda) by negating both waking and dream?"
     },
@@ -146,7 +146,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "kalpayaty ātmanātmānam ātmā devaḥ svamāyayā |\nsa eva budhyate bhedān iti vedāntaniścayaḥ || 12 ||",
       padaccheda: "कल्पयति, आत्मना, आत्मानम्, आत्मा, देवः, स्व-मायया, सः, एव, बुध्यते, भेदान्, इति, वेदान्त-निश्चयः",
       anvaya: "देवः आत्मा स्वमायया आत्मना आत्मानं कल्पयति, सः एव भेदान् बुध्यते इति वेदान्तनिश्चयः ।",
-      bhashyaExtract: "स्वयंप्रकाश आत्मा स्वकीयया मायया स्वात्मानमेव विविधजीवादिभावेन कल्पयति, स एव च तान् कल्पितान् भेदान् बुध्यते । नायं शून्यवादः, कल्पनाविरोधिनः साक्षिणः सिद्धत्वात् ।",
+      bhashyaExtract: "स्वयं स्वमायया स्वमात्मानमात्मा देवः आत्मन्येव वक्ष्यमाणं भेदाकारं कल्पयति रज्ज्वादाविव सर्पादीन् , स्वयमेव च तान्बुध्यते भेदान् , तद्वदेवेत्येवं वेदान्तनिश्चयः । नान्योऽस्ति ज्ञानस्मृत्याश्रयः । न च निरास्पदे एव ज्ञानस्मृती वैनाशिकानामिवेत्यभिप्रायः ॥",
       englishTranslation: "The luminous Self, by Its own power of cosmic illusion (Māyā), imagines Itself within Itself; and It alone cognizes the different manifold objects. Such is the definitive verdict of Vedānta.",
       commentaryNotes: "The conclusive answer: Reality is not a void (śūnya). The eternal conscious Self is both the substrate (adhiṣṭhāna) and the witness (sākṣī) of all projections."
     },
@@ -158,7 +158,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "vikaroty aparān bhāvān antaś citte'vyavasthitān |\nniyatāṁś ca bahiś citta evaṁ kalpayate prabhuḥ || 13 ||",
       padaccheda: "विकरोति, अपरान्, भावान्, अन्तः, चित्ते, अव्यवस्थितान्, नियतान्, च, बहिः, चित्तः, एवम्, कल्पयते, प्रभुः",
       anvaya: "प्रभुः अन्तः चित्ते अव्यवस्थितान् अपरान् भावान् विकरोति, बहिः चित्तः च नियतान् (कल्पयते), एवं कल्पयते ।",
-      bhashyaExtract: "आत्मा प्रभुः चित्ते लीनान् वासनामयान् भावान् विकरोति, बाह्यत्वेनावस्थितान् पृथिव्यादीन् नियतान् देशकालसम्बद्धान् कल्पयति ।",
+      bhashyaExtract: "सङ्कल्पयन्केन प्रकारेण कल्पयतीत्युच्यते — विकरोति नाना करोति अपरान् लौकिकान् भावान् पदार्थाञ्शब्दादीनन्यांश्च अन्तश्चित्ते वासनारूपेण व्यवस्थितानव्याकृतान् नियतांश्च पृथिव्यादीननियतांश्च कल्पनाकालान् बहिश्चित्तः सन् , तथा अन्तश्चित्तो मनोरथादिलक्षणानित्येवं कल्पयति, प्रभुः ईश्वरः, आत्मेत्यर्थः ॥",
       englishTranslation: "The all-powerful Lord diversifies the various modifications stationed within the mind, and projects as well the fixed, determinate objects outside. Thus does the Lord imagine.",
       commentaryNotes: "Internal thoughts are transient and indeterminate; external objects appear durable and rule-bound (niyata); yet both are cosmic imagination."
     },
@@ -170,7 +170,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "cittakālā hi ye'ntas tu dvayakālāś ca ye bahiḥ |\nkalpitā eva te sarve viśeṣo nānyahetukaḥ || 14 ||",
       padaccheda: "चित्त-कालाः, हि, ये, अन्तः, तु, द्वय-कालाः, च, ये, बहिः, कल्पिताः, एव, ते, सर्वे, विशेषः, न, अन्य-हेतुकः",
       anvaya: "ये अन्तः तु ते चित्तकालाः हि, ये बहिः च ते द्वयकालाः । ते सर्वे कल्पिताः एव, विशेषः अन्यहेतुकः न ।",
-      bhashyaExtract: "अन्तर्वर्तमाना भावा यावच्चित्तं तावदेव वर्तन्ते । बाह्यास्तु विषयाश्चित्तस्य बाह्यकालस्य च द्वयोः सम्बन्धिनः । तथापि द्वयेऽपि कल्पिता एव ।",
+      bhashyaExtract: "स्वप्नवच्चित्तपरिकल्पितं सर्वमित्येतदाशङ्क्यते — यस्माच्चित्तपरिकल्पितैर्मनोरथादिलक्षणैश्चित्तपरिच्छेद्यैर्वैलक्षण्यं बाह्यानामन्योन्यपरिच्छेद्यत्वमिति, सा न युक्ताशङ्का । चित्तकाला हि येऽन्तस्तु चित्तपरिच्छेद्याः, नान्यश्चित्तकालव्यतिरेकेण परिच्छेदकः कालो येषाम् , ते चित्तकालाः ; कल्पनाकाल एवोपलभ्यन्त इत्यर्थः । द्वयकालाश्च भेदकाला अन्योन्यपरिच्छेद्याः, यथा आगोदोहनमास्ते ; यावदास्ते तावद्गां दोग्धि ; यावद्गां दोग्धि तावदास्ते, तावानयमेतावान्स इति परस्परपरिच्छेद्यपरिच्छेदकत्वं बाह्यानां भेदानाम् , ते द्वयकालाः । अन्तश्चित्तकाला बाह्याश्च द्वयकालाः कल्पिता एव ते सर्वे । न बाह्यो द्वयकालत्वविशेषः कल्पितत्वव्यतिरेकेणान्यहेतुकः । अत्रापि हि स्वप्नदृष्टान्तो भवत्येव ॥",
       englishTranslation: "Those entities that exist within the mind last only as long as thought lasts (citta-kāla); those outside depend on dual time (the duration of thought and external clocks). All of them are verily imagined; their distinction has no other cause.",
       commentaryNotes: "A brilliant psychological insight: internal moods last only while noticed; external objects appear to outlast our perception because of external temporal coordination; yet both are mental fabrications."
     },
@@ -182,7 +182,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "avyaktā eva ye'ntas tu sphuṭā eva ca ye bahiḥ |\nkalpitā eva te sarve viśeṣas tv indriyāntare || 15 ||",
       padaccheda: "अव्यक्ताः, एव, ये, अन्तः, तु, स्फुटाः, एव, च, ये, बहिः, कल्पिताः, एव, ते, सर्वे, विशेषः, तु, इन्द्रिय-अन्तरे",
       anvaya: "ये अन्तः तु ते अव्यक्ताः एव, ये बहिः च ते स्फुटाः एव । ते सर्वे कल्पिताः एव, विशेषः तु इन्द्रियान्तरे ।",
-      bhashyaExtract: "अन्तर्गता भावा वासनामया अस्पष्टाः, बाह्याश्चक्षुरादिग्राह्याः स्फुटाः । अयमवान्तरविशेष इन्द्रियभेदात्, न तु पारमार्थिकसत्यत्वात् ।",
+      bhashyaExtract: "यदपि अन्तरव्यक्तत्वं भावानां मनोवासनामात्राभिव्यक्तानां स्फुटत्वं वा बहिश्चक्षुरादीन्द्रियान्तरे विशेषः, नासौ भेदानामस्तित्वकृतः, स्वप्नेऽपि तथा दर्शनात् । किं तर्हि ? इन्द्रियान्तरकृत एव । अतः कल्पिता एव जाग्रद्भावा अपि स्वप्नभाववदिति सिद्धम् ॥",
       englishTranslation: "Those objects within are subtle and unmanifest, while those outside are vivid and distinct. All of them are verily imagined; the difference lies solely in the intervention of different sense organs.",
       commentaryNotes: "Vividness (sphutatva) is an epistemological feature of sensory mediation, not a proof of ontological reality."
     },
@@ -194,7 +194,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "jīvaṁ kalpayate pūrvaṁ tato bhāvān pṛthagvidhān |\nbāhyān ādhyātmikāṁś caiva yathāvidyas tathāsmṛtiḥ || 16 ||",
       padaccheda: "जीवम्, कल्पयते, पूर्वम्, ततः, भावान्, पृथक्-विधान्, बाह्यान्, आध्यात्मिकान्, च, एव, यथा-विद्यः, तथा-स्मृतिः",
       anvaya: "पूर्वं जीवं कल्पयते, ततः पृथग्विधान् बाह्यान् आध्यात्मिकान् च एव भावान् (कल्पयते) । यथाविद्यः तथास्मृतिः ।",
-      bhashyaExtract: "अविद्यया कल्पितात्मा पूर्वं कर्ता भोक्ता जीव इति कल्प्यते । ततो बाह्यघटादय आन्तरधर्मादयश्च कल्प्यन्ते । यस्या यादृशी विद्या तदनुरूपा स्मृतिः ।",
+      bhashyaExtract: "बाह्याध्यात्मिकानां भावानामितरेतरनिमित्तनैमित्तिकतया कल्पनायाः किं मूलमित्युच्यते — जीवं हेतुफलात्मकम् ‘अहं करोमि, मम सुखदुःखे’ इत्येवंलक्षणम् । अनेवंलक्षण एव शुद्ध आत्मनि रज्ज्वामिव सर्पं कल्पयते पूर्वम् । ततस्तादर्थ्येन क्रियाकारकफलभेदेन प्राणादीन्नानाविधान्भावान्बाह्यानाध्यात्मिकांश्चैव कल्पयते । तत्र कल्पनायां को हेतुरित्युच्यते — योऽसौ स्वयं कल्पितो जीवः सर्वकल्पनायामधिकृतः, सः यथाविद्यः यादृशी विद्या विज्ञानमस्येति यथाविद्यः, तथाविधैव स्मृतिस्तस्येति तथास्मृतिर्भवति स इति । अतो हेतुकल्पनाविज्ञानात्फलविज्ञानम् , ततो हेतुफलस्मृतिः, ततस्तद्विज्ञानम् , ततः तदर्थक्रियाकारकतत्फलभेदविज्ञानानि, तेभ्यस्तत्स्मृतिः, तत्स्मृतेश्च पुनस्तद्विज्ञानानि इत्येवं बाह्यानाध्यात्मिकांश्च इतरेतरनिमित्तनैमित्तिकभावेनानेकधा कल्पयते ॥",
       englishTranslation: "First the individual soul (Jīva) is imagined, and then the manifold entities, external and internal. As is one's knowledge, so is one's memory.",
       commentaryNotes: "The primary illusion is the ego-sense (jīvabhāva). Once an individual experiencer is superimposed on consciousness, a corresponding world of objects inevitably follows."
     },
@@ -206,7 +206,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "aniścitā yathā rajjur andhakāre vikalpitā |\nsarpadhārādibhir bhāvais tadvad ātmā vikalpitaḥ || 17 ||",
       padaccheda: "अनिश्चिता, यथा, रज्जुः, अन्धकारे, विकल्पिता, सर्प-धारा-आदिभिः, भावैः, तद्वत्, आत्मा, विकल्पितः",
       anvaya: "यथा अन्धकारे अनिश्चिता रज्जुः सर्पधारादिभिः भावैः विकल्पिता, तद्वत् आत्मा विकल्पितः ।",
-      bhashyaExtract: "यथा मन्दान्धकारे रज्जुस्वरूपाज्ञानात् सर्पो वा जलधारा वेति कल्प्यते, तद्वत् परमार्थाज्ञानादात्मा प्राणादिरूपेण कल्पितः ।",
+      bhashyaExtract: "तत्र जीवकल्पना सर्वकल्पनामूलमित्युक्तम् ; सैव जीवकल्पना किंनिमित्तेति दृष्टान्तेन प्रतिपादयति — यथा लोके स्वेन रूपेण अनिश्चिता अनवधारिता एवमेवेति रज्जुः मन्दान्धकारे किं सर्प उदकधारा दण्ड इति वा अनेकधा विकल्पिता भवति पूर्वं स्वरूपानिश्चयनिमित्तम् । यदि हि पूर्वमेव रज्जुः स्वरूपेण निश्चिता स्यात् , न सर्पादिविकल्पोऽभविष्यत् , यथा स्वहस्ताङ्गुल्यादिषु ; एष दृष्टान्तः । तद्वद्धेतुफलादिसंसारधर्मानर्थविलक्षणतया स्वेन विशुद्धविज्ञप्तिमात्रसत्ताद्वयरूपेणानिश्चितत्वाज्जीवप्राणाद्यनन्तभावभेदैरात्मा विकल्पित इत्येष सर्वोपनिषदां सिद्धान्तः ॥",
       englishTranslation: "Just as a rope not definitely ascertained in darkness is imagined as a snake, a stream of water, or a staff; so is the Self imagined in diverse forms.",
       commentaryNotes: "The classical locus classicus of Adhyāsa (superimposition): the rope-snake analogy illustrating how the non-dual reality is misconstrued."
     },
@@ -218,7 +218,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "niścitāyāṁ yathā rajjvāṁ vikalpo vinivartate |\nrajjur eveti cādvaitaṁ tadvad ātmaviniścayaḥ || 18 ||",
       padaccheda: "निश्चितायाम्, यथा, रज्ज्वाम्, विकल्पः, विनिवर्तते, रज्जुः, एव, इति, च, अद्वैतम्, तद्वत्, आत्म-विनिश्चयः",
       anvaya: "यथा रज्ज्वां निश्चितायां 'रज्जुः एव' इति विकल्पः विनिवर्तते च अद्वैतं (भवति), तद्वत् आत्मविनिश्चयः ।",
-      bhashyaExtract: "प्रदीपेन रज्जुस्वरूपे निश्चिते सर्पाद्यसत्यविकल्पो विनिवर्तते, रज्जुमात्रमवशिष्यते । तथा वेदान्तवाक्यैरात्मनि साक्षात्कृते सर्वद्वैतनिवृत्तौ निर्विकल्प आत्मावशिष्यते ।",
+      bhashyaExtract: "रज्जुरेवेति निश्चये सर्पादिविकल्पनिवृत्तौ रज्जुरेवेति चाद्वैतं यथा, तथा नेति नेतीति सर्वसंसारधर्मशून्यप्रतिपादकशास्त्रजनितविज्ञानसूर्यालोककृतात्मविनिश्चयः ‘आत्मैवेदं सर्वमपूर्वोऽनपरोऽनन्तरोऽबाह्यः सबाह्याभ्यन्तरो ह्यजोऽजरोऽमृतोऽभय एक एवाद्वयः’ इति ॥",
       englishTranslation: "As, when the rope is definitely ascertained, the misapprehension vanishes and the non-dual certitude 'this is the rope alone' remains; so is the decisive ascertainment of the Self.",
       commentaryNotes: "Knowledge (jñāna) alone destroys error (bhrama). When Brahman is recognized, the manifold cosmos dissolves without leaving a trace."
     },
@@ -230,7 +230,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "prāṇādibhir anantais tu bhāvair etair vikalpitaḥ |\nmāyaiṣā tasya devasya yayāyaṁ mohitaḥ svayam || 19 ||",
       padaccheda: "प्राण-आदिभिः, अनन्तैः, तु, भावैः, एतैः, विकल्पितः, माया, एषा, तस्य, देवस्य, यया, अयम्, मोहितः, स्वयम्",
       anvaya: "एतैः अनन्तैः प्राणादिभिः भावैः तु विकल्पितः । एषा तस्य देवस्य माया यया अयम् स्वयं मोहितः ।",
-      bhashyaExtract: "परमात्मैव प्राणादिभिर्नानाभावैर्विकल्पितः । एषा तस्यैव स्वाभाविकी माया यया स्वात्मानमेव मोहितमिव मन्यते ।",
+      bhashyaExtract: "यदि आत्मैक एवेति निश्चयः, कथं प्राणादिभिरनन्तैर्भावैरेतैः संसारलक्षणैर्विकल्पित इति ? उच्यते शृणु — मायैषा तस्यात्मनो देवस्य । यथा मायाविना विहिता माया गगनमतिविमलं कुसुमितैः सपलाशैस्तरुभिराकीर्णमिव करोति, तथा इयमपि देवस्य माया, यया अयं स्वयमपि मोहित इव मोहितो भवति । ‘मम माया दुरत्यया’(भ. गी. ७ । १४) इत्युक्तम् ॥",
       englishTranslation: "The Self is imagined as endless entities such as Prāṇa and the rest. This is the cosmic illusion (Māyā) of that luminous Lord, by which He Himself appears to be deluded.",
       commentaryNotes: "Māyā does not affect Brahman in reality; the appearance of delusion belongs to the empirical realm."
     },
@@ -242,7 +242,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "prāṇa iti prāṇavido bhūtānīti ca tadvidaḥ |\nguṇā iti guṇavidas tattvānīti ca tadvidaḥ || 20 ||",
       padaccheda: "प्राणः, इति, प्राण-विदः, भूतानि, इति, च, तत्-विदः, गुणाः, इति, गुण-विदः, तत्त्वानि, इति, च, तत्-विदः",
       anvaya: "प्राणविदः 'प्राणः' इति, तद्विदः 'भूतानि' इति च, गुणविदः 'गुणाः' इति, तद्विदः 'तत्त्वानि' इति च (आत्मतत्त्वं मन्यन्ते) ।",
-      bhashyaExtract: "ये प्राणे निष्णातास्ते प्राणमेवात्मेति मन्यन्ते, भौतिकविदो भूतानि, साङ्ख्या गुणांस्तत्त्वानि च मन्यन्ते ।",
+      bhashyaExtract: "प्राणः प्राज्ञो बीजात्मा, तत्कार्यभेदा हीतरे स्थित्यन्ताः । अन्ये च सर्वे लौकिकाः सर्वप्राणिपरिकल्पिता भेदा रज्ज्वामिव सर्पादयः । तच्छून्ये आत्मन्यात्मस्वरूपानिश्चयहेतोरविद्यया कल्पिता इति पिण्डितोऽर्थः । प्राणादिश्लोकानां प्रत्येकं पदार्थव्याख्याने फल्गुप्रयोजनत्वात्सिद्धपदार्थत्वाच्च यत्नो न कृतः ॥",
       englishTranslation: "The knowers of Prāṇa declare the reality to be Prāṇa; the cosmologists say it is the physical Elements; the knowers of Guṇas say it is the Gunas; and the metaphysicians say it is the Tattvas.",
       commentaryNotes: "Gauḍapāda surveys all philosophical systems of ancient India, showing that each identifies ultimate reality with its own preferred category."
     },
@@ -254,7 +254,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "pādā iti pādavido viṣayā iti tadvidaḥ |\nlokā iti lokavido devā iti ca tadvidaḥ || 21 ||",
       padaccheda: "पादाः, इति, पाद-विदः, विषयाः, इति, तत्-विदः, लोकाः, इति, लोक-विदः, देवाः, इति, च, तत्-विदः",
       anvaya: "पादविदः 'पादाः' इति, तद्विदः 'विषयाः' इति, लोकविदः 'लोकाः' इति, तद्विदः 'देवाः' इति च (वदन्ति) ।",
-      bhashyaExtract: "पादविदो जाग्रदादीन्, विषयविदः शब्दादीन्, लोकविदो भूर्भुवःस्वरादीन्, दैवज्ञा देवान् मन्यन्ते ।",
+      bhashyaExtract: "प्राणः प्राज्ञो बीजात्मा, तत्कार्यभेदा हीतरे स्थित्यन्ताः । अन्ये च सर्वे लौकिकाः सर्वप्राणिपरिकल्पिता भेदा रज्ज्वामिव सर्पादयः । तच्छून्ये आत्मन्यात्मस्वरूपानिश्चयहेतोरविद्यया कल्पिता इति पिण्डितोऽर्थः । प्राणादिश्लोकानां प्रत्येकं पदार्थव्याख्याने फल्गुप्रयोजनत्वात्सिद्धपदार्थत्वाच्च यत्नो न कृतः ॥",
       englishTranslation: "Those who know the quarters call it Pādas; those who know sense objects call it sense objects; those who know cosmic planes call it the worlds; and theists call it the Gods.",
       commentaryNotes: "Catalogues the theological and ritualistic conceptions of reality."
     },
@@ -266,7 +266,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "vedā iti vedavido yajñā iti ca tadvidaḥ |\nbhokteti ca bhoktṛvido bhojyam iti ca tadvidaḥ || 22 ||",
       padaccheda: "वेदाः, इति, वेद-विदः, यज्ञाः, इति, च, तत्-विदः, भोक्ता, इति, च, भोक्तृ-विदः, भोज्यम्, इति, च, तत्-विदः",
       anvaya: "वेदविदः 'वेदाः' इति, तद्विदः 'यज्ञाः' इति च, भोक्तृविदः 'भोक्ता' इति च, तद्विदः 'भोज्यम्' इति च (मन्यन्ते) ।",
-      bhashyaExtract: "मीमांसका वेदानेव यज्ञान् वा, सांख्याः पुरुषमेव भोक्तारं, चार्वाका भोज्यमन्नादिकम् ।",
+      bhashyaExtract: "प्राणः प्राज्ञो बीजात्मा, तत्कार्यभेदा हीतरे स्थित्यन्ताः । अन्ये च सर्वे लौकिकाः सर्वप्राणिपरिकल्पिता भेदा रज्ज्वामिव सर्पादयः । तच्छून्ये आत्मन्यात्मस्वरूपानिश्चयहेतोरविद्यया कल्पिता इति पिण्डितोऽर्थः । प्राणादिश्लोकानां प्रत्येकं पदार्थव्याख्याने फल्गुप्रयोजनत्वात्सिद्धपदार्थत्वाच्च यत्नो न कृतः ॥",
       englishTranslation: "The knowers of the Vedas declare it to be the Vedas; ritualists call it Sacrifices; those who know the enjoyer say it is the Experiencer (puruṣa); and sensualists say it is the Enjoyed (prakṛti/food).",
       commentaryNotes: "Mīmāṁsā, Sāṅkhya, and Materialist viewpoints."
     },
@@ -278,7 +278,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "sūkṣma iti sūkṣmavidaḥ sthūla iti ca tadvidaḥ |\nmūrta iti mūrtavido'mūrta iti ca tadvidaḥ || 23 ||",
       padaccheda: "सूक्ष्मः, इति, सूक्ष्म-विदः, स्थूलः, इति, च, तत्-विदः, मूर्तम्, इति, मूर्त-विदः, अमूर्तम्, इति, च, तत्-विदः",
       anvaya: "सूक्ष्मविदः 'सूक्ष्मः' इति, तद्विदः 'स्थूलः' इति च, मूर्तविदः 'मूर्तः' इति, तद्विदः 'अमूर्तः' इति च (प्रतिपादयन्ति) ।",
-      bhashyaExtract: "परमाण्वादिवादिनः सूक्ष्मं, स्थूलदेहात्मवादिनः स्थूलम्, प्रतिमाद्युपासका मूर्तम्, आकाशोपासका अमूर्तम् ।",
+      bhashyaExtract: "प्राणः प्राज्ञो बीजात्मा, तत्कार्यभेदा हीतरे स्थित्यन्ताः । अन्ये च सर्वे लौकिकाः सर्वप्राणिपरिकल्पिता भेदा रज्ज्वामिव सर्पादयः । तच्छून्ये आत्मन्यात्मस्वरूपानिश्चयहेतोरविद्यया कल्पिता इति पिण्डितोऽर्थः । प्राणादिश्लोकानां प्रत्येकं पदार्थव्याख्याने फल्गुप्रयोजनत्वात्सिद्धपदार्थत्वाच्च यत्नो न कृतः ॥",
       englishTranslation: "Knowers of the subtle call it Subtle (atoms); knowers of the gross call it Gross (physical body); those who know formed deities call it Formed; and those who know the formless call it Formless (space).",
       commentaryNotes: "Vaiśeṣika atomism, dehavāda, and formless space worship."
     },
@@ -290,7 +290,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "kāla iti kālavido diśa iti ca tadvidaḥ |\nvādā iti vādavido bhuvanānīti tadvidaḥ || 24 ||",
       padaccheda: "कालः, इति, काल-विदः, दिशः, इति, च, तत्-विदः, वादाः, इति, वाद-विदः, भुवनानि, इति, तत्-विदः",
       anvaya: "कालविदः 'कालः' इति, तद्विदः 'दिशः' इति च, वादविदः 'वादाः' इति, तद्विदः 'भुवनानि' इति (प्रतिपादयन्ति) ।",
-      bhashyaExtract: "ज्योतिर्विदाः कालं, दिग्भागादिकं तद्विदः, नैयायिका वादांस्तर्कादिकं, भूगोलविदो भुवनानि ।",
+      bhashyaExtract: "प्राणः प्राज्ञो बीजात्मा, तत्कार्यभेदा हीतरे स्थित्यन्ताः । अन्ये च सर्वे लौकिकाः सर्वप्राणिपरिकल्पिता भेदा रज्ज्वामिव सर्पादयः । तच्छून्ये आत्मन्यात्मस्वरूपानिश्चयहेतोरविद्यया कल्पिता इति पिण्डितोऽर्थः । प्राणादिश्लोकानां प्रत्येकं पदार्थव्याख्याने फल्गुप्रयोजनत्वात्सिद्धपदार्थत्वाच्च यत्नो न कृतः ॥",
       englishTranslation: "Knowers of time call it Time; knowers of space call it the Cardinal Directions; dialecticians call it Philosophical Debates; and cosmographers call it the Fourteen Worlds.",
       commentaryNotes: "Every intellectual craft hypostatizes its own field of study into the supreme truth."
     },
@@ -302,7 +302,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "mana iti manovido buddhir iti ca tadvidaḥ |\ncittam iti cittavido dharmādharmau ca tadvidaḥ || 25 ||",
       padaccheda: "मनः, इति, मनः-विदः, बुद्धिः, इति, च, तत्-विदः, चित्तम्, इति, चित्त-विदः, धर्म-अधर्मौ, च, तत्-विदः",
       anvaya: "मनोविदः 'मनः' इति, तद्विदः 'बुद्धिः' इति च, चित्तविदः 'चित्तम्' इति, तद्विदः 'धर्माधर्मौ' च (मन्यन्ते) ।",
-      bhashyaExtract: "अन्तःकरणविदो मनः, बुद्धिमहत्तत्त्ववादिनो बुद्धिं, पातञ्जलाश्चित्तं, मीमांसका धर्माधर्मौ परं तत्त्वं मन्यन्ते ।",
+      bhashyaExtract: "प्राणः प्राज्ञो बीजात्मा, तत्कार्यभेदा हीतरे स्थित्यन्ताः । अन्ये च सर्वे लौकिकाः सर्वप्राणिपरिकल्पिता भेदा रज्ज्वामिव सर्पादयः । तच्छून्ये आत्मन्यात्मस्वरूपानिश्चयहेतोरविद्यया कल्पिता इति पिण्डितोऽर्थः । प्राणादिश्लोकानां प्रत्येकं पदार्थव्याख्याने फल्गुप्रयोजनत्वात्सिद्धपदार्थत्वाच्च यत्नो न कृतः ॥",
       englishTranslation: "Psychologists call it the Mind; epistemologists call it the Intellect (Buddhi); Yogis call it Consciousness-stuff (Citta); and moralists declare it to be Virtue and Vice (Dharma and Adharma).",
       commentaryNotes: "Yogic and moral philosophies."
     },
@@ -314,7 +314,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "pañcaviṁśaka ity eke ṣaḍviṁśa iti cāpare |\nekatriṁśaka ity āhur ananta iti cāpare || 26 ||",
       padaccheda: "पञ्चविंशकः, इति, एके, षड्विंशः, इति, च, अपरे, एकत्रिंशकः, इति, आहुः, अनन्तः, इति, च, अपरे",
       anvaya: "एके 'पञ्चविंशकः' इति, अपरे 'षड्विंशः' इति च, 'एकत्रिंशकः' इति (अन्ये) आहुः, अपरे 'अनन्तः' इति च ।",
-      bhashyaExtract: "साङ्ख्याः पञ्चविंशतितत्त्वानि, योगिनः सेश्वराः षड्विंशतिम्, पाशुपता एकत्रिंशकं, लोकायता अनन्तमिति ।",
+      bhashyaExtract: "प्राणः प्राज्ञो बीजात्मा, तत्कार्यभेदा हीतरे स्थित्यन्ताः । अन्ये च सर्वे लौकिकाः सर्वप्राणिपरिकल्पिता भेदा रज्ज्वामिव सर्पादयः । तच्छून्ये आत्मन्यात्मस्वरूपानिश्चयहेतोरविद्यया कल्पिता इति पिण्डितोऽर्थः । प्राणादिश्लोकानां प्रत्येकं पदार्थव्याख्याने फल्गुप्रयोजनत्वात्सिद्धपदार्थत्वाच्च यत्नो न कृतः ॥",
       englishTranslation: "Some proclaim twenty-five principles (Sāṅkhya); others say twenty-six (Yoga with Īśvara); others assert thirty-one (Pāśupata); and still others maintain infinite principles.",
       commentaryNotes: "Numerical ontological schemas: 25 (Sāṅkhya: 24 Prakṛti evolutes + Puruṣa), 26 (Yoga: + Īśvara), 31 (Pāśupata), etc."
     },
@@ -326,7 +326,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "lokāṁl lokavidaḥ prāhur āśramā iti tadvidaḥ |\nstrīpuṁnapuṁsakaṁ laiṅgāḥ parāparam athāpare || 27 ||",
       padaccheda: "लोकान्, लोक-विदः, प्राहुः, आश्रमाः, इति, तत्-विदः, स्त्री-पुं-नपुंसकम्, लैङ्गाः, परापरम्, अथ, अपरे",
       anvaya: "लोकविदः लोकान् प्राहुः, तद्विदः 'आश्रमाः' इति, लैङ्गाः 'स्त्री-पुं-नपुंसकम्', अथ अपरे 'परापरम्' (इति प्राहुः) ।",
-      bhashyaExtract: "वर्णाश्रमधर्मादिषु निष्णातास्तत्तदात्मेति, वैयाकरणा लिङ्गभेदं, कार्यब्रह्मविदोऽपरं कारणब्रह्मविदो वा परमिति ।",
+      bhashyaExtract: "प्राणः प्राज्ञो बीजात्मा, तत्कार्यभेदा हीतरे स्थित्यन्ताः । अन्ये च सर्वे लौकिकाः सर्वप्राणिपरिकल्पिता भेदा रज्ज्वामिव सर्पादयः । तच्छून्ये आत्मन्यात्मस्वरूपानिश्चयहेतोरविद्यया कल्पिता इति पिण्डितोऽर्थः । प्राणादिश्लोकानां प्रत्येकं पदार्थव्याख्याने फल्गुप्रयोजनत्वात्सिद्धपदार्थत्वाच्च यत्नो न कृतः ॥",
       englishTranslation: "Sociologists say it is the Social Worlds; institutionalists say it is the Stages of Life (Āśramas); grammarians speak of masculine, feminine, or neuter genders; and others speak of the higher and lower causes.",
       commentaryNotes: "Shows how language, social status, and gender roles become conceptual prisons."
     },
@@ -338,7 +338,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "sṛṣṭir iti sṛṣṭivido laya iti ca tadvidaḥ |\nsthitir iti sthitividaḥ sarve ceha tu sarvadā || 28 ||",
       padaccheda: "सृष्टिः, इति, सृष्टि-विदः, लयः, इति, च, तत्-विदः, स्थितिः, इति, स्थिति-विदः, सर्वे, च, इह, तु, सर्वदा",
       anvaya: "सृष्टिविदः 'सृष्टिः' इति, तद्विदः 'लयः' इति च, स्थितिविदः 'स्थितिः' इति, इह तु सर्वदा सर्वे (कल्पयन्ति) ।",
-      bhashyaExtract: "उत्पत्तिस्थितिप्रलयविदः सर्वमेतदात्मन्येव सर्वदा कल्पयन्ति, न तु वस्तुस्वरूपं पश्यन्ति ।",
+      bhashyaExtract: "प्राणः प्राज्ञो बीजात्मा, तत्कार्यभेदा हीतरे स्थित्यन्ताः । अन्ये च सर्वे लौकिकाः सर्वप्राणिपरिकल्पिता भेदा रज्ज्वामिव सर्पादयः । तच्छून्ये आत्मन्यात्मस्वरूपानिश्चयहेतोरविद्यया कल्पिता इति पिण्डितोऽर्थः । प्राणादिश्लोकानां प्रत्येकं पदार्थव्याख्याने फल्गुप्रयोजनत्वात्सिद्धपदार्थत्वाच्च यत्नो न कृतः ॥",
       englishTranslation: "Knowers of cosmogony declare it to be Creation; knowers of dissolution call it Dissolution; knowers of sustenance call it Preservation. All these are ever projected in the world.",
       commentaryNotes: "Even the triad of Sṛṣṭi, Sthiti, and Laya are empirical superimpositions on changeless Brahman."
     },
@@ -350,7 +350,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "yaṁ bhāvaṁ darśayed yasya taṁ bhāvaṁ sa tu paśyati |\ntaṁ cāvati sa bhūtvāsau tadgrahaḥ samupaiti tam || 29 ||",
       padaccheda: "यम्, भावम्, दर्शयेत्, यस्य, तम्, भावम्, सः, तु, पश्यति, तम्, च, अवति, सः, भूत्वा, असौ, तत्-ग्रहः, समुपैति, तम्",
       anvaya: "यस्य यं भावं दर्शयेत् सः तु तं भावं पश्यति । असौ तद्भूत्वा तं च अवति, तत्ग्रहः तं समुपैति ।",
-      bhashyaExtract: "यो यस्मिन् वादे गुरुणा श्रद्धां ग्राहितः स तमेव सत्यत्वेन पश्यति, तदात्मा भूत्वा तं पालयति, तदभिनिवेशश्च तं बध्नाति ।",
+      bhashyaExtract: "किं बहुना ? प्राणादीनामन्यतममुक्तमनुक्तं वा अन्यं यं भावं पदार्थं दर्शयेद्यस्याचार्योऽन्यो वा आप्तः इदमेव तत्त्वमिति, स तं भावमात्मभूतं पश्यत्ययमहमिति वा ममेति वा, तं च द्रष्टारं स भावोऽवति, यो दर्शितो भावः, असौ स भूत्वा रक्षति ; स्वेनात्मना सर्वतो निरुणद्धि । तस्मिन्ग्रहस्तद्ग्रहस्तदभिनिवेशः इदमेव तत्त्वमिति स तं ग्रहीतारमुपैति, तस्यात्मभावं निगच्छतीत्यर्थः ॥",
       englishTranslation: "Whichever concept is presented to a person by his teacher, that concept alone he beholds. Becoming thoroughly identified with it, he defends it; that dogmatic obsession completely grips him.",
       commentaryNotes: "A profound deconstruction of sectarian dogmatism: religious and philosophical commitments are conditioned cognitive grips (tadgraha)."
     },
@@ -362,7 +362,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "etair eṣo'pṛthagbhāvaiḥ pṛthag eveti lakṣitaḥ |\nevaṁ yo veda tattvena kalpayet so'viśaṅkitaḥ || 30 ||",
       padaccheda: "एतैः, एषः, अपृथक्-भावैः, पृथक्, एव, इति, लक्षितः, एवम्, यः, वेद, तत्त्वेन, कल्पयेत्, सः, अविशङ्कितः",
       anvaya: "एषः एतैः अपृथग्भावैः पृथक् एव इति लक्षितः । यः एवं तत्त्वेन वेद सः अविशङ्कितः कल्पयेत् ।",
-      bhashyaExtract: "आत्मानन्यैरेव प्राणादिभावैर्भिन्न इव लक्ष्यते । एवं यः परमात्मतत्त्वं वेदान्तैर्जानाति, स निःशङ्को वेदार्थं प्रकाशयेत् ।",
+      bhashyaExtract: "एतैः प्राणादिभिः आत्मनोऽपृथग्भूतैरपृथग्भावैः एषः आत्मा रज्जुरिव सर्पादिविकल्पनारूपैः पृथगेवेति लक्षितः अभिलक्षितः निश्चितः मूढैरित्यर्थः । विवेकिनां तु रज्ज्वामिव कल्पिताः सर्पादयो नात्मव्यतिरेकेण प्राणादयः सन्तीत्यभिप्रायः ; ‘इदं सर्वं यदयमात्मा’(बृ. उ. २ । ४ । ६) इति श्रुतेः । एवमात्मव्यतिरेकेणासत्त्वं रज्जुसर्पवदात्मनि कल्पितानामात्मानं च केवलं निर्विकल्पं यो वेद तत्त्वेन श्रुतितो युक्तितश्च, सः अविशङ्कितो वेदार्थं विभागतः कल्पयेत् कल्पयतीत्यर्थः — इदमेवंपरं वाक्यम् अदोऽन्यपरम् इति । न ह्यनध्यात्मविद्वेदान्ज्ञातुं शक्नोति तत्त्वतः, ‘न ह्यनध्यात्मवित्कश्चित्क्रियाफलमुपाश्नुते’(मनु. ६ । ८२) इति हि मानवं वचनम् ॥",
       englishTranslation: "Through these entities that are not distinct from Itself, this Self is perceived as though distinct. He who knows this in its true nature may interpret the scriptures without fear of contradiction.",
       commentaryNotes: "The sage who sees that all names and forms are waves on the non-dual ocean of consciousness is never unsettled by conflicting doctrines."
     },
@@ -374,7 +374,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "svapnamāye yathā dṛṣṭe gandharvanagaraṁ yathā |\ntathā viśvam idaṁ dṛṣṭaṁ vedānteṣu vicakṣaṇaiḥ || 31 ||",
       padaccheda: "स्वप्न-माये, यथा, दृष्टे, गन्धर्व-नगरम्, यथा, तथा, विश्वम्, इदम्, दृष्टम्, वेदान्तेषु, विचक्षणैः",
       anvaya: "यथा स्वप्नमाये दृष्टे, यथा गन्धर्वनगरं (दृष्टम्), तथा विचक्षणैः वेदान्तेषु इदं विश्वं दृष्टम् ।",
-      bhashyaExtract: "यथा स्वप्नो माया गन्धर्वनगरं चासत्यमपि सत्यवद्भासते, तथैवेदं समस्तं प्रपञ्चजातं वेदान्तपारङ्गमैर्मिथ्याभूतं दृष्टम् ।",
+      bhashyaExtract: "यदेतद्द्वैतस्यासत्त्वमुक्तं युक्तितः, तदेतद्वेदान्तप्रमाणावगतमित्याह — स्वप्नश्च माया च स्वप्नमाये असद्वस्त्वात्मिके सत्यौ सद्वस्त्वात्मिके इव लक्ष्येते अविवेकिभिः । यथा च प्रसारितपण्यापणगृहप्रासादस्त्रीपुञ्जनपदव्यवहाराकीर्णमिव गन्धर्वनगरं दृश्यमानमेव सत् अकस्मादभावतां गतं दृष्टम् , यथा च स्वप्नमाये दृष्टे असद्रूपे, तथा विश्वमिदं द्वैतं समस्तमसद्दृष्टम् । क्वेत्याह — वेदान्तेषु, ‘नेह नानास्ति किञ्चन’(क. उ. २ । १ । ११) ‘इन्द्रो मायाभिः’(बृ. उ. २ । ५ । १९) ‘आत्मैवेदमग्र आसीत्’(बृ. उ. १ । ४ । १) ‘ब्रह्मैवेदमग्र आसीत्’(बृ. उ. १ । ४ । १०) ‘द्वितीयाद्वै भयं भवति’(बृ. उ. १ । ४ । २) ‘न तु तद्द्वितीयमस्ति’(बृ. उ. ४ । ३ । २३) ‘यत्र त्वस्य सर्वमात्मैवाभूत्’(बृ. उ. ४ । ५ । १५) इत्यादिषु विचक्षणैः निपुणतरवस्तुदर्शिभिः पण्डितैरित्यर्थः ; ‘तमः श्वभ्रनिभं दृष्टं वर्षबुद्बुदसंनिभम् । नाशप्रायं सुखाद्धीनं नाशोत्तरमभावगम्’(मो. ध. ३०१ । ६०) इति व्यासस्मृतेः ॥",
       englishTranslation: "As dream and magic are seen, as a city in the clouds (Gandharvanagara) is beheld, so is this entire cosmos viewed by the wise seers of Vedānta.",
       commentaryNotes: "The three classic analogies for cosmic unreality: svapna (dream), māyā (magician's illusion), and gandharvanagara (fata morgana / mirage city in the sky)."
     },
@@ -386,7 +386,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "na nirodho na cotpattir na baddho na ca sādhakaḥ |\nna mumukṣur na vai mukta ity eṣā paramārthatā || 32 ||",
       padaccheda: "न, निरोधः, न, च, उत्पत्तिः, न, बद्धः, न, च, साधकः, न, मुमुक्षुः, न, वै, मुक्तः, इति, एषा, परमार्थता",
       anvaya: "न निरोधः न च उत्पत्तिः, न बद्धः न च साधकः, न मुमुक्षुः न वै मुक्तः, इति एषा परमार्थता ।",
-      bhashyaExtract: "उत्पत्तिप्रलययोर्द्वैतस्य चाभावात् न कश्चित् बद्धः, नापि साधनवान् साधकः, न मोक्षेच्छुः, न वा मुक्तः । रज्जुसर्पवत् सर्वस्य कल्पितत्वात् परमार्थतः सर्वदा ब्रह्मैकरसमेवावशिष्यते ।",
+      bhashyaExtract: "प्रकरणार्थोपसंहारार्थोऽयं श्लोकः — यदा वितथं द्वैतम् आत्मैवैकः परमार्थतः सन् , तदा इदं निष्पन्नं भवति — सर्वोऽयं लौकिको वैदिकश्च व्यवहारोऽविद्याविषय एवेति । तदा न निरोधः, निरोधनं निरोधः प्रलयः, उत्पत्तिः जननम् , बद्धः संसारी जीवः, साधकः साधनवान्मोक्षस्य, मुमुक्षुः मोचनार्थी, मुक्तः विमुक्तबन्धः । उत्पत्तिप्रलययोरभावाद्बद्धादयो न सन्तीत्येषा परमार्थता । कथमुत्पत्तिप्रलययोरभाव इति, उच्यते — द्वैतस्यासत्त्वात् । ‘यत्र हि द्वैतमिव भवति’(बृ. उ. २ । ४ । १४) ‘य इह नानेव पश्यति’(क. उ. २ । १ । १०) ‘आत्मैवेदं सर्वम्’(छा. उ. ७ । २५ । २) ‘ब्रह्मैवेदं सर्वम्’ ‘एकमेवाद्वितीयम्’(छा. उ. ६ । २ । १) ‘इदं सर्वं यदयमात्मा’(बृ. उ. २ । ४ । ६) इत्यादिनानाश्रुतिभ्यो द्वैतस्यासत्त्वं सिद्धम् । सतो ह्युत्पत्तिः प्रलयो वा स्यात् , नासतः शशविषाणादेः । नाप्यद्वैतमुत्पद्यते प्रलीयते वा । अद्वैतं च, उत्पत्तिप्रलयवच्चेति विप्रतिषिद्धम् । यस्तु पुनर्द्वैतसंव्यवहारः, स रज्जुसर्पवदात्मनि प्राणादिलक्षणः कल्पित इत्युक्तम् ; न हि मनोविकल्पनाया रज्जुसर्पादिलक्षणाया रज्ज्वां प्रलय उत्पत्तिर्वा ; न च मनसि रज्जुसर्पस्योत्पत्तिः प्रलयो वा, न चोभयतो वा । तथा मानसत्वाविशेषाद्द्वैतस्य । न हि नियते मनसि सुषुप्ते वा द्वैतं गृह्यते ; अतो मनोविकल्पनामात्रं द्वैतमिति सिद्धम् । तस्मात्सूक्तम् — द्वैतस्यासत्त्वान्निरोधाद्यभावः परमार्थतेति । यद्येवं द्वैताभावे शास्त्रव्यापारः, नाद्वैते, विरोधात् ; तथा च सत्यद्वैतस्य वस्तुत्वे प्रमाणाभावाच्छून्यवादप्रसङ्गः, द्वैतस्य चाभावात् ; न, रज्जुवत्सर्पादिकल्पनाया निरास्पदत्वेऽनुपपत्तिरिति प्रत्युक्तमेतत्कथमुज्जीवयसीति, आह — रज्जुरपि सर्पविकल्पस्यास्पदभूता कल्पितैवेति दृष्टान्तानुपपत्तिः ; न, विकल्पनाक्षये अविकल्पितस्याविकल्पितत्वादेव सत्त्वोपपत्तेः ; रज्जुसर्पवदसत्त्वमिति चेत् , न एकान्तेनाविकल्पितत्वात् अविकल्पितरज्ज्वंशवत्प्राक्सर्पाभावविज्ञानात् , विकल्पयितुश्च प्राग्विकल्पनोत्पत्तेः सिद्धत्वाभ्युपगमादेवासत्त्वानुपपत्तिः । कथं पुनः स्वरूपे व्यापाराभावे शास्त्रस्य द्वैतविज्ञाननिवर्तकत्वम् ? नैष दोषः, रज्ज्वां सर्पादिवदात्मनि द्वैतस्याविद्याध्यस्तत्वात् कथं सुख्यहं दुःखी मूढो जातो मृतो जीर्णो देहवान् पश्यामि व्यक्ताव्यक्तः कर्ता फली संयुक्तो वियुक्तः क्षीणो वृद्धोऽहं ममैते इत्येवमादयः सर्वे आत्मन्यध्यारोप्यन्ते । आत्मा एतेष्वनुगतः, सर्वत्राव्यभिचारात् , यथा सर्पधारादिभेदेषु रज्जुः । यदा चैवं विशेष्यस्वरूपप्रत्ययस्य सिद्धत्वान्न कर्तव्यत्वं शास्त्रेण । अकृतकर्तृ च शास्त्रं कृतानुकारित्वे अप्रमाणम् । यतः अविद्याध्यारोपितसुखित्वादिविशेषप्रतिबन्धादेवात्मनः स्वरूपेणानवस्थानम् , स्वरूपावस्थानं च श्रेयः इति सुखित्वादिनिवर्तकं शास्त्रमात्मन्यसुखित्वादिप्रत्ययकरणेन नेति नेत्यस्थूलादिवाक्यैः ; आत्मस्वरूपवदसुखित्वादिरपि सुखित्वादिभेदेषु नानुवृत्तोऽस्ति धर्मः । यद्यनुवृत्तः स्यात् , नाध्यारोप्येत सुखित्वादिलक्षणो विशेषः, यथोष्णत्वगुणविशेषवत्यग्नौ शीतता ; तस्मान्निर्विशेष एवात्मनि सुखित्वादयो विशेषाः कल्पिताः । यत्त्वसुखित्वादिशास्त्रमात्मनः, तत्सुखित्वादिविशेषनिवृत्त्यर्थमेवेति सिद्धम् । ‘सिद्धं तु निवर्तकत्वात्’ इत्यागमविदां सूत्रम् ॥",
       englishTranslation: "There is no dissolution, nor is there creation; there is no one bound, nor is there any spiritual aspirant; there is no one longing for liberation, nor is there anyone liberated—this is the absolute Ultimate Truth (Paramārthatā)!",
       commentaryNotes: "Universally acknowledged as one of the most radical, soaring proclamations in world philosophy. From the transcendental standpoint (Paramārtha), bondage, practice, and liberation were never real; pure Brahman alone is."
     },
@@ -398,7 +398,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "bhāvair asadbhir evāyam advayena ca kalpitaḥ |\nbhāvā apy advayenaiva tasmād advayatā śivā || 33 ||",
       padaccheda: "भावैः, असद्भिः, एव, अयम्, अद्वयेन, च, कल्पितः, भावाः, अपि, अद्वयेन, एव, तस्मात्, अद्वयता, शिवा",
       anvaya: "अयम् असद्भिः भावैः एव अद्वयेन च कल्पितः, भावाः अपि अद्वयेन एव, तस्माद् अद्वयता शिवा ।",
-      bhashyaExtract: "अविद्यया कल्पिता भावा असन्तोऽपि अद्वयेनैवात्मना भासन्ते । तस्मात् सर्वद्वन्द्वरहिता अद्वैतस्थितिरत्यन्तशिवा मङ्गला ।",
+      bhashyaExtract: "पूर्वश्लोकार्थस्य हेतुमाह — यथा रज्ज्वामसद्भिः सर्पधारादिभिः अद्वयेन च रज्जुद्रव्येण सता अयं सर्प इति धारेयं दण्डोऽयमिति वा रज्जुद्रव्यमेव कल्प्यते, एवं प्राणादिभिरनन्तैः असद्भिरेव अविद्यमानैः, न परमार्थतः । न ह्यप्रचलिते मनसि कश्चिद्भाव उपलक्षयितुं शक्यते केनचित् ; न चात्मनः प्रचलनमस्ति । प्रचलितस्यैवोपलभ्यमाना भावा न परमार्थतः सन्तः कल्पयितुं शक्याः । अतः असद्भिरेव प्राणादिभिर्भावैरद्वयेन च परमार्थसता आत्मना रज्जुवत्सर्वविकल्पास्पदभूतेन अयं स्वयमेवात्मा कल्पितः सदैकस्वभावोऽपि सन् । ते चापि प्राणादिभावाः अद्वयेनैव सता आत्मना विकल्पिताः ; न हि निरास्पदा काचित्कल्पना उपपद्यते ; अतः सर्वकल्पनास्पदत्वात्स्वेनात्मना अद्वयस्य अव्यभिचारात् कल्पनावस्थायामपि अद्वयता शिवा ; कल्पना एव त्वशिवाः, रज्जुसर्पादिवत्त्रासादिकारिण्यो हि ताः । अद्वयता अभया ; अतः सैव शिवा ॥",
       englishTranslation: "This world is imagined through unreal entities by the non-dual Self; the entities themselves exist only by virtue of that Non-Duality. Therefore Non-Duality alone is auspicious (Śiva).",
       commentaryNotes: "Even false appearances borrow their appearance of being from the singular non-dual substratum."
     },
@@ -410,7 +410,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "nātmabhāvena nānedaṁ na svenāpi kathañcana |\nna pṛthaṅ nāpṛthak kiñcid iti tattvavido viduḥ || 34 ||",
       padaccheda: "न, आत्म-भावेन, नाना, इदम्, न, स्वेन, अपि, कथञ्चन, न, पृथक्, न, अपृथक्, किञ्चित्, इति, तत्त्व-विदः, विदुः",
       anvaya: "इदं नाना न आत्मभावेन, न स्वेन अपि कथञ्चन । न पृथक् न अपृथक् किञ्चित् इति तत्त्वविदः विदुः ।",
-      bhashyaExtract: "इदं नानात्वं नात्मस्वरूपेण सत्यम्, नापि जडरूपेण स्वतः सिध्यति । न किञ्चिद् ब्रह्मणः पृथगस्ति नाप्यपृथक्, कल्पितस्यानिर्वचनीयत्वात् ।",
+      bhashyaExtract: "कुतश्चाद्वयता शिवा ? नानाभूतं प्रथक्त्वम् अन्यस्य अन्यस्मात् यत्र दृष्टम् , तत्राशिवं भवेत् । न ह्यत्राद्वये परमार्थसत्यात्मनि प्राणादिसंसारजातमिदं जगत् आत्मभावेन परमार्थस्वरूपेण निरूप्यमाणं नाना वस्त्वन्तरभूतं भवति ; यथा रज्जुस्वरूपेण प्रकाशेन निरूप्यमाणो न नानाभूतः कल्पितः सर्पोऽस्ति, तद्वत् । नापि स्वेन प्राणाद्यात्मना इदं विद्यते कदाचिदपि, रज्जुसर्पवत्कल्पितत्वादेव । तथा अन्योन्यं न पृथक् प्राणादि वस्तु, यथा अश्वान्महिषः पृथग्विद्यते, एवम् । अतः असत्त्वात् नापि अपृथक् विद्यतेऽन्योन्यं परेण वा किञ्चिदिति । एवं परमार्थतत्त्वविदो ब्राह्मणा विदुः । अतः अशिवहेतुत्वाभावादद्वयतैव शिवेत्यभिप्रायः ॥",
       englishTranslation: "This diversity does not exist in the nature of the Self, nor does it exist in its own right in any manner whatsoever. Neither distinct nor non-distinct does anything exist: so know the knowers of Truth.",
       commentaryNotes: "Anticipates the later Advaitic doctrine of Anirvacanīyatva (indescribability of appearances as neither absolutely real nor totally unreal like a sky-lotus)."
     },
@@ -422,7 +422,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "vītarāgabhayakrodhair munibhir vedapāragaiḥ |\nnirvikalpo hy ayaṁ dṛṣṭaḥ prapañcopaśamo'dvayaḥ || 35 ||",
       padaccheda: "वीत-राग-भय-क्रोधैः, मुनिभिः, वेद-पारगैः, निर्विकल्पः, हि, अयम्, दृष्टः, प्रपञ्च-उपशमः, अद्वयः",
       anvaya: "वीतरागभयक्रोधैः वेदपारगैः मुनिभिः अयं प्रपञ्चोपशमः अद्वयः निर्विकल्पः हि दृष्टः ।",
-      bhashyaExtract: "रागद्वेषादिरहितैः संन्यासपरैर्वेदान्तरहस्यवेत्तृभिर्मुनिभिर्निर्विकल्पक आत्मा साक्षात्कृतः ।",
+      bhashyaExtract: "तदेतत्सम्यग्दर्शनं स्तूयते — विगतरागभयक्रोधादिसर्वदोषैः सर्वदा मुनिभिः मननशीलैर्विवेकिभिः वेदपारगैः अवगतवेदान्तार्थतत्त्वैर्ज्ञानिभिः निर्विकल्पः सर्वविकल्पशून्यः अयम् आत्मा दृष्टः उपलब्धो वेदान्तार्थतत्परैः, प्रपञ्चोपशमः, प्रपञ्चो द्वैतभेदविस्तारः, तस्योपशमोऽभावो यस्मिन् , स आत्मा प्रपञ्चोपशमः, अत एव अद्वयः विगतदोषैरेव पण्डितैर्वेदान्तार्थतत्परैः संन्यासिभिः अयमात्मा द्रष्टुं शक्यः, नान्यैः रागादिकलुषितचेतोभिः स्वपक्षपातिदर्शनैस्तार्किकादिभिरित्यभिप्रायः ॥",
       englishTranslation: "By sages free from attachment, fear, and anger, well-versed in the essence of the Vedas, this unconditioned, changeless Self—the cessation of all phenomenal appearance, non-dual—is directly realized.",
       commentaryNotes: "Moral and intellectual prerequisites for Advaitic realization: Sādhana-catuṣṭaya and Vairāgya."
     },
@@ -434,7 +434,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "tasmād evaṁ viditvainam advaite yojayet smṛtim |\nadvaitaṁ samanuprāpya jaḍaval lokam ācaret || 36 ||",
       padaccheda: "तस्मात्, एवम्, विदित्वा, एनम्, अद्वैते, योजयेत्, स्मृतिम्, अद्वैतम्, समनुप्राप्य, जडवत्, लोकम्, आचरेत्",
       anvaya: "तस्माद् एनम् एवं विदित्वा अद्वैते स्मृतिं योजयेत् । अद्वैतं समनुप्राप्य जडवत् लोकम् आचरेत् ।",
-      bhashyaExtract: "आत्मतत्त्वं ज्ञात्वा निरन्तरमद्वैतभावनया तिष्ठेत् । अद्वैतं साक्षात्कृत्य दम्भरहितः सन् बालवज्जडवद्वा लोकव्यवहारं कुर्यात् ।",
+      bhashyaExtract: "यस्मात्सर्वानर्थोपशमरूपत्वादद्वयं शिवमभयम् , अतः एवं विदित्वैनम् अद्वैते स्मृतिं योजयेत् ; अद्वैतावगमायैव स्मृतिं कुर्यादित्यर्थः । तच्च अद्वैतम् अवगम्य ‘अहमस्मि परं ब्रह्म’ इति विदित्वा अशनायाद्यतीतं साक्षादपरोक्षादजमात्मानं सर्वलोकव्यवहारातीतं जडवत् लोकमाचरेत् ; अप्रख्यापयन्नात्मानमहमेवंविध इत्यभिप्रायः ॥",
       englishTranslation: "Therefore, having known this Self thus, fix your constant remembrance upon Non-Duality. Having fully attained Non-Duality, move about in the world as though an unconcerned simpleton (jaḍavat).",
       commentaryNotes: "The Jīvanmukta behaves without ostentation, pride, or self-display, unconcerned with social praise or blame (Jaḍabharata archetype)."
     },
@@ -446,7 +446,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "niḥstutir nirnamaskāro niḥsvadhākāra eva ca |\ncalācalaniketaś ca yatir yādṛcchiko bhavet || 37 ||",
       padaccheda: "निःस्तुतिः, निर्नमस्कारः, निःस्वधाकारः, एव, च, चलाचल-निकेतः, च, यतिः, यादृच्छिकः, भवेत्",
       anvaya: "यतिः निःस्तुतिः निर्नमस्कारः निःस्वधाकारः एव च चलाचलनिकेतः च यादृच्छिकः भवेत् ।",
-      bhashyaExtract: "न कञ्चित् स्तौति, न कमपि नमस्करोति, न श्राद्धादिकर्मसु प्रवर्तते, शरीरमात्रनिकेतः प्रारब्धप्राप्तेन सन्तुष्टो यतिर्भवति ।",
+      bhashyaExtract: "कया चर्यया लोकमाचरेदिति, आह — स्तुतिनमस्कारादिसर्वकर्मविवर्जितः त्यक्तसर्वबाह्यैषणः प्रतिपन्नपरमहंसपारिव्राज्य इत्यभिप्रायः, ‘एतं वै तमात्मानं विदित्वा’(बृ. उ. ३ । ५ । १) इत्यादिश्रुतेः, ‘तद्बुद्धयस्तदात्मानस्तन्निष्ठास्तत्परायणाः’(भ. गी. ५ । १७) इत्यादिस्मृतेश्च । चलं शरीरम् , प्रतिक्षणमन्यथाभावात् ; अचलम् आत्मतत्त्वम् । यदा कदाचिद्भोजनादिसंव्यवहारनिमित्तमाकाशवदचलं स्वरूपमात्मतत्त्वम् आत्मनो निकेतमाश्रयमात्मस्थितिं विस्मृत्य अहमिति मन्यते यदा, तदा चलो देहो निकेतो यस्य सोऽयमेवं चलाचलनिकेतो विद्वान्न पुनर्बाह्यविषयाश्रयः । स च यादृच्छिको भवेत् , यदृच्छाप्राप्तकौपीनाच्छादनग्रासमात्रदेहस्थितिरित्यर्थः ॥",
       englishTranslation: "Beyond praise, beyond salutations, and beyond ancestral libations (svadhākāra); with the moving body or immovable Self as his only dwelling, the ascetic should live content with whatever comes by chance.",
       commentaryNotes: "Complete renunciation (Paramahaṁsa Sannyāsa): the sage is established beyond all scriptural rituals and social conventions."
     },
@@ -458,7 +458,7 @@ export const MANDUKYA_VAITATHYA_CHAPTER: GranthaChapter = {
       mulaIast: "tattvam ādhyātmikaṁ dṛṣṭvā tattvaṁ dṛṣṭvā tu bāhyataḥ |\ntattvībhūtas tadārāmas tattvād apracyuto bhavet || 38 ||",
       padaccheda: "तत्त्वम्, आध्यात्मिकम्, दृष्ट्वा, तत्त्वम्, दृष्ट्वा, तु, बाह्यतः, तत्त्वीभूतः, तदारामः, तत्त्वात्, अप्रच्युतः, भवेत्",
       anvaya: "आध्यात्मिकं तत्त्वं दृष्ट्वा, बाह्यतः तु तत्त्वं दृष्ट्वा, तत्त्वीभूतः तदारामः तत्त्वाद् अप्रच्युतः भवेत् ।",
-      bhashyaExtract: "देहेऽन्तः प्रत्यगात्मानं ब्रह्म दृष्ट्वा, बाह्ये च सर्वं ब्रह्मैवेति साक्षात्कृत्य, ब्रह्मैव सन् ब्रह्मानन्दरतो ब्रह्मणः कदापि न विचलेत् ।",
+      bhashyaExtract: "बाह्यं पृथिव्यादि तत्त्वमाध्यात्मिकं च देहादिलक्षणं रज्जुसर्पादिवत्स्वप्नमायादिवच्च असत् , ‘वाचारम्भणं विकारो नामधेयम्’(छा. उ. ६ । १ । ४) इत्यादिश्रुतेः । आत्मा च सबाह्याभ्यन्तरो ह्यजोऽपूर्वोऽनपरोऽनन्तरोऽबाह्यः कृत्स्नः तथा आकाशवत्सर्वगतः सूक्ष्मोऽचलो निर्गुणो निष्कलो निष्क्रियः ‘तत्सत्यं स आत्मा तत्त्वमसि’(छा. उ. ६ । ८ । ७) इति श्रुतेः, इत्येवं तत्त्वं दृष्ट्वा तत्त्वीभूतस्तदारामो न बाह्यरमणः ; यथा अतत्त्वदर्शी कश्चित्तमात्मत्वेन प्रतिपन्नश्चित्तचलनमनु चलितमात्मानं मन्यमानः तत्त्वाच्चलितं देहादिभूतमात्मानं कदाचिन्मन्यते प्रच्युतोऽहमात्मतत्त्वादिदानीमिति, समाहिते तु मनसि कदाचित्तत्त्वभूतं प्रसन्नमात्मानं मन्यते इदानीमस्मि तत्त्वीभूत इति ; न तथा आत्मविद्भवेत् , आत्मन एकरूपत्वात् , स्वरूपप्रच्यवनासम्भवाच्च । सदैव ब्रह्मास्मीत्यप्रच्युतो भवेत्तत्त्वात् , सदा अप्रच्युतात्मतत्त्वदर्शनो भवेदित्यभिप्रायः ; ‘शुनि चैव श्वपाके च’(भ. गी. ५ । १८) ‘समं सर्वेषु भूतेषु’(भ. गी. १३ । २७) इत्यादिस्मृतेः ॥\n\nइति द्वितीयं वैतथ्यप्रकरणं सम्पूर्णम् ॥",
       englishTranslation: "Having beheld the Truth within oneself, and having beheld the Truth equally in all external objects, becoming Truth itself, rejoicing in Truth, one should never swerve from the Truth!",
       commentaryNotes: "The triumphant conclusion of the Vaitathya Prakaraṇa: non-dual vision everywhere, inner and outer, culminating in unwavering Sahaja Samādhi."
     }
